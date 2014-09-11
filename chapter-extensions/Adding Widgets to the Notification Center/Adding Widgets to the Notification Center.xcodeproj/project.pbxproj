@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A65234B21976792400D7029A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65234B11976792400D7029A /* AppDelegate.swift */; };
+		A65234B41976792400D7029A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65234B31976792400D7029A /* ViewController.swift */; };
+		A65234B71976792400D7029A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65234B51976792400D7029A /* Main.storyboard */; };
+		A65234B91976792400D7029A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65234B81976792400D7029A /* Images.xcassets */; };
+		A65234C51976792400D7029A /* Adding_Widgets_to_the_Notification_CenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65234C41976792400D7029A /* Adding_Widgets_to_the_Notification_CenterTests.swift */; };
+		A65234D51976793600D7029A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A65234D41976793600D7029A /* NotificationCenter.framework */; };
+		A65234DA1976793600D7029A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65234D91976793600D7029A /* TodayViewController.swift */; };
+		A65234DC1976793600D7029A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65234DB1976793600D7029A /* MainInterface.storyboard */; };
+		A65234DF1976793600D7029A /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A65234D21976793600D7029A /* Widget.appex */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A65234BF1976792400D7029A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65234A41976792400D7029A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A65234AB1976792400D7029A;
+			remoteInfo = "Adding Widgets to the Notification Center";
+		};
+		A65234DD1976793600D7029A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65234A41976792400D7029A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A65234D11976793600D7029A;
+			remoteInfo = Widget;
+		};
+		A65234E01976793600D7029A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A65234A41976792400D7029A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A65234D11976793600D7029A;
+			remoteInfo = Widget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A65234E51976793600D7029A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A65234DF1976793600D7029A /* Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A65234AC1976792400D7029A /* Adding Widgets to the Notification Center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Adding Widgets to the Notification Center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65234B01976792400D7029A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65234B11976792400D7029A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A65234B31976792400D7029A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A65234B61976792400D7029A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A65234B81976792400D7029A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A65234BE1976792400D7029A /* Adding Widgets to the Notification CenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Adding Widgets to the Notification CenterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65234C31976792400D7029A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65234C41976792400D7029A /* Adding_Widgets_to_the_Notification_CenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adding_Widgets_to_the_Notification_CenterTests.swift; sourceTree = "<group>"; };
+		A65234D21976793600D7029A /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65234D41976793600D7029A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		A65234D81976793600D7029A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65234D91976793600D7029A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		A65234DB1976793600D7029A /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A65234A91976792400D7029A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65234BB1976792400D7029A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65234CF1976793600D7029A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A65234D51976793600D7029A /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A65234A31976792400D7029A = {
+			isa = PBXGroup;
+			children = (
+				A65234AE1976792400D7029A /* Adding Widgets to the Notification Center */,
+				A65234D61976793600D7029A /* Widget */,
+				A65234C11976792400D7029A /* Adding Widgets to the Notification CenterTests */,
+				A65234D31976793600D7029A /* Frameworks */,
+				A65234AD1976792400D7029A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A65234AD1976792400D7029A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A65234AC1976792400D7029A /* Adding Widgets to the Notification Center.app */,
+				A65234BE1976792400D7029A /* Adding Widgets to the Notification CenterTests.xctest */,
+				A65234D21976793600D7029A /* Widget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A65234AE1976792400D7029A /* Adding Widgets to the Notification Center */ = {
+			isa = PBXGroup;
+			children = (
+				A65234B11976792400D7029A /* AppDelegate.swift */,
+				A65234B31976792400D7029A /* ViewController.swift */,
+				A65234B51976792400D7029A /* Main.storyboard */,
+				A65234B81976792400D7029A /* Images.xcassets */,
+				A65234AF1976792400D7029A /* Supporting Files */,
+			);
+			path = "Adding Widgets to the Notification Center";
+			sourceTree = "<group>";
+		};
+		A65234AF1976792400D7029A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A65234B01976792400D7029A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A65234C11976792400D7029A /* Adding Widgets to the Notification CenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				A65234C41976792400D7029A /* Adding_Widgets_to_the_Notification_CenterTests.swift */,
+				A65234C21976792400D7029A /* Supporting Files */,
+			);
+			path = "Adding Widgets to the Notification CenterTests";
+			sourceTree = "<group>";
+		};
+		A65234C21976792400D7029A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A65234C31976792400D7029A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A65234D31976793600D7029A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A65234D41976793600D7029A /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A65234D61976793600D7029A /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				A65234D91976793600D7029A /* TodayViewController.swift */,
+				A65234DB1976793600D7029A /* MainInterface.storyboard */,
+				A65234D71976793600D7029A /* Supporting Files */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		A65234D71976793600D7029A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A65234D81976793600D7029A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A65234AB1976792400D7029A /* Adding Widgets to the Notification Center */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A65234C81976792400D7029A /* Build configuration list for PBXNativeTarget "Adding Widgets to the Notification Center" */;
+			buildPhases = (
+				A65234A81976792400D7029A /* Sources */,
+				A65234A91976792400D7029A /* Frameworks */,
+				A65234AA1976792400D7029A /* Resources */,
+				A65234E51976793600D7029A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A65234DE1976793600D7029A /* PBXTargetDependency */,
+				A65234E11976793600D7029A /* PBXTargetDependency */,
+			);
+			name = "Adding Widgets to the Notification Center";
+			productName = "Adding Widgets to the Notification Center";
+			productReference = A65234AC1976792400D7029A /* Adding Widgets to the Notification Center.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A65234BD1976792400D7029A /* Adding Widgets to the Notification CenterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A65234CB1976792400D7029A /* Build configuration list for PBXNativeTarget "Adding Widgets to the Notification CenterTests" */;
+			buildPhases = (
+				A65234BA1976792400D7029A /* Sources */,
+				A65234BB1976792400D7029A /* Frameworks */,
+				A65234BC1976792400D7029A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A65234C01976792400D7029A /* PBXTargetDependency */,
+			);
+			name = "Adding Widgets to the Notification CenterTests";
+			productName = "Adding Widgets to the Notification CenterTests";
+			productReference = A65234BE1976792400D7029A /* Adding Widgets to the Notification CenterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A65234D11976793600D7029A /* Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A65234E21976793600D7029A /* Build configuration list for PBXNativeTarget "Widget" */;
+			buildPhases = (
+				A65234CE1976793600D7029A /* Sources */,
+				A65234CF1976793600D7029A /* Frameworks */,
+				A65234D01976793600D7029A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Widget;
+			productName = Widget;
+			productReference = A65234D21976793600D7029A /* Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A65234A41976792400D7029A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Pixolity Ltd.";
+				TargetAttributes = {
+					A65234AB1976792400D7029A = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					A65234BD1976792400D7029A = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = A65234AB1976792400D7029A;
+					};
+					A65234D11976793600D7029A = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = A65234A71976792400D7029A /* Build configuration list for PBXProject "Adding Widgets to the Notification Center" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A65234A31976792400D7029A;
+			productRefGroup = A65234AD1976792400D7029A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A65234AB1976792400D7029A /* Adding Widgets to the Notification Center */,
+				A65234BD1976792400D7029A /* Adding Widgets to the Notification CenterTests */,
+				A65234D11976793600D7029A /* Widget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A65234AA1976792400D7029A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A65234B71976792400D7029A /* Main.storyboard in Resources */,
+				A65234B91976792400D7029A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65234BC1976792400D7029A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65234D01976793600D7029A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A65234DC1976793600D7029A /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A65234A81976792400D7029A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A65234B41976792400D7029A /* ViewController.swift in Sources */,
+				A65234B21976792400D7029A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65234BA1976792400D7029A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A65234C51976792400D7029A /* Adding_Widgets_to_the_Notification_CenterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65234CE1976793600D7029A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A65234DA1976793600D7029A /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A65234C01976792400D7029A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A65234AB1976792400D7029A /* Adding Widgets to the Notification Center */;
+			targetProxy = A65234BF1976792400D7029A /* PBXContainerItemProxy */;
+		};
+		A65234DE1976793600D7029A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A65234D11976793600D7029A /* Widget */;
+			targetProxy = A65234DD1976793600D7029A /* PBXContainerItemProxy */;
+		};
+		A65234E11976793600D7029A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A65234D11976793600D7029A /* Widget */;
+			targetProxy = A65234E01976793600D7029A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A65234B51976792400D7029A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A65234B61976792400D7029A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A65234C61976792400D7029A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A65234C71976792400D7029A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A65234C91976792400D7029A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Adding Widgets to the Notification Center/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A65234CA1976792400D7029A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Adding Widgets to the Notification Center/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A65234CC1976792400D7029A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Adding Widgets to the Notification Center.app/Adding Widgets to the Notification Center";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Adding Widgets to the Notification CenterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		A65234CD1976792400D7029A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Adding Widgets to the Notification Center.app/Adding Widgets to the Notification Center";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Adding Widgets to the Notification CenterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		A65234E31976793600D7029A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A65234E41976793600D7029A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A65234A71976792400D7029A /* Build configuration list for PBXProject "Adding Widgets to the Notification Center" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A65234C61976792400D7029A /* Debug */,
+				A65234C71976792400D7029A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A65234C81976792400D7029A /* Build configuration list for PBXNativeTarget "Adding Widgets to the Notification Center" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A65234C91976792400D7029A /* Debug */,
+				A65234CA1976792400D7029A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A65234CB1976792400D7029A /* Build configuration list for PBXNativeTarget "Adding Widgets to the Notification CenterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A65234CC1976792400D7029A /* Debug */,
+				A65234CD1976792400D7029A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A65234E21976793600D7029A /* Build configuration list for PBXNativeTarget "Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A65234E31976793600D7029A /* Debug */,
+				A65234E41976793600D7029A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A65234A41976792400D7029A /* Project object */;
+}

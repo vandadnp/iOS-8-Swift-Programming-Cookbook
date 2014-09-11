@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CSQ-pY-47C">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+    </dependencies>
+    <scenes>
+        <!--All Homes-->
+        <scene sceneID="miL-yE-4GH">
+            <objects>
+                <tableViewController id="T99-0O-Sg9" customClass="ListHomesViewController" customModule="Adding_Rooms_to_the_User_s_Home" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="i0t-9i-RIk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="WgL-3d-fIW" detailTextLabel="kMN-cO-cDt" style="IBUITableViewCellStyleSubtitle" id="bVr-cB-Veg">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bVr-cB-Veg" id="F5H-17-NrV">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WgL-3d-fIW">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kMN-cO-cDt">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="QoT-dF-AJK" kind="show" identifier="showRooms" id="6pG-rj-OCD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="T99-0O-Sg9" id="PXs-bM-9aa"/>
+                            <outlet property="delegate" destination="T99-0O-Sg9" id="8L5-aC-PfK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="All Homes" id="JgC-Pk-UYZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eJl-cc-C27">
+                            <connections>
+                                <segue destination="STf-YL-FW8" kind="show" identifier="addHome" id="XYU-39-ZdP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGG-De-jaB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="148"/>
+        </scene>
+        <!--All Rooms-->
+        <scene sceneID="Lwj-9b-8F4">
+            <objects>
+                <tableViewController id="QoT-dF-AJK" customClass="ListRoomsTableViewController" customModule="Adding_Rooms_to_the_User_s_Home" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5tk-bJ-wSy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="djZ-xc-EC4" style="IBUITableViewCellStyleDefault" id="Sd1-8L-5e5">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sd1-8L-5e5" id="1Os-Qt-8sB">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="djZ-xc-EC4">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QoT-dF-AJK" id="2OG-tD-1v7"/>
+                            <outlet property="delegate" destination="QoT-dF-AJK" id="80C-XH-edm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="All Rooms" id="LQq-AZ-qV3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ael-wc-J5D">
+                            <connections>
+                                <segue destination="0Lu-0M-EKJ" kind="show" identifier="addRoom" id="t28-NU-r3k"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6hf-US-O0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="892"/>
+        </scene>
+        <!--Add Home-->
+        <scene sceneID="pu8-zi-SRv">
+            <objects>
+                <viewController id="STf-YL-FW8" customClass="AddHomeViewController" customModule="Adding_Rooms_to_the_User_s_Home" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UfI-Vq-ldp"/>
+                        <viewControllerLayoutGuide type="bottom" id="W5X-bK-dlO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a63-fV-YU0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the name of the home here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zIq-xp-eFy">
+                                <rect key="frame" x="20" y="87" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zIq-xp-eFy" secondAttribute="trailing" constant="20" symbolic="YES" id="YVY-vm-kdu"/>
+                            <constraint firstItem="zIq-xp-eFy" firstAttribute="top" secondItem="UfI-Vq-ldp" secondAttribute="bottom" constant="23" id="fvn-FC-YPf"/>
+                            <constraint firstItem="zIq-xp-eFy" firstAttribute="leading" secondItem="a63-fV-YU0" secondAttribute="leading" constant="20" symbolic="YES" id="h6I-HS-U3K"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Home" id="foP-UB-aUU">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="lbU-ZG-ZxD">
+                            <connections>
+                                <action selector="addHome" destination="STf-YL-FW8" id="dKX-i8-Hhd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="zIq-xp-eFy" id="BV5-qd-bgR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QgG-Ye-O8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="148"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0CC-Et-h1Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CSQ-pY-47C" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fw8-kv-Ode">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="T99-0O-Sg9" kind="relationship" relationship="rootViewController" id="vdP-mR-Fw6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F05-8U-CXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-241" y="148"/>
+        </scene>
+        <!--Add Room-->
+        <scene sceneID="Q3r-Nf-Yxm">
+            <objects>
+                <viewController id="0Lu-0M-EKJ" customClass="AddRoomViewController" customModule="Adding_Rooms_to_the_User_s_Home" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z4b-JC-Xt5"/>
+                        <viewControllerLayoutGuide type="bottom" id="imF-SA-IgE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2su-Kn-62S">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the name of the room here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jGN-k9-jb0">
+                                <rect key="frame" x="20" y="87" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jGN-k9-jb0" firstAttribute="top" secondItem="Z4b-JC-Xt5" secondAttribute="bottom" constant="23" id="23d-Gp-cJY"/>
+                            <constraint firstAttribute="trailing" secondItem="jGN-k9-jb0" secondAttribute="trailing" constant="20" symbolic="YES" id="gwV-yz-Bco"/>
+                            <constraint firstItem="jGN-k9-jb0" firstAttribute="leading" secondItem="2su-Kn-62S" secondAttribute="leading" constant="20" symbolic="YES" id="vNX-xp-rSb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Room" id="hL8-JK-ceC">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="ipV-vZ-Gw3">
+                            <connections>
+                                <action selector="addRoom" destination="0Lu-0M-EKJ" id="AMM-fq-opO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="jGN-k9-jb0" id="UnS-2F-vwW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nNj-hS-HVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="892"/>
+        </scene>
+    </scenes>
+</document>

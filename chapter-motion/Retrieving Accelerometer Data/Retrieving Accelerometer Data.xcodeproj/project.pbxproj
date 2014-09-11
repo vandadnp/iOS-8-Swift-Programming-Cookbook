@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A63789E71977BF2D00D19505 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63789E61977BF2D00D19505 /* AppDelegate.swift */; };
+		A63789E91977BF2D00D19505 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63789E81977BF2D00D19505 /* ViewController.swift */; };
+		A63789EC1977BF2D00D19505 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A63789EA1977BF2D00D19505 /* Main.storyboard */; };
+		A63789EE1977BF2D00D19505 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A63789ED1977BF2D00D19505 /* Images.xcassets */; };
+		A63789FA1977BF2D00D19505 /* Retrieving_Accelerometer_DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63789F91977BF2D00D19505 /* Retrieving_Accelerometer_DataTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A63789F41977BF2D00D19505 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A63789D91977BF2D00D19505 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A63789E01977BF2D00D19505;
+			remoteInfo = "Retrieving Accelerometer Data";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A63789E11977BF2D00D19505 /* Retrieving Accelerometer Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Retrieving Accelerometer Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A63789E51977BF2D00D19505 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A63789E61977BF2D00D19505 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A63789E81977BF2D00D19505 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A63789EB1977BF2D00D19505 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A63789ED1977BF2D00D19505 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A63789F31977BF2D00D19505 /* Retrieving Accelerometer DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Retrieving Accelerometer DataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A63789F81977BF2D00D19505 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A63789F91977BF2D00D19505 /* Retrieving_Accelerometer_DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Retrieving_Accelerometer_DataTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A63789DE1977BF2D00D19505 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A63789F01977BF2D00D19505 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A63789D81977BF2D00D19505 = {
+			isa = PBXGroup;
+			children = (
+				A63789E31977BF2D00D19505 /* Retrieving Accelerometer Data */,
+				A63789F61977BF2D00D19505 /* Retrieving Accelerometer DataTests */,
+				A63789E21977BF2D00D19505 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A63789E21977BF2D00D19505 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A63789E11977BF2D00D19505 /* Retrieving Accelerometer Data.app */,
+				A63789F31977BF2D00D19505 /* Retrieving Accelerometer DataTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A63789E31977BF2D00D19505 /* Retrieving Accelerometer Data */ = {
+			isa = PBXGroup;
+			children = (
+				A63789E61977BF2D00D19505 /* AppDelegate.swift */,
+				A63789E81977BF2D00D19505 /* ViewController.swift */,
+				A63789EA1977BF2D00D19505 /* Main.storyboard */,
+				A63789ED1977BF2D00D19505 /* Images.xcassets */,
+				A63789E41977BF2D00D19505 /* Supporting Files */,
+			);
+			path = "Retrieving Accelerometer Data";
+			sourceTree = "<group>";
+		};
+		A63789E41977BF2D00D19505 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A63789E51977BF2D00D19505 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A63789F61977BF2D00D19505 /* Retrieving Accelerometer DataTests */ = {
+			isa = PBXGroup;
+			children = (
+				A63789F91977BF2D00D19505 /* Retrieving_Accelerometer_DataTests.swift */,
+				A63789F71977BF2D00D19505 /* Supporting Files */,
+			);
+			path = "Retrieving Accelerometer DataTests";
+			sourceTree = "<group>";
+		};
+		A63789F71977BF2D00D19505 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A63789F81977BF2D00D19505 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A63789E01977BF2D00D19505 /* Retrieving Accelerometer Data */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A63789FD1977BF2D00D19505 /* Build configuration list for PBXNativeTarget "Retrieving Accelerometer Data" */;
+			buildPhases = (
+				A63789DD1977BF2D00D19505 /* Sources */,
+				A63789DE1977BF2D00D19505 /* Frameworks */,
+				A63789DF1977BF2D00D19505 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Retrieving Accelerometer Data";
+			productName = "Retrieving Accelerometer Data";
+			productReference = A63789E11977BF2D00D19505 /* Retrieving Accelerometer Data.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A63789F21977BF2D00D19505 /* Retrieving Accelerometer DataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6378A001977BF2D00D19505 /* Build configuration list for PBXNativeTarget "Retrieving Accelerometer DataTests" */;
+			buildPhases = (
+				A63789EF1977BF2D00D19505 /* Sources */,
+				A63789F01977BF2D00D19505 /* Frameworks */,
+				A63789F11977BF2D00D19505 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A63789F51977BF2D00D19505 /* PBXTargetDependency */,
+			);
+			name = "Retrieving Accelerometer DataTests";
+			productName = "Retrieving Accelerometer DataTests";
+			productReference = A63789F31977BF2D00D19505 /* Retrieving Accelerometer DataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A63789D91977BF2D00D19505 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Pixolity Ltd.";
+				TargetAttributes = {
+					A63789E01977BF2D00D19505 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					A63789F21977BF2D00D19505 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = A63789E01977BF2D00D19505;
+					};
+				};
+			};
+			buildConfigurationList = A63789DC1977BF2D00D19505 /* Build configuration list for PBXProject "Retrieving Accelerometer Data" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A63789D81977BF2D00D19505;
+			productRefGroup = A63789E21977BF2D00D19505 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A63789E01977BF2D00D19505 /* Retrieving Accelerometer Data */,
+				A63789F21977BF2D00D19505 /* Retrieving Accelerometer DataTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A63789DF1977BF2D00D19505 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A63789EC1977BF2D00D19505 /* Main.storyboard in Resources */,
+				A63789EE1977BF2D00D19505 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A63789F11977BF2D00D19505 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A63789DD1977BF2D00D19505 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A63789E91977BF2D00D19505 /* ViewController.swift in Sources */,
+				A63789E71977BF2D00D19505 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A63789EF1977BF2D00D19505 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A63789FA1977BF2D00D19505 /* Retrieving_Accelerometer_DataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A63789F51977BF2D00D19505 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A63789E01977BF2D00D19505 /* Retrieving Accelerometer Data */;
+			targetProxy = A63789F41977BF2D00D19505 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A63789EA1977BF2D00D19505 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A63789EB1977BF2D00D19505 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A63789FB1977BF2D00D19505 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A63789FC1977BF2D00D19505 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A63789FE1977BF2D00D19505 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Retrieving Accelerometer Data/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A63789FF1977BF2D00D19505 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Retrieving Accelerometer Data/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A6378A011977BF2D00D19505 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Retrieving Accelerometer Data.app/Retrieving Accelerometer Data";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Retrieving Accelerometer DataTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		A6378A021977BF2D00D19505 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Retrieving Accelerometer Data.app/Retrieving Accelerometer Data";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Retrieving Accelerometer DataTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A63789DC1977BF2D00D19505 /* Build configuration list for PBXProject "Retrieving Accelerometer Data" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A63789FB1977BF2D00D19505 /* Debug */,
+				A63789FC1977BF2D00D19505 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A63789FD1977BF2D00D19505 /* Build configuration list for PBXNativeTarget "Retrieving Accelerometer Data" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A63789FE1977BF2D00D19505 /* Debug */,
+				A63789FF1977BF2D00D19505 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A6378A001977BF2D00D19505 /* Build configuration list for PBXNativeTarget "Retrieving Accelerometer DataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6378A011977BF2D00D19505 /* Debug */,
+				A6378A021977BF2D00D19505 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A63789D91977BF2D00D19505 /* Project object */;
+}

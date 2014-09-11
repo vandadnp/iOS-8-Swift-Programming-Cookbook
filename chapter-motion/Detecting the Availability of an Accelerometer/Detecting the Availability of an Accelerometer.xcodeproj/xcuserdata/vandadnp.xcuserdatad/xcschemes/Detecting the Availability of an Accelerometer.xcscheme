@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0600"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A637898A1977BB2700D19505"
+               BuildableName = "Detecting the Availability of an Accelerometer.app"
+               BlueprintName = "Detecting the Availability of an Accelerometer"
+               ReferencedContainer = "container:Detecting the Availability of an Accelerometer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A637899C1977BB2700D19505"
+               BuildableName = "Detecting the Availability of an AccelerometerTests.xctest"
+               BlueprintName = "Detecting the Availability of an AccelerometerTests"
+               ReferencedContainer = "container:Detecting the Availability of an Accelerometer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9D029EE21778E4B1004E533F"
+               BuildableName = "Detecting the Availability of an AccelerometerTests.xctest"
+               BlueprintName = "Detecting the Availability of an AccelerometerTests"
+               ReferencedContainer = "container:../ios7/Detecting the Availability of an Accelerometer/Detecting the Availability of an Accelerometer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A637898A1977BB2700D19505"
+            BuildableName = "Detecting the Availability of an Accelerometer.app"
+            BlueprintName = "Detecting the Availability of an Accelerometer"
+            ReferencedContainer = "container:Detecting the Availability of an Accelerometer.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A637898A1977BB2700D19505"
+            BuildableName = "Detecting the Availability of an Accelerometer.app"
+            BlueprintName = "Detecting the Availability of an Accelerometer"
+            ReferencedContainer = "container:Detecting the Availability of an Accelerometer.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A637898A1977BB2700D19505"
+            BuildableName = "Detecting the Availability of an Accelerometer.app"
+            BlueprintName = "Detecting the Availability of an Accelerometer"
+            ReferencedContainer = "container:Detecting the Availability of an Accelerometer.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

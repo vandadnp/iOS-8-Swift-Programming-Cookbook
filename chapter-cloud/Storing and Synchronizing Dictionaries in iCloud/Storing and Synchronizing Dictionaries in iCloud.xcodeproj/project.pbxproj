@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A617712F197BAD34008D1357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A617712E197BAD34008D1357 /* AppDelegate.swift */; };
+		A6177131197BAD34008D1357 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6177130197BAD34008D1357 /* ViewController.swift */; };
+		A6177134197BAD34008D1357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6177132197BAD34008D1357 /* Main.storyboard */; };
+		A6177136197BAD34008D1357 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6177135197BAD34008D1357 /* Images.xcassets */; };
+		A6177142197BAD34008D1357 /* Storing_and_Synchronizing_Dictionaries_in_iCloudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6177141197BAD34008D1357 /* Storing_and_Synchronizing_Dictionaries_in_iCloudTests.swift */; };
+		A617714D197BAD65008D1357 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A617714C197BAD65008D1357 /* CloudKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A617713C197BAD34008D1357 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6177121197BAD34008D1357 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6177128197BAD34008D1357;
+			remoteInfo = "Storing and Synchronizing Dictionaries in iCloud";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A6177129197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storing and Synchronizing Dictionaries in iCloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A617712D197BAD34008D1357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A617712E197BAD34008D1357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A6177130197BAD34008D1357 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A6177133197BAD34008D1357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A6177135197BAD34008D1357 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A617713B197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Storing and Synchronizing Dictionaries in iCloudTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6177140197BAD34008D1357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6177141197BAD34008D1357 /* Storing_and_Synchronizing_Dictionaries_in_iCloudTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storing_and_Synchronizing_Dictionaries_in_iCloudTests.swift; sourceTree = "<group>"; };
+		A617714B197BAD61008D1357 /* Storing and Synchronizing Dictionaries in iCloud.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Storing and Synchronizing Dictionaries in iCloud.entitlements"; sourceTree = "<group>"; };
+		A617714C197BAD65008D1357 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6177126197BAD34008D1357 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A617714D197BAD65008D1357 /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6177138197BAD34008D1357 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A6177120197BAD34008D1357 = {
+			isa = PBXGroup;
+			children = (
+				A617714C197BAD65008D1357 /* CloudKit.framework */,
+				A617712B197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloud */,
+				A617713E197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloudTests */,
+				A617712A197BAD34008D1357 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A617712A197BAD34008D1357 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6177129197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloud.app */,
+				A617713B197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloudTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A617712B197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloud */ = {
+			isa = PBXGroup;
+			children = (
+				A617714B197BAD61008D1357 /* Storing and Synchronizing Dictionaries in iCloud.entitlements */,
+				A617712E197BAD34008D1357 /* AppDelegate.swift */,
+				A6177130197BAD34008D1357 /* ViewController.swift */,
+				A6177132197BAD34008D1357 /* Main.storyboard */,
+				A6177135197BAD34008D1357 /* Images.xcassets */,
+				A617712C197BAD34008D1357 /* Supporting Files */,
+			);
+			path = "Storing and Synchronizing Dictionaries in iCloud";
+			sourceTree = "<group>";
+		};
+		A617712C197BAD34008D1357 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A617712D197BAD34008D1357 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A617713E197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloudTests */ = {
+			isa = PBXGroup;
+			children = (
+				A6177141197BAD34008D1357 /* Storing_and_Synchronizing_Dictionaries_in_iCloudTests.swift */,
+				A617713F197BAD34008D1357 /* Supporting Files */,
+			);
+			path = "Storing and Synchronizing Dictionaries in iCloudTests";
+			sourceTree = "<group>";
+		};
+		A617713F197BAD34008D1357 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6177140197BAD34008D1357 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6177128197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6177145197BAD34008D1357 /* Build configuration list for PBXNativeTarget "Storing and Synchronizing Dictionaries in iCloud" */;
+			buildPhases = (
+				A6177125197BAD34008D1357 /* Sources */,
+				A6177126197BAD34008D1357 /* Frameworks */,
+				A6177127197BAD34008D1357 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Storing and Synchronizing Dictionaries in iCloud";
+			productName = "Storing and Synchronizing Dictionaries in iCloud";
+			productReference = A6177129197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloud.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A617713A197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloudTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6177148197BAD34008D1357 /* Build configuration list for PBXNativeTarget "Storing and Synchronizing Dictionaries in iCloudTests" */;
+			buildPhases = (
+				A6177137197BAD34008D1357 /* Sources */,
+				A6177138197BAD34008D1357 /* Frameworks */,
+				A6177139197BAD34008D1357 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A617713D197BAD34008D1357 /* PBXTargetDependency */,
+			);
+			name = "Storing and Synchronizing Dictionaries in iCloudTests";
+			productName = "Storing and Synchronizing Dictionaries in iCloudTests";
+			productReference = A617713B197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloudTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6177121197BAD34008D1357 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Pixolity Ltd.";
+				TargetAttributes = {
+					A6177128197BAD34008D1357 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = F3FU372W5M;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					A617713A197BAD34008D1357 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = A6177128197BAD34008D1357;
+					};
+				};
+			};
+			buildConfigurationList = A6177124197BAD34008D1357 /* Build configuration list for PBXProject "Storing and Synchronizing Dictionaries in iCloud" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A6177120197BAD34008D1357;
+			productRefGroup = A617712A197BAD34008D1357 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6177128197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloud */,
+				A617713A197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloudTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6177127197BAD34008D1357 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6177134197BAD34008D1357 /* Main.storyboard in Resources */,
+				A6177136197BAD34008D1357 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6177139197BAD34008D1357 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6177125197BAD34008D1357 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6177131197BAD34008D1357 /* ViewController.swift in Sources */,
+				A617712F197BAD34008D1357 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6177137197BAD34008D1357 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6177142197BAD34008D1357 /* Storing_and_Synchronizing_Dictionaries_in_iCloudTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A617713D197BAD34008D1357 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6177128197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloud */;
+			targetProxy = A617713C197BAD34008D1357 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A6177132197BAD34008D1357 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6177133197BAD34008D1357 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A6177143197BAD34008D1357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A6177144197BAD34008D1357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6177146197BAD34008D1357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "Storing and Synchronizing Dictionaries in iCloud/Storing and Synchronizing Dictionaries in iCloud.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
+				INFOPLIST_FILE = "Storing and Synchronizing Dictionaries in iCloud/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5c3e7b9b-e609-4b87-b960-62efcc90d867";
+			};
+			name = Debug;
+		};
+		A6177147197BAD34008D1357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "Storing and Synchronizing Dictionaries in iCloud/Storing and Synchronizing Dictionaries in iCloud.entitlements";
+				INFOPLIST_FILE = "Storing and Synchronizing Dictionaries in iCloud/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5c3e7b9b-e609-4b87-b960-62efcc90d867";
+			};
+			name = Release;
+		};
+		A6177149197BAD34008D1357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Storing and Synchronizing Dictionaries in iCloud.app/Storing and Synchronizing Dictionaries in iCloud";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Storing and Synchronizing Dictionaries in iCloudTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		A617714A197BAD34008D1357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Storing and Synchronizing Dictionaries in iCloud.app/Storing and Synchronizing Dictionaries in iCloud";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Storing and Synchronizing Dictionaries in iCloudTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6177124197BAD34008D1357 /* Build configuration list for PBXProject "Storing and Synchronizing Dictionaries in iCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6177143197BAD34008D1357 /* Debug */,
+				A6177144197BAD34008D1357 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6177145197BAD34008D1357 /* Build configuration list for PBXNativeTarget "Storing and Synchronizing Dictionaries in iCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6177146197BAD34008D1357 /* Debug */,
+				A6177147197BAD34008D1357 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A6177148197BAD34008D1357 /* Build configuration list for PBXNativeTarget "Storing and Synchronizing Dictionaries in iCloudTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6177149197BAD34008D1357 /* Debug */,
+				A617714A197BAD34008D1357 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A6177121197BAD34008D1357 /* Project object */;
+}

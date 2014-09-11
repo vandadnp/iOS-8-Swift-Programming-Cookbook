@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A67A12B5197D861A002B4397 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A12B4197D861A002B4397 /* AppDelegate.swift */; };
+		A67A12B7197D861A002B4397 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A12B6197D861A002B4397 /* ViewController.swift */; };
+		A67A12BA197D861A002B4397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67A12B8197D861A002B4397 /* Main.storyboard */; };
+		A67A12BC197D861A002B4397 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A67A12BB197D861A002B4397 /* Images.xcassets */; };
+		A67A12C8197D861B002B4397 /* Providing_a_Custom_Sharing_Extension_to_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A12C7197D861B002B4397 /* Providing_a_Custom_Sharing_Extension_to_iOSTests.swift */; };
+		A67A12DA197D86F0002B4397 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A12D9197D86F0002B4397 /* ShareViewController.swift */; };
+		A67A12DC197D86F0002B4397 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67A12DB197D86F0002B4397 /* MainInterface.storyboard */; };
+		A67A12DF197D86F0002B4397 /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A67A12D5197D86F0002B4397 /* ShareExtension.appex */; };
+		A67A12EB197D8E5F002B4397 /* AudienceSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67A12EA197D8E5E002B4397 /* AudienceSelectionViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A67A12C2197D861B002B4397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A67A12A7197D861A002B4397 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A67A12AE197D861A002B4397;
+			remoteInfo = "Providing a Custom Sharing Extension to iOS";
+		};
+		A67A12DD197D86F0002B4397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A67A12A7197D861A002B4397 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A67A12D4197D86F0002B4397;
+			remoteInfo = ShareExtension;
+		};
+		A67A12E0197D86F0002B4397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A67A12A7197D861A002B4397 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A67A12D4197D86F0002B4397;
+			remoteInfo = ShareExtension;
+		};
+		A67A12E6197D8726002B4397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A67A12A7197D861A002B4397 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A67A12AE197D861A002B4397;
+			remoteInfo = "Providing a Custom Sharing Extension to iOS";
+		};
+		A67A12E8197D8726002B4397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A67A12A7197D861A002B4397 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A67A12AE197D861A002B4397;
+			remoteInfo = "Providing a Custom Sharing Extension to iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A67A12E5197D86F0002B4397 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A67A12DF197D86F0002B4397 /* ShareExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A67A12AF197D861A002B4397 /* Providing a Custom Sharing Extension to iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Providing a Custom Sharing Extension to iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A67A12B3197D861A002B4397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A67A12B4197D861A002B4397 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A67A12B6197D861A002B4397 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A67A12B9197D861A002B4397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A67A12BB197D861A002B4397 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A67A12C1197D861B002B4397 /* Providing a Custom Sharing Extension to iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Providing a Custom Sharing Extension to iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A67A12C6197D861B002B4397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A67A12C7197D861B002B4397 /* Providing_a_Custom_Sharing_Extension_to_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providing_a_Custom_Sharing_Extension_to_iOSTests.swift; sourceTree = "<group>"; };
+		A67A12D5197D86F0002B4397 /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A67A12D8197D86F0002B4397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A67A12D9197D86F0002B4397 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		A67A12DB197D86F0002B4397 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		A67A12EA197D8E5E002B4397 /* AudienceSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudienceSelectionViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A67A12AC197D861A002B4397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A67A12BE197D861B002B4397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A67A12D2197D86F0002B4397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A67A12A6197D861A002B4397 = {
+			isa = PBXGroup;
+			children = (
+				A67A12B1197D861A002B4397 /* Providing a Custom Sharing Extension to iOS */,
+				A67A12C4197D861B002B4397 /* Providing a Custom Sharing Extension to iOSTests */,
+				A67A12D6197D86F0002B4397 /* ShareExtension */,
+				A67A12B0197D861A002B4397 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A67A12B0197D861A002B4397 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A67A12AF197D861A002B4397 /* Providing a Custom Sharing Extension to iOS.app */,
+				A67A12C1197D861B002B4397 /* Providing a Custom Sharing Extension to iOSTests.xctest */,
+				A67A12D5197D86F0002B4397 /* ShareExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A67A12B1197D861A002B4397 /* Providing a Custom Sharing Extension to iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A67A12B4197D861A002B4397 /* AppDelegate.swift */,
+				A67A12B6197D861A002B4397 /* ViewController.swift */,
+				A67A12B8197D861A002B4397 /* Main.storyboard */,
+				A67A12BB197D861A002B4397 /* Images.xcassets */,
+				A67A12B2197D861A002B4397 /* Supporting Files */,
+			);
+			path = "Providing a Custom Sharing Extension to iOS";
+			sourceTree = "<group>";
+		};
+		A67A12B2197D861A002B4397 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A67A12B3197D861A002B4397 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A67A12C4197D861B002B4397 /* Providing a Custom Sharing Extension to iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				A67A12C7197D861B002B4397 /* Providing_a_Custom_Sharing_Extension_to_iOSTests.swift */,
+				A67A12C5197D861B002B4397 /* Supporting Files */,
+			);
+			path = "Providing a Custom Sharing Extension to iOSTests";
+			sourceTree = "<group>";
+		};
+		A67A12C5197D861B002B4397 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A67A12C6197D861B002B4397 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A67A12D6197D86F0002B4397 /* ShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A67A12D9197D86F0002B4397 /* ShareViewController.swift */,
+				A67A12EA197D8E5E002B4397 /* AudienceSelectionViewController.swift */,
+				A67A12DB197D86F0002B4397 /* MainInterface.storyboard */,
+				A67A12D7197D86F0002B4397 /* Supporting Files */,
+			);
+			path = ShareExtension;
+			sourceTree = "<group>";
+		};
+		A67A12D7197D86F0002B4397 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A67A12D8197D86F0002B4397 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A67A12AE197D861A002B4397 /* Providing a Custom Sharing Extension to iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A67A12CB197D861B002B4397 /* Build configuration list for PBXNativeTarget "Providing a Custom Sharing Extension to iOS" */;
+			buildPhases = (
+				A67A12AB197D861A002B4397 /* Sources */,
+				A67A12AC197D861A002B4397 /* Frameworks */,
+				A67A12AD197D861A002B4397 /* Resources */,
+				A67A12E5197D86F0002B4397 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A67A12DE197D86F0002B4397 /* PBXTargetDependency */,
+				A67A12E1197D86F0002B4397 /* PBXTargetDependency */,
+			);
+			name = "Providing a Custom Sharing Extension to iOS";
+			productName = "Providing a Custom Sharing Extension to iOS";
+			productReference = A67A12AF197D861A002B4397 /* Providing a Custom Sharing Extension to iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A67A12C0197D861B002B4397 /* Providing a Custom Sharing Extension to iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A67A12CE197D861B002B4397 /* Build configuration list for PBXNativeTarget "Providing a Custom Sharing Extension to iOSTests" */;
+			buildPhases = (
+				A67A12BD197D861B002B4397 /* Sources */,
+				A67A12BE197D861B002B4397 /* Frameworks */,
+				A67A12BF197D861B002B4397 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A67A12C3197D861B002B4397 /* PBXTargetDependency */,
+				A67A12E7197D8726002B4397 /* PBXTargetDependency */,
+				A67A12E9197D8726002B4397 /* PBXTargetDependency */,
+			);
+			name = "Providing a Custom Sharing Extension to iOSTests";
+			productName = "Providing a Custom Sharing Extension to iOSTests";
+			productReference = A67A12C1197D861B002B4397 /* Providing a Custom Sharing Extension to iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A67A12D4197D86F0002B4397 /* ShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A67A12E2197D86F0002B4397 /* Build configuration list for PBXNativeTarget "ShareExtension" */;
+			buildPhases = (
+				A67A12D1197D86F0002B4397 /* Sources */,
+				A67A12D2197D86F0002B4397 /* Frameworks */,
+				A67A12D3197D86F0002B4397 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareExtension;
+			productName = ShareExtension;
+			productReference = A67A12D5197D86F0002B4397 /* ShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A67A12A7197D861A002B4397 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Pixolity Ltd.";
+				TargetAttributes = {
+					A67A12AE197D861A002B4397 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					A67A12C0197D861B002B4397 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = A67A12AE197D861A002B4397;
+					};
+					A67A12D4197D86F0002B4397 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = A67A12AA197D861A002B4397 /* Build configuration list for PBXProject "Providing a Custom Sharing Extension to iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A67A12A6197D861A002B4397;
+			productRefGroup = A67A12B0197D861A002B4397 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A67A12AE197D861A002B4397 /* Providing a Custom Sharing Extension to iOS */,
+				A67A12C0197D861B002B4397 /* Providing a Custom Sharing Extension to iOSTests */,
+				A67A12D4197D86F0002B4397 /* ShareExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A67A12AD197D861A002B4397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A67A12BA197D861A002B4397 /* Main.storyboard in Resources */,
+				A67A12BC197D861A002B4397 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A67A12BF197D861B002B4397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A67A12D3197D86F0002B4397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A67A12DC197D86F0002B4397 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A67A12AB197D861A002B4397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A67A12B7197D861A002B4397 /* ViewController.swift in Sources */,
+				A67A12B5197D861A002B4397 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A67A12BD197D861B002B4397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A67A12C8197D861B002B4397 /* Providing_a_Custom_Sharing_Extension_to_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A67A12D1197D86F0002B4397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A67A12DA197D86F0002B4397 /* ShareViewController.swift in Sources */,
+				A67A12EB197D8E5F002B4397 /* AudienceSelectionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A67A12C3197D861B002B4397 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A67A12AE197D861A002B4397 /* Providing a Custom Sharing Extension to iOS */;
+			targetProxy = A67A12C2197D861B002B4397 /* PBXContainerItemProxy */;
+		};
+		A67A12DE197D86F0002B4397 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A67A12D4197D86F0002B4397 /* ShareExtension */;
+			targetProxy = A67A12DD197D86F0002B4397 /* PBXContainerItemProxy */;
+		};
+		A67A12E1197D86F0002B4397 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A67A12D4197D86F0002B4397 /* ShareExtension */;
+			targetProxy = A67A12E0197D86F0002B4397 /* PBXContainerItemProxy */;
+		};
+		A67A12E7197D8726002B4397 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A67A12AE197D861A002B4397 /* Providing a Custom Sharing Extension to iOS */;
+			targetProxy = A67A12E6197D8726002B4397 /* PBXContainerItemProxy */;
+		};
+		A67A12E9197D8726002B4397 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A67A12AE197D861A002B4397 /* Providing a Custom Sharing Extension to iOS */;
+			targetProxy = A67A12E8197D8726002B4397 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A67A12B8197D861A002B4397 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A67A12B9197D861A002B4397 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A67A12C9197D861B002B4397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A67A12CA197D861B002B4397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A67A12CC197D861B002B4397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
+				INFOPLIST_FILE = "Providing a Custom Sharing Extension to iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
+			};
+			name = Debug;
+		};
+		A67A12CD197D861B002B4397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Providing a Custom Sharing Extension to iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
+			};
+			name = Release;
+		};
+		A67A12CF197D861B002B4397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Providing a Custom Sharing Extension to iOS.app/Providing a Custom Sharing Extension to iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Providing a Custom Sharing Extension to iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		A67A12D0197D861B002B4397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Providing a Custom Sharing Extension to iOS.app/Providing a Custom Sharing Extension to iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Providing a Custom Sharing Extension to iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		A67A12E3197D86F0002B4397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "03DA68F8-0286-4EBA-B627-7D2FAC77B206";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A67A12E4197D86F0002B4397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "03DA68F8-0286-4EBA-B627-7D2FAC77B206";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A67A12AA197D861A002B4397 /* Build configuration list for PBXProject "Providing a Custom Sharing Extension to iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A67A12C9197D861B002B4397 /* Debug */,
+				A67A12CA197D861B002B4397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A67A12CB197D861B002B4397 /* Build configuration list for PBXNativeTarget "Providing a Custom Sharing Extension to iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A67A12CC197D861B002B4397 /* Debug */,
+				A67A12CD197D861B002B4397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A67A12CE197D861B002B4397 /* Build configuration list for PBXNativeTarget "Providing a Custom Sharing Extension to iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A67A12CF197D861B002B4397 /* Debug */,
+				A67A12D0197D861B002B4397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A67A12E2197D86F0002B4397 /* Build configuration list for PBXNativeTarget "ShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A67A12E3197D86F0002B4397 /* Debug */,
+				A67A12E4197D86F0002B4397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A67A12A7197D861A002B4397 /* Project object */;
+}

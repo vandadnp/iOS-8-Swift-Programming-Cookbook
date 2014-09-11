@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D28C85A19AB4D1700135AF6 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D28C85919AB4D1700135AF6 /* todo */; };
+		9DEE3FCF196964D500AB8A74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEE3FCE196964D500AB8A74 /* AppDelegate.swift */; };
+		9DEE3FD1196964D500AB8A74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEE3FD0196964D500AB8A74 /* ViewController.swift */; };
+		9DEE3FD4196964D500AB8A74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DEE3FD2196964D500AB8A74 /* Main.storyboard */; };
+		9DEE3FD6196964D500AB8A74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DEE3FD5196964D500AB8A74 /* Images.xcassets */; };
+		9DEE3FE2196964D500AB8A74 /* Completing_a_Long_Running_Task_in_the_BackgroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEE3FE1196964D500AB8A74 /* Completing_a_Long_Running_Task_in_the_BackgroundTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9DEE3FDC196964D500AB8A74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DEE3FC1196964D500AB8A74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DEE3FC8196964D500AB8A74;
+			remoteInfo = "Completing a Long-Running Task in the Background";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9D28C85919AB4D1700135AF6 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
+		9DEE3FC9196964D500AB8A74 /* Completing a Long-Running Task in the Background.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Completing a Long-Running Task in the Background.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DEE3FCD196964D500AB8A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DEE3FCE196964D500AB8A74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9DEE3FD0196964D500AB8A74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9DEE3FD3196964D500AB8A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9DEE3FD5196964D500AB8A74 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9DEE3FDB196964D500AB8A74 /* Completing a Long-Running Task in the BackgroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Completing a Long-Running Task in the BackgroundTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DEE3FE0196964D500AB8A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DEE3FE1196964D500AB8A74 /* Completing_a_Long_Running_Task_in_the_BackgroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Completing_a_Long_Running_Task_in_the_BackgroundTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9DEE3FC6196964D500AB8A74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DEE3FD8196964D500AB8A74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9DEE3FC0196964D500AB8A74 = {
+			isa = PBXGroup;
+			children = (
+				9D28C85919AB4D1700135AF6 /* todo */,
+				9DEE3FCB196964D500AB8A74 /* Completing a Long-Running Task in the Background */,
+				9DEE3FDE196964D500AB8A74 /* Completing a Long-Running Task in the BackgroundTests */,
+				9DEE3FCA196964D500AB8A74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9DEE3FCA196964D500AB8A74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DEE3FC9196964D500AB8A74 /* Completing a Long-Running Task in the Background.app */,
+				9DEE3FDB196964D500AB8A74 /* Completing a Long-Running Task in the BackgroundTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9DEE3FCB196964D500AB8A74 /* Completing a Long-Running Task in the Background */ = {
+			isa = PBXGroup;
+			children = (
+				9DEE3FCE196964D500AB8A74 /* AppDelegate.swift */,
+				9DEE3FD0196964D500AB8A74 /* ViewController.swift */,
+				9DEE3FD2196964D500AB8A74 /* Main.storyboard */,
+				9DEE3FD5196964D500AB8A74 /* Images.xcassets */,
+				9DEE3FCC196964D500AB8A74 /* Supporting Files */,
+			);
+			path = "Completing a Long-Running Task in the Background";
+			sourceTree = "<group>";
+		};
+		9DEE3FCC196964D500AB8A74 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9DEE3FCD196964D500AB8A74 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9DEE3FDE196964D500AB8A74 /* Completing a Long-Running Task in the BackgroundTests */ = {
+			isa = PBXGroup;
+			children = (
+				9DEE3FE1196964D500AB8A74 /* Completing_a_Long_Running_Task_in_the_BackgroundTests.swift */,
+				9DEE3FDF196964D500AB8A74 /* Supporting Files */,
+			);
+			path = "Completing a Long-Running Task in the BackgroundTests";
+			sourceTree = "<group>";
+		};
+		9DEE3FDF196964D500AB8A74 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9DEE3FE0196964D500AB8A74 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9DEE3FC8196964D500AB8A74 /* Completing a Long-Running Task in the Background */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DEE3FE5196964D500AB8A74 /* Build configuration list for PBXNativeTarget "Completing a Long-Running Task in the Background" */;
+			buildPhases = (
+				9DEE3FC5196964D500AB8A74 /* Sources */,
+				9DEE3FC6196964D500AB8A74 /* Frameworks */,
+				9DEE3FC7196964D500AB8A74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Completing a Long-Running Task in the Background";
+			productName = "Completing a Long-Running Task in the Background";
+			productReference = 9DEE3FC9196964D500AB8A74 /* Completing a Long-Running Task in the Background.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9DEE3FDA196964D500AB8A74 /* Completing a Long-Running Task in the BackgroundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DEE3FE8196964D500AB8A74 /* Build configuration list for PBXNativeTarget "Completing a Long-Running Task in the BackgroundTests" */;
+			buildPhases = (
+				9DEE3FD7196964D500AB8A74 /* Sources */,
+				9DEE3FD8196964D500AB8A74 /* Frameworks */,
+				9DEE3FD9196964D500AB8A74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DEE3FDD196964D500AB8A74 /* PBXTargetDependency */,
+			);
+			name = "Completing a Long-Running Task in the BackgroundTests";
+			productName = "Completing a Long-Running Task in the BackgroundTests";
+			productReference = 9DEE3FDB196964D500AB8A74 /* Completing a Long-Running Task in the BackgroundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9DEE3FC1196964D500AB8A74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Pixolity Ltd.";
+				TargetAttributes = {
+					9DEE3FC8196964D500AB8A74 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					9DEE3FDA196964D500AB8A74 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 9DEE3FC8196964D500AB8A74;
+					};
+				};
+			};
+			buildConfigurationList = 9DEE3FC4196964D500AB8A74 /* Build configuration list for PBXProject "Completing a Long-Running Task in the Background" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9DEE3FC0196964D500AB8A74;
+			productRefGroup = 9DEE3FCA196964D500AB8A74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9DEE3FC8196964D500AB8A74 /* Completing a Long-Running Task in the Background */,
+				9DEE3FDA196964D500AB8A74 /* Completing a Long-Running Task in the BackgroundTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9DEE3FC7196964D500AB8A74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D28C85A19AB4D1700135AF6 /* todo in Resources */,
+				9DEE3FD4196964D500AB8A74 /* Main.storyboard in Resources */,
+				9DEE3FD6196964D500AB8A74 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DEE3FD9196964D500AB8A74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9DEE3FC5196964D500AB8A74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DEE3FD1196964D500AB8A74 /* ViewController.swift in Sources */,
+				9DEE3FCF196964D500AB8A74 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DEE3FD7196964D500AB8A74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DEE3FE2196964D500AB8A74 /* Completing_a_Long_Running_Task_in_the_BackgroundTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DEE3FDD196964D500AB8A74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DEE3FC8196964D500AB8A74 /* Completing a Long-Running Task in the Background */;
+			targetProxy = 9DEE3FDC196964D500AB8A74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9DEE3FD2196964D500AB8A74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9DEE3FD3196964D500AB8A74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9DEE3FE3196964D500AB8A74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9DEE3FE4196964D500AB8A74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9DEE3FE6196964D500AB8A74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Completing a Long-Running Task in the Background/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9DEE3FE7196964D500AB8A74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Completing a Long-Running Task in the Background/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9DEE3FE9196964D500AB8A74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Completing a Long-Running Task in the Background.app/Completing a Long-Running Task in the Background";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Completing a Long-Running Task in the BackgroundTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		9DEE3FEA196964D500AB8A74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Completing a Long-Running Task in the Background.app/Completing a Long-Running Task in the Background";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Completing a Long-Running Task in the BackgroundTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9DEE3FC4196964D500AB8A74 /* Build configuration list for PBXProject "Completing a Long-Running Task in the Background" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DEE3FE3196964D500AB8A74 /* Debug */,
+				9DEE3FE4196964D500AB8A74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DEE3FE5196964D500AB8A74 /* Build configuration list for PBXNativeTarget "Completing a Long-Running Task in the Background" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DEE3FE6196964D500AB8A74 /* Debug */,
+				9DEE3FE7196964D500AB8A74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DEE3FE8196964D500AB8A74 /* Build configuration list for PBXNativeTarget "Completing a Long-Running Task in the BackgroundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DEE3FE9196964D500AB8A74 /* Debug */,
+				9DEE3FEA196964D500AB8A74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9DEE3FC1196964D500AB8A74 /* Project object */;
+}

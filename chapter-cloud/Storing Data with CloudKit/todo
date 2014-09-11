@@ -1,0 +1,8 @@
+1) I will reset the simulator
+2) I will log into the CloudKit dashboard and delete all data
+3) I will log into my iCloud account on the simulator
+4) I will then show the slides to the user
+5) I will then code the ViewController.swift file to the end
+6) I will run the code on the simulator
+7) I will then show them the CloudKit Dashboard on my browser and show them
+    the zones that have been created

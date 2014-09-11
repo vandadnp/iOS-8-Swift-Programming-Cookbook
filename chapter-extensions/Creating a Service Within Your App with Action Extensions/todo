@@ -1,0 +1,10 @@
+1) I'll show the slides
+2) I'll then show the project and show how to add the Action Extension Target
+3) I'll then show how the info.plist of the extension is configured to only
+    allow text files
+4) Then I will show the storyboard of the extension
+5) I will then show the storyboard of the main project
+6) I'll then code the ActionViewController.swift file
+7) I'll then code the ViewController.swift file
+8) I'll run the code on iPhone, put some text in and then press the Share button
+    and enable the UPPERCASE extension and use it

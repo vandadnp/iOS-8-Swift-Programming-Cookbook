@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A6AD1DFC1976CF00006AB781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD1DFB1976CF00006AB781 /* AppDelegate.swift */; };
+		A6AD1DFF1976CF00006AB781 /* Sorting_Data_in_Core_Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6AD1DFD1976CF00006AB781 /* Sorting_Data_in_Core_Data.xcdatamodeld */; };
+		A6AD1E011976CF00006AB781 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD1E001976CF00006AB781 /* ViewController.swift */; };
+		A6AD1E041976CF00006AB781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6AD1E021976CF00006AB781 /* Main.storyboard */; };
+		A6AD1E061976CF00006AB781 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6AD1E051976CF00006AB781 /* Images.xcassets */; };
+		A6AD1E121976CF00006AB781 /* Sorting_Data_in_Core_DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD1E111976CF00006AB781 /* Sorting_Data_in_Core_DataTests.swift */; };
+		A6AD1E1C1976CF21006AB781 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD1E1B1976CF21006AB781 /* Person.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A6AD1E0C1976CF00006AB781 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6AD1DEE1976CF00006AB781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6AD1DF51976CF00006AB781;
+			remoteInfo = "Sorting Data in Core Data";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A6AD1DF61976CF00006AB781 /* Sorting Data in Core Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sorting Data in Core Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6AD1DFA1976CF00006AB781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6AD1DFB1976CF00006AB781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A6AD1DFE1976CF00006AB781 /* Sorting_Data_in_Core_Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sorting_Data_in_Core_Data.xcdatamodel; sourceTree = "<group>"; };
+		A6AD1E001976CF00006AB781 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A6AD1E031976CF00006AB781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A6AD1E051976CF00006AB781 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A6AD1E0B1976CF00006AB781 /* Sorting Data in Core DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sorting Data in Core DataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6AD1E101976CF00006AB781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6AD1E111976CF00006AB781 /* Sorting_Data_in_Core_DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting_Data_in_Core_DataTests.swift; sourceTree = "<group>"; };
+		A6AD1E1B1976CF21006AB781 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6AD1DF31976CF00006AB781 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6AD1E081976CF00006AB781 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A6AD1DED1976CF00006AB781 = {
+			isa = PBXGroup;
+			children = (
+				A6AD1DF81976CF00006AB781 /* Sorting Data in Core Data */,
+				A6AD1E0E1976CF00006AB781 /* Sorting Data in Core DataTests */,
+				A6AD1DF71976CF00006AB781 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A6AD1DF71976CF00006AB781 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6AD1DF61976CF00006AB781 /* Sorting Data in Core Data.app */,
+				A6AD1E0B1976CF00006AB781 /* Sorting Data in Core DataTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6AD1DF81976CF00006AB781 /* Sorting Data in Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				A6AD1DFB1976CF00006AB781 /* AppDelegate.swift */,
+				A6AD1E001976CF00006AB781 /* ViewController.swift */,
+				A6AD1E021976CF00006AB781 /* Main.storyboard */,
+				A6AD1E051976CF00006AB781 /* Images.xcassets */,
+				A6AD1DFD1976CF00006AB781 /* Sorting_Data_in_Core_Data.xcdatamodeld */,
+				A6AD1E1B1976CF21006AB781 /* Person.swift */,
+				A6AD1DF91976CF00006AB781 /* Supporting Files */,
+			);
+			path = "Sorting Data in Core Data";
+			sourceTree = "<group>";
+		};
+		A6AD1DF91976CF00006AB781 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6AD1DFA1976CF00006AB781 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6AD1E0E1976CF00006AB781 /* Sorting Data in Core DataTests */ = {
+			isa = PBXGroup;
+			children = (
+				A6AD1E111976CF00006AB781 /* Sorting_Data_in_Core_DataTests.swift */,
+				A6AD1E0F1976CF00006AB781 /* Supporting Files */,
+			);
+			path = "Sorting Data in Core DataTests";
+			sourceTree = "<group>";
+		};
+		A6AD1E0F1976CF00006AB781 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6AD1E101976CF00006AB781 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6AD1DF51976CF00006AB781 /* Sorting Data in Core Data */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6AD1E151976CF00006AB781 /* Build configuration list for PBXNativeTarget "Sorting Data in Core Data" */;
+			buildPhases = (
+				A6AD1DF21976CF00006AB781 /* Sources */,
+				A6AD1DF31976CF00006AB781 /* Frameworks */,
+				A6AD1DF41976CF00006AB781 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sorting Data in Core Data";
+			productName = "Sorting Data in Core Data";
+			productReference = A6AD1DF61976CF00006AB781 /* Sorting Data in Core Data.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A6AD1E0A1976CF00006AB781 /* Sorting Data in Core DataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6AD1E181976CF00006AB781 /* Build configuration list for PBXNativeTarget "Sorting Data in Core DataTests" */;
+			buildPhases = (
+				A6AD1E071976CF00006AB781 /* Sources */,
+				A6AD1E081976CF00006AB781 /* Frameworks */,
+				A6AD1E091976CF00006AB781 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6AD1E0D1976CF00006AB781 /* PBXTargetDependency */,
+			);
+			name = "Sorting Data in Core DataTests";
+			productName = "Sorting Data in Core DataTests";
+			productReference = A6AD1E0B1976CF00006AB781 /* Sorting Data in Core DataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6AD1DEE1976CF00006AB781 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Pixolity Ltd.";
+				TargetAttributes = {
+					A6AD1DF51976CF00006AB781 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					A6AD1E0A1976CF00006AB781 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = A6AD1DF51976CF00006AB781;
+					};
+				};
+			};
+			buildConfigurationList = A6AD1DF11976CF00006AB781 /* Build configuration list for PBXProject "Sorting Data in Core Data" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A6AD1DED1976CF00006AB781;
+			productRefGroup = A6AD1DF71976CF00006AB781 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6AD1DF51976CF00006AB781 /* Sorting Data in Core Data */,
+				A6AD1E0A1976CF00006AB781 /* Sorting Data in Core DataTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6AD1DF41976CF00006AB781 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6AD1E041976CF00006AB781 /* Main.storyboard in Resources */,
+				A6AD1E061976CF00006AB781 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6AD1E091976CF00006AB781 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6AD1DF21976CF00006AB781 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6AD1E011976CF00006AB781 /* ViewController.swift in Sources */,
+				A6AD1DFF1976CF00006AB781 /* Sorting_Data_in_Core_Data.xcdatamodeld in Sources */,
+				A6AD1E1C1976CF21006AB781 /* Person.swift in Sources */,
+				A6AD1DFC1976CF00006AB781 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6AD1E071976CF00006AB781 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6AD1E121976CF00006AB781 /* Sorting_Data_in_Core_DataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A6AD1E0D1976CF00006AB781 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6AD1DF51976CF00006AB781 /* Sorting Data in Core Data */;
+			targetProxy = A6AD1E0C1976CF00006AB781 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A6AD1E021976CF00006AB781 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6AD1E031976CF00006AB781 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A6AD1E131976CF00006AB781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A6AD1E141976CF00006AB781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6AD1E161976CF00006AB781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Sorting Data in Core Data/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A6AD1E171976CF00006AB781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Sorting Data in Core Data/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A6AD1E191976CF00006AB781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sorting Data in Core Data.app/Sorting Data in Core Data";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Sorting Data in Core DataTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		A6AD1E1A1976CF00006AB781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sorting Data in Core Data.app/Sorting Data in Core Data";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Sorting Data in Core DataTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6AD1DF11976CF00006AB781 /* Build configuration list for PBXProject "Sorting Data in Core Data" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6AD1E131976CF00006AB781 /* Debug */,
+				A6AD1E141976CF00006AB781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6AD1E151976CF00006AB781 /* Build configuration list for PBXNativeTarget "Sorting Data in Core Data" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6AD1E161976CF00006AB781 /* Debug */,
+				A6AD1E171976CF00006AB781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A6AD1E181976CF00006AB781 /* Build configuration list for PBXNativeTarget "Sorting Data in Core DataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6AD1E191976CF00006AB781 /* Debug */,
+				A6AD1E1A1976CF00006AB781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A6AD1DFD1976CF00006AB781 /* Sorting_Data_in_Core_Data.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A6AD1DFE1976CF00006AB781 /* Sorting_Data_in_Core_Data.xcdatamodel */,
+			);
+			currentVersion = A6AD1DFE1976CF00006AB781 /* Sorting_Data_in_Core_Data.xcdatamodel */;
+			path = Sorting_Data_in_Core_Data.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A6AD1DEE1976CF00006AB781 /* Project object */;
+}

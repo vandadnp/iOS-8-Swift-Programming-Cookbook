@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Creating and Managing Folders for Apps in iCloud.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>154</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>A6177156197BB1B7008D1357</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A6177168197BB1B8008D1357</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

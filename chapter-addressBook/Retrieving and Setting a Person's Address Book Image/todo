@@ -1,0 +1,8 @@
+1) I will reset the simulator and explain that the app has an image in its
+    Images.xcasstes which we will use to set the image for the person that
+    we are going to create in the address book
+2) there are no slides for this recipe
+3) I will then program AppDelegate.swift to the end
+4) I will run the app
+5) I will show Richard Branson on the simulator and the image that
+    has been added for that person

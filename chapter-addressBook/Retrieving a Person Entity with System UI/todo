@@ -1,0 +1,7 @@
+1) I will make sure that the simulator is reset
+2) I will show that there are a few contacts that have already been added
+    to the simulator by Apple and that they have various properties
+3) There are no slides for this project so I will skip over this
+4) I will show the storyboard and the button on the UI
+5) I will then code ViewController.swift to the end
+6) I will run the code on the simulator

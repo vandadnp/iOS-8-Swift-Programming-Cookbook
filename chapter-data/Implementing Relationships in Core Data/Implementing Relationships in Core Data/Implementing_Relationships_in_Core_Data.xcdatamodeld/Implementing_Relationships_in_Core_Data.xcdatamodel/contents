@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6198" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Employee" representedClassName="Employee">
+        <attribute name="age" optional="YES" attributeType="Integer 32" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <attribute name="firstName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="lastName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="managers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Manager" inverseName="employees" inverseEntity="Manager" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <entity name="Manager" representedClassName="Manager">
+        <attribute name="age" optional="YES" attributeType="Integer 32" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <attribute name="firstName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="lastName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="employees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Employee" inverseName="managers" inverseEntity="Employee" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <elements>
+        <element name="Manager" positionX="-36" positionY="9" width="128" height="103"/>
+        <element name="Employee" positionX="0" positionY="45" width="128" height="103"/>
+    </elements>
+</model>

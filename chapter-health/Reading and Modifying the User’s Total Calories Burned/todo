@@ -1,0 +1,8 @@
+1) I will first show the slides to the end
+2) Then I will show the storyboard and let them know that there are 2 view controllers
+    involved and which one does what
+3) Then I will program the AddBurnedCaloriesToDietViewController.swift to the end
+4) And then I will program the ListCaloriesBurnedTableViewController.swift to the end
+5) I will then reset the simulator and run the app on it and add a few values
+6) And will then open the Health app on the device and show the values
+    that we stored

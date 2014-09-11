@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Authenticating_the_User_with_Touch_ID" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkV-rr-zkB">
+                                <rect key="frame" x="148" y="58" width="184" height="30"/>
+                                <state key="normal" title="Authenticate with Touch ID">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="useTouchId:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iTV-XI-xyV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnM-4k-fuN">
+                                <rect key="frame" x="148" y="20" width="184" height="30"/>
+                                <state key="normal" title="Check Touch ID availability">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkTouchIdAvailability:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqB-bz-mpB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zkV-rr-zkB" firstAttribute="leading" secondItem="VnM-4k-fuN" secondAttribute="leading" id="241-pY-vaR"/>
+                            <constraint firstItem="zkV-rr-zkB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UsG-ts-dxm"/>
+                            <constraint firstItem="VnM-4k-fuN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="uIA-QB-2jE"/>
+                            <constraint firstItem="zkV-rr-zkB" firstAttribute="top" secondItem="VnM-4k-fuN" secondAttribute="bottom" constant="8" symbolic="YES" id="xvt-vX-Z9S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonCheckTouchId" destination="VnM-4k-fuN" id="I6a-ON-wSf"/>
+                        <outlet property="buttonUseTouchId" destination="zkV-rr-zkB" id="RoC-Df-dGd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

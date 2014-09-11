@@ -1,0 +1,7 @@
+1) I will reset the simulator
+2) Then I will show the data model and the Person.swift class briefly
+3) I will then show the slides
+4) And then I will code the AppDelegate.swift file
+5) I will then put a breakpoint to where the objects are brought to the main
+    context and run the code on the simulator and then I will call the println()
+    on the firstName of the persons that were found and run the code again

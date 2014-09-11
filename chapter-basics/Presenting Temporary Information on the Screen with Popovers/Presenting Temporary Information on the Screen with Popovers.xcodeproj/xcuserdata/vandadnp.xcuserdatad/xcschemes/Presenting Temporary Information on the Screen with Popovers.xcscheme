@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0600"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9D6C5B9E195D4B3900766271"
+               BuildableName = "Presenting Temporary Information on the Screen with Popovers.app"
+               BlueprintName = "Presenting Temporary Information on the Screen with Popovers"
+               ReferencedContainer = "container:Presenting Temporary Information on the Screen with Popovers.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9D6C5BB0195D4B3900766271"
+               BuildableName = "Presenting Temporary Information on the Screen with PopoversTests.xctest"
+               BlueprintName = "Presenting Temporary Information on the Screen with PopoversTests"
+               ReferencedContainer = "container:Presenting Temporary Information on the Screen with Popovers.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9D6C5B9E195D4B3900766271"
+            BuildableName = "Presenting Temporary Information on the Screen with Popovers.app"
+            BlueprintName = "Presenting Temporary Information on the Screen with Popovers"
+            ReferencedContainer = "container:Presenting Temporary Information on the Screen with Popovers.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9D6C5B9E195D4B3900766271"
+            BuildableName = "Presenting Temporary Information on the Screen with Popovers.app"
+            BlueprintName = "Presenting Temporary Information on the Screen with Popovers"
+            ReferencedContainer = "container:Presenting Temporary Information on the Screen with Popovers.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9D6C5B9E195D4B3900766271"
+            BuildableName = "Presenting Temporary Information on the Screen with Popovers.app"
+            BlueprintName = "Presenting Temporary Information on the Screen with Popovers"
+            ReferencedContainer = "container:Presenting Temporary Information on the Screen with Popovers.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

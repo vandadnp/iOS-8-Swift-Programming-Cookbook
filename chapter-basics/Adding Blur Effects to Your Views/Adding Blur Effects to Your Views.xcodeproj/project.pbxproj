@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D9EE74119A8E6410055B347 /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9D9EE74019A8E6410055B347 /* slides.key */; };
+		9D9EE74A19A8F0DC0055B347 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D9EE74919A8F0DC0055B347 /* todo */; };
+		9DB3F2B2195C8398009A4864 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3F2B1195C8398009A4864 /* AppDelegate.swift */; };
+		9DB3F2B4195C8398009A4864 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3F2B3195C8398009A4864 /* ViewController.swift */; };
+		9DB3F2B7195C8398009A4864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB3F2B5195C8398009A4864 /* Main.storyboard */; };
+		9DB3F2B9195C8398009A4864 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB3F2B8195C8398009A4864 /* Images.xcassets */; };
+		9DB3F2C5195C8398009A4864 /* Adding_Blur_Effects_to_Your_ViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3F2C4195C8398009A4864 /* Adding_Blur_Effects_to_Your_ViewsTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9DB3F2BF195C8398009A4864 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DB3F2A4195C8398009A4864 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DB3F2AB195C8398009A4864;
+			remoteInfo = "Adding Blur Effects to Your Views";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9D9EE74019A8E6410055B347 /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
+		9D9EE74919A8F0DC0055B347 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
+		9DB3F2AC195C8398009A4864 /* Adding Blur Effects to Your Views.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Adding Blur Effects to Your Views.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DB3F2B0195C8398009A4864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DB3F2B1195C8398009A4864 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9DB3F2B3195C8398009A4864 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9DB3F2B6195C8398009A4864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9DB3F2B8195C8398009A4864 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9DB3F2BE195C8398009A4864 /* Adding Blur Effects to Your ViewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Adding Blur Effects to Your ViewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DB3F2C3195C8398009A4864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DB3F2C4195C8398009A4864 /* Adding_Blur_Effects_to_Your_ViewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adding_Blur_Effects_to_Your_ViewsTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9DB3F2A9195C8398009A4864 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DB3F2BB195C8398009A4864 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D9EE73F19A8E4D70055B347 /* slides */ = {
+			isa = PBXGroup;
+			children = (
+				9D9EE74019A8E6410055B347 /* slides.key */,
+			);
+			name = slides;
+			sourceTree = "<group>";
+		};
+		9DB3F2A3195C8398009A4864 = {
+			isa = PBXGroup;
+			children = (
+				9D9EE74919A8F0DC0055B347 /* todo */,
+				9D9EE73F19A8E4D70055B347 /* slides */,
+				9DB3F2AE195C8398009A4864 /* Adding Blur Effects to Your Views */,
+				9DB3F2C1195C8398009A4864 /* Adding Blur Effects to Your ViewsTests */,
+				9DB3F2AD195C8398009A4864 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9DB3F2AD195C8398009A4864 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DB3F2AC195C8398009A4864 /* Adding Blur Effects to Your Views.app */,
+				9DB3F2BE195C8398009A4864 /* Adding Blur Effects to Your ViewsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9DB3F2AE195C8398009A4864 /* Adding Blur Effects to Your Views */ = {
+			isa = PBXGroup;
+			children = (
+				9DB3F2B1195C8398009A4864 /* AppDelegate.swift */,
+				9DB3F2B3195C8398009A4864 /* ViewController.swift */,
+				9DB3F2B5195C8398009A4864 /* Main.storyboard */,
+				9DB3F2B8195C8398009A4864 /* Images.xcassets */,
+				9DB3F2AF195C8398009A4864 /* Supporting Files */,
+			);
+			path = "Adding Blur Effects to Your Views";
+			sourceTree = "<group>";
+		};
+		9DB3F2AF195C8398009A4864 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9DB3F2B0195C8398009A4864 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9DB3F2C1195C8398009A4864 /* Adding Blur Effects to Your ViewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				9DB3F2C4195C8398009A4864 /* Adding_Blur_Effects_to_Your_ViewsTests.swift */,
+				9DB3F2C2195C8398009A4864 /* Supporting Files */,
+			);
+			path = "Adding Blur Effects to Your ViewsTests";
+			sourceTree = "<group>";
+		};
+		9DB3F2C2195C8398009A4864 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9DB3F2C3195C8398009A4864 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9DB3F2AB195C8398009A4864 /* Adding Blur Effects to Your Views */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DB3F2C8195C8398009A4864 /* Build configuration list for PBXNativeTarget "Adding Blur Effects to Your Views" */;
+			buildPhases = (
+				9DB3F2A8195C8398009A4864 /* Sources */,
+				9DB3F2A9195C8398009A4864 /* Frameworks */,
+				9DB3F2AA195C8398009A4864 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Adding Blur Effects to Your Views";
+			productName = "Adding Blur Effects to Your Views";
+			productReference = 9DB3F2AC195C8398009A4864 /* Adding Blur Effects to Your Views.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9DB3F2BD195C8398009A4864 /* Adding Blur Effects to Your ViewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DB3F2CB195C8398009A4864 /* Build configuration list for PBXNativeTarget "Adding Blur Effects to Your ViewsTests" */;
+			buildPhases = (
+				9DB3F2BA195C8398009A4864 /* Sources */,
+				9DB3F2BB195C8398009A4864 /* Frameworks */,
+				9DB3F2BC195C8398009A4864 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DB3F2C0195C8398009A4864 /* PBXTargetDependency */,
+			);
+			name = "Adding Blur Effects to Your ViewsTests";
+			productName = "Adding Blur Effects to Your ViewsTests";
+			productReference = 9DB3F2BE195C8398009A4864 /* Adding Blur Effects to Your ViewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9DB3F2A4195C8398009A4864 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Pixolity Ltd.";
+				TargetAttributes = {
+					9DB3F2AB195C8398009A4864 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					9DB3F2BD195C8398009A4864 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 9DB3F2AB195C8398009A4864;
+					};
+				};
+			};
+			buildConfigurationList = 9DB3F2A7195C8398009A4864 /* Build configuration list for PBXProject "Adding Blur Effects to Your Views" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9DB3F2A3195C8398009A4864;
+			productRefGroup = 9DB3F2AD195C8398009A4864 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9DB3F2AB195C8398009A4864 /* Adding Blur Effects to Your Views */,
+				9DB3F2BD195C8398009A4864 /* Adding Blur Effects to Your ViewsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9DB3F2AA195C8398009A4864 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DB3F2B7195C8398009A4864 /* Main.storyboard in Resources */,
+				9DB3F2B9195C8398009A4864 /* Images.xcassets in Resources */,
+				9D9EE74A19A8F0DC0055B347 /* todo in Resources */,
+				9D9EE74119A8E6410055B347 /* slides.key in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DB3F2BC195C8398009A4864 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9DB3F2A8195C8398009A4864 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DB3F2B4195C8398009A4864 /* ViewController.swift in Sources */,
+				9DB3F2B2195C8398009A4864 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DB3F2BA195C8398009A4864 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DB3F2C5195C8398009A4864 /* Adding_Blur_Effects_to_Your_ViewsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DB3F2C0195C8398009A4864 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DB3F2AB195C8398009A4864 /* Adding Blur Effects to Your Views */;
+			targetProxy = 9DB3F2BF195C8398009A4864 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9DB3F2B5195C8398009A4864 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9DB3F2B6195C8398009A4864 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9DB3F2C6195C8398009A4864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9DB3F2C7195C8398009A4864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9DB3F2C9195C8398009A4864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Adding Blur Effects to Your Views/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9DB3F2CA195C8398009A4864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Adding Blur Effects to Your Views/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9DB3F2CC195C8398009A4864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Adding Blur Effects to Your Views.app/Adding Blur Effects to Your Views";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Adding Blur Effects to Your ViewsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		9DB3F2CD195C8398009A4864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Adding Blur Effects to Your Views.app/Adding Blur Effects to Your Views";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Adding Blur Effects to Your ViewsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9DB3F2A7195C8398009A4864 /* Build configuration list for PBXProject "Adding Blur Effects to Your Views" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DB3F2C6195C8398009A4864 /* Debug */,
+				9DB3F2C7195C8398009A4864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DB3F2C8195C8398009A4864 /* Build configuration list for PBXNativeTarget "Adding Blur Effects to Your Views" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DB3F2C9195C8398009A4864 /* Debug */,
+				9DB3F2CA195C8398009A4864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DB3F2CB195C8398009A4864 /* Build configuration list for PBXNativeTarget "Adding Blur Effects to Your ViewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DB3F2CC195C8398009A4864 /* Debug */,
+				9DB3F2CD195C8398009A4864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9DB3F2A4195C8398009A4864 /* Project object */;
+}

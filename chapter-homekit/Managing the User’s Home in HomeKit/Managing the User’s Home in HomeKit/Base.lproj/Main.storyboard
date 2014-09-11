@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Nz-xp-AXc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+    </dependencies>
+    <scenes>
+        <!--All Homes-->
+        <scene sceneID="8Nh-SE-SSU">
+            <objects>
+                <tableViewController id="Z53-Ky-Y9w" customClass="ListHomesViewController" customModule="Managing_the_User_s_Home_in_HomeKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BZx-91-P6R">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="tre-j2-A2t" detailTextLabel="VIT-1A-lpg" style="IBUITableViewCellStyleSubtitle" id="7ae-2z-cHm">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7ae-2z-cHm" id="moT-4Q-Jng">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tre-j2-A2t">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VIT-1A-lpg">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Z53-Ky-Y9w" id="hOi-W3-0o1"/>
+                            <outlet property="delegate" destination="Z53-Ky-Y9w" id="r6f-9S-Gdt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="All Homes" id="5a3-KZ-ivU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZgB-Wl-XFP">
+                            <connections>
+                                <segue destination="3ok-oe-JR0" kind="show" identifier="addHome" id="nF5-9j-Cve"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQF-9c-hoG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="148"/>
+        </scene>
+        <!--Add Home-->
+        <scene sceneID="4dL-IF-c0b">
+            <objects>
+                <viewController id="3ok-oe-JR0" customClass="AddHomeViewController" customModule="Managing_the_User_s_Home_in_HomeKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lS2-7Q-wj1"/>
+                        <viewControllerLayoutGuide type="bottom" id="b3T-bS-G6O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hbg-Ub-GYh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the name of the home here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fGJ-91-5BS">
+                                <rect key="frame" x="20" y="87" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fGJ-91-5BS" firstAttribute="top" secondItem="lS2-7Q-wj1" secondAttribute="bottom" constant="23" id="2Uu-qZ-XMa"/>
+                            <constraint firstItem="fGJ-91-5BS" firstAttribute="leading" secondItem="Hbg-Ub-GYh" secondAttribute="leading" constant="20" symbolic="YES" id="8Eo-8x-qfg"/>
+                            <constraint firstAttribute="trailing" secondItem="fGJ-91-5BS" secondAttribute="trailing" constant="20" symbolic="YES" id="dca-kJ-W4q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Home" id="AKl-Hc-pxb">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="6hK-vg-niw">
+                            <connections>
+                                <action selector="addHome" destination="3ok-oe-JR0" id="bq7-9O-lgG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="fGJ-91-5BS" id="HyL-Fi-gZZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zi0-6f-4Rr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="148"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F8t-cv-VAm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Nz-xp-AXc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FMM-1P-c36">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Z53-Ky-Y9w" kind="relationship" relationship="rootViewController" id="DP0-jO-pRr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yyn-ed-VjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-241" y="148"/>
+        </scene>
+    </scenes>
+</document>

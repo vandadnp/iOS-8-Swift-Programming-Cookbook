@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Observing Changes to Records in CloudKit
+
+  Created by vandad on 197//14.
+  Copyright (c) 2014 Pixolity Ltd. All rights reserved.
+*/
+"creationAlertBodyKey" = "A new car is inserted into the cloud";
+"creationAlertActionKey" = "Show me";

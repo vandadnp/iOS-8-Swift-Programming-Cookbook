@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9DB7F2281959E535007DF05C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7F2271959E535007DF05C /* AppDelegate.swift */; };
+		9DB7F22A1959E535007DF05C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7F2291959E535007DF05C /* Images.xcassets */; };
+		9DB7F2361959E535007DF05C /* Adding_Alarms_to_CalendarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7F2351959E535007DF05C /* Adding_Alarms_to_CalendarsTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9DB7F2301959E535007DF05C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DB7F21A1959E535007DF05C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DB7F2211959E535007DF05C;
+			remoteInfo = "Adding Alarms to Calendars";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9DB7F2221959E535007DF05C /* Adding Alarms to Calendars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Adding Alarms to Calendars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DB7F2261959E535007DF05C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DB7F2271959E535007DF05C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9DB7F2291959E535007DF05C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9DB7F22F1959E535007DF05C /* Adding Alarms to CalendarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Adding Alarms to CalendarsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DB7F2341959E535007DF05C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DB7F2351959E535007DF05C /* Adding_Alarms_to_CalendarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adding_Alarms_to_CalendarsTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9DB7F21F1959E535007DF05C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DB7F22C1959E535007DF05C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9DB7F2191959E535007DF05C = {
+			isa = PBXGroup;
+			children = (
+				9DB7F2241959E535007DF05C /* Adding Alarms to Calendars */,
+				9DB7F2321959E535007DF05C /* Adding Alarms to CalendarsTests */,
+				9DB7F2231959E535007DF05C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9DB7F2231959E535007DF05C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DB7F2221959E535007DF05C /* Adding Alarms to Calendars.app */,
+				9DB7F22F1959E535007DF05C /* Adding Alarms to CalendarsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9DB7F2241959E535007DF05C /* Adding Alarms to Calendars */ = {
+			isa = PBXGroup;
+			children = (
+				9DB7F2271959E535007DF05C /* AppDelegate.swift */,
+				9DB7F2291959E535007DF05C /* Images.xcassets */,
+				9DB7F2251959E535007DF05C /* Supporting Files */,
+			);
+			path = "Adding Alarms to Calendars";
+			sourceTree = "<group>";
+		};
+		9DB7F2251959E535007DF05C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9DB7F2261959E535007DF05C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9DB7F2321959E535007DF05C /* Adding Alarms to CalendarsTests */ = {
+			isa = PBXGroup;
+			children = (
+				9DB7F2351959E535007DF05C /* Adding_Alarms_to_CalendarsTests.swift */,
+				9DB7F2331959E535007DF05C /* Supporting Files */,
+			);
+			path = "Adding Alarms to CalendarsTests";
+			sourceTree = "<group>";
+		};
+		9DB7F2331959E535007DF05C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9DB7F2341959E535007DF05C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9DB7F2211959E535007DF05C /* Adding Alarms to Calendars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DB7F2391959E535007DF05C /* Build configuration list for PBXNativeTarget "Adding Alarms to Calendars" */;
+			buildPhases = (
+				9DB7F21E1959E535007DF05C /* Sources */,
+				9DB7F21F1959E535007DF05C /* Frameworks */,
+				9DB7F2201959E535007DF05C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Adding Alarms to Calendars";
+			productName = "Adding Alarms to Calendars";
+			productReference = 9DB7F2221959E535007DF05C /* Adding Alarms to Calendars.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9DB7F22E1959E535007DF05C /* Adding Alarms to CalendarsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DB7F23C1959E535007DF05C /* Build configuration list for PBXNativeTarget "Adding Alarms to CalendarsTests" */;
+			buildPhases = (
+				9DB7F22B1959E535007DF05C /* Sources */,
+				9DB7F22C1959E535007DF05C /* Frameworks */,
+				9DB7F22D1959E535007DF05C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DB7F2311959E535007DF05C /* PBXTargetDependency */,
+			);
+			name = "Adding Alarms to CalendarsTests";
+			productName = "Adding Alarms to CalendarsTests";
+			productReference = 9DB7F22F1959E535007DF05C /* Adding Alarms to CalendarsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9DB7F21A1959E535007DF05C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Pixolity Ltd.";
+				TargetAttributes = {
+					9DB7F2211959E535007DF05C = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					9DB7F22E1959E535007DF05C = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 9DB7F2211959E535007DF05C;
+					};
+				};
+			};
+			buildConfigurationList = 9DB7F21D1959E535007DF05C /* Build configuration list for PBXProject "Adding Alarms to Calendars" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9DB7F2191959E535007DF05C;
+			productRefGroup = 9DB7F2231959E535007DF05C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9DB7F2211959E535007DF05C /* Adding Alarms to Calendars */,
+				9DB7F22E1959E535007DF05C /* Adding Alarms to CalendarsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9DB7F2201959E535007DF05C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DB7F22A1959E535007DF05C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DB7F22D1959E535007DF05C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9DB7F21E1959E535007DF05C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DB7F2281959E535007DF05C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DB7F22B1959E535007DF05C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DB7F2361959E535007DF05C /* Adding_Alarms_to_CalendarsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DB7F2311959E535007DF05C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DB7F2211959E535007DF05C /* Adding Alarms to Calendars */;
+			targetProxy = 9DB7F2301959E535007DF05C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9DB7F2371959E535007DF05C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9DB7F2381959E535007DF05C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9DB7F23A1959E535007DF05C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Adding Alarms to Calendars/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9DB7F23B1959E535007DF05C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Adding Alarms to Calendars/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9DB7F23D1959E535007DF05C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Adding Alarms to Calendars.app/Adding Alarms to Calendars";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Adding Alarms to CalendarsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		9DB7F23E1959E535007DF05C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Adding Alarms to Calendars.app/Adding Alarms to Calendars";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Adding Alarms to CalendarsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9DB7F21D1959E535007DF05C /* Build configuration list for PBXProject "Adding Alarms to Calendars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DB7F2371959E535007DF05C /* Debug */,
+				9DB7F2381959E535007DF05C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DB7F2391959E535007DF05C /* Build configuration list for PBXNativeTarget "Adding Alarms to Calendars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DB7F23A1959E535007DF05C /* Debug */,
+				9DB7F23B1959E535007DF05C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9DB7F23C1959E535007DF05C /* Build configuration list for PBXNativeTarget "Adding Alarms to CalendarsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DB7F23D1959E535007DF05C /* Debug */,
+				9DB7F23E1959E535007DF05C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9DB7F21A1959E535007DF05C /* Project object */;
+}

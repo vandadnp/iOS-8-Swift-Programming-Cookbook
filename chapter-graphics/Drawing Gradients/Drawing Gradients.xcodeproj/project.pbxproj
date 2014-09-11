@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D9C64DE195AB40000FD89DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9C64DD195AB40000FD89DB /* AppDelegate.swift */; };
+		9D9C64E0195AB40000FD89DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9C64DF195AB40000FD89DB /* ViewController.swift */; };
+		9D9C64E3195AB40000FD89DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D9C64E1195AB40000FD89DB /* Main.storyboard */; };
+		9D9C64E5195AB40000FD89DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D9C64E4195AB40000FD89DB /* Images.xcassets */; };
+		9D9C64F1195AB40000FD89DB /* Drawing_GradientsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9C64F0195AB40000FD89DB /* Drawing_GradientsTests.swift */; };
+		9D9C64FB195AB40800FD89DB /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9C64FA195AB40800FD89DB /* View.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9D9C64EB195AB40000FD89DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D9C64D0195AB40000FD89DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D9C64D7195AB40000FD89DB;
+			remoteInfo = "Drawing Gradients";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9D9C64D8195AB40000FD89DB /* Drawing Gradients.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drawing Gradients.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D9C64DC195AB40000FD89DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D9C64DD195AB40000FD89DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9D9C64DF195AB40000FD89DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9D9C64E2195AB40000FD89DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D9C64E4195AB40000FD89DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9D9C64EA195AB40000FD89DB /* Drawing GradientsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Drawing GradientsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D9C64EF195AB40000FD89DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D9C64F0195AB40000FD89DB /* Drawing_GradientsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing_GradientsTests.swift; sourceTree = "<group>"; };
+		9D9C64FA195AB40800FD89DB /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D9C64D5195AB40000FD89DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9C64E7195AB40000FD89DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D9C64CF195AB40000FD89DB = {
+			isa = PBXGroup;
+			children = (
+				9D9C64DA195AB40000FD89DB /* Drawing Gradients */,
+				9D9C64ED195AB40000FD89DB /* Drawing GradientsTests */,
+				9D9C64D9195AB40000FD89DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9D9C64D9195AB40000FD89DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D9C64D8195AB40000FD89DB /* Drawing Gradients.app */,
+				9D9C64EA195AB40000FD89DB /* Drawing GradientsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D9C64DA195AB40000FD89DB /* Drawing Gradients */ = {
+			isa = PBXGroup;
+			children = (
+				9D9C64DD195AB40000FD89DB /* AppDelegate.swift */,
+				9D9C64DF195AB40000FD89DB /* ViewController.swift */,
+				9D9C64E1195AB40000FD89DB /* Main.storyboard */,
+				9D9C64E4195AB40000FD89DB /* Images.xcassets */,
+				9D9C64DB195AB40000FD89DB /* Supporting Files */,
+				9D9C64FA195AB40800FD89DB /* View.swift */,
+			);
+			path = "Drawing Gradients";
+			sourceTree = "<group>";
+		};
+		9D9C64DB195AB40000FD89DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D9C64DC195AB40000FD89DB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D9C64ED195AB40000FD89DB /* Drawing GradientsTests */ = {
+			isa = PBXGroup;
+			children = (
+				9D9C64F0195AB40000FD89DB /* Drawing_GradientsTests.swift */,
+				9D9C64EE195AB40000FD89DB /* Supporting Files */,
+			);
+			path = "Drawing GradientsTests";
+			sourceTree = "<group>";
+		};
+		9D9C64EE195AB40000FD89DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D9C64EF195AB40000FD89DB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D9C64D7195AB40000FD89DB /* Drawing Gradients */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D9C64F4195AB40000FD89DB /* Build configuration list for PBXNativeTarget "Drawing Gradients" */;
+			buildPhases = (
+				9D9C64D4195AB40000FD89DB /* Sources */,
+				9D9C64D5195AB40000FD89DB /* Frameworks */,
+				9D9C64D6195AB40000FD89DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Drawing Gradients";
+			productName = "Drawing Gradients";
+			productReference = 9D9C64D8195AB40000FD89DB /* Drawing Gradients.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9D9C64E9195AB40000FD89DB /* Drawing GradientsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D9C64F7195AB40000FD89DB /* Build configuration list for PBXNativeTarget "Drawing GradientsTests" */;
+			buildPhases = (
+				9D9C64E6195AB40000FD89DB /* Sources */,
+				9D9C64E7195AB40000FD89DB /* Frameworks */,
+				9D9C64E8195AB40000FD89DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D9C64EC195AB40000FD89DB /* PBXTargetDependency */,
+			);
+			name = "Drawing GradientsTests";
+			productName = "Drawing GradientsTests";
+			productReference = 9D9C64EA195AB40000FD89DB /* Drawing GradientsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D9C64D0195AB40000FD89DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Pixolity Ltd.";
+				TargetAttributes = {
+					9D9C64D7195AB40000FD89DB = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					9D9C64E9195AB40000FD89DB = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 9D9C64D7195AB40000FD89DB;
+					};
+				};
+			};
+			buildConfigurationList = 9D9C64D3195AB40000FD89DB /* Build configuration list for PBXProject "Drawing Gradients" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9D9C64CF195AB40000FD89DB;
+			productRefGroup = 9D9C64D9195AB40000FD89DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D9C64D7195AB40000FD89DB /* Drawing Gradients */,
+				9D9C64E9195AB40000FD89DB /* Drawing GradientsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D9C64D6195AB40000FD89DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D9C64E3195AB40000FD89DB /* Main.storyboard in Resources */,
+				9D9C64E5195AB40000FD89DB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9C64E8195AB40000FD89DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D9C64D4195AB40000FD89DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D9C64E0195AB40000FD89DB /* ViewController.swift in Sources */,
+				9D9C64DE195AB40000FD89DB /* AppDelegate.swift in Sources */,
+				9D9C64FB195AB40800FD89DB /* View.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9C64E6195AB40000FD89DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D9C64F1195AB40000FD89DB /* Drawing_GradientsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D9C64EC195AB40000FD89DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D9C64D7195AB40000FD89DB /* Drawing Gradients */;
+			targetProxy = 9D9C64EB195AB40000FD89DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9D9C64E1195AB40000FD89DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D9C64E2195AB40000FD89DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D9C64F2195AB40000FD89DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9D9C64F3195AB40000FD89DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D9C64F5195AB40000FD89DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Drawing Gradients/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9D9C64F6195AB40000FD89DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Drawing Gradients/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9D9C64F8195AB40000FD89DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Drawing Gradients.app/Drawing Gradients";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Drawing GradientsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		9D9C64F9195AB40000FD89DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Drawing Gradients.app/Drawing Gradients";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Drawing GradientsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D9C64D3195AB40000FD89DB /* Build configuration list for PBXProject "Drawing Gradients" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D9C64F2195AB40000FD89DB /* Debug */,
+				9D9C64F3195AB40000FD89DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D9C64F4195AB40000FD89DB /* Build configuration list for PBXNativeTarget "Drawing Gradients" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D9C64F5195AB40000FD89DB /* Debug */,
+				9D9C64F6195AB40000FD89DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9D9C64F7195AB40000FD89DB /* Build configuration list for PBXNativeTarget "Drawing GradientsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D9C64F8195AB40000FD89DB /* Debug */,
+				9D9C64F9195AB40000FD89DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D9C64D0195AB40000FD89DB /* Project object */;
+}

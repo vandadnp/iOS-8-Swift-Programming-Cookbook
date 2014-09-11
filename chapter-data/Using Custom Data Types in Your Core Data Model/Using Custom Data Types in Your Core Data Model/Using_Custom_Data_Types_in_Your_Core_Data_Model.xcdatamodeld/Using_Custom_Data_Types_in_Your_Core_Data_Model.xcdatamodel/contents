@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6198" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Laptop" representedClassName="Laptop" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="Transformable" valueTransformerName="ColorTransformer" syncable="YES"/>
+        <attribute name="model" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Laptop" positionX="-9" positionY="36" width="128" height="75"/>
+    </elements>
+</model>

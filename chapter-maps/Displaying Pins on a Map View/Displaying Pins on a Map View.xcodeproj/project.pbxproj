@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9DEA36E5196BA5AB00377DE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA36E4196BA5AB00377DE2 /* AppDelegate.swift */; };
+		9DEA36E7196BA5AB00377DE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA36E6196BA5AB00377DE2 /* ViewController.swift */; };
+		9DEA36EA196BA5AB00377DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DEA36E8196BA5AB00377DE2 /* Main.storyboard */; };
+		9DEA36EC196BA5AB00377DE2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DEA36EB196BA5AB00377DE2 /* Images.xcassets */; };
+		9DEA36F8196BA5AB00377DE2 /* Displaying_Pins_on_a_Map_ViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA36F7196BA5AB00377DE2 /* Displaying_Pins_on_a_Map_ViewTests.swift */; };
+		9DEA3702196BA5F300377DE2 /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA3701196BA5F300377DE2 /* MyAnnotation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9DEA36F2196BA5AB00377DE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DEA36D7196BA5AB00377DE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DEA36DE196BA5AB00377DE2;
+			remoteInfo = "Displaying Pins on a Map View";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9DEA36DF196BA5AB00377DE2 /* Displaying Pins on a Map View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Displaying Pins on a Map View.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DEA36E3196BA5AB00377DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DEA36E4196BA5AB00377DE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9DEA36E6196BA5AB00377DE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9DEA36E9196BA5AB00377DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9DEA36EB196BA5AB00377DE2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9DEA36F1196BA5AB00377DE2 /* Displaying Pins on a Map ViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Displaying Pins on a Map ViewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DEA36F6196BA5AB00377DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DEA36F7196BA5AB00377DE2 /* Displaying_Pins_on_a_Map_ViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Displaying_Pins_on_a_Map_ViewTests.swift; sourceTree = "<group>"; };
+		9DEA3701196BA5F300377DE2 /* MyAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9DEA36DC196BA5AB00377DE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DEA36EE196BA5AB00377DE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9DEA36D6196BA5AB00377DE2 = {
+			isa = PBXGroup;
+			children = (
+				9DEA36E1196BA5AB00377DE2 /* Displaying Pins on a Map View */,
+				9DEA36F4196BA5AB00377DE2 /* Displaying Pins on a Map ViewTests */,
+				9DEA36E0196BA5AB00377DE2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9DEA36E0196BA5AB00377DE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DEA36DF196BA5AB00377DE2 /* Displaying Pins on a Map View.app */,
+				9DEA36F1196BA5AB00377DE2 /* Displaying Pins on a Map ViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9DEA36E1196BA5AB00377DE2 /* Displaying Pins on a Map View */ = {
+			isa = PBXGroup;
+			children = (
+				9DEA36E4196BA5AB00377DE2 /* AppDelegate.swift */,
+				9DEA36E6196BA5AB00377DE2 /* ViewController.swift */,
+				9DEA36E8196BA5AB00377DE2 /* Main.storyboard */,
+				9DEA36EB196BA5AB00377DE2 /* Images.xcassets */,
+				9DEA36E2196BA5AB00377DE2 /* Supporting Files */,
+				9DEA3701196BA5F300377DE2 /* MyAnnotation.swift */,
+			);
+			path = "Displaying Pins on a Map View";
+			sourceTree = "<group>";
+		};
+		9DEA36E2196BA5AB00377DE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9DEA36E3196BA5AB00377DE2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9DEA36F4196BA5AB00377DE2 /* Displaying Pins on a Map ViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				9DEA36F7196BA5AB00377DE2 /* Displaying_Pins_on_a_Map_ViewTests.swift */,
+				9DEA36F5196BA5AB00377DE2 /* Supporting Files */,
+			);
+			path = "Displaying Pins on a Map ViewTests";
+			sourceTree = "<group>";
+		};
+		9DEA36F5196BA5AB00377DE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9DEA36F6196BA5AB00377DE2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9DEA36DE196BA5AB00377DE2 /* Displaying Pins on a Map View */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DEA36FB196BA5AB00377DE2 /* Build configuration list for PBXNativeTarget "Displaying Pins on a Map View" */;
+			buildPhases = (
+				9DEA36DB196BA5AB00377DE2 /* Sources */,
+				9DEA36DC196BA5AB00377DE2 /* Frameworks */,
+				9DEA36DD196BA5AB00377DE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Displaying Pins on a Map View";
+			productName = "Displaying Pins on a Map View";
+			productReference = 9DEA36DF196BA5AB00377DE2 /* Displaying Pins on a Map View.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9DEA36F0196BA5AB00377DE2 /* Displaying Pins on a Map ViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DEA36FE196BA5AB00377DE2 /* Build configuration list for PBXNativeTarget "Displaying Pins on a Map ViewTests" */;
+			buildPhases = (
+				9DEA36ED196BA5AB00377DE2 /* Sources */,
+				9DEA36EE196BA5AB00377DE2 /* Frameworks */,
+				9DEA36EF196BA5AB00377DE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DEA36F3196BA5AB00377DE2 /* PBXTargetDependency */,
+			);
+			name = "Displaying Pins on a Map ViewTests";
+			productName = "Displaying Pins on a Map ViewTests";
+			productReference = 9DEA36F1196BA5AB00377DE2 /* Displaying Pins on a Map ViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9DEA36D7196BA5AB00377DE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Pixolity Ltd.";
+				TargetAttributes = {
+					9DEA36DE196BA5AB00377DE2 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					9DEA36F0196BA5AB00377DE2 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 9DEA36DE196BA5AB00377DE2;
+					};
+				};
+			};
+			buildConfigurationList = 9DEA36DA196BA5AB00377DE2 /* Build configuration list for PBXProject "Displaying Pins on a Map View" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9DEA36D6196BA5AB00377DE2;
+			productRefGroup = 9DEA36E0196BA5AB00377DE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9DEA36DE196BA5AB00377DE2 /* Displaying Pins on a Map View */,
+				9DEA36F0196BA5AB00377DE2 /* Displaying Pins on a Map ViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9DEA36DD196BA5AB00377DE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DEA36EA196BA5AB00377DE2 /* Main.storyboard in Resources */,
+				9DEA36EC196BA5AB00377DE2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DEA36EF196BA5AB00377DE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9DEA36DB196BA5AB00377DE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DEA36E7196BA5AB00377DE2 /* ViewController.swift in Sources */,
+				9DEA36E5196BA5AB00377DE2 /* AppDelegate.swift in Sources */,
+				9DEA3702196BA5F300377DE2 /* MyAnnotation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DEA36ED196BA5AB00377DE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DEA36F8196BA5AB00377DE2 /* Displaying_Pins_on_a_Map_ViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DEA36F3196BA5AB00377DE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DEA36DE196BA5AB00377DE2 /* Displaying Pins on a Map View */;
+			targetProxy = 9DEA36F2196BA5AB00377DE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9DEA36E8196BA5AB00377DE2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9DEA36E9196BA5AB00377DE2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9DEA36F9196BA5AB00377DE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9DEA36FA196BA5AB00377DE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9DEA36FC196BA5AB00377DE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Displaying Pins on a Map View/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9DEA36FD196BA5AB00377DE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Displaying Pins on a Map View/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9DEA36FF196BA5AB00377DE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Displaying Pins on a Map View.app/Displaying Pins on a Map View";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Displaying Pins on a Map ViewTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		9DEA3700196BA5AB00377DE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Displaying Pins on a Map View.app/Displaying Pins on a Map View";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Displaying Pins on a Map ViewTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9DEA36DA196BA5AB00377DE2 /* Build configuration list for PBXProject "Displaying Pins on a Map View" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DEA36F9196BA5AB00377DE2 /* Debug */,
+				9DEA36FA196BA5AB00377DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DEA36FB196BA5AB00377DE2 /* Build configuration list for PBXNativeTarget "Displaying Pins on a Map View" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DEA36FC196BA5AB00377DE2 /* Debug */,
+				9DEA36FD196BA5AB00377DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9DEA36FE196BA5AB00377DE2 /* Build configuration list for PBXNativeTarget "Displaying Pins on a Map ViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DEA36FF196BA5AB00377DE2 /* Debug */,
+				9DEA3700196BA5AB00377DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9DEA36D7196BA5AB00377DE2 /* Project object */;
+}

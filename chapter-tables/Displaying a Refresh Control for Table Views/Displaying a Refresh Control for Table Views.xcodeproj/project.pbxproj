@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D2664E619630A6C006BC5E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2664E519630A6C006BC5E7 /* AppDelegate.swift */; };
+		9D2664E819630A6C006BC5E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2664E719630A6C006BC5E7 /* ViewController.swift */; };
+		9D2664EB19630A6C006BC5E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D2664E919630A6C006BC5E7 /* Main.storyboard */; };
+		9D2664ED19630A6C006BC5E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2664EC19630A6C006BC5E7 /* Images.xcassets */; };
+		9D2664F919630A6C006BC5E7 /* Displaying_a_Refresh_Control_for_Table_ViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2664F819630A6C006BC5E7 /* Displaying_a_Refresh_Control_for_Table_ViewsTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9D2664F319630A6C006BC5E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D2664D819630A6C006BC5E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D2664DF19630A6C006BC5E7;
+			remoteInfo = "Displaying a Refresh Control for Table Views";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9D2664E019630A6C006BC5E7 /* Displaying a Refresh Control for Table Views.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Displaying a Refresh Control for Table Views.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D2664E419630A6C006BC5E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D2664E519630A6C006BC5E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9D2664E719630A6C006BC5E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9D2664EA19630A6C006BC5E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D2664EC19630A6C006BC5E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9D2664F219630A6C006BC5E7 /* Displaying a Refresh Control for Table ViewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Displaying a Refresh Control for Table ViewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D2664F719630A6C006BC5E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D2664F819630A6C006BC5E7 /* Displaying_a_Refresh_Control_for_Table_ViewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Displaying_a_Refresh_Control_for_Table_ViewsTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D2664DD19630A6C006BC5E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D2664EF19630A6C006BC5E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D2664D719630A6C006BC5E7 = {
+			isa = PBXGroup;
+			children = (
+				9D2664E219630A6C006BC5E7 /* Displaying a Refresh Control for Table Views */,
+				9D2664F519630A6C006BC5E7 /* Displaying a Refresh Control for Table ViewsTests */,
+				9D2664E119630A6C006BC5E7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9D2664E119630A6C006BC5E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D2664E019630A6C006BC5E7 /* Displaying a Refresh Control for Table Views.app */,
+				9D2664F219630A6C006BC5E7 /* Displaying a Refresh Control for Table ViewsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D2664E219630A6C006BC5E7 /* Displaying a Refresh Control for Table Views */ = {
+			isa = PBXGroup;
+			children = (
+				9D2664E519630A6C006BC5E7 /* AppDelegate.swift */,
+				9D2664E719630A6C006BC5E7 /* ViewController.swift */,
+				9D2664E919630A6C006BC5E7 /* Main.storyboard */,
+				9D2664EC19630A6C006BC5E7 /* Images.xcassets */,
+				9D2664E319630A6C006BC5E7 /* Supporting Files */,
+			);
+			path = "Displaying a Refresh Control for Table Views";
+			sourceTree = "<group>";
+		};
+		9D2664E319630A6C006BC5E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D2664E419630A6C006BC5E7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D2664F519630A6C006BC5E7 /* Displaying a Refresh Control for Table ViewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				9D2664F819630A6C006BC5E7 /* Displaying_a_Refresh_Control_for_Table_ViewsTests.swift */,
+				9D2664F619630A6C006BC5E7 /* Supporting Files */,
+			);
+			path = "Displaying a Refresh Control for Table ViewsTests";
+			sourceTree = "<group>";
+		};
+		9D2664F619630A6C006BC5E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D2664F719630A6C006BC5E7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D2664DF19630A6C006BC5E7 /* Displaying a Refresh Control for Table Views */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D2664FC19630A6C006BC5E7 /* Build configuration list for PBXNativeTarget "Displaying a Refresh Control for Table Views" */;
+			buildPhases = (
+				9D2664DC19630A6C006BC5E7 /* Sources */,
+				9D2664DD19630A6C006BC5E7 /* Frameworks */,
+				9D2664DE19630A6C006BC5E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Displaying a Refresh Control for Table Views";
+			productName = "Displaying a Refresh Control for Table Views";
+			productReference = 9D2664E019630A6C006BC5E7 /* Displaying a Refresh Control for Table Views.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9D2664F119630A6C006BC5E7 /* Displaying a Refresh Control for Table ViewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D2664FF19630A6C006BC5E7 /* Build configuration list for PBXNativeTarget "Displaying a Refresh Control for Table ViewsTests" */;
+			buildPhases = (
+				9D2664EE19630A6C006BC5E7 /* Sources */,
+				9D2664EF19630A6C006BC5E7 /* Frameworks */,
+				9D2664F019630A6C006BC5E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D2664F419630A6C006BC5E7 /* PBXTargetDependency */,
+			);
+			name = "Displaying a Refresh Control for Table ViewsTests";
+			productName = "Displaying a Refresh Control for Table ViewsTests";
+			productReference = 9D2664F219630A6C006BC5E7 /* Displaying a Refresh Control for Table ViewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D2664D819630A6C006BC5E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Pixolity Ltd.";
+				TargetAttributes = {
+					9D2664DF19630A6C006BC5E7 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					9D2664F119630A6C006BC5E7 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 9D2664DF19630A6C006BC5E7;
+					};
+				};
+			};
+			buildConfigurationList = 9D2664DB19630A6C006BC5E7 /* Build configuration list for PBXProject "Displaying a Refresh Control for Table Views" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9D2664D719630A6C006BC5E7;
+			productRefGroup = 9D2664E119630A6C006BC5E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D2664DF19630A6C006BC5E7 /* Displaying a Refresh Control for Table Views */,
+				9D2664F119630A6C006BC5E7 /* Displaying a Refresh Control for Table ViewsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D2664DE19630A6C006BC5E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D2664EB19630A6C006BC5E7 /* Main.storyboard in Resources */,
+				9D2664ED19630A6C006BC5E7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D2664F019630A6C006BC5E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D2664DC19630A6C006BC5E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D2664E819630A6C006BC5E7 /* ViewController.swift in Sources */,
+				9D2664E619630A6C006BC5E7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D2664EE19630A6C006BC5E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D2664F919630A6C006BC5E7 /* Displaying_a_Refresh_Control_for_Table_ViewsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D2664F419630A6C006BC5E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D2664DF19630A6C006BC5E7 /* Displaying a Refresh Control for Table Views */;
+			targetProxy = 9D2664F319630A6C006BC5E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9D2664E919630A6C006BC5E7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D2664EA19630A6C006BC5E7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D2664FA19630A6C006BC5E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9D2664FB19630A6C006BC5E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D2664FD19630A6C006BC5E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Displaying a Refresh Control for Table Views/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9D2664FE19630A6C006BC5E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Displaying a Refresh Control for Table Views/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9D26650019630A6C006BC5E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Displaying a Refresh Control for Table Views.app/Displaying a Refresh Control for Table Views";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Displaying a Refresh Control for Table ViewsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		9D26650119630A6C006BC5E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Displaying a Refresh Control for Table Views.app/Displaying a Refresh Control for Table Views";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Displaying a Refresh Control for Table ViewsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D2664DB19630A6C006BC5E7 /* Build configuration list for PBXProject "Displaying a Refresh Control for Table Views" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D2664FA19630A6C006BC5E7 /* Debug */,
+				9D2664FB19630A6C006BC5E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D2664FC19630A6C006BC5E7 /* Build configuration list for PBXNativeTarget "Displaying a Refresh Control for Table Views" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D2664FD19630A6C006BC5E7 /* Debug */,
+				9D2664FE19630A6C006BC5E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9D2664FF19630A6C006BC5E7 /* Build configuration list for PBXNativeTarget "Displaying a Refresh Control for Table ViewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D26650019630A6C006BC5E7 /* Debug */,
+				9D26650119630A6C006BC5E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D2664D819630A6C006BC5E7 /* Project object */;
+}

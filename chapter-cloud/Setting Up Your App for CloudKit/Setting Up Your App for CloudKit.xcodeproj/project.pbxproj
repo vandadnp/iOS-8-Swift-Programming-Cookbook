@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A62BF08419792E430027539E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62BF08319792E430027539E /* AppDelegate.swift */; };
+		A62BF08619792E430027539E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62BF08519792E430027539E /* ViewController.swift */; };
+		A62BF08919792E430027539E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62BF08719792E430027539E /* Main.storyboard */; };
+		A62BF08B19792E430027539E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A62BF08A19792E430027539E /* Images.xcassets */; };
+		A62BF09719792E440027539E /* Setting_Up_Your_App_for_CloudKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62BF09619792E440027539E /* Setting_Up_Your_App_for_CloudKitTests.swift */; };
+		A62BF0A7197931090027539E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62BF0A6197931090027539E /* CloudKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A62BF09119792E440027539E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A62BF07619792E430027539E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A62BF07D19792E430027539E;
+			remoteInfo = "Setting Up Your App for CloudKit";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A62BF07E19792E430027539E /* Setting Up Your App for CloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Setting Up Your App for CloudKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A62BF08219792E430027539E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A62BF08319792E430027539E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A62BF08519792E430027539E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A62BF08819792E430027539E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A62BF08A19792E430027539E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A62BF09019792E440027539E /* Setting Up Your App for CloudKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Setting Up Your App for CloudKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A62BF09519792E440027539E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A62BF09619792E440027539E /* Setting_Up_Your_App_for_CloudKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting_Up_Your_App_for_CloudKitTests.swift; sourceTree = "<group>"; };
+		A62BF0A3197930590027539E /* Setting Up Your App for CloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Setting Up Your App for CloudKit.entitlements"; sourceTree = "<group>"; };
+		A62BF0A6197931090027539E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A62BF07B19792E430027539E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A62BF0A7197931090027539E /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A62BF08D19792E440027539E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A62BF07519792E430027539E = {
+			isa = PBXGroup;
+			children = (
+				A62BF0A6197931090027539E /* CloudKit.framework */,
+				A62BF08019792E430027539E /* Setting Up Your App for CloudKit */,
+				A62BF09319792E440027539E /* Setting Up Your App for CloudKitTests */,
+				A62BF07F19792E430027539E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A62BF07F19792E430027539E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A62BF07E19792E430027539E /* Setting Up Your App for CloudKit.app */,
+				A62BF09019792E440027539E /* Setting Up Your App for CloudKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A62BF08019792E430027539E /* Setting Up Your App for CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				A62BF0A3197930590027539E /* Setting Up Your App for CloudKit.entitlements */,
+				A62BF08319792E430027539E /* AppDelegate.swift */,
+				A62BF08519792E430027539E /* ViewController.swift */,
+				A62BF08719792E430027539E /* Main.storyboard */,
+				A62BF08A19792E430027539E /* Images.xcassets */,
+				A62BF08119792E430027539E /* Supporting Files */,
+			);
+			path = "Setting Up Your App for CloudKit";
+			sourceTree = "<group>";
+		};
+		A62BF08119792E430027539E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A62BF08219792E430027539E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A62BF09319792E440027539E /* Setting Up Your App for CloudKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				A62BF09619792E440027539E /* Setting_Up_Your_App_for_CloudKitTests.swift */,
+				A62BF09419792E440027539E /* Supporting Files */,
+			);
+			path = "Setting Up Your App for CloudKitTests";
+			sourceTree = "<group>";
+		};
+		A62BF09419792E440027539E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A62BF09519792E440027539E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A62BF07D19792E430027539E /* Setting Up Your App for CloudKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A62BF09A19792E440027539E /* Build configuration list for PBXNativeTarget "Setting Up Your App for CloudKit" */;
+			buildPhases = (
+				A62BF07A19792E430027539E /* Sources */,
+				A62BF07B19792E430027539E /* Frameworks */,
+				A62BF07C19792E430027539E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Setting Up Your App for CloudKit";
+			productName = "Setting Up Your App for CloudKit";
+			productReference = A62BF07E19792E430027539E /* Setting Up Your App for CloudKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A62BF08F19792E440027539E /* Setting Up Your App for CloudKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A62BF09D19792E440027539E /* Build configuration list for PBXNativeTarget "Setting Up Your App for CloudKitTests" */;
+			buildPhases = (
+				A62BF08C19792E440027539E /* Sources */,
+				A62BF08D19792E440027539E /* Frameworks */,
+				A62BF08E19792E440027539E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A62BF09219792E440027539E /* PBXTargetDependency */,
+			);
+			name = "Setting Up Your App for CloudKitTests";
+			productName = "Setting Up Your App for CloudKitTests";
+			productReference = A62BF09019792E440027539E /* Setting Up Your App for CloudKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A62BF07619792E430027539E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Pixolity Ltd.";
+				TargetAttributes = {
+					A62BF07D19792E430027539E = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = F3FU372W5M;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					A62BF08F19792E440027539E = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = A62BF07D19792E430027539E;
+					};
+				};
+			};
+			buildConfigurationList = A62BF07919792E430027539E /* Build configuration list for PBXProject "Setting Up Your App for CloudKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A62BF07519792E430027539E;
+			productRefGroup = A62BF07F19792E430027539E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A62BF07D19792E430027539E /* Setting Up Your App for CloudKit */,
+				A62BF08F19792E440027539E /* Setting Up Your App for CloudKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A62BF07C19792E430027539E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A62BF08919792E430027539E /* Main.storyboard in Resources */,
+				A62BF08B19792E430027539E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A62BF08E19792E440027539E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A62BF07A19792E430027539E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A62BF08619792E430027539E /* ViewController.swift in Sources */,
+				A62BF08419792E430027539E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A62BF08C19792E440027539E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A62BF09719792E440027539E /* Setting_Up_Your_App_for_CloudKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A62BF09219792E440027539E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A62BF07D19792E430027539E /* Setting Up Your App for CloudKit */;
+			targetProxy = A62BF09119792E440027539E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A62BF08719792E430027539E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A62BF08819792E430027539E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A62BF09819792E440027539E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A62BF09919792E440027539E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A62BF09B19792E440027539E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "Setting Up Your App for CloudKit/Setting Up Your App for CloudKit.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
+				INFOPLIST_FILE = "Setting Up Your App for CloudKit/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5c3e7b9b-e609-4b87-b960-62efcc90d867";
+			};
+			name = Debug;
+		};
+		A62BF09C19792E440027539E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "Setting Up Your App for CloudKit/Setting Up Your App for CloudKit.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
+				INFOPLIST_FILE = "Setting Up Your App for CloudKit/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5c3e7b9b-e609-4b87-b960-62efcc90d867";
+			};
+			name = Release;
+		};
+		A62BF09E19792E440027539E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Setting Up Your App for CloudKit.app/Setting Up Your App for CloudKit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Setting Up Your App for CloudKitTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		A62BF09F19792E440027539E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Setting Up Your App for CloudKit.app/Setting Up Your App for CloudKit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Setting Up Your App for CloudKitTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A62BF07919792E430027539E /* Build configuration list for PBXProject "Setting Up Your App for CloudKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A62BF09819792E440027539E /* Debug */,
+				A62BF09919792E440027539E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A62BF09A19792E440027539E /* Build configuration list for PBXNativeTarget "Setting Up Your App for CloudKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A62BF09B19792E440027539E /* Debug */,
+				A62BF09C19792E440027539E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A62BF09D19792E440027539E /* Build configuration list for PBXNativeTarget "Setting Up Your App for CloudKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A62BF09E19792E440027539E /* Debug */,
+				A62BF09F19792E440027539E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A62BF07619792E430027539E /* Project object */;
+}

@@ -1,0 +1,6 @@
+1) I will ensure that the simulator is reset
+2) I will then go through the slides
+3) I will then go through the code in ViewController.swift and show the accessory
+    simulator in the background on the Cinema Room Projector accessory and show
+    that every time the app is run, the Brightness characteristic of the accessory
+    is decremented by 1
