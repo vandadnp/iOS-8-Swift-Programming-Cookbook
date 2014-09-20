@@ -21,6 +21,81 @@
 //  report them to O'Reilly at the following URL:
 //  http://www.oreilly.com/catalog/errata.csp?isbn=0636920034254
 
+/* 1 */
+//import UIKit
+//import WebKit
+//
+//class ViewController: UIViewController, WKNavigationDelegate {
+//  var webView: WKWebView?
+//  
+//  /* Start the network activity indicator when the web view is loading */
+//  func webView(webView: WKWebView!,
+//    didStartProvisionalNavigation navigation: WKNavigation!){
+//      UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+//  }
+//  
+//  /* Stop the network activity indicator when the loading finishes */
+//  func webView(webView: WKWebView!,
+//    didFinishNavigation navigation: WKNavigation!){
+//      UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+//  }
+//  
+//  /* Do not allow links to be tapped */
+//  func webView(webView: WKWebView!,
+//    decidePolicyForNavigationAction navigationAction: WKNavigationAction!,
+//    decisionHandler: ((WKNavigationActionPolicy) -> Void)!){
+//      
+//      /* Do not allow links to be tapped */
+//      if navigationAction.navigationType == .LinkActivated{
+//        
+//        decisionHandler(.Cancel)
+//        
+//        let alertController = UIAlertController(
+//          title: "Action not allowed",
+//          message: "Tapping on links is not allowed. Sorry!",
+//          preferredStyle: .Alert)
+//        
+//        alertController.addAction(UIAlertAction(
+//          title: "OK", style: .Default, handler: nil))
+//        
+//        presentViewController(alertController,
+//          animated: true, completion: nil)
+//        
+//        return
+//        
+//      }
+//      
+//      decisionHandler(.Allow)
+//    
+//  }
+//  
+//  override func viewDidLoad() {
+//    super.viewDidLoad()
+//    
+//    /* Create our preferences on how the web page should be loaded */
+//    let preferences = WKPreferences()
+//    preferences.javaScriptEnabled = false
+//    
+//    /* Create a configuration for our preferences */
+//    let configuration = WKWebViewConfiguration()
+//    configuration.preferences = preferences
+//    
+//    /* Now instantiate the web view */
+//    webView = WKWebView(frame: view.bounds, configuration: configuration)
+//    
+//    if let theWebView = webView{
+//      /* Load a web page into our web view */
+//      let url = NSURL(string: "http://www.apple.com")
+//      let urlRequest = NSURLRequest(URL: url)
+//      theWebView.loadRequest(urlRequest)
+//      theWebView.navigationDelegate = self
+//      view.addSubview(theWebView)
+//      
+//    }
+//    
+//  }
+//  
+//}
 
 /* 2 */
 import UIKit
@@ -41,11 +116,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
       UIApplication.sharedApplication().networkActivityIndicatorVisible = false
   }
   
-  /* Intercept what type of action is being taken and allow or disallow it */
   func webView(webView: WKWebView!,
     decidePolicyForNavigationResponse navigationResponse: WKNavigationResponse!,
     decisionHandler: ((WKNavigationResponsePolicy) -> Void)!){
-      
+    
       println(navigationResponse.response.MIMEType)
       
       decisionHandler(.Allow)

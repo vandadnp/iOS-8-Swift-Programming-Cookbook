@@ -15,8 +15,6 @@
 		9D1583CA19852DD8008E2AC0 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1583C919852DD8008E2AC0 /* KeyboardViewController.swift */; };
 		9D1583CD19852DD8008E2AC0 /* CustomKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9D1583C519852DD8008E2AC0 /* CustomKeyboard.appex */; };
 		9D1583D71985304E008E2AC0 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1583D61985304E008E2AC0 /* KeyboardView.swift */; };
-		9D9EE7A619AA00070055B347 /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9D9EE7A519AA00070055B347 /* slides.key */; };
-		9D9EE7A819AA00100055B347 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D9EE7A719AA00100055B347 /* todo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +69,6 @@
 		9D1583C819852DD8008E2AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1583C919852DD8008E2AC0 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		9D1583D61985304E008E2AC0 /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
-		9D9EE7A519AA00070055B347 /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
-		9D9EE7A719AA00100055B347 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +99,6 @@
 		9D15839619852DC8008E2AC0 = {
 			isa = PBXGroup;
 			children = (
-				9D9EE7A719AA00100055B347 /* todo */,
-				9D9EE7A419AA00010055B347 /* slides */,
 				9D1583A119852DC8008E2AC0 /* Building Custom Keyboards */,
 				9D1583B419852DC8008E2AC0 /* Building Custom KeyboardsTests */,
 				9D1583C619852DD8008E2AC0 /* CustomKeyboard */,
@@ -175,14 +169,6 @@
 				9D1583C819852DD8008E2AC0 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9D9EE7A419AA00010055B347 /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9D9EE7A519AA00070055B347 /* slides.key */,
-			);
-			name = slides;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,8 +277,6 @@
 			files = (
 				9D1583AA19852DC8008E2AC0 /* Main.storyboard in Resources */,
 				9D1583AC19852DC8008E2AC0 /* Images.xcassets in Resources */,
-				9D9EE7A819AA00100055B347 /* todo in Resources */,
-				9D9EE7A619AA00070055B347 /* slides.key in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

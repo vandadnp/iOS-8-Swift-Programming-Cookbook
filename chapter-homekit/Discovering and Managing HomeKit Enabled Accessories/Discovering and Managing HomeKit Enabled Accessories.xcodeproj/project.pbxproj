@@ -12,9 +12,7 @@
 		9D022AF61982877000AA8814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D022AF41982877000AA8814 /* Main.storyboard */; };
 		9D022AF81982877000AA8814 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D022AF71982877000AA8814 /* Images.xcassets */; };
 		9D022B041982877000AA8814 /* Discovering_and_Managing_HomeKit_Enabled_AccessoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D022B031982877000AA8814 /* Discovering_and_Managing_HomeKit_Enabled_AccessoriesTests.swift */; };
-		9D28C84819AA444B00135AF6 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D28C84719AA444B00135AF6 /* todo */; };
-		9D28C84A19AA446C00135AF6 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D28C84919AA446C00135AF6 /* HomeKit.framework */; };
-		9D28C84D19AB329000135AF6 /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9D28C84C19AB329000135AF6 /* slides.key */; };
+		9D022B0E1982885600AA8814 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D022B0D1982885600AA8814 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +35,8 @@
 		9D022AFD1982877000AA8814 /* Discovering and Managing HomeKit Enabled AccessoriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Discovering and Managing HomeKit Enabled AccessoriesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D022B021982877000AA8814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D022B031982877000AA8814 /* Discovering_and_Managing_HomeKit_Enabled_AccessoriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discovering_and_Managing_HomeKit_Enabled_AccessoriesTests.swift; sourceTree = "<group>"; };
+		9D022B0D1982885600AA8814 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		9D022B0F1982885600AA8814 /* Discovering and Managing HomeKit Enabled Accessories.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Discovering and Managing HomeKit Enabled Accessories.entitlements"; sourceTree = "<group>"; };
-		9D28C84719AA444B00135AF6 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
-		9D28C84919AA446C00135AF6 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
-		9D28C84C19AB329000135AF6 /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D28C84A19AA446C00135AF6 /* HomeKit.framework in Frameworks */,
+				9D022B0E1982885600AA8814 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,9 +61,7 @@
 		9D022AE21982877000AA8814 = {
 			isa = PBXGroup;
 			children = (
-				9D28C84719AA444B00135AF6 /* todo */,
-				9D28C84B19AB328A00135AF6 /* slides */,
-				9D28C84919AA446C00135AF6 /* HomeKit.framework */,
+				9D022B0D1982885600AA8814 /* HealthKit.framework */,
 				9D022AED1982877000AA8814 /* Discovering and Managing HomeKit Enabled Accessories */,
 				9D022B001982877000AA8814 /* Discovering and Managing HomeKit Enabled AccessoriesTests */,
 				9D022AEC1982877000AA8814 /* Products */,
@@ -119,14 +113,6 @@
 				9D022B021982877000AA8814 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9D28C84B19AB328A00135AF6 /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9D28C84C19AB329000135AF6 /* slides.key */,
-			);
-			name = slides;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,9 +167,6 @@
 						DevelopmentTeam = F3FU372W5M;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
-								enabled = 0;
-							};
-							com.apple.HomeKit = {
 								enabled = 1;
 							};
 						};
@@ -218,8 +201,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D28C84819AA444B00135AF6 /* todo in Resources */,
-				9D28C84D19AB329000135AF6 /* slides.key in Resources */,
 				9D022AF61982877000AA8814 /* Main.storyboard in Resources */,
 				9D022AF81982877000AA8814 /* Images.xcassets in Resources */,
 			);
@@ -434,7 +415,6 @@
 				9D022B091982877000AA8814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9D022B0A1982877000AA8814 /* Build configuration list for PBXNativeTarget "Discovering and Managing HomeKit Enabled AccessoriesTests" */ = {
 			isa = XCConfigurationList;
@@ -443,7 +423,6 @@
 				9D022B0C1982877000AA8814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

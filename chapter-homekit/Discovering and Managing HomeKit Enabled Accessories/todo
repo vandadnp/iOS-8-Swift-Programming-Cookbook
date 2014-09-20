@@ -1,9 +1,0 @@
-1) I will run through the slides first
-2) I'll show people where to download the Hardware tools from the shortcut
-    that I have in Safari under iOS favorites button
-3) Then I will open the Accessory Simulator from Xcode and show them what I have
-    already set up and will talk abit about different characteristics
-    and properties of every accessory
-4) I will then run through the ViewController.swift code
-5) I will make sure the simulator is reset and then I will run the code on the
-    simulator

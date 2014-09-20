@@ -25,7 +25,6 @@ import UIKit
 
 class CountingOperation: NSOperation {
   
-  /* Our variables */
   var startingCount: Int = 0
   var endingCount: Int = 0
   
@@ -40,7 +39,6 @@ class CountingOperation: NSOperation {
   
   override func main() {
     
-    /* Do the main task of the operation here */
     var isTaskFinished = false
     
     while isTaskFinished == false &&

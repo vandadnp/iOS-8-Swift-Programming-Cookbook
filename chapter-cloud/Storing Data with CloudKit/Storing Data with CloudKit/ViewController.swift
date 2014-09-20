@@ -6,6 +6,41 @@
 //  Copyright (c) 2014 Pixolity Ltd. All rights reserved.
 //
 
+/* 1 */
+//import UIKit
+//import CloudKit
+//
+//class ViewController: UIViewController {
+//
+//  let database = CKContainer.defaultContainer().publicCloudDatabase
+//
+//  override func viewDidLoad() {
+//    super.viewDidLoad()
+//
+//    /* Store information about a Volvo V50 car */
+//    let volvoV50 = CKRecord(recordType: "Car")
+//    volvoV50.setObject("Volvo", forKey: "maker")
+//    volvoV50.setObject("V50", forKey: "model")
+//    volvoV50.setObject(5, forKey: "numberOfDoors")
+//    volvoV50.setObject(2015, forKey: "year")
+//
+//    /* Save this record publicly */
+//    database.saveRecord(volvoV50, completionHandler: {
+//      (record: CKRecord!, error: NSError!) in
+//
+//      if error != nil{
+//        println("Error occurred. Error = \(error)")
+//      } else {
+//        println("Successfully saved the record in the public database")
+//      }
+//
+//      })
+//
+//  }
+//
+//}
+
+/* 2 */
 import UIKit
 import CloudKit
 
@@ -13,7 +48,6 @@ class ViewController: UIViewController {
   
   let database = CKContainer.defaultContainer().privateCloudDatabase
   
-  /* An enumeration of car types (Hatchback, Estate) */
   enum CarType: String{
     case Hatchback = "Hatchback"
     case Estate = "Estate"
@@ -30,7 +64,6 @@ class ViewController: UIViewController {
     
   }
   
-  /* Methods that allow us to create cars */
   func carWithType(type: CarType) -> CKRecord{
     let uuid = NSUUID().UUIDString
     let recordId = CKRecordID(recordName: uuid, zoneID: type.zoneId())
@@ -43,7 +76,7 @@ class ViewController: UIViewController {
     model: String,
     numberOfDoors: Int,
     year: Int) -> CKRecord{
-      
+    
       let record = carWithType(type)
       
       record.setValue(maker, forKey: "maker")
@@ -77,7 +110,6 @@ class ViewController: UIViewController {
         year: year)
   }
   
-  /* Methods that allow us to save the cars into the database */
   func saveCarClosure(record: CKRecord!, error: NSError!){
     
     /* Be careful, we might be on a non-UI thread */
@@ -145,7 +177,6 @@ class ViewController: UIViewController {
     dispatch_async(dispatch_get_main_queue(), block)
   }
   
-  /* Use or save a zone */
   func useOrSaveZone(#zoneIsCreatedAlready: Bool, forCarType: CarType){
     
     if zoneIsCreatedAlready{
@@ -162,7 +193,7 @@ class ViewController: UIViewController {
             println("Successfully saved the hatchback zone")
             self!.performOnMainThread{self!.saveCarsForType(forCarType)}
           }
-      })
+        })
     }
     
   }
@@ -178,7 +209,6 @@ class ViewController: UIViewController {
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     
-    /* Begin the whole process */
     if isIcloudAvailable(){
       displayAlertWithTitle("iCloud", message: "iCloud is not available." +
         " Please sign into your iCloud account and restart this app")

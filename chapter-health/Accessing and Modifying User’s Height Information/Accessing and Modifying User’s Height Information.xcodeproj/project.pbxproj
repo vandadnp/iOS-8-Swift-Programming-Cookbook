@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D28C83F19AA13F700135AF6 /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9D28C83E19AA13F700135AF6 /* slides.key */; };
-		9D28C84119AA13FC00135AF6 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D28C84019AA13FC00135AF6 /* todo */; };
 		A676E09A197FA69700DB9B2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676E099197FA69700DB9B2D /* AppDelegate.swift */; };
 		A676E09C197FA69700DB9B2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676E09B197FA69700DB9B2D /* ViewController.swift */; };
 		A676E09F197FA69700DB9B2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676E09D197FA69700DB9B2D /* Main.storyboard */; };
@@ -28,8 +26,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9D28C83E19AA13F700135AF6 /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
-		9D28C84019AA13FC00135AF6 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 		A676E094197FA69700DB9B2D /* Accessing and Modifying User’s Height Information.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Accessing and Modifying User’s Height Information.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A676E098197FA69700DB9B2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A676E099197FA69700DB9B2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,19 +58,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9D28C83D19AA13F000135AF6 /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9D28C83E19AA13F700135AF6 /* slides.key */,
-			);
-			name = slides;
-			sourceTree = "<group>";
-		};
 		A676E08B197FA69700DB9B2D = {
 			isa = PBXGroup;
 			children = (
-				9D28C84019AA13FC00135AF6 /* todo */,
-				9D28C83D19AA13F000135AF6 /* slides */,
 				A676E0B7197FA6CF00DB9B2D /* HealthKit.framework */,
 				A676E096197FA69700DB9B2D /* Accessing and Modifying User’s Height Information */,
 				A676E0A9197FA69800DB9B2D /* Accessing and Modifying User’s Height InformationTests */,
@@ -217,8 +203,6 @@
 			files = (
 				A676E09F197FA69700DB9B2D /* Main.storyboard in Resources */,
 				A676E0A1197FA69700DB9B2D /* Images.xcassets in Resources */,
-				9D28C84119AA13FC00135AF6 /* todo in Resources */,
-				9D28C83F19AA13F700135AF6 /* slides.key in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

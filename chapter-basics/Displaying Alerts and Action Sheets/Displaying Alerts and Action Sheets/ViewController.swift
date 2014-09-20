@@ -21,6 +21,86 @@
 //  report them to O'Reilly at the following URL:
 //  http://www.oreilly.com/catalog/errata.csp?isbn=0636920034254
 
+/* 1 */
+//import UIKit
+//
+//class ViewController: UIViewController {
+//  
+//  var controller:UIAlertController?
+//  
+//}
+
+/* 2 */
+//import UIKit
+//
+//class ViewController: UIViewController {
+//  
+//  var controller:UIAlertController?
+//  
+//  override func viewDidLoad() {
+//    super.viewDidLoad()
+//    
+//    controller = UIAlertController(title: "Title",
+//      message: "Message",
+//      preferredStyle: .Alert)
+//    
+//    let action = UIAlertAction(title: "Done",
+//      style: UIAlertActionStyle.Default,
+//      handler: {(paramAction:UIAlertAction!) in
+//      println("The Done button was tapped")
+//      })
+//    
+//    controller!.addAction(action)
+//    
+//  }
+//  
+//  override func viewDidAppear(animated: Bool) {
+//    super.viewDidAppear(animated)
+//    self.presentViewController(controller!, animated: true, completion: nil)
+//  }
+//
+//}
+
+/* 3 */
+//import UIKit
+//
+//class ViewController: UIViewController {
+//  
+//  var controller:UIAlertController?
+//  
+//  override func viewDidLoad() {
+//    super.viewDidLoad()
+//    
+//    controller = UIAlertController(title: "Please enter your username",
+//      message: "This is usually 10 characters long",
+//      preferredStyle: .Alert)
+//    
+//    let action = UIAlertAction(title: "Next",
+//      style: UIAlertActionStyle.Default,
+//      handler: {[weak self] (paramAction:UIAlertAction!) in
+//        
+//        let userName = self!.controller!.textFields[0].text
+//        println("Your username is \(userName)")
+//        
+//      })
+//    
+//    controller!.addAction(action)
+//    
+//    controller!.addTextFieldWithConfigurationHandler(
+//      {(textField: UITextField!) in
+//        textField.placeholder = "XXXXXXXXXX"
+//      })
+//    
+//  }
+//  
+//  override func viewDidAppear(animated: Bool) {
+//    super.viewDidAppear(animated)
+//    self.presentViewController(controller!, animated: true, completion: nil)
+//  }
+//  
+//}
+
+/* 4 */
 import UIKit
 
 class ViewController: UIViewController {
@@ -30,18 +110,38 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    /* Instantiate the alert controller */
-    //<#alert1#>
+    controller = UIAlertController(
+      title: "Choose how you would like to share this photo",
+      message: "You cannot bring back a deleted photo",
+      preferredStyle: .ActionSheet)
     
-    /* Add all our actions to the alert controller */
-    //<#alert2#>
+    let actionEmail = UIAlertAction(title: "Via email",
+      style: UIAlertActionStyle.Default,
+      handler: {(paramAction:UIAlertAction!) in
+        /* Send the photo via email */
+      })
+    
+    let actionImessage = UIAlertAction(title: "Via iMessage",
+      style: UIAlertActionStyle.Default,
+      handler: {(paramAction:UIAlertAction!) in
+        /* Send the photo via iMessage */
+      })
+    
+    let actionDelete = UIAlertAction(title: "Delete photo",
+      style: UIAlertActionStyle.Destructive,
+      handler: {(paramAction:UIAlertAction!) in
+        /* Delete the photo here */
+      })
+    
+    controller!.addAction(actionEmail)
+    controller!.addAction(actionImessage)
+    controller!.addAction(actionDelete)
     
   }
   
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
-    /* Display the alert controller */
-    //<#alert3#>
+    self.presentViewController(controller!, animated: true, completion: nil)
   }
   
 }

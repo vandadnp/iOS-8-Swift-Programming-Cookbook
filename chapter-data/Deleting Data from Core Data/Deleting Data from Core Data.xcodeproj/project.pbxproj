@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9DFDFCD719AB6BCD00DCDC5D /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDFCD619AB6BCD00DCDC5D /* todo */; };
 		A6AD1DCC1976C825006AB781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD1DCB1976C825006AB781 /* AppDelegate.swift */; };
 		A6AD1DCF1976C825006AB781 /* Deleting_Data_from_Core_Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6AD1DCD1976C825006AB781 /* Deleting_Data_from_Core_Data.xcdatamodeld */; };
 		A6AD1DD11976C825006AB781 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD1DD01976C825006AB781 /* ViewController.swift */; };
@@ -28,7 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9DFDFCD619AB6BCD00DCDC5D /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 		A6AD1DC61976C825006AB781 /* Deleting Data from Core Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deleting Data from Core Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6AD1DCA1976C825006AB781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6AD1DCB1976C825006AB781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 		A6AD1DBD1976C825006AB781 = {
 			isa = PBXGroup;
 			children = (
-				9DFDFCD619AB6BCD00DCDC5D /* todo */,
 				A6AD1DC81976C825006AB781 /* Deleting Data from Core Data */,
 				A6AD1DDE1976C825006AB781 /* Deleting Data from Core DataTests */,
 				A6AD1DC71976C825006AB781 /* Products */,
@@ -84,10 +81,10 @@
 			children = (
 				A6AD1DCB1976C825006AB781 /* AppDelegate.swift */,
 				A6AD1DD01976C825006AB781 /* ViewController.swift */,
-				A6AD1DEB1976C83D006AB781 /* Person.swift */,
 				A6AD1DD21976C825006AB781 /* Main.storyboard */,
 				A6AD1DD51976C825006AB781 /* Images.xcassets */,
 				A6AD1DCD1976C825006AB781 /* Deleting_Data_from_Core_Data.xcdatamodeld */,
+				A6AD1DEB1976C83D006AB781 /* Person.swift */,
 				A6AD1DC91976C825006AB781 /* Supporting Files */,
 			);
 			path = "Deleting Data from Core Data";
@@ -198,7 +195,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DFDFCD719AB6BCD00DCDC5D /* todo in Resources */,
 				A6AD1DD41976C825006AB781 /* Main.storyboard in Resources */,
 				A6AD1DD61976C825006AB781 /* Images.xcassets in Resources */,
 			);
@@ -412,7 +408,6 @@
 				A6AD1DE71976C825006AB781 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		A6AD1DE81976C825006AB781 /* Build configuration list for PBXNativeTarget "Deleting Data from Core DataTests" */ = {
 			isa = XCConfigurationList;
@@ -421,7 +416,6 @@
 				A6AD1DEA1976C825006AB781 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9DFDFCD019AB681E00DCDC5D /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDFCCF19AB681E00DCDC5D /* todo */; };
-		9DFDFCD219AB693F00DCDC5D /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDFCD119AB693F00DCDC5D /* slides.key */; };
 		A6AD1EFE1976FBA6006AB781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD1EFD1976FBA6006AB781 /* AppDelegate.swift */; };
 		A6AD1F011976FBA6006AB781 /* Performing_Batch_Updates_on_Core_Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6AD1EFF1976FBA6006AB781 /* Performing_Batch_Updates_on_Core_Data.xcdatamodeld */; };
 		A6AD1F031976FBA6006AB781 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD1F021976FBA6006AB781 /* ViewController.swift */; };
@@ -29,8 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9DFDFCCF19AB681E00DCDC5D /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
-		9DFDFCD119AB693F00DCDC5D /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
 		A6AD1EF81976FBA6006AB781 /* Performing Batch Updates on Core Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Performing Batch Updates on Core Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6AD1EFC1976FBA6006AB781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6AD1EFD1976FBA6006AB781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,19 +58,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9DFDFCCE19AB681700DCDC5D /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9DFDFCD119AB693F00DCDC5D /* slides.key */,
-			);
-			name = slides;
-			sourceTree = "<group>";
-		};
 		A6AD1EEF1976FBA6006AB781 = {
 			isa = PBXGroup;
 			children = (
-				9DFDFCCF19AB681E00DCDC5D /* todo */,
-				9DFDFCCE19AB681700DCDC5D /* slides */,
 				A6AD1EFA1976FBA6006AB781 /* Performing Batch Updates on Core Data */,
 				A6AD1F101976FBA6006AB781 /* Performing Batch Updates on Core DataTests */,
 				A6AD1EF91976FBA6006AB781 /* Products */,
@@ -95,10 +81,10 @@
 			children = (
 				A6AD1EFD1976FBA6006AB781 /* AppDelegate.swift */,
 				A6AD1F021976FBA6006AB781 /* ViewController.swift */,
-				A6AD1F1D1976FBD8006AB781 /* Person.swift */,
 				A6AD1F041976FBA6006AB781 /* Main.storyboard */,
 				A6AD1F071976FBA6006AB781 /* Images.xcassets */,
 				A6AD1EFF1976FBA6006AB781 /* Performing_Batch_Updates_on_Core_Data.xcdatamodeld */,
+				A6AD1F1D1976FBD8006AB781 /* Person.swift */,
 				A6AD1EFB1976FBA6006AB781 /* Supporting Files */,
 			);
 			path = "Performing Batch Updates on Core Data";
@@ -210,8 +196,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DFDFCD019AB681E00DCDC5D /* todo in Resources */,
-				9DFDFCD219AB693F00DCDC5D /* slides.key in Resources */,
 				A6AD1F061976FBA6006AB781 /* Main.storyboard in Resources */,
 				A6AD1F081976FBA6006AB781 /* Images.xcassets in Resources */,
 			);

@@ -66,20 +66,20 @@ class AudienceSelectionViewController: UITableViewController {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
   }
   
-  override func tableView(tableView: UITableView!,
+  override func tableView(tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
       return Audience.allValues.count
   }
 
-  override func tableView(tableView: UITableView!,
-    cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+  override func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewValues.identifier,
         forIndexPath: indexPath) as UITableViewCell
       
       let text = Audience.allValues[indexPath.row].toRaw()
       
-      cell.textLabel.text = text
+      cell.textLabel!.text = text
       
       if text == audience{
         cell.accessoryType = .Checkmark
@@ -90,8 +90,8 @@ class AudienceSelectionViewController: UITableViewController {
       return cell
   }
 
-  override func tableView(tableView: UITableView!,
-    didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+  override func tableView(tableView: UITableView,
+    didSelectRowAtIndexPath indexPath: NSIndexPath) {
       
       if let theDelegate = delegate{
         let selectedAudience = Audience.allValues[indexPath.row].toRaw()

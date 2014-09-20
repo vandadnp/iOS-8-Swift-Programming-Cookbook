@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     button.setTitle("Stretched Image on Button", forState: .Normal)
     
     /* Adjust the font for our text */
-    button.titleLabel.font = UIFont.systemFontOfSize(15)
+    button.titleLabel!.font = UIFont.systemFontOfSize(15)
     
     /* Construct the stretchable image */
     let image = UIImage(named: "Button").resizableImageWithCapInsets(

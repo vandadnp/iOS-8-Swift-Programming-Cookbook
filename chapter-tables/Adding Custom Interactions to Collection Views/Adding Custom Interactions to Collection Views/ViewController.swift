@@ -42,14 +42,14 @@ class ViewController: UICollectionViewController {
     let pinch = UIPinchGestureRecognizer(target: self,
       action: "handlePinches:")
     
-    for recognizer in collectionView.gestureRecognizers as
+    for recognizer in collectionView!.gestureRecognizers as
       [UIGestureRecognizer]{
         if recognizer is UIPinchGestureRecognizer{
           recognizer.requireGestureRecognizerToFail(pinch)
         }
     }
     
-    collectionView.addGestureRecognizer(pinch)
+    collectionView!.addGestureRecognizer(pinch)
     
   }
   
@@ -57,7 +57,7 @@ class ViewController: UICollectionViewController {
     
     let defaultLayoutItemSize = CGSize(width: 80, height: 120)
     
-    let layout = collectionView.collectionViewLayout
+    let layout = collectionView!.collectionViewLayout
       as UICollectionViewFlowLayout
     
     layout.itemSize =
@@ -73,8 +73,8 @@ class ViewController: UICollectionViewController {
     
     let nib = UINib(nibName: "MyCollectionViewCell", bundle: nil)
     
-    collectionView.registerNib(nib, forCellWithReuseIdentifier: "cell")
-    collectionView.backgroundColor = UIColor.whiteColor()
+    collectionView!.registerNib(nib, forCellWithReuseIdentifier: "cell")
+    collectionView!.backgroundColor = UIColor.whiteColor()
     
   }
   
@@ -93,19 +93,19 @@ class ViewController: UICollectionViewController {
   }
   
   override func numberOfSectionsInCollectionView(
-    collectionView: UICollectionView!) -> Int {
+    collectionView: UICollectionView) -> Int {
       /* Between 3 to 6 sections */
       return Int(3 + arc4random_uniform(4))
   }
   
-  override func collectionView(collectionView: UICollectionView!,
+  override func collectionView(collectionView: UICollectionView,
     numberOfItemsInSection section: Int) -> Int {
       /* Each section has between 10 to 15 cells */
       return Int(10 + arc4random_uniform(6))
   }
   
-  override func collectionView(collectionView: UICollectionView!,
-    cellForItemAtIndexPath indexPath: NSIndexPath!) -> UICollectionViewCell! {
+  override func collectionView(collectionView: UICollectionView,
+    cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
       
       let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
         "cell", forIndexPath: indexPath) as MyCollectionViewCell

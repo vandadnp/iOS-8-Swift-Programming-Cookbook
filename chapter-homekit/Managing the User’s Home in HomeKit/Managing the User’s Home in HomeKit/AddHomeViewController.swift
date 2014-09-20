@@ -44,7 +44,7 @@ class AddHomeViewController: UIViewController {
   
   @IBAction func addHome(){
     
-    if textField.text.utf16Count == 0{
+    if countElements(textField.text) == 0{
       displayAlertWithTitle("Home name", message: "Please enter the home name")
       return
     }
@@ -58,7 +58,7 @@ class AddHomeViewController: UIViewController {
           strongSelf.displayAlertWithTitle("Error happened",
             message: "\(error)")
         } else {
-          strongSelf.navigationController.popViewControllerAnimated(true)
+          strongSelf.navigationController!.popViewControllerAnimated(true)
         }
         
       })

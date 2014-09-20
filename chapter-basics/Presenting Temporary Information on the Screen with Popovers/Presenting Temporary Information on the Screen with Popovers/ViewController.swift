@@ -27,12 +27,31 @@ class ViewController: UIViewController {
   
   var selectedItem: String?
   
-  /* Create the popover's content view controller */
-  //<#popovers8#>
+  lazy var popoverContentController: UINavigationController = {
+    let controller = PopoverTableViewController(style: .Plain)
+    controller.selectionHandler = self.selectionHandler
+    let navigationController = UINavigationController(
+      rootViewController: controller)
+    return navigationController
+    }()
   
-  /* And then create the popover controller and display it to the
-  user when the button is pressed */
-  //<#popovers9#>
+  lazy var popoverController: UIPopoverController = {
+    return UIPopoverController(contentViewController:
+      self.popoverContentController)
+    }()
+  
+  func selectionHandler(selectedItem: String){
+    self.selectedItem = selectedItem
+    
+    /* Do something with the selected item */
+    
+  }
+  
+  @IBAction func displayPopover(sender: UIBarButtonItem){
+    popoverController.presentPopoverFromBarButtonItem(sender,
+      permittedArrowDirections: .Any,
+      animated: true)
+  }
   
 }
 

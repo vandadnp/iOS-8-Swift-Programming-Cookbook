@@ -63,20 +63,20 @@ class StringReverserActivity: UIActivity {
     
   }
   
-  override func activityType() -> String! {
+  override func activityType() -> String {
     return NSBundle.mainBundle().bundleIdentifier! + ".StringReverserActivity"
   }
   
-  override func activityTitle() -> String! {
+  override func activityTitle() -> String {
     return "Reverse String"
   }
   
-  override func activityImage() -> UIImage! {
+  override func activityImage() -> UIImage {
     return UIImage(named: "Reverse")
   }
   
   override func canPerformWithActivityItems(
-    activityItems: [AnyObject]!) -> Bool {
+    activityItems: [AnyObject]) -> Bool {
       
       for object:AnyObject in activityItems{
         if object is NSString{
@@ -88,7 +88,7 @@ class StringReverserActivity: UIActivity {
       
   }
   
-  override func prepareWithActivityItems(paramActivityItems: [AnyObject]!) {
+  override func prepareWithActivityItems(paramActivityItems: [AnyObject]) {
     
     for object:AnyObject in paramActivityItems{
       if object is NSString{

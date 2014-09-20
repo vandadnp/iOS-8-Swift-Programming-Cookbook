@@ -26,7 +26,7 @@
 //
 //class ViewController: UIViewController {
 //  
-//  var segmentedControl:UISegmentedControl?
+//  var segmentedControl:UISegmentedControl!
 //
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
@@ -38,8 +38,8 @@
 //      "iMac"]
 //    
 //    segmentedControl = UISegmentedControl(items: segments)
-//    segmentedControl!.center = view.center
-//    self.view.addSubview(segmentedControl!)
+//    segmentedControl.center = view.center
+//    self.view.addSubview(segmentedControl)
 //    
 //  }
 //
@@ -50,7 +50,7 @@
 //
 //class ViewController: UIViewController {
 //  
-//  var segmentedControl:UISegmentedControl?
+//  var segmentedControl:UISegmentedControl!
 //  
 //  func segmentedControlValueChanged(sender: UISegmentedControl){
 //    
@@ -73,13 +73,13 @@
 //      "iMac"]
 //    
 //    segmentedControl = UISegmentedControl(items: segments)
-//    segmentedControl!.center = view.center
+//    segmentedControl.center = view.center
 //    
-//    segmentedControl!.addTarget(self,
+//    segmentedControl.addTarget(self,
 //      action: "segmentedControlValueChanged:",
 //      forControlEvents: .ValueChanged)
 //    
-//    self.view.addSubview(segmentedControl!)
+//    self.view.addSubview(segmentedControl)
 //    
 //  }
 //  
@@ -90,7 +90,7 @@
 //
 //class ViewController: UIViewController {
 //  
-//  var segmentedControl:UISegmentedControl?
+//  var segmentedControl:UISegmentedControl!
 //  
 //  func segmentedControlValueChanged(sender: UISegmentedControl){
 //    
@@ -113,13 +113,13 @@
 //      "iMac"]
 //    
 //    segmentedControl = UISegmentedControl(items: segments)
-//    segmentedControl!.center = view.center
-//    segmentedControl!.momentary = true
-//    segmentedControl!.addTarget(self,
+//    segmentedControl.center = view.center
+//    segmentedControl.momentary = true
+//    segmentedControl.addTarget(self,
 //      action: "segmentedControlValueChanged:",
 //      forControlEvents: .ValueChanged)
 //    
-//    self.view.addSubview(segmentedControl!)
+//    self.view.addSubview(segmentedControl)
 //    
 //  }
 //  
@@ -130,7 +130,7 @@ import UIKit
 
 class ViewController: UIViewController {
   
-  var segmentedControl:UISegmentedControl?
+  var segmentedControl:UISegmentedControl!
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -141,8 +141,8 @@ class ViewController: UIViewController {
       "Yellow"]
     
     segmentedControl = UISegmentedControl(items: segments)
-    segmentedControl!.center = view.center
-    self.view.addSubview(segmentedControl!)
+    segmentedControl.center = view.center
+    self.view.addSubview(segmentedControl)
     
   }
   

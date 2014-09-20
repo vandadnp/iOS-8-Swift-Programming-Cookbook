@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.pixolity.ios.Adding-Widgets-to-the-Notification-Center.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.pixolity.ios.cookbook.app.ext</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

@@ -1,6 +1,0 @@
-1) I will reset the simulator
-2) I will then show the slides
-3) I will show the data model and the Person.swift class
-4) I will then code AppDelegate.swift to the end ensuring that
-    populateDatabase() is called to populate the database
-5) I will run the code on the simulator

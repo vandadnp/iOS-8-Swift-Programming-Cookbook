@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Inserting a Group Entry into the Address Book.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>184</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9D46723519841CC400E35636</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9D46724719841CC400E35636</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

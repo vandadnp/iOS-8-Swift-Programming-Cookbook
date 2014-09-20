@@ -37,10 +37,9 @@ extension NSDate{
   }
 }
 
-class ListCaloriesBurnedTableViewController: UITableViewController ,
+class ListCaloriesBurnedTableViewController: UITableViewController,
 AddBurnedCaloriesToDietViewControllerDelegate {
   
-  /* Define our variables and constants here */
   /* The array of all the exercises that the user has performed
   today */
   var allCaloriesBurned = [CalorieBurner]()
@@ -98,7 +97,18 @@ AddBurnedCaloriesToDietViewControllerDelegate {
       endDate: beginningOfTomorrow,
       options: .StrictEndDate)
     }()
-
+  
+  func burnedCaloriesChangedHandler(query: HKObserverQuery!,
+    completionHandler: HKObserverQueryCompletionHandler!,
+    error: NSError!){
+      
+      println("The burned calories has changed...")
+      
+      /* Be careful, we are not on the UI thread */
+      fetchBurnedCaloriesInLastDay()
+      
+  }
+  
   func addBurnedCaloriesToDietViewController(
     sender: AddBurnedCaloriesToDietViewController,
     addedCalorieBurnerWithName: String,
@@ -106,7 +116,6 @@ AddBurnedCaloriesToDietViewControllerDelegate {
     startDate: NSDate,
     endDate: NSDate) {
       
-      /* Add the calorie burner to the health store */
       let quantity = HKQuantity(unit: unit, doubleValue: calories)
       let metadata = [
         HKMetadataKeyExerciseName: addedCalorieBurnerWithName
@@ -136,22 +145,9 @@ AddBurnedCaloriesToDietViewControllerDelegate {
         })
       
   }
-
-  func burnedCaloriesChangedHandler(query: HKObserverQuery!,
-    completionHandler: HKObserverQueryCompletionHandler!,
-    error: NSError!){
-      
-      /* The list of calories burned has changed. Update the UI */
-      println("The burned calories has changed...")
-      
-      /* Be careful, we are not on the UI thread */
-      fetchBurnedCaloriesInLastDay()
-      
-  }
   
   func fetchBurnedCaloriesInLastDay(){
     
-    /* Get all the calories that were burned in the last day */
     let sortDescriptor = NSSortDescriptor(
       key: HKSampleSortIdentifierStartDate,
       ascending: false)
@@ -207,8 +203,6 @@ AddBurnedCaloriesToDietViewControllerDelegate {
   
   func startObservingBurnedCaloriesChanges(){
     
-    /* Find out changes to the burned calories quantity type in 
-      the health store */
     if isObservingBurnedCalories{
       return
     }
@@ -238,7 +232,6 @@ AddBurnedCaloriesToDietViewControllerDelegate {
   
   func stopObservingBurnedCaloriesChanges(){
     
-    /* Stop observing the changes to the burned energy type */
     if isObservingBurnedCalories == false{
       return
     }
@@ -297,8 +290,7 @@ AddBurnedCaloriesToDietViewControllerDelegate {
     
   }
   
-  /* Set ourselves as the delegate of the next view controller */
-  override func prepareForSegue(segue: UIStoryboardSegue!,
+  override func prepareForSegue(segue: UIStoryboardSegue,
     sender: AnyObject!) {
       
       if segue.identifier == segueIdentifier{
@@ -310,14 +302,13 @@ AddBurnedCaloriesToDietViewControllerDelegate {
       
   }
   
-  /* Show the calories that were burned on the table view */
-  override func tableView(tableView: UITableView!,
+  override func tableView(tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
       return allCaloriesBurned.count
   }
   
-  override func tableView(tableView: UITableView!,
-    cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+  override func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewValues.identifier, forIndexPath: indexPath)
@@ -328,8 +319,8 @@ AddBurnedCaloriesToDietViewControllerDelegate {
       let caloriesAsString = formatter.stringFromValue(burner.calories,
         unit: .Kilocalorie)
       
-      cell.textLabel.text = burner.name
-      cell.detailTextLabel.text = caloriesAsString
+      cell.textLabel!.text = burner.name
+      cell.detailTextLabel!.text = caloriesAsString
       
       return cell
   }

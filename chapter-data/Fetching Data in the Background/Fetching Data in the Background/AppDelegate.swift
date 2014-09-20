@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func processPersons(){
     
-    /* Do your work here using the mutablePersons property of our app */
+    /* Do your work here using the mutablePersons property of our app*/
     
   }
   
@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     for counter in 0..<1000{
       let person = NSEntityDescription.insertNewObjectForEntityForName(
         NSStringFromClass(Person.classForCoder()),
-        inManagedObjectContext: managedObjectContext) as Person
+        inManagedObjectContext: managedObjectContext!) as Person
       
       person.firstName = "First name \(counter)"
       person.lastName = "Last name \(counter)"
@@ -44,7 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
   }
   
-  /* Create our fetch request */
   func newFetchRequest() -> NSFetchRequest{
     
     let request = NSFetchRequest(entityName:
@@ -60,8 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(application: UIApplication!,
     didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-      
-      populateDatabase()
       
       /* Set up the background context */
       let backgroundContext = NSManagedObjectContext(
@@ -88,10 +85,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             for personId in personIds{
               let person = mainContext!.objectWithID(personId) as Person
               self!.mutablePersons.append(person)
-              println(person.firstName)
             }
             self!.processPersons()
-          })
+            })
         } else {
           println("Failed to execute the fetch request")
         }
@@ -116,7 +112,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   lazy var managedObjectModel: NSManagedObjectModel = {
       // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-      let modelURL = NSBundle.mainBundle().URLForResource("Fetching_Data_in_the_Background", withExtension: "momd")
+      let modelURL = NSBundle.mainBundle().URLForResource("Fetching_Data_in_the_Background", withExtension: "momd")!
       return NSManagedObjectModel(contentsOfURL: modelURL)
   }()
 

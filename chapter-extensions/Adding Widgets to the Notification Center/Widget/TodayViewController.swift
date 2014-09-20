@@ -21,19 +21,19 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
   /* List of items that we want to display in our table view */
   var items: [String] = []
   
-  override func tableView(tableView: UITableView!,
+  override func tableView(tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
       return items.count
   }
   
-  override func tableView(tableView: UITableView!,
-    cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+  override func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewConstants.cellIdentifier,
         forIndexPath: indexPath) as UITableViewCell
       
-      cell.textLabel.text = items[indexPath.row]
+      cell.textLabel!.text = items[indexPath.row]
       
       return cell
       
@@ -75,11 +75,11 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
       completionHandler(result)
   }
   
-  override func tableView(tableView: UITableView!,
-    didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+  override func tableView(tableView: UITableView,
+    didSelectRowAtIndexPath indexPath: NSIndexPath) {
       let urlAsString = "widget://" + "\(indexPath.section)-\(indexPath.row)"
       let url = NSURL(string: urlAsString)
-      self.extensionContext.openURL(url, completionHandler: nil)
+      self.extensionContext!.openURL(url, completionHandler: nil)
       tableView.deselectRowAtIndexPath(indexPath, animated: false)
   }
   

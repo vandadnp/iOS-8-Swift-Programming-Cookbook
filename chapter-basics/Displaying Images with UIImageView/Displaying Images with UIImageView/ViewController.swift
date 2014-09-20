@@ -48,14 +48,14 @@ import UIKit
 //class ViewController: UIViewController {
 //
 //  let image = UIImage(named: "Safari")
-//  var imageView: UIImageView?
+//  var imageView: UIImageView!
 //
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //    imageView = UIImageView(frame: view.bounds)
-//    imageView!.image = image
-//    imageView!.center = view.center
-//    view.addSubview(imageView!)
+//    imageView.image = image
+//    imageView.center = view.center
+//    view.addSubview(imageView)
 //  }
 //
 //}
@@ -66,15 +66,15 @@ import UIKit
 class ViewController: UIViewController {
   
   let image = UIImage(named: "Safari")
-  var imageView: UIImageView?
+  var imageView: UIImageView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     imageView = UIImageView(frame: view.bounds)
-    imageView!.contentMode = .ScaleAspectFit
-    imageView!.image = image
-    imageView!.center = view.center
-    view.addSubview(imageView!)
+    imageView.contentMode = .ScaleAspectFit
+    imageView.image = image
+    imageView.center = view.center
+    view.addSubview(imageView)
   }
   
 }

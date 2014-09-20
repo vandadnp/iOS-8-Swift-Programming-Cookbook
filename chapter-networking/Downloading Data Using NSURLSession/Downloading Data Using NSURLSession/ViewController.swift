@@ -21,6 +21,150 @@
 //  report them to O'Reilly at the following URL:
 //  http://www.oreilly.com/catalog/errata.csp?isbn=0636920034254
 
+/* 1 */
+//import UIKit
+//
+//class ViewController: UIViewController, NSURLSessionDelegate {
+//
+//  var session: NSURLSession!
+//
+//  required init(coder aDecoder: NSCoder) {
+//    super.init(coder: aDecoder)
+//
+//    /* Create our configuration first */
+//    let configuration =
+//    NSURLSessionConfiguration.defaultSessionConfiguration()
+//    configuration.timeoutIntervalForRequest = 15.0
+//
+//    /* Now create our session which will allow us to create the tasks */
+//    session = NSURLSession(configuration: configuration,
+//      delegate: self,
+//      delegateQueue: nil)
+//
+//  }
+//
+//  override func viewDidLoad() {
+//    super.viewDidLoad()
+//
+//    /* Now attempt to download the contents of the URL */
+//    let url = NSURL(string: "<# place a URL here #>")
+//
+//    let task = session.dataTaskWithURL(url,
+//      completionHandler: {[weak self] (data: NSData!,
+//        response: NSURLResponse!,
+//        error: NSError!) in
+//
+//        /* We got our data here */
+//        println("Done")
+//
+//        self!.session.finishTasksAndInvalidate()
+//
+//      })
+//
+//    task.resume()
+//
+//  }
+//
+//}
+
+/* 2 */
+//import UIKit
+//
+//extension NSURLSessionTask{
+//  func start(){
+//    self.resume()
+//  }
+//}
+//
+//class ViewController: UIViewController, NSURLSessionDelegate {
+//
+//  var session: NSURLSession!
+//
+//  required init(coder aDecoder: NSCoder) {
+//    super.init(coder: aDecoder)
+//
+//    /* Create our configuration first */
+//    let configuration =
+//    NSURLSessionConfiguration.defaultSessionConfiguration()
+//    configuration.timeoutIntervalForRequest = 15.0
+//
+//    /* Now create our session which will allow us to create the tasks */
+//    session = NSURLSession(configuration: configuration,
+//      delegate: self,
+//      delegateQueue: nil)
+//
+//  }
+//
+//  /* Just a little method to help us display alert dialogs to the user */
+//  func displayAlertWithTitle(title: String, message: String){
+//    let controller = UIAlertController(title: title,
+//      message: message,
+//      preferredStyle: .Alert)
+//
+//    controller.addAction(UIAlertAction(title: "OK",
+//      style: .Default,
+//      handler: nil))
+//
+//    presentViewController(controller, animated: true, completion: nil)
+//
+//  }
+//
+//  override func viewDidAppear(animated: Bool) {
+//    super.viewDidAppear(animated)
+//
+//    /* Now attempt to download the contents of the URL */
+//    let url = NSURL(string: "<# place a URL here #>")
+//
+//    let task = session.downloadTaskWithURL(url,
+//      completionHandler: {[weak self] (url: NSURL!,
+//        response: NSURLResponse!,
+//        error: NSError!) in
+//
+//        if error == nil{
+//
+//          let manager = NSFileManager()
+//
+//          /* Get the path to the caches folder */
+//          var error: NSError?
+//          var destinationPath = manager.URLForDirectory(.CachesDirectory,
+//            inDomain: .UserDomainMask,
+//            appropriateForURL: url,
+//            create: true,
+//            error: &error)!
+//
+//          /* Extract the last part of the source URL which is the name of the
+//          file we are downloading  */
+//          let componentsOfUrl =
+//          url.absoluteString!.componentsSeparatedByString("/")
+//          let fileNameFromUrl = componentsOfUrl[componentsOfUrl.count - 1]
+//
+//          /* Append the name of the file in the source URL to the
+//          destination folder */
+//          destinationPath =
+//            destinationPath.URLByAppendingPathComponent(fileNameFromUrl)
+//
+//          /* Now move the file over */
+//          manager.moveItemAtURL(url, toURL: destinationPath, error: nil)
+//
+//          let message = "Saved the downloaded data to = \(destinationPath)"
+//
+//          self!.displayAlertWithTitle("Success", message: message)
+//
+//        } else {
+//          self!.displayAlertWithTitle("Error",
+//            message: "Could not download the data. An error occurred")
+//        }
+//
+//      })
+//
+//    /* Our own extension on the task adds the start method */
+//    task.start()
+//
+//  }
+//
+//}
+
+/* 3 */
 import UIKit
 
 extension NSURLSessionTask{
@@ -29,43 +173,13 @@ extension NSURLSessionTask{
   }
 }
 
-class ViewController: UIViewController , NSURLSessionDelegate,
+class ViewController: UIViewController, NSURLSessionDelegate,
 NSURLSessionDataDelegate {
   
-  /* Define our variables here */
   var session: NSURLSession!
   /* We will download a URL one chunk at a time and append the downloaded
   data to this mutable data */
   var mutableData: NSMutableData = NSMutableData()
-
-  required init(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-
-    /* Set up the url session */
-    
-    /* Create our configuration first */
-    let configuration =
-    NSURLSessionConfiguration.defaultSessionConfiguration()
-    configuration.timeoutIntervalForRequest = 15.0
-    
-    /* Now create our session which will allow us to create the tasks */
-    session = NSURLSession(configuration: configuration,
-      delegate: self,
-      delegateQueue: nil)
-    
-  }
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    /* Now attempt to download the contents of the URL */
-    let url = NSURL(string: "http://www.apple.com")
-    
-    let task = session.dataTaskWithURL(url, completionHandler: nil)
-    
-    task.start()
-    
-  }
   
   /* This method will get called on a random thread because
   we have not provided an operation queue to our session */
@@ -102,6 +216,33 @@ NSURLSessionDataDelegate {
         
       })
       
+  }
+  
+  required init(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    
+    /* Create our configuration first */
+    let configuration =
+    NSURLSessionConfiguration.defaultSessionConfiguration()
+    configuration.timeoutIntervalForRequest = 15.0
+    
+    /* Now create our session which will allow us to create the tasks */
+    session = NSURLSession(configuration: configuration,
+      delegate: self,
+      delegateQueue: nil)
+    
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    /* Now attempt to download the contents of the URL */
+    let url = NSURL(string: "<# place your URL here #>")
+    
+    let task = session.dataTaskWithURL(url, completionHandler: nil)
+    
+    task.start()
+    
   }
   
   /* Just a little method to help us display alert dialogs to the user */

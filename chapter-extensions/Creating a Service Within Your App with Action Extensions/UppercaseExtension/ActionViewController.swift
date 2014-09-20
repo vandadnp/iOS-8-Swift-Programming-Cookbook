@@ -31,11 +31,9 @@ class ActionViewController: UIViewController {
   let type = kUTTypeText as NSString as String
   
   override func viewDidLoad() {
-    /* Get the text that is passed to us and then process it. If we find
-    text in it, display the text on our UI */
     super.viewDidLoad()
     
-    for item in extensionContext.inputItems as [NSExtensionItem]{
+    for item in extensionContext!.inputItems as [NSExtensionItem]{
       for provider in item.attachments as [NSItemProvider]{
         if provider.hasItemConformingToTypeIdentifier(type){
           provider.loadItemForTypeIdentifier(type, options: nil,
@@ -52,23 +50,21 @@ class ActionViewController: UIViewController {
                 }
               }
               
-          })
+            })
         }
       }
     }
+    
   }
   
   @IBAction func cancel(){
-    /* Cancel the request and pass an error to the caller */
     let userInfo = [NSLocalizedDescriptionKey : "User cancelled"]
     let error = NSError(domain: "Extension", code: -1, userInfo: userInfo)
-    extensionContext.cancelRequestWithError(error)
+    extensionContext!.cancelRequestWithError(error)
   }
   
   @IBAction func done() {
     
-    /* When the Done bar button is tapped, pass the processed text
-    to the caller */
     let extensionItem = NSExtensionItem()
     let text = textView.text as NSString
     let itemProvider = NSItemProvider(item: text,
@@ -76,7 +72,7 @@ class ActionViewController: UIViewController {
     extensionItem.attachments = [itemProvider]
     let itemsToShare = [extensionItem]
     
-    extensionContext.completeRequestReturningItems(itemsToShare,
+    extensionContext!.completeRequestReturningItems(itemsToShare,
       completionHandler: nil)
   }
   

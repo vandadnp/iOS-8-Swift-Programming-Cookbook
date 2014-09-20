@@ -26,7 +26,6 @@ import HealthKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
   
-  /* Define our variables and constants first */
   @IBOutlet weak var textField: UITextField!
   @IBOutlet weak var saveButton: UIButton!
   /* This is a label that shows the user's weight unit (Kilograms) on
@@ -38,53 +37,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
   
   lazy var types: NSSet = {
     return NSSet(object: self.weightQuantityType)
-    }()
+  }()
   
   lazy var healthStore = HKHealthStore()
   
-  func textFieldShouldReturn(textField: UITextField!) -> Bool {
-    textField.resignFirstResponder()
-    return true
-  }
-  
-  override func viewDidLoad() {
-    /* Set up the text field here */
-    super.viewDidLoad()
-    textField.rightView = textFieldRightLabel
-    textField.rightViewMode = .Always
-  }
-  
-  /* Ask for permission to access the health store */
-  override func viewDidAppear(animated: Bool) {
-    super.viewDidAppear(animated)
-    
-    if HKHealthStore.isHealthDataAvailable(){
-      
-      healthStore.requestAuthorizationToShareTypes(types,
-        readTypes: types,
-        completion: {[weak self]
-          (succeeded: Bool, error: NSError!) in
-          
-          let strongSelf = self!
-          if succeeded && error == nil{
-            dispatch_async(dispatch_get_main_queue(),
-              strongSelf.readWeightInformation)
-          } else {
-            if let theError = error{
-              println("Error occurred = \(theError)")
-            }
-          }
-          
-      })
-      
-    } else {
-      println("Health data is not available")
-    }
-  }
-  
   @IBAction func saveUserWeight(){
   
-    /* Take the entered weight and save it */
     let kilogramUnit = HKUnit.gramUnitWithMetricPrefix(.Kilo)
     let weightQuantity = HKQuantity(unit: kilogramUnit,
       doubleValue: (textField.text as NSString).doubleValue)
@@ -103,11 +61,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         println("Failed to save the user's weight")
       }
       
-    })
+      })
     
   }
   
-  /* Read the weight information back */
   func readWeightInformation(){
     
     let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate,
@@ -120,7 +77,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
       resultsHandler: {[weak self] (query: HKSampleQuery!,
         results: [AnyObject]!,
         error: NSError!) in
-        
+      
         if results.count > 0{
           
           /* We only have one sample really */
@@ -153,17 +110,57 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             strongSelf.textField.text = weightFormattedAsString
             
-          })
+            })
           
         } else {
           print("Could not read the user's weight ")
           println("or no weight data was available")
         }
         
-        
-    })
+      
+      })
     
     healthStore.executeQuery(query)
+    
+  }
+  
+  func textFieldShouldReturn(textField: UITextField!) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    textField.rightView = textFieldRightLabel
+    textField.rightViewMode = .Always
+  }
+  
+  /* Ask for permission to access the health store */
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    if HKHealthStore.isHealthDataAvailable(){
+      
+      healthStore.requestAuthorizationToShareTypes(types,
+        readTypes: types,
+        completion: {[weak self]
+          (succeeded: Bool, error: NSError!) in
+          
+          let strongSelf = self!
+          if succeeded && error == nil{
+            dispatch_async(dispatch_get_main_queue(),
+              strongSelf.readWeightInformation)
+          } else {
+            if let theError = error{
+              println("Error occurred = \(theError)")
+            }
+          }
+          
+        })
+      
+    } else {
+      println("Health data is not available")
+    }
     
   }
 

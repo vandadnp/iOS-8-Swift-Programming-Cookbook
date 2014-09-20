@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D3A30D019AB76D000057718 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D3A30CF19AB76D000057718 /* todo */; };
-		9D3A30D219AB783F00057718 /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9D3A30D119AB783F00057718 /* slides.key */; };
 		A60B045D197A92E3007F4967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B045C197A92E3007F4967 /* AppDelegate.swift */; };
 		A60B045F197A92E3007F4967 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B045E197A92E3007F4967 /* ViewController.swift */; };
 		A60B0462197A92E3007F4967 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A60B0460197A92E3007F4967 /* Main.storyboard */; };
@@ -28,8 +26,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9D3A30CF19AB76D000057718 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
-		9D3A30D119AB783F00057718 /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
 		A60B0457197A92E3007F4967 /* Querying the Cloud with CloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Querying the Cloud with CloudKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60B045B197A92E3007F4967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A60B045C197A92E3007F4967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,19 +58,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9D3A30CE19AB76CA00057718 /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9D3A30D119AB783F00057718 /* slides.key */,
-			);
-			name = slides;
-			sourceTree = "<group>";
-		};
 		A60B044E197A92E3007F4967 = {
 			isa = PBXGroup;
 			children = (
-				9D3A30CF19AB76D000057718 /* todo */,
-				9D3A30CE19AB76CA00057718 /* slides */,
 				A60B047A197A95EA007F4967 /* CloudKit.framework */,
 				A60B0459197A92E3007F4967 /* Querying the Cloud with CloudKit */,
 				A60B046C197A92E3007F4967 /* Querying the Cloud with CloudKitTests */,
@@ -215,8 +201,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D3A30D019AB76D000057718 /* todo in Resources */,
-				9D3A30D219AB783F00057718 /* slides.key in Resources */,
 				A60B0462197A92E3007F4967 /* Main.storyboard in Resources */,
 				A60B0464197A92E3007F4967 /* Images.xcassets in Resources */,
 			);

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D9EE74119A8E6410055B347 /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9D9EE74019A8E6410055B347 /* slides.key */; };
-		9D9EE74A19A8F0DC0055B347 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D9EE74919A8F0DC0055B347 /* todo */; };
 		9DB3F2B2195C8398009A4864 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3F2B1195C8398009A4864 /* AppDelegate.swift */; };
 		9DB3F2B4195C8398009A4864 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3F2B3195C8398009A4864 /* ViewController.swift */; };
 		9DB3F2B7195C8398009A4864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB3F2B5195C8398009A4864 /* Main.storyboard */; };
@@ -27,8 +25,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9D9EE74019A8E6410055B347 /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
-		9D9EE74919A8F0DC0055B347 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 		9DB3F2AC195C8398009A4864 /* Adding Blur Effects to Your Views.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Adding Blur Effects to Your Views.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB3F2B0195C8398009A4864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DB3F2B1195C8398009A4864 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,19 +54,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9D9EE73F19A8E4D70055B347 /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9D9EE74019A8E6410055B347 /* slides.key */,
-			);
-			name = slides;
-			sourceTree = "<group>";
-		};
 		9DB3F2A3195C8398009A4864 = {
 			isa = PBXGroup;
 			children = (
-				9D9EE74919A8F0DC0055B347 /* todo */,
-				9D9EE73F19A8E4D70055B347 /* slides */,
 				9DB3F2AE195C8398009A4864 /* Adding Blur Effects to Your Views */,
 				9DB3F2C1195C8398009A4864 /* Adding Blur Effects to Your ViewsTests */,
 				9DB3F2AD195C8398009A4864 /* Products */,
@@ -205,8 +191,6 @@
 			files = (
 				9DB3F2B7195C8398009A4864 /* Main.storyboard in Resources */,
 				9DB3F2B9195C8398009A4864 /* Images.xcassets in Resources */,
-				9D9EE74A19A8F0DC0055B347 /* todo in Resources */,
-				9D9EE74119A8E6410055B347 /* slides.key in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +399,6 @@
 				9DB3F2CA195C8398009A4864 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9DB3F2CB195C8398009A4864 /* Build configuration list for PBXNativeTarget "Adding Blur Effects to Your ViewsTests" */ = {
 			isa = XCConfigurationList;
@@ -424,7 +407,6 @@
 				9DB3F2CD195C8398009A4864 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

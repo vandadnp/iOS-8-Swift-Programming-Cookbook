@@ -31,7 +31,6 @@ class ViewController: UICollectionViewController {
     UIImage(named: "3")
   ]
   
-  
   func randomImage() -> UIImage{
     return allImages[Int(arc4random_uniform(UInt32(allImages.count)))]
   }
@@ -41,8 +40,8 @@ class ViewController: UICollectionViewController {
     
     let nib = UINib(nibName: "MyCollectionViewCell", bundle: nil)
     
-    collectionView.registerNib(nib, forCellWithReuseIdentifier: "cell")
-    collectionView.backgroundColor = UIColor.whiteColor()
+    collectionView!.registerNib(nib, forCellWithReuseIdentifier: "cell")
+    collectionView!.backgroundColor = UIColor.whiteColor()
   }
   
   convenience required init(coder aDecoder: NSCoder) {
@@ -60,19 +59,19 @@ class ViewController: UICollectionViewController {
   }
   
   override func numberOfSectionsInCollectionView(
-    collectionView: UICollectionView!) -> Int {
+    collectionView: UICollectionView) -> Int {
       /* Between 3 to 6 sections */
       return Int(3 + arc4random_uniform(4))
   }
   
-  override func collectionView(collectionView: UICollectionView!,
+  override func collectionView(collectionView: UICollectionView,
     numberOfItemsInSection section: Int) -> Int {
       /* Each section has between 10 to 15 cells */
       return Int(10 + arc4random_uniform(6))
   }
   
-  override func collectionView(collectionView: UICollectionView!,
-    cellForItemAtIndexPath indexPath: NSIndexPath!) -> UICollectionViewCell! {
+  override func collectionView(collectionView: UICollectionView,
+    cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
       
       let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
         "cell", forIndexPath: indexPath) as MyCollectionViewCell

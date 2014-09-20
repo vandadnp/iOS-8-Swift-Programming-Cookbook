@@ -10,7 +10,6 @@
 		9D1CE36C195806360068FE3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1CE36B195806360068FE3B /* AppDelegate.swift */; };
 		9D1CE36E195806360068FE3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D1CE36D195806360068FE3B /* Images.xcassets */; };
 		9D1CE37A195806360068FE3B /* Enumerating_Files_and_FoldersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1CE379195806360068FE3B /* Enumerating_Files_and_FoldersTests.swift */; };
-		9DFDFCCD19AB678D00DCDC5D /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDFCCC19AB678D00DCDC5D /* todo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +30,6 @@
 		9D1CE373195806360068FE3B /* Enumerating Files and FoldersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Enumerating Files and FoldersTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1CE378195806360068FE3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1CE379195806360068FE3B /* Enumerating_Files_and_FoldersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerating_Files_and_FoldersTests.swift; sourceTree = "<group>"; };
-		9DFDFCCC19AB678D00DCDC5D /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +53,6 @@
 		9D1CE35D195806360068FE3B = {
 			isa = PBXGroup;
 			children = (
-				9DFDFCCC19AB678D00DCDC5D /* todo */,
 				9D1CE368195806360068FE3B /* Enumerating Files and Folders */,
 				9D1CE376195806360068FE3B /* Enumerating Files and FoldersTests */,
 				9D1CE367195806360068FE3B /* Products */,
@@ -185,7 +182,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DFDFCCD19AB678D00DCDC5D /* todo in Resources */,
 				9D1CE36E195806360068FE3B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,7 +379,6 @@
 				9D1CE37F195806360068FE3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9D1CE380195806360068FE3B /* Build configuration list for PBXNativeTarget "Enumerating Files and FoldersTests" */ = {
 			isa = XCConfigurationList;
@@ -392,7 +387,6 @@
 				9D1CE382195806360068FE3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

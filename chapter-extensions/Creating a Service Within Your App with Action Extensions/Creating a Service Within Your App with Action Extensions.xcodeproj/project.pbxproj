@@ -15,8 +15,6 @@
 		9D08F8FA19856DAB0078860A /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08F8F919856DAB0078860A /* ActionViewController.swift */; };
 		9D08F8FC19856DAB0078860A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D08F8FB19856DAB0078860A /* MainInterface.storyboard */; };
 		9D08F8FF19856DAB0078860A /* UppercaseExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9D08F8F519856DAB0078860A /* UppercaseExtension.appex */; };
-		9D9EE7AB19AA0BA10055B347 /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9D9EE7AA19AA0BA10055B347 /* slides.key */; };
-		9D9EE7AD19AA0BA60055B347 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D9EE7AC19AA0BA60055B347 /* todo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +69,6 @@
 		9D08F8F819856DAB0078860A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D08F8F919856DAB0078860A /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		9D08F8FB19856DAB0078860A /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
-		9D9EE7AA19AA0BA10055B347 /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
-		9D9EE7AC19AA0BA60055B347 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +99,6 @@
 		9D08F8C619856D000078860A = {
 			isa = PBXGroup;
 			children = (
-				9D9EE7AC19AA0BA60055B347 /* todo */,
-				9D9EE7A919AA0B9C0055B347 /* slides */,
 				9D08F8D119856D000078860A /* Creating a Service Within Your App with Action Extensions */,
 				9D08F8E419856D000078860A /* Creating a Service Within Your App with Action ExtensionsTests */,
 				9D08F8F619856DAB0078860A /* UppercaseExtension */,
@@ -175,14 +169,6 @@
 				9D08F8F819856DAB0078860A /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9D9EE7A919AA0B9C0055B347 /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9D9EE7AA19AA0BA10055B347 /* slides.key */,
-			);
-			name = slides;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,8 +277,6 @@
 			files = (
 				9D08F8DA19856D000078860A /* Main.storyboard in Resources */,
 				9D08F8DC19856D000078860A /* Images.xcassets in Resources */,
-				9D9EE7AD19AA0BA60055B347 /* todo in Resources */,
-				9D9EE7AB19AA0BA10055B347 /* slides.key in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,7 +533,6 @@
 				9D08F8ED19856D000078860A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9D08F8EE19856D000078860A /* Build configuration list for PBXNativeTarget "Creating a Service Within Your App with Action ExtensionsTests" */ = {
 			isa = XCConfigurationList;
@@ -558,7 +541,6 @@
 				9D08F8F019856D000078860A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9D08F90219856DAB0078860A /* Build configuration list for PBXNativeTarget "UppercaseExtension" */ = {
 			isa = XCConfigurationList;
@@ -567,7 +549,6 @@
 				9D08F90419856DAB0078860A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

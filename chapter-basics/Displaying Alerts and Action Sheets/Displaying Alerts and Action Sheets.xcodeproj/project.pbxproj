@@ -12,8 +12,6 @@
 		9D6C5BD7195D4D4E00766271 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D6C5BD5195D4D4E00766271 /* Main.storyboard */; };
 		9D6C5BD9195D4D4E00766271 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D6C5BD8195D4D4E00766271 /* Images.xcassets */; };
 		9D6C5BE5195D4D4E00766271 /* Displaying_Alerts_and_Action_SheetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6C5BE4195D4D4E00766271 /* Displaying_Alerts_and_Action_SheetsTests.swift */; };
-		9D9EE74F19A8F3730055B347 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D9EE74E19A8F3730055B347 /* todo */; };
-		9D9EE75119A8F5100055B347 /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9D9EE75019A8F5100055B347 /* slides.key */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +34,6 @@
 		9D6C5BDE195D4D4E00766271 /* Displaying Alerts and Action SheetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Displaying Alerts and Action SheetsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D6C5BE3195D4D4E00766271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D6C5BE4195D4D4E00766271 /* Displaying_Alerts_and_Action_SheetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Displaying_Alerts_and_Action_SheetsTests.swift; sourceTree = "<group>"; };
-		9D9EE74E19A8F3730055B347 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
-		9D9EE75019A8F5100055B347 /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +57,6 @@
 		9D6C5BC3195D4D4E00766271 = {
 			isa = PBXGroup;
 			children = (
-				9D9EE74E19A8F3730055B347 /* todo */,
-				9D9EE74D19A8F36D0055B347 /* slides */,
 				9D6C5BCE195D4D4E00766271 /* Displaying Alerts and Action Sheets */,
 				9D6C5BE1195D4D4E00766271 /* Displaying Alerts and Action SheetsTests */,
 				9D6C5BCD195D4D4E00766271 /* Products */,
@@ -113,14 +107,6 @@
 				9D6C5BE3195D4D4E00766271 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9D9EE74D19A8F36D0055B347 /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9D9EE75019A8F5100055B347 /* slides.key */,
-			);
-			name = slides;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,8 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D9EE74F19A8F3730055B347 /* todo in Resources */,
-				9D9EE75119A8F5100055B347 /* slides.key in Resources */,
 				9D6C5BD7195D4D4E00766271 /* Main.storyboard in Resources */,
 				9D6C5BD9195D4D4E00766271 /* Images.xcassets in Resources */,
 			);
@@ -415,7 +399,6 @@
 				9D6C5BEA195D4D4E00766271 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9D6C5BEB195D4D4E00766271 /* Build configuration list for PBXNativeTarget "Displaying Alerts and Action SheetsTests" */ = {
 			isa = XCConfigurationList;
@@ -424,7 +407,6 @@
 				9D6C5BED195D4D4E00766271 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

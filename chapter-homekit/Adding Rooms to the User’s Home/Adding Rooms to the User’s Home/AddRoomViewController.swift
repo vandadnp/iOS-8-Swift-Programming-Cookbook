@@ -32,7 +32,7 @@ class AddRoomViewController: UIViewController{
   
   @IBAction func addRoom(){
     
-    if textField.text.utf16Count == 0{
+    if countElements(textField.text) == 0{
       UIAlertController.showAlertControllerOnHostController(self,
         title: "Room name", message: "Please enter the room name",
         buttonTitle: "OK")
@@ -49,7 +49,7 @@ class AddRoomViewController: UIViewController{
           title: "Error happened", message: "\(error)",
           buttonTitle: "OK")
       } else {
-        strongSelf.navigationController.popViewControllerAnimated(true)
+        strongSelf.navigationController!.popViewControllerAnimated(true)
       }
       
       })

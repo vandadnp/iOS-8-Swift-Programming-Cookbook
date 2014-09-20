@@ -88,7 +88,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
-  /* Read the contents of the app bundle using the file manager */
   func contentsOfAppBundle() -> [NSURL]{
     
     let propertiesToGet = [
@@ -115,7 +114,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
   }
   
-  /* Get the string equivalent of a boolean property from an NSURL */
   func stringValueOfBoolProperty(property: String, url: NSURL) -> String{
     var value:AnyObject?
     var error:NSError?
@@ -130,7 +128,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return "NO"
   }
   
-  /* Find out if a URL is a directory/readable */
   func isUrlDirectory(url: NSURL) -> String{
     return stringValueOfBoolProperty(NSURLIsDirectoryKey, url: url)
   }
@@ -139,7 +136,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return stringValueOfBoolProperty(NSURLIsReadableKey, url: url)
   }
   
-  /* Find a date property of an NSURL */
+  
   func dateOfType(type: String, url: NSURL) -> NSDate?{
     var value:AnyObject?
     var error:NSError?
@@ -152,7 +149,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return nil
   }
   
-  /* Takes a URL and prints its various properties to the console */
   func printUrlPropertiesToConsole(url: NSURL){
     println("URL name = \(url.lastPathComponent)")
     println("Is a Directory? \(isUrlDirectory(url))")
@@ -178,12 +174,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
     
-      /* Get the contents of the app bundle */
-      let appBundleContents = contentsOfAppBundle()
-      
-      for url in appBundleContents{
-        printUrlPropertiesToConsole(url)
-      }
+    let appBundleContents = contentsOfAppBundle()
+    
+    for url in appBundleContents{
+      printUrlPropertiesToConsole(url)
+    }
     
     self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
     // Override point for customization after application launch.

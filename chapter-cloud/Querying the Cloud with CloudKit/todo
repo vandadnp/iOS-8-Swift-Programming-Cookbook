@@ -1,6 +1,0 @@
-1) I will reset the simulator
-2) I will make sure CloudKit dashboard is clean
-3) I will log myself into the simulator's iCloud section
-4) I will run the Storing Data with CloudKit recipe and ensure data is saved
-5) I will then go through the ViewController.swift class
-6) I will run the app on the simulator

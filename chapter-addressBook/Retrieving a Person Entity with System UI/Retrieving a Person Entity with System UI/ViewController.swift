@@ -21,23 +21,73 @@
 //  report them to O'Reilly at the following URL:
 //  http://www.oreilly.com/catalog/errata.csp?isbn=0636920034254
 
+/* 1 */
+//import UIKit
+//import AddressBookUI
+//
+//class ViewController: UIViewController,
+//ABPeoplePickerNavigationControllerDelegate {
+//  
+//  let personPicker: ABPeoplePickerNavigationController
+//  
+//  required init(coder aDecoder: NSCoder) {
+//    personPicker = ABPeoplePickerNavigationController()
+//    super.init(coder: aDecoder)
+//    personPicker.peoplePickerDelegate = self
+//  }
+//  
+//  @IBAction func performPickPerson(sender : AnyObject) {
+//    self.presentViewController(personPicker, animated: true, completion: nil)
+//  }
+//  
+//  func peoplePickerNavigationControllerDidCancel(
+//    peoplePicker: ABPeoplePickerNavigationController!){
+//    /* Mandatory to implement */
+//  }
+//  
+//  func peoplePickerNavigationController(
+//    peoplePicker: ABPeoplePickerNavigationController!,
+//    didSelectPerson person: ABRecordRef!) {
+//      
+//      /* Do we know which picker this is? */
+//      if peoplePicker != personPicker{
+//        return
+//      }
+//      
+//      /* Get all the phone numbers this user has */
+//      
+//      let phones: ABMultiValueRef = ABRecordCopyValue(person,
+//        kABPersonPhoneProperty).takeRetainedValue()
+//      
+//      let countOfPhones = ABMultiValueGetCount(phones)
+//      
+//      for index in 0..<countOfPhones{
+//        let phone = ABMultiValueCopyValueAtIndex(phones,
+//          index).takeRetainedValue() as String
+//        
+//        println(phone)
+//        
+//      }
+//    
+//  }
+//  
+//}
+
 /* 2 */
 import UIKit
 import AddressBookUI
 
-class ViewController: UIViewController ,
+class ViewController: UIViewController,
 ABPeoplePickerNavigationControllerDelegate {
 
-  /* Instantiate the person picker */
   let personPicker: ABPeoplePickerNavigationController
-  
+
   required init(coder aDecoder: NSCoder) {
     personPicker = ABPeoplePickerNavigationController()
     super.init(coder: aDecoder)
     personPicker.peoplePickerDelegate = self
   }
 
-  /* Present the picker */
   @IBAction func performPickPerson(sender : AnyObject) {
     self.presentViewController(personPicker, animated: true, completion: nil)
   }
@@ -50,8 +100,6 @@ ABPeoplePickerNavigationControllerDelegate {
   func peoplePickerNavigationController(
     peoplePicker: ABPeoplePickerNavigationController!,
     didSelectPerson person: ABRecordRef!) {
-      
-      /* Find all the emails */
 
       /* Do we know which picker this is? */
       if peoplePicker != personPicker{

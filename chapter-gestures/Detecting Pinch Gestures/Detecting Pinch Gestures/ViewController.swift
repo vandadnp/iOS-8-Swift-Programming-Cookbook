@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     }
     
     if sender.scale != CGFloat.NaN && sender.scale != 0.0{
-      sender.view.transform = CGAffineTransformMakeScale(sender.scale,
+      sender.view!.transform = CGAffineTransformMakeScale(sender.scale,
         sender.scale);
     }
     

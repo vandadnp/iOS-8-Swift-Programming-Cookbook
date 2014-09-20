@@ -14,11 +14,11 @@ class ColorTransformer: NSValueTransformer {
     return true
   }
   
-  override class func transformedValueClass() -> AnyClass!{
+  override class func transformedValueClass() -> AnyClass{
     return NSData.classForCoder()
   }
   
-  override func transformedValue(value: AnyObject!) -> AnyObject! {
+  override func transformedValue(value: AnyObject!) -> AnyObject {
     
     /* Transform color to data */
     
@@ -38,7 +38,7 @@ class ColorTransformer: NSValueTransformer {
     
   }
   
-  override func reverseTransformedValue(value: AnyObject!) -> AnyObject! {
+  override func reverseTransformedValue(value: AnyObject!) -> AnyObject {
     
     /* Transform data to color */
     let data = value as NSData

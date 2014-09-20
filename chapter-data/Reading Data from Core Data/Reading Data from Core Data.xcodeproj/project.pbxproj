@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9DFDFCD419AB69A700DCDC5D /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDFCD319AB69A700DCDC5D /* todo */; };
 		A67005A71976C16200611988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67005A61976C16200611988 /* AppDelegate.swift */; };
 		A67005AA1976C16200611988 /* Reading_Data_from_Core_Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A67005A81976C16200611988 /* Reading_Data_from_Core_Data.xcdatamodeld */; };
 		A67005AC1976C16200611988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67005AB1976C16200611988 /* ViewController.swift */; };
@@ -28,7 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9DFDFCD319AB69A700DCDC5D /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 		A67005A11976C16200611988 /* Reading Data from Core Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reading Data from Core Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67005A51976C16200611988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A67005A61976C16200611988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 		A67005981976C16200611988 = {
 			isa = PBXGroup;
 			children = (
-				9DFDFCD319AB69A700DCDC5D /* todo */,
 				A67005A31976C16200611988 /* Reading Data from Core Data */,
 				A67005B91976C16200611988 /* Reading Data from Core DataTests */,
 				A67005A21976C16200611988 /* Products */,
@@ -84,10 +81,10 @@
 			children = (
 				A67005A61976C16200611988 /* AppDelegate.swift */,
 				A67005AB1976C16200611988 /* ViewController.swift */,
-				A6AD1DBB1976C2F7006AB781 /* Person.swift */,
 				A67005AD1976C16200611988 /* Main.storyboard */,
 				A67005B01976C16200611988 /* Images.xcassets */,
 				A67005A81976C16200611988 /* Reading_Data_from_Core_Data.xcdatamodeld */,
+				A6AD1DBB1976C2F7006AB781 /* Person.swift */,
 				A67005A41976C16200611988 /* Supporting Files */,
 			);
 			path = "Reading Data from Core Data";
@@ -198,7 +195,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DFDFCD419AB69A700DCDC5D /* todo in Resources */,
 				A67005AF1976C16200611988 /* Main.storyboard in Resources */,
 				A67005B11976C16200611988 /* Images.xcassets in Resources */,
 			);

@@ -29,7 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   func example1(){
-    /* Write the contents of NSString to disk */
     let someText = NSString(string: "Put some string here")
     let destinationPath = NSTemporaryDirectory() + "MyFile.txt"
     var error:NSError?
@@ -50,31 +49,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func example2(){
     
-    /* Write and read the NSString back from file */
-    var error:NSError?
-    let path = NSTemporaryDirectory() + "MyFile.txt"
-    
-    let succeeded = "Hello, World!".writeToFile(path,
-      atomically: true,
-      encoding: NSUTF8StringEncoding,
-      error: &error)
-    
-    if (succeeded){
-      /* Now read from the same file */
-      let readString = NSString(contentsOfFile: path,
-        encoding: NSUTF8StringEncoding, error: nil) as String
-      println("The read string is: \(readString)")
-    } else {
-      if let theError = error{
-        println("Could not write. Error = \(theError)")
-      }
-    }
+var error:NSError?
+let path = NSTemporaryDirectory() + "MyFile.txt"
+
+let succeeded = "Hello, World!".writeToFile(path,
+  atomically: true,
+  encoding: NSUTF8StringEncoding,
+  error: &error)
+
+if (succeeded){
+  /* Now read from the same file */
+  let readString = NSString(contentsOfFile: path,
+    encoding: NSUTF8StringEncoding, error: nil) as String
+  println("The read string is: \(readString)")
+} else {
+  if let theError = error{
+    println("Could not write. Error = \(theError)")
+  }
+}
     
   }
   
   func example3(){
     
-    /* Write and read an array */
     let path = NSTemporaryDirectory() + "MyFile.txt"
     let arrayOfNames:NSArray = ["Steve", "John", "Edward"]
     
@@ -91,7 +88,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func example4(){
     
-    /* Read and write an NSDictionary */
     let path = NSTemporaryDirectory() + "MyFile.txt"
     let dict:NSDictionary = [
       "first name" : "Steven",
@@ -114,8 +110,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
   
   func example5(){
-    
-    /* Read and write NSData */
     let path = NSTemporaryDirectory() + "MyFile.txt"
     let chars = [CUnsignedChar("a"), CUnsignedChar("b")]
     let data = NSData(bytes: chars, length: 2)
@@ -130,11 +124,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     } else {
       println("Could not write the data")
     }
-    
   }
   
-  func application(application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
     
     example5()
     

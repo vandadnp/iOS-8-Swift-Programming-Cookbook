@@ -1,8 +1,0 @@
-1) I'll run through the slides
-2) I'll then show them how to get to the height information in the Health app on simulator
-3) Then I'll show them to set up the Capabilities for HealthKit in Xcode
-4) I'll then show the storyboard of the app
-5) I'll then introduce the code (be careful about the height8 macro, it has /* */ around it)
-6) Then I'll run the code and save the data and close the simulator and run
-    it again to see the data read back properly
-7) Then I will show the results also shown in the Health app

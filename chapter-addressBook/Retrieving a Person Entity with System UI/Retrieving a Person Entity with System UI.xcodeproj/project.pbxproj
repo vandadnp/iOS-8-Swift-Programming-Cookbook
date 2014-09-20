@@ -12,7 +12,6 @@
 		9D12AEF2195B554000000A8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D12AEF0195B554000000A8A /* Main.storyboard */; };
 		9D12AEF4195B554000000A8A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D12AEF3195B554000000A8A /* Images.xcassets */; };
 		9D12AF00195B554000000A8A /* Retrieving_a_Person_Entity_with_System_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D12AEFF195B554000000A8A /* Retrieving_a_Person_Entity_with_System_UITests.swift */; };
-		9DFDFCBF19AB548500DCDC5D /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDFCBE19AB548500DCDC5D /* todo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +34,6 @@
 		9D12AEF9195B554000000A8A /* Retrieving a Person Entity with System UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Retrieving a Person Entity with System UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D12AEFE195B554000000A8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D12AEFF195B554000000A8A /* Retrieving_a_Person_Entity_with_System_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Retrieving_a_Person_Entity_with_System_UITests.swift; sourceTree = "<group>"; };
-		9DFDFCBE19AB548500DCDC5D /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +57,6 @@
 		9D12AEDE195B554000000A8A = {
 			isa = PBXGroup;
 			children = (
-				9DFDFCBE19AB548500DCDC5D /* todo */,
 				9D12AEE9195B554000000A8A /* Retrieving a Person Entity with System UI */,
 				9D12AEFC195B554000000A8A /* Retrieving a Person Entity with System UITests */,
 				9D12AEE8195B554000000A8A /* Products */,
@@ -192,7 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DFDFCBF19AB548500DCDC5D /* todo in Resources */,
 				9D12AEF2195B554000000A8A /* Main.storyboard in Resources */,
 				9D12AEF4195B554000000A8A /* Images.xcassets in Resources */,
 			);
@@ -403,7 +399,6 @@
 				9D12AF05195B554000000A8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9D12AF06195B554000000A8A /* Build configuration list for PBXNativeTarget "Retrieving a Person Entity with System UITests" */ = {
 			isa = XCConfigurationList;
@@ -412,7 +407,6 @@
 				9D12AF08195B554000000A8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9DBC8CA919AB6D4900EC45B0 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9DBC8CA819AB6D4900EC45B0 /* todo */; };
-		9DBC8CAB19AB6EBF00EC45B0 /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9DBC8CAA19AB6EBF00EC45B0 /* slides.key */; };
 		A6AD1E9C1976E5EC006AB781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD1E9B1976E5EC006AB781 /* AppDelegate.swift */; };
 		A6AD1E9F1976E5EC006AB781 /* Fetching_Data_in_the_Background.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6AD1E9D1976E5EC006AB781 /* Fetching_Data_in_the_Background.xcdatamodeld */; };
 		A6AD1EA11976E5EC006AB781 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD1EA01976E5EC006AB781 /* ViewController.swift */; };
@@ -29,8 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9DBC8CA819AB6D4900EC45B0 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
-		9DBC8CAA19AB6EBF00EC45B0 /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
 		A6AD1E961976E5EC006AB781 /* Fetching Data in the Background.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fetching Data in the Background.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6AD1E9A1976E5EC006AB781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6AD1E9B1976E5EC006AB781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,19 +58,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9DBC8CA719AB6D4300EC45B0 /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9DBC8CAA19AB6EBF00EC45B0 /* slides.key */,
-			);
-			name = slides;
-			sourceTree = "<group>";
-		};
 		A6AD1E8D1976E5EC006AB781 = {
 			isa = PBXGroup;
 			children = (
-				9DBC8CA819AB6D4900EC45B0 /* todo */,
-				9DBC8CA719AB6D4300EC45B0 /* slides */,
 				A6AD1E981976E5EC006AB781 /* Fetching Data in the Background */,
 				A6AD1EAE1976E5ED006AB781 /* Fetching Data in the BackgroundTests */,
 				A6AD1E971976E5EC006AB781 /* Products */,
@@ -95,10 +81,10 @@
 			children = (
 				A6AD1E9B1976E5EC006AB781 /* AppDelegate.swift */,
 				A6AD1EA01976E5EC006AB781 /* ViewController.swift */,
-				A6AD1EBB1976E665006AB781 /* Person.swift */,
 				A6AD1EA21976E5EC006AB781 /* Main.storyboard */,
 				A6AD1EA51976E5EC006AB781 /* Images.xcassets */,
 				A6AD1E9D1976E5EC006AB781 /* Fetching_Data_in_the_Background.xcdatamodeld */,
+				A6AD1EBB1976E665006AB781 /* Person.swift */,
 				A6AD1E991976E5EC006AB781 /* Supporting Files */,
 			);
 			path = "Fetching Data in the Background";
@@ -209,8 +195,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DBC8CA919AB6D4900EC45B0 /* todo in Resources */,
-				9DBC8CAB19AB6EBF00EC45B0 /* slides.key in Resources */,
 				A6AD1EA41976E5EC006AB781 /* Main.storyboard in Resources */,
 				A6AD1EA61976E5EC006AB781 /* Images.xcassets in Resources */,
 			);
@@ -424,7 +408,6 @@
 				A6AD1EB71976E5ED006AB781 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		A6AD1EB81976E5ED006AB781 /* Build configuration list for PBXNativeTarget "Fetching Data in the BackgroundTests" */ = {
 			isa = XCConfigurationList;
@@ -433,7 +416,6 @@
 				A6AD1EBA1976E5ED006AB781 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

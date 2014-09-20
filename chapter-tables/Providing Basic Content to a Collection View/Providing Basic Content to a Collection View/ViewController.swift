@@ -33,10 +33,10 @@ class ViewController: UICollectionViewController {
   override init(collectionViewLayout layout: UICollectionViewLayout!) {
     super.init(collectionViewLayout: layout)
     
-    collectionView.registerClass(UICollectionViewCell.classForCoder(),
+    collectionView!.registerClass(UICollectionViewCell.classForCoder(),
       forCellWithReuseIdentifier: "cell")
     
-    collectionView.backgroundColor = UIColor.whiteColor()
+    collectionView!.backgroundColor = UIColor.whiteColor()
   }
   
   convenience required init(coder aDecoder: NSCoder) {
@@ -55,18 +55,18 @@ class ViewController: UICollectionViewController {
   }
   
   override func numberOfSectionsInCollectionView(
-    collectionView: UICollectionView!) -> Int{
+    collectionView: UICollectionView) -> Int{
       return allSectionColors.count
   }
   
-  override func collectionView(collectionView: UICollectionView!,
+  override func collectionView(collectionView: UICollectionView,
     numberOfItemsInSection section: Int) -> Int{
       /* Generate between 20 to 40 cells for each section */
       return Int(arc4random_uniform(21)) + 20
   }
   
-  override func collectionView(collectionView: UICollectionView!,
-    cellForItemAtIndexPath indexPath: NSIndexPath!) -> UICollectionViewCell!{
+  override func collectionView(collectionView: UICollectionView,
+    cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
       
       let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
         "cell",

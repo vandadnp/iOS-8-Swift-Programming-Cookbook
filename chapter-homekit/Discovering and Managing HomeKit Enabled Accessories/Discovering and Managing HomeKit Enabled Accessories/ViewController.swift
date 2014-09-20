@@ -24,11 +24,9 @@
 import UIKit
 import HomeKit
 
-/* Home manager delegate and accessory browser delegate */
-class ViewController: UIViewController , HMHomeManagerDelegate,
-HMAccessoryBrowserDelegate{
+class ViewController: UIViewController, HMHomeManagerDelegate,
+HMAccessoryBrowserDelegate {
   
-  /* Define our variables and constants */
   var accessories = [HMAccessory]()
   var home: HMHome!
   var room: HMRoom!
@@ -46,14 +44,6 @@ HMAccessoryBrowserDelegate{
   let roomName = "Bedroom 1"
   
   var homeManager: HMHomeManager!
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    /* Instantiate the home manager to start looking for homes that are 
-    already defined */
-    homeManager = HMHomeManager()
-    homeManager.delegate = self
-  }
   
   func homeManagerDidUpdateHomes(manager: HMHomeManager!) {
     
@@ -79,16 +69,15 @@ HMAccessoryBrowserDelegate{
             strongSelf.accessoryBrowser.startSearchingForNewAccessories()
           }
           
-        })
+          })
         
       }
       
-    })
+      })
     
   }
   
   func findCharacteristicsOfService(service: HMService){
-    /* Go through the characteristics of the given service */
     for characteristic in service.characteristics as [HMCharacteristic]{
       println("   Characteristic type = " +
         "\(characteristic.characteristicType)")
@@ -96,7 +85,6 @@ HMAccessoryBrowserDelegate{
   }
   
   func findServicesForAccessory(accessory: HMAccessory){
-    /* Find all the services of an accessory */
     println("Finding services for this accessory...")
     for service in accessory.services as [HMService]{
       println(" Service name = \(service.name)")
@@ -110,7 +98,6 @@ HMAccessoryBrowserDelegate{
   func accessoryBrowser(browser: HMAccessoryBrowser!,
     didFindNewAccessory accessory: HMAccessory!) {
       
-      /* Handle what to do when a new accessory is found */
       println("Found a new accessory")
       println("Adding it to the home...")
       home.addAccessory(accessory, completionHandler: {[weak self]
@@ -138,10 +125,10 @@ HMAccessoryBrowserDelegate{
                 
               }
               
-          })
+            })
         }
         
-      })
+        })
       
   }
   
@@ -152,9 +139,14 @@ HMAccessoryBrowserDelegate{
       
   }
   
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    homeManager = HMHomeManager()
+    homeManager.delegate = self
+  }
+  
   override func viewDidDisappear(animated: Bool) {
     super.viewDidDisappear(animated)
-    /* Stop looking for accessories */
     accessoryBrowser.stopSearchingForNewAccessories()
   }
   

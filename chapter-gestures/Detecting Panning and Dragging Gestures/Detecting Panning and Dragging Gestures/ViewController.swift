@@ -63,8 +63,8 @@ class ViewController: UIViewController {
   func handlePanGestures(sender: UIPanGestureRecognizer){
     
     if sender.state != .Ended && sender.state != .Failed{
-      let location = sender.locationInView(sender.view.superview)
-      sender.view.center = location
+      let location = sender.locationInView(sender.view!.superview!)
+      sender.view!.center = location
     }
     
   }

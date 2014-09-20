@@ -28,8 +28,7 @@ import AddressBook
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
-  
-  /* Get our address book reference */
+    
   lazy var addressBook: ABAddressBookRef = {
     var error: Unmanaged<CFError>?
     return ABAddressBookCreateWithOptions(nil,
@@ -39,7 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication!,
     didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
       
-      /* Get permission */
       switch ABAddressBookGetAuthorizationStatus(){
       case .Authorized:
         println("Already authorized")
@@ -59,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
               println("Access is not granted")
             }
             
-        })
+          })
       case .Restricted:
         println("Access is restricted")
         
@@ -75,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /* Get all the people in the address book */
     let allPeople = ABAddressBookCopyArrayOfAllPeople(
       addressBook).takeRetainedValue() as NSArray
-    
+
     for person: ABRecordRef in allPeople{
       println(person)
     }

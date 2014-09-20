@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       let newPerson =
       NSEntityDescription.insertNewObjectForEntityForName("Person",
-        inManagedObjectContext: managedObjectContext) as Person
+        inManagedObjectContext: managedObjectContext!) as Person
       
       (newPerson.firstName, newPerson.lastName, newPerson.age) =
         (firstName, lastName, age)
@@ -38,16 +38,57 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       return false
       
   }
+
+  /* 1 */
+//  func application(application: UIApplication!,
+//    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+//      
+//      /* Create the entities first */
+//      createNewPersonWithFirstName("Anthony", lastName: "Robbins", age: 52)
+//      createNewPersonWithFirstName("Richard", lastName: "Branson", age: 62)
+//      
+//      /* Tell the request that we want to read the
+//      contents of the Person entity */
+//      /* Create the fetch request first */
+//      let fetchRequest = NSFetchRequest(entityName: "Person")
+//      
+//      var requestError: NSError?
+//      
+//      /* And execute the fetch request on the context */
+//      let persons = managedObjectContext!.executeFetchRequest(fetchRequest,
+//        error: &requestError) as [Person!]
+//      
+//      /* Make sure we get the array */
+//      if persons.count > 0{
+//        
+//        /* Delete the last person in the array */
+//        let lastPerson = (persons as NSArray).lastObject as Person
+//        
+//        managedObjectContext!.deleteObject(lastPerson)
+//        
+//        var savingError: NSError?
+//        if managedObjectContext!.save(&savingError){
+//          println("Successfully deleted the last person in the array")
+//        } else {
+//          if let error = savingError{
+//            println("Failed to delete the last person. Error = \(error)")
+//          }
+//        }
+//        
+//      } else {
+//        println("Could not find any Person entities in the context")
+//      }
+//      
+//      return true
+//  }
   
-  
+  /* 2 */
   func application(application: UIApplication!,
     didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
       
       /* Create the entities first */
       createNewPersonWithFirstName("Anthony", lastName: "Robbins", age: 52)
       createNewPersonWithFirstName("Richard", lastName: "Branson", age: 62)
-      
-      /* Find all the Person entities and delete the last one */
       
       /* Tell the request that we want to read the
       contents of the Person entity */
@@ -69,8 +110,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         managedObjectContext!.deleteObject(lastPerson)
         
         if lastPerson.deleted{
-          println("Successfully deleted the last person...")
-          
+            println("Successfully deleted the last person...")
+
           var savingError: NSError?
           if managedObjectContext!.save(&savingError){
             println("Successfully saved the context")
@@ -79,9 +120,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
               println("Failed to save the context. Error = \(error)")
             }
           }
-          
+
         } else {
-          println("Failed to delete the last person")
+            println("Failed to delete the last person")
         }
         
       } else {
@@ -107,7 +148,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   lazy var managedObjectModel: NSManagedObjectModel = {
       // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-      let modelURL = NSBundle.mainBundle().URLForResource("Deleting_Data_from_Core_Data", withExtension: "momd")
+      let modelURL = NSBundle.mainBundle().URLForResource("Deleting_Data_from_Core_Data", withExtension: "momd")!
       return NSManagedObjectModel(contentsOfURL: modelURL)
   }()
 

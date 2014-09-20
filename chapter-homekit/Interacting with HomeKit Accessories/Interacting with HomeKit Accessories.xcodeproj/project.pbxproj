@@ -13,8 +13,6 @@
 		9D217C2B1983AFC300876497 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D217C2A1983AFC300876497 /* Images.xcassets */; };
 		9D217C371983AFC300876497 /* Interacting_with_HomeKit_AccessoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D217C361983AFC300876497 /* Interacting_with_HomeKit_AccessoriesTests.swift */; };
 		9D217C411983B0A400876497 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D217C401983B0A400876497 /* HomeKit.framework */; };
-		9D28C85019AB392600135AF6 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D28C84F19AB392600135AF6 /* todo */; };
-		9D28C85219AB3A3E00135AF6 /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9D28C85119AB3A3E00135AF6 /* slides.key */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +37,6 @@
 		9D217C361983AFC300876497 /* Interacting_with_HomeKit_AccessoriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interacting_with_HomeKit_AccessoriesTests.swift; sourceTree = "<group>"; };
 		9D217C401983B0A400876497 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		9D217C421983B0A400876497 /* Interacting with HomeKit Accessories.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Interacting with HomeKit Accessories.entitlements"; sourceTree = "<group>"; };
-		9D28C84F19AB392600135AF6 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
-		9D28C85119AB3A3E00135AF6 /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +61,6 @@
 		9D217C151983AFC300876497 = {
 			isa = PBXGroup;
 			children = (
-				9D28C84F19AB392600135AF6 /* todo */,
-				9D28C84E19AB391E00135AF6 /* slides */,
 				9D217C401983B0A400876497 /* HomeKit.framework */,
 				9D217C201983AFC300876497 /* Interacting with HomeKit Accessories */,
 				9D217C331983AFC300876497 /* Interacting with HomeKit AccessoriesTests */,
@@ -119,14 +113,6 @@
 				9D217C351983AFC300876497 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9D28C84E19AB391E00135AF6 /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9D28C85119AB3A3E00135AF6 /* slides.key */,
-			);
-			name = slides;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,8 +201,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D28C85019AB392600135AF6 /* todo in Resources */,
-				9D28C85219AB3A3E00135AF6 /* slides.key in Resources */,
 				9D217C291983AFC300876497 /* Main.storyboard in Resources */,
 				9D217C2B1983AFC300876497 /* Images.xcassets in Resources */,
 			);
@@ -428,7 +412,6 @@
 				9D217C3C1983AFC300876497 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9D217C3D1983AFC300876497 /* Build configuration list for PBXNativeTarget "Interacting with HomeKit AccessoriesTests" */ = {
 			isa = XCConfigurationList;
@@ -437,7 +420,6 @@
 				9D217C3F1983AFC300876497 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -39,13 +39,13 @@
 //    return manager
 //    }()
 //  
-//  override func tableView(tableView: UITableView!,
+//  override func tableView(tableView: UITableView,
 //    numberOfRowsInSection section: Int) -> Int {
 //      return homeManager.homes.count
 //  }
 //  
-//  override func tableView(tableView: UITableView!,
-//    cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+//  override func tableView(tableView: UITableView,
+//    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 //      
 //      let cell = tableView.dequeueReusableCellWithIdentifier(
 //        TableViewValues.identifier, forIndexPath: indexPath)
@@ -53,7 +53,7 @@
 //      
 //      let home = homeManager.homes[indexPath.row] as HMHome
 //      
-//      cell.textLabel.text = home.name
+//      cell.textLabel!.text = home.name
 //      
 //      return cell
 //      
@@ -63,7 +63,7 @@
 //    tableView.reloadData()
 //  }
 //  
-//  override func prepareForSegue(segue: UIStoryboardSegue!,
+//  override func prepareForSegue(segue: UIStoryboardSegue,
 //    sender: AnyObject!) {
 //      
 //      if segue.identifier == segueIdentifier{
@@ -120,7 +120,7 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
     return manager
     }()
   
-  override func tableView(tableView: UITableView!,
+  override func tableView(tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
       let numberOfRows = homeManager.homes.count
       
@@ -133,8 +133,8 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
       return numberOfRows
   }
   
-  override func tableView(tableView: UITableView!,
-    cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+  override func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewValues.identifier, forIndexPath: indexPath)
@@ -142,7 +142,7 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
       
       let home = homeManager.homes[indexPath.row] as HMHome
       
-      cell.textLabel.text = home.name
+      cell.textLabel!.text = home.name
       
       return cell
       
@@ -156,7 +156,7 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
     tableView.reloadData()
   }
   
-  override func prepareForSegue(segue: UIStoryboardSegue!,
+  override func prepareForSegue(segue: UIStoryboardSegue,
     sender: AnyObject!) {
       
       if segue.identifier == segueIdentifier{
@@ -171,7 +171,7 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
       
   }
   
-  override func tableView(tableView: UITableView!,
+  override func tableView(tableView: UITableView,
     commitEditingStyle editingStyle: UITableViewCellEditingStyle,
     forRowAtIndexPath indexPath: NSIndexPath!) {
       

@@ -26,10 +26,10 @@ import HomeKit
 
 extension HMCharacteristic{
   
-  func containsProperty(property: String) -> Bool{
+  func containsProperty(paramProperty: String) -> Bool{
     if let propeties = self.properties{
       for property in properties as [String]{
-        if property == property{
+        if property == paramProperty{
           return true
         }
       }
@@ -66,7 +66,7 @@ HMAccessoryBrowserDelegate {
     
     /* Can we find the old value? */
     if let name = defaults.stringForKey(homeNameKey){
-      if name.utf16Count > 0 {
+      if countElements(name) > 0 {
         return name
       }
     }

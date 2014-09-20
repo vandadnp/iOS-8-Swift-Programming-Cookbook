@@ -12,7 +12,7 @@ class ViewController: UIViewController {
   
   /* 1 */
   //  override func motionEnded(motion: UIEventSubtype,
-  //    withEvent event: UIEvent!) {
+  //    withEvent event: UIEvent) {
   //
   //      /* Handle the motion here */
   //
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
   
   /* 2 */
   override func motionEnded(motion: UIEventSubtype,
-    withEvent event: UIEvent!) {
+    withEvent event: UIEvent) {
       
       if motion == .MotionShake{
         let controller = UIAlertController(title: "Shake",

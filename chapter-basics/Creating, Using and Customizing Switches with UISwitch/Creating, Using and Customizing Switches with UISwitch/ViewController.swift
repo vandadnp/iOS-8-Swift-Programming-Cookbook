@@ -26,7 +26,7 @@
 //
 //class ViewController: UIViewController {
 //  
-//  var mainSwitch:UISwitch?
+//  var mainSwitch:UISwitch!
 //
 //}
 
@@ -35,7 +35,7 @@
 //
 //class ViewController: UIViewController {
 //  
-//  var mainSwitch:UISwitch?
+//  var mainSwitch:UISwitch!
 //  
 //  func switchIsChanged(sender: UISwitch){
 //    println("Sender is = \(sender)")
@@ -53,13 +53,13 @@
 //    mainSwitch = UISwitch(frame: CGRect(x: 100, y: 100, width: 0, height: 0))
 //    view.addSubview(mainSwitch!)
 //    
-////    if mainSwitch!.on{
+////    if mainSwitch.on{
 ////      /* Switch is on */
 ////    } else {
 ////      /* Switch is off */
 ////    }
 //    
-//    mainSwitch!.addTarget(self,
+//    mainSwitch.addTarget(self,
 //      action: "switchIsChanged:",
 //      forControlEvents: .ValueChanged)
 //    
@@ -72,7 +72,7 @@ import UIKit
 
 class ViewController: UIViewController {
   
-  var mainSwitch:UISwitch?
+  var mainSwitch:UISwitch!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -80,13 +80,13 @@ class ViewController: UIViewController {
     mainSwitch = UISwitch(frame: CGRect(x: 100, y: 100, width: 0, height: 0))
     
     /* Adjust the off-mode tint color */
-    mainSwitch!.tintColor = UIColor.redColor()
+    mainSwitch.tintColor = UIColor.redColor()
     /* Adjust the on-mode tint color */
-    mainSwitch!.onTintColor = UIColor.brownColor()
+    mainSwitch.onTintColor = UIColor.brownColor()
     /* Also change the knob's tint color */
-    mainSwitch!.thumbTintColor = UIColor.greenColor()
+    mainSwitch.thumbTintColor = UIColor.greenColor()
     
-    view.addSubview(mainSwitch!)
+    view.addSubview(mainSwitch)
     
   }
   

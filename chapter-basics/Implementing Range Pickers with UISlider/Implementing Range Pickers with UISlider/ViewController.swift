@@ -26,17 +26,17 @@
 //
 //class ViewController: UIViewController {
 //  
-//  var slider: UISlider?
+//  var slider: UISlider!
 //                            
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //    
 //    slider = UISlider(frame: CGRect(x: 0, y: 0, width: 200, height: 23))
-//    slider!.center = view.center
-//    slider!.minimumValue = 0
-//    slider!.maximumValue = 100
-//    slider!.value = slider!.maximumValue / 2.0
-//    view.addSubview(slider!)
+//    slider.center = view.center
+//    slider.minimumValue = 0
+//    slider.maximumValue = 100
+//    slider.value = slider!.maximumValue / 2.0
+//    view.addSubview(slider)
 //    
 //  }
 //
@@ -47,7 +47,7 @@
 //
 //class ViewController: UIViewController {
 //  
-//  var slider: UISlider?
+//  var slider: UISlider!
 //  
 //  func sliderValueChanged(slider: UISlider){
 //    println("Slider's new value is \(slider.value)")
@@ -57,16 +57,16 @@
 //    super.viewDidLoad()
 //    
 //    slider = UISlider(frame: CGRect(x: 0, y: 0, width: 200, height: 23))
-//    slider!.center = view.center
-//    slider!.minimumValue = 0
-//    slider!.maximumValue = 100
-//    slider!.value = slider!.maximumValue / 2.0
+//    slider.center = view.center
+//    slider.minimumValue = 0
+//    slider.maximumValue = 100
+//    slider.value = slider!.maximumValue / 2.0
 //    
-//    slider!.addTarget(self,
+//    slider.addTarget(self,
 //      action: "sliderValueChanged:",
 //      forControlEvents: .ValueChanged)
 //    
-//    view.addSubview(slider!)
+//    view.addSubview(slider)
 //    
 //  }
 //  
@@ -77,21 +77,21 @@ import UIKit
 
 class ViewController: UIViewController {
   
-  var slider: UISlider?
+  var slider: UISlider!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     slider = UISlider(frame: CGRect(x: 0, y: 0, width: 200, height: 23))
-    slider!.center = view.center
-    slider!.minimumValue = 0
-    slider!.maximumValue = 100
-    slider!.value = slider!.maximumValue / 2.0
+    slider.center = view.center
+    slider.minimumValue = 0
+    slider.maximumValue = 100
+    slider.value = slider!.maximumValue / 2.0
     
-    slider!.setThumbImage(UIImage(named: "ThumbNormal"), forState: .Normal)
-    slider!.setThumbImage(UIImage(named: "ThumbHighlighted"), forState: .Highlighted)
+    slider.setThumbImage(UIImage(named: "ThumbNormal"), forState: .Normal)
+    slider.setThumbImage(UIImage(named: "ThumbHighlighted"), forState: .Highlighted)
     
-    view.addSubview(slider!)
+    view.addSubview(slider)
     
   }
   

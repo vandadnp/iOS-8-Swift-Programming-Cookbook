@@ -25,14 +25,14 @@
 //
 //class ViewController: UIViewController {
 //
-//  var datePicker: UIDatePicker?
+//  var datePicker: UIDatePicker!
 //  
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //    
 //    datePicker = UIDatePicker()
-//    datePicker!.center = view.center
-//    view.addSubview(datePicker!)
+//    datePicker.center = view.center
+//    view.addSubview(datePicker)
 //    
 //  }
 //
@@ -43,16 +43,16 @@
 //
 //class ViewController: UIViewController {
 //  
-//  var datePicker: UIDatePicker?
+//  var datePicker: UIDatePicker!
 //  
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //    
 //    datePicker = UIDatePicker()
-//    datePicker!.center = view.center
-//    view.addSubview(datePicker!)
+//    datePicker.center = view.center
+//    view.addSubview(datePicker)
 //    
-//    let currentDate = datePicker!.date
+//    let currentDate = datePicker.date
 //    println(currentDate)
 //    
 //  }
@@ -64,7 +64,7 @@
 //
 //class ViewController: UIViewController {
 //  
-//  var datePicker: UIDatePicker?
+//  var datePicker: UIDatePicker!
 //  
 //  func datePickerDateChanged(datePicker: UIDatePicker){
 //    println("Selected date = \(datePicker.date)")
@@ -74,10 +74,10 @@
 //    super.viewDidLoad()
 //    
 //    datePicker = UIDatePicker()
-//    datePicker!.center = view.center
-//    view.addSubview(datePicker!)
+//    datePicker.center = view.center
+//    view.addSubview(datePicker)
 //    
-//    datePicker!.addTarget(self,
+//    datePicker.addTarget(self,
 //      action: "datePickerDateChanged:",
 //      forControlEvents: .ValueChanged)
 //    
@@ -90,14 +90,14 @@
 //
 //class ViewController: UIViewController {
 //  
-//  var datePicker: UIDatePicker?
+//  var datePicker: UIDatePicker!
 //
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //    
 //    datePicker = UIDatePicker()
-//    datePicker!.center = view.center
-//    view.addSubview(datePicker!)
+//    datePicker.center = view.center
+//    view.addSubview(datePicker)
 //    
 //    let oneYearTime:NSTimeInterval = 365 * 24 * 60 * 60
 //    let todayDate = NSDate()
@@ -106,8 +106,8 @@
 //    
 //    let twoYearsFromToday = todayDate.dateByAddingTimeInterval(2 * oneYearTime)
 //    
-//    datePicker!.minimumDate = oneYearFromToday
-//    datePicker!.maximumDate = twoYearsFromToday
+//    datePicker.minimumDate = oneYearFromToday
+//    datePicker.maximumDate = twoYearsFromToday
 //    
 //  }
 //  
@@ -118,17 +118,17 @@ import UIKit
 
 class ViewController: UIViewController {
   
-  var datePicker: UIDatePicker?
+  var datePicker: UIDatePicker!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     datePicker = UIDatePicker()
-    datePicker!.center = view.center
-    datePicker!.datePickerMode = .CountDownTimer
+    datePicker.center = view.center
+    datePicker.datePickerMode = .CountDownTimer
     let twoMinutes = (2 * 60) as NSTimeInterval
-    datePicker!.countDownDuration = twoMinutes
-    view.addSubview(datePicker!)
+    datePicker.countDownDuration = twoMinutes
+    view.addSubview(datePicker)
     
   }
   

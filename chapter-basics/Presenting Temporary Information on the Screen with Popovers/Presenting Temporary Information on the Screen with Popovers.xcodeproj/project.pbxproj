@@ -13,8 +13,6 @@
 		9D6C5BAA195D4B3900766271 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D6C5BA8195D4B3900766271 /* Main.storyboard */; };
 		9D6C5BAC195D4B3900766271 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D6C5BAB195D4B3900766271 /* Images.xcassets */; };
 		9D6C5BB8195D4B3900766271 /* Presenting_Temporary_Information_on_the_Screen_with_PopoversTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6C5BB7195D4B3900766271 /* Presenting_Temporary_Information_on_the_Screen_with_PopoversTests.swift */; };
-		9D9EE74419A8EF2B0055B347 /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9D9EE74319A8EF2B0055B347 /* slides.key */; };
-		9D9EE74C19A8F2670055B347 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D9EE74B19A8F2670055B347 /* todo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +36,6 @@
 		9D6C5BB1195D4B3900766271 /* Presenting Temporary Information on the Screen with PopoversTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Presenting Temporary Information on the Screen with PopoversTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D6C5BB6195D4B3900766271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D6C5BB7195D4B3900766271 /* Presenting_Temporary_Information_on_the_Screen_with_PopoversTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenting_Temporary_Information_on_the_Screen_with_PopoversTests.swift; sourceTree = "<group>"; };
-		9D9EE74319A8EF2B0055B347 /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
-		9D9EE74B19A8F2670055B347 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +59,6 @@
 		9D6C5B96195D4B3900766271 = {
 			isa = PBXGroup;
 			children = (
-				9D9EE74B19A8F2670055B347 /* todo */,
-				9D9EE74219A8EF230055B347 /* slides */,
 				9D6C5BA1195D4B3900766271 /* Presenting Temporary Information on the Screen with Popovers */,
 				9D6C5BB4195D4B3900766271 /* Presenting Temporary Information on the Screen with PopoversTests */,
 				9D6C5BA0195D4B3900766271 /* Products */,
@@ -85,10 +79,10 @@
 			children = (
 				9D6C5BA4195D4B3900766271 /* AppDelegate.swift */,
 				9D6C5BA6195D4B3900766271 /* ViewController.swift */,
-				9D5046B5198B8E810022825E /* PopoverTableViewController.swift */,
 				9D6C5BA8195D4B3900766271 /* Main.storyboard */,
 				9D6C5BAB195D4B3900766271 /* Images.xcassets */,
 				9D6C5BA2195D4B3900766271 /* Supporting Files */,
+				9D5046B5198B8E810022825E /* PopoverTableViewController.swift */,
 			);
 			path = "Presenting Temporary Information on the Screen with Popovers";
 			sourceTree = "<group>";
@@ -116,14 +110,6 @@
 				9D6C5BB6195D4B3900766271 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9D9EE74219A8EF230055B347 /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9D9EE74319A8EF2B0055B347 /* slides.key */,
-			);
-			name = slides;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,8 +194,6 @@
 			files = (
 				9D6C5BAA195D4B3900766271 /* Main.storyboard in Resources */,
 				9D6C5BAC195D4B3900766271 /* Images.xcassets in Resources */,
-				9D9EE74C19A8F2670055B347 /* todo in Resources */,
-				9D9EE74419A8EF2B0055B347 /* slides.key in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

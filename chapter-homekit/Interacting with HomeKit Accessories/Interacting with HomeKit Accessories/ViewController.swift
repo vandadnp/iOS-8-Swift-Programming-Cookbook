@@ -24,14 +24,12 @@
 import UIKit
 import HomeKit
 
-/* Create a category on HMCharacteristic that allows us to easily
-find out if a characteristic is readable/writable using its properties */
 extension HMCharacteristic{
   
-  func containsProperty(property: String) -> Bool{
+  func containsProperty(paramProperty: String) -> Bool{
     if let propeties = self.properties{
       for property in properties as [String]{
-        if property == property{
+        if property == paramProperty{
           return true
         }
       }
@@ -49,10 +47,9 @@ extension HMCharacteristic{
   
 }
 
-class ViewController: UIViewController , HMHomeManagerDelegate,
+class ViewController: UIViewController, HMHomeManagerDelegate,
 HMAccessoryBrowserDelegate {
   
-  /* Define our variables and constants */
   var home: HMHome!
   var room: HMRoom!
   var projectorAccessory: HMAccessory!
@@ -68,7 +65,7 @@ HMAccessoryBrowserDelegate {
     
     /* Can we find the old value? */
     if let name = defaults.stringForKey(homeNameKey){
-      if name.utf16Count > 0 {
+      if countElements(name) > 0 {
         return name
       }
     }
@@ -90,24 +87,6 @@ HMAccessoryBrowserDelegate {
   
   var homeManager: HMHomeManager!
   
-  func createHome(){
-    
-    homeManager.addHomeWithName(homeName, completionHandler: {
-      [weak self](home: HMHome!, error: NSError!) in
-      
-      if error != nil{
-        println("Failed to create the home")
-      } else {
-        println("Successfully created the home")
-        let strongSelf = self!
-        strongSelf.home = home
-        println("Creating the room...")
-        strongSelf.createRoom()
-      }
-      
-      })
-  }
-  
   func createRoom(){
     
     home.addRoomWithName(roomName, completionHandler: {
@@ -126,9 +105,27 @@ HMAccessoryBrowserDelegate {
     
   }
   
+  func createHome(){
+    
+    homeManager.addHomeWithName(homeName, completionHandler: {
+      [weak self](home: HMHome!, error: NSError!) in
+      
+      if error != nil{
+        println("Failed to create the home")
+      } else {
+        println("Successfully created the home")
+        let strongSelf = self!
+        strongSelf.home = home
+        println("Creating the room...")
+        strongSelf.createRoom()
+      }
+      
+      })
+    
+  }
+  
   func homeManagerDidUpdateHomes(manager: HMHomeManager!) {
     
-    /* Create the home if it doesn't exist */
     for home in manager.homes as [HMHome]{
       if home.name == homeName{
         
@@ -162,7 +159,6 @@ HMAccessoryBrowserDelegate {
   func accessoryBrowser(browser: HMAccessoryBrowser!,
     didFindNewAccessory accessory: HMAccessory!) {
       
-      /* Add the accessory to our room */
       println("Found an accessory...")
       
       if accessory.name == accessoryName{
@@ -286,7 +282,6 @@ HMAccessoryBrowserDelegate {
   
   override func viewDidLoad() {
     
-    /* Start the home manager */
     homeManager = HMHomeManager()
     homeManager.delegate = self
     

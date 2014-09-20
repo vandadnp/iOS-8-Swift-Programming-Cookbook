@@ -26,7 +26,7 @@
 //
 //class ViewController: UIViewController {
 //  
-//  var textField: UITextField?
+//  var textField: UITextField!
 //  
 //}
 
@@ -35,24 +35,22 @@
 //
 //class ViewController: UIViewController {
 //  
-//  var textField: UITextField?
+//  var textField: UITextField!
 //  
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //    
 //    textField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 31))
+//
+//    textField.borderStyle = .RoundedRect
 //    
-//    if let theTextField = self.textField{
-//      theTextField.borderStyle = .RoundedRect
-//      
-//      theTextField.contentVerticalAlignment = .Center
-//      
-//      theTextField.textAlignment = .Center
-//      
-//      theTextField.text = "Sir Richard Branson"
-//      theTextField.center = view.center
-//      view.addSubview(theTextField)
-//    }
+//    textField.contentVerticalAlignment = .Center
+//    
+//    textField.textAlignment = .Center
+//    
+//    textField.text = "Sir Richard Branson"
+//    textField.center = view.center
+//    view.addSubview(textField)
 //    
 //  }
 //  
@@ -72,8 +70,8 @@
 //
 //class ViewController: UIViewController, UITextFieldDelegate {
 //
-//  var textField: UITextField?
-//  var label: UILabel?
+//  var textField: UITextField!
+//  var label: UILabel!
 //  
 //}
 
@@ -82,8 +80,8 @@
 //
 //class ViewController: UIViewController, UITextFieldDelegate {
 //
-//  var textField: UITextField?
-//  var label: UILabel?
+//  var textField: UITextField!
+//  var label: UILabel!
 //  
 //  func calculateAndDisplayTextFieldLengthWithText(text: String){
 //    
@@ -94,14 +92,14 @@
 //    
 //    let stringLength = countElements(text)
 //    
-//    label!.text = "\(stringLength) \(characterOrCharacters)"
+//    label.text = "\(stringLength) \(characterOrCharacters)"
 //    
 //  }
 //  
 //  
-//  func textField(paramTextField: UITextField!,
+//  func textField(paramTextField: UITextField,
 //    shouldChangeCharactersInRange range: NSRange,
-//    replacementString string: String!) -> Bool{
+//    replacementString string: String) -> Bool{
 //      
 //      let text = paramTextField.text as NSString
 //      
@@ -115,7 +113,7 @@
 //      
 //  }
 //  
-//  func textFieldShouldReturn(paramTextField: UITextField!) -> Bool{
+//  func textFieldShouldReturn(paramTextField: UITextField) -> Bool{
 //    paramTextField.resignFirstResponder()
 //    return true
 //  }
@@ -125,20 +123,17 @@
 //    
 //    textField = UITextField(frame:
 //      CGRect(x: 38, y: 30, width: 220, height: 31))
-//    
-//    if let theTextField = textField{
-//      theTextField.delegate = self
-//      theTextField.borderStyle = .RoundedRect
-//      theTextField.contentVerticalAlignment = .Center
-//      theTextField.textAlignment = .Center
-//      theTextField.text = "Sir Richard Branson"
-//      view.addSubview(theTextField)
-//      
-//    }
+//
+//    textField.delegate = self
+//    textField.borderStyle = .RoundedRect
+//    textField.contentVerticalAlignment = .Center
+//    textField.textAlignment = .Center
+//    textField.text = "Sir Richard Branson"
+//    view.addSubview(textField)
 //    
 //    label = UILabel(frame: CGRect(x: 38, y: 61, width: 220, height: 31))
-//    view.addSubview(label!)
-//    calculateAndDisplayTextFieldLengthWithText(textField!.text)
+//    view.addSubview(label)
+//    calculateAndDisplayTextFieldLengthWithText(textField.text)
 //    
 //  }
 //
@@ -149,59 +144,55 @@
 //
 //class ViewController: UIViewController {
 //
-//  var textField: UITextField?
+//  var textField: UITextField!
 //
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //    
 //    textField = UITextField(frame:
 //      CGRect(x: 38, y: 30, width: 220, height: 31))
-//    
-//    if let theTextField = textField{
-//      theTextField.borderStyle = .RoundedRect
-//      theTextField.contentVerticalAlignment = .Center
-//      theTextField.textAlignment = .Center
-//      theTextField.placeholder = "Enter your text here..."
-//      view.addSubview(theTextField)
-//    }
+//
+//    textField.borderStyle = .RoundedRect
+//    textField.contentVerticalAlignment = .Center
+//    textField.textAlignment = .Center
+//    textField.placeholder = "Enter your text here..."
+//    view.addSubview(textField)
 //
 //  }
 //
 //}
 
 /* 7 */
-import UIKit
-
-class ViewController: UIViewController {
-  
-  var textField: UITextField?
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    textField = UITextField(frame:
-      CGRect(x: 38, y: 30, width: 220, height: 31))
-    
-    if let theTextField = textField{
-      theTextField.borderStyle = .RoundedRect
-      theTextField.contentVerticalAlignment = .Center
-      theTextField.textAlignment = .Left
-      theTextField.placeholder = "Enter your text here..."
-      
-    let currencyLabel = UILabel(frame: CGRectZero)
-    currencyLabel.text = NSNumberFormatter().currencySymbol
-    currencyLabel.font = theTextField.font
-    currencyLabel.textAlignment = .Right
-    currencyLabel.sizeToFit()
-    /* Give more width to the label so that it aligns properly on the
-      text field's left view, when the label's text itself is right aligned
-    */
-    currencyLabel.frame.size.width += 10
-    theTextField.leftView = currencyLabel
-    theTextField.leftViewMode = .Always
-    view.addSubview(theTextField)
-    }
-    
-  }
-  
-}
+//import UIKit
+//
+//class ViewController: UIViewController {
+//  
+//  var textField: UITextField!
+//  
+//  override func viewDidLoad() {
+//    super.viewDidLoad()
+//    
+//    textField = UITextField(frame:
+//      CGRect(x: 38, y: 30, width: 220, height: 31))
+//    
+//    textField.borderStyle = .RoundedRect
+//    textField.contentVerticalAlignment = .Center
+//    textField.textAlignment = .Left
+//    textField.placeholder = "Enter your text here..."
+//    
+//    let currencyLabel = UILabel(frame: CGRectZero)
+//    currencyLabel.text = NSNumberFormatter().currencySymbol
+//    currencyLabel.font = textField.font
+//    currencyLabel.textAlignment = .Right
+//    currencyLabel.sizeToFit()
+//    /* Give more width to the label so that it aligns properly on the
+//    text field's left view, when the label's text itself is right aligned
+//    */
+//    currencyLabel.frame.size.width += 10
+//    textField.leftView = currencyLabel
+//    textField.leftViewMode = .Always
+//    view.addSubview(textField)
+//
+//  }
+//  
+//}

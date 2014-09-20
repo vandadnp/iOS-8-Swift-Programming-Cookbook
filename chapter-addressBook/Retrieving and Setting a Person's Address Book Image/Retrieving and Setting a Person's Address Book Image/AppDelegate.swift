@@ -28,14 +28,13 @@ import AddressBook
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
-  /* Get a reference to the address book */
+  
   lazy var addressBook: ABAddressBookRef = {
     var error: Unmanaged<CFError>?
     return ABAddressBookCreateWithOptions(nil,
       &error).takeRetainedValue() as ABAddressBookRef
     }()
   
-  /* Retrieves the image for a person */
   func imageForPerson(person: ABRecordRef) -> UIImage?{
     
     let data = ABPersonCopyImageData(person).takeRetainedValue() as NSData
@@ -44,41 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return image
   }
   
-  func application(application: UIApplication!,
-    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-      
-      /* Ask for permission */
-      switch ABAddressBookGetAuthorizationStatus(){
-      case .Authorized:
-        println("Already authorized")
-        performExample()
-      case .Denied:
-        println("You are denied access to address book")
-        
-      case .NotDetermined:
-        ABAddressBookRequestAccessWithCompletion(addressBook,
-          {[weak self] (granted: Bool, error: CFError!) in
-            
-            if granted{
-              let strongSelf = self!
-              println("Access is granted")
-              strongSelf.performExample()
-            } else {
-              println("Access is not granted")
-            }
-            
-        })
-      case .Restricted:
-        println("Access is restricted")
-        
-      default:
-        println("Unhandled")
-      }
-      
-      return true
-  }
-  
-  /* Allows us to create a new person */
   func newPersonWithFirstName(firstName: String,
     lastName: String,
     inAddressBook: ABAddressBookRef) -> ABRecordRef?{
@@ -130,7 +94,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
   }
   
-  /* Allows us to set an image for a person */
   func setImageForPerson(person: ABRecordRef,
     inAddressBook addressBook: ABAddressBookRef,
     imageData: NSData) -> Bool{
@@ -165,7 +128,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
   
   func performExample(){
-    /* Creates the person and sets the image */
     let person: ABRecordRef? = newPersonWithFirstName("Richard",
       lastName: "Branson", inAddressBook: addressBook)
     
@@ -193,6 +155,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
     }
     
+  }
+  
+  func application(application: UIApplication!,
+    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+      
+      switch ABAddressBookGetAuthorizationStatus(){
+      case .Authorized:
+        println("Already authorized")
+        performExample()
+      case .Denied:
+        println("You are denied access to address book")
+        
+      case .NotDetermined:
+        ABAddressBookRequestAccessWithCompletion(addressBook,
+          {[weak self] (granted: Bool, error: CFError!) in
+            
+            if granted{
+              let strongSelf = self!
+              println("Access is granted")
+              strongSelf.performExample()
+            } else {
+              println("Access is not granted")
+            }
+            
+        })
+      case .Restricted:
+        println("Access is restricted")
+        
+      default:
+        println("Unhandled")
+      }
+      
+      return true
   }
   
 }

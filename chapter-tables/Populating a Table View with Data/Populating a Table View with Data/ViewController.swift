@@ -71,11 +71,11 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
   }
   
-  func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 3
   }
   
-  func tableView(tableView: UITableView!,
+  func tableView(tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
       
       switch section{
@@ -91,13 +91,13 @@ class ViewController: UIViewController, UITableViewDataSource {
       
   }
   
-  func tableView(tableView: UITableView!,
-    cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!{
+  func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
       
       let cell = tableView.dequeueReusableCellWithIdentifier("identifier",
         forIndexPath: indexPath) as UITableViewCell
       
-      cell.textLabel.text = "Section \(indexPath.section), " +
+      cell.textLabel!.text = "Section \(indexPath.section), " +
       "Cell \(indexPath.row)"
       
       return cell

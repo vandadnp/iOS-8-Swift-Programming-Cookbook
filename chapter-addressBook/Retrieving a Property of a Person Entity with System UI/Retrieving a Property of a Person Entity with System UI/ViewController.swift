@@ -27,12 +27,14 @@ import AddressBookUI
 class ViewController: UIViewController,
 ABPeoplePickerNavigationControllerDelegate {
   
-  /* Specify that we only want to pick the addresses of the selected contact */
   let personPicker: ABPeoplePickerNavigationController
   
   required init(coder aDecoder: NSCoder) {
     personPicker = ABPeoplePickerNavigationController()
     super.init(coder: aDecoder)
+    personPicker.displayedProperties = [
+      Int(kABPersonAddressProperty)
+    ]
     personPicker.peoplePickerDelegate = self
   }
   
@@ -50,8 +52,6 @@ ABPeoplePickerNavigationControllerDelegate {
     didSelectPerson person: ABRecordRef!,
     property: ABPropertyID,
     identifier: ABMultiValueIdentifier) {
-      
-      /* Read the selected address */
       
       let addresses: ABMultiValueRef = ABRecordCopyValue(person,
         property).takeRetainedValue()

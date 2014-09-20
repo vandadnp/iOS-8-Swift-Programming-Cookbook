@@ -29,21 +29,11 @@ class ViewController: UIViewController {
   @IBOutlet weak var textField: UITextField!
   let type = kUTTypeText as NSString as String
   
-  /* Present the activity view controller */
-  @IBAction func performShare(){
-    /* Show the activity view controller and handle the completion */
-    let controller = UIActivityViewController(activityItems: [textField.text],
-      applicationActivities: nil)
-    controller.completionWithItemsHandler = activityCompletionHandler
-    presentViewController(controller, animated: true, completion: nil)
-  }
-  
   func activityCompletionHandler(activityType: String!,
     completed: Bool,
     returnedItems: [AnyObject]!,
     activityError: NSError!){
       
-      /* Handle the completion of the extension */
       if completed && activityError == nil{
         
         let item = returnedItems[0] as NSExtensionItem
@@ -73,6 +63,13 @@ class ViewController: UIViewController {
         
       }
     
+  }
+  
+  @IBAction func performShare(){
+    let controller = UIActivityViewController(activityItems: [textField.text],
+      applicationActivities: nil)
+    controller.completionWithItemsHandler = activityCompletionHandler
+    presentViewController(controller, animated: true, completion: nil)
   }
 
 }

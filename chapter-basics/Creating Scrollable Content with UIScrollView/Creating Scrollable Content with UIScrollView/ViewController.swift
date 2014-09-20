@@ -25,8 +25,8 @@
 //import UIKit
 //
 //class ViewController: UIViewController {
-//  var imageView: UIImageView?
-//  var scrollView: UIScrollView?
+//  var imageView: UIImageView!
+//  var scrollView: UIScrollView!
 //  let image = UIImage(named: "Safari")
 //}
 
@@ -34,8 +34,8 @@
 //import UIKit
 //
 //class ViewController: UIViewController {
-//  var imageView: UIImageView?
-//  var scrollView: UIScrollView?
+//  var imageView: UIImageView!
+//  var scrollView: UIScrollView!
 //  let image = UIImage(named: "Safari")
 //  
 //  override func viewDidLoad() {
@@ -43,12 +43,10 @@
 //    
 //    imageView = UIImageView(image: image)
 //    scrollView = UIScrollView(frame: view.bounds)
-//    
-//    if let theScrollView = scrollView{
-//      theScrollView.addSubview(imageView!)
-//      theScrollView.contentSize = imageView!.bounds.size
-//      view.addSubview(theScrollView)
-//    }
+//
+//    scrollView.addSubview(imageView)
+//    scrollView.contentSize = imageView.bounds.size
+//    view.addSubview(scrollView)
 //    
 //  }
 //  
@@ -58,8 +56,8 @@
 import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
-  var imageView: UIImageView?
-  var scrollView: UIScrollView?
+  var imageView: UIImageView!
+  var scrollView: UIScrollView!
   let image = UIImage(named: "Safari")
   
   func scrollViewDidScroll(scrollView: UIScrollView){
@@ -83,13 +81,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     imageView = UIImageView(image: image)
     scrollView = UIScrollView(frame: view.bounds)
     
-    if let theScrollView = scrollView{
-      theScrollView.addSubview(imageView!)
-      theScrollView.contentSize = imageView!.bounds.size
-      theScrollView.delegate = self
-      theScrollView.indicatorStyle = .White
-      view.addSubview(theScrollView)
-    }
+    scrollView.addSubview(imageView)
+    scrollView.contentSize = imageView.bounds.size
+    scrollView.delegate = self
+    scrollView.indicatorStyle = .White
+    view.addSubview(scrollView)
     
   }
   

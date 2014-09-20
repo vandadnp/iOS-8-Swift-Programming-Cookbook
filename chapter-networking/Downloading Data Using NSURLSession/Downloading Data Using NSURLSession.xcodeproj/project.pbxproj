@@ -12,8 +12,6 @@
 		9D3A2CCA196D43BB009416E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3A2CC8196D43BB009416E1 /* Main.storyboard */; };
 		9D3A2CCC196D43BB009416E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3A2CCB196D43BB009416E1 /* Images.xcassets */; };
 		9D3A2CD8196D43BB009416E1 /* Downloading_Data_Using_NSURLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3A2CD7196D43BB009416E1 /* Downloading_Data_Using_NSURLSessionTests.swift */; };
-		9DFDFCB719AB516600DCDC5D /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDFCB619AB516600DCDC5D /* slides.key */; };
-		9DFDFCB919AB516B00DCDC5D /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDFCB819AB516B00DCDC5D /* todo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +34,6 @@
 		9D3A2CD1196D43BB009416E1 /* Downloading Data Using NSURLSessionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Downloading Data Using NSURLSessionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3A2CD6196D43BB009416E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D3A2CD7196D43BB009416E1 /* Downloading_Data_Using_NSURLSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloading_Data_Using_NSURLSessionTests.swift; sourceTree = "<group>"; };
-		9DFDFCB619AB516600DCDC5D /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
-		9DFDFCB819AB516B00DCDC5D /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +57,6 @@
 		9D3A2CB6196D43BB009416E1 = {
 			isa = PBXGroup;
 			children = (
-				9DFDFCB819AB516B00DCDC5D /* todo */,
-				9DFDFCB519AB516100DCDC5D /* slides */,
 				9D3A2CC1196D43BB009416E1 /* Downloading Data Using NSURLSession */,
 				9D3A2CD4196D43BB009416E1 /* Downloading Data Using NSURLSessionTests */,
 				9D3A2CC0196D43BB009416E1 /* Products */,
@@ -113,14 +107,6 @@
 				9D3A2CD6196D43BB009416E1 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9DFDFCB519AB516100DCDC5D /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9DFDFCB619AB516600DCDC5D /* slides.key */,
-			);
-			name = slides;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +191,6 @@
 			files = (
 				9D3A2CCA196D43BB009416E1 /* Main.storyboard in Resources */,
 				9D3A2CCC196D43BB009416E1 /* Images.xcassets in Resources */,
-				9DFDFCB919AB516B00DCDC5D /* todo in Resources */,
-				9DFDFCB719AB516600DCDC5D /* slides.key in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D28C85A19AB4D1700135AF6 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D28C85919AB4D1700135AF6 /* todo */; };
 		9DEE3FCF196964D500AB8A74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEE3FCE196964D500AB8A74 /* AppDelegate.swift */; };
 		9DEE3FD1196964D500AB8A74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEE3FD0196964D500AB8A74 /* ViewController.swift */; };
 		9DEE3FD4196964D500AB8A74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DEE3FD2196964D500AB8A74 /* Main.storyboard */; };
@@ -26,7 +25,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9D28C85919AB4D1700135AF6 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 		9DEE3FC9196964D500AB8A74 /* Completing a Long-Running Task in the Background.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Completing a Long-Running Task in the Background.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DEE3FCD196964D500AB8A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DEE3FCE196964D500AB8A74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 		9DEE3FC0196964D500AB8A74 = {
 			isa = PBXGroup;
 			children = (
-				9D28C85919AB4D1700135AF6 /* todo */,
 				9DEE3FCB196964D500AB8A74 /* Completing a Long-Running Task in the Background */,
 				9DEE3FDE196964D500AB8A74 /* Completing a Long-Running Task in the BackgroundTests */,
 				9DEE3FCA196964D500AB8A74 /* Products */,
@@ -192,7 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D28C85A19AB4D1700135AF6 /* todo in Resources */,
 				9DEE3FD4196964D500AB8A74 /* Main.storyboard in Resources */,
 				9DEE3FD6196964D500AB8A74 /* Images.xcassets in Resources */,
 			);
@@ -403,7 +399,6 @@
 				9DEE3FE7196964D500AB8A74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9DEE3FE8196964D500AB8A74 /* Build configuration list for PBXNativeTarget "Completing a Long-Running Task in the BackgroundTests" */ = {
 			isa = XCConfigurationList;
@@ -412,7 +407,6 @@
 				9DEE3FEA196964D500AB8A74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -32,6 +32,7 @@ class KeyboardViewController: UIInputViewController {
     loadedView.nextKeyboardButton.button.addTarget(self,
       action: "advanceToNextInputMode", forControlEvents: .TouchUpInside)
     view = loadedView
+    
   }
   
 }

@@ -10,7 +10,6 @@
 		9D66CB2A19543B7E00CDDE2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66CB2919543B7E00CDDE2A /* AppDelegate.swift */; };
 		9D66CB2C19543B7E00CDDE2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D66CB2B19543B7E00CDDE2A /* Images.xcassets */; };
 		9D66CB3819543B7E00CDDE2A /* Writing_to_and_Reading_from_FilesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66CB3719543B7E00CDDE2A /* Writing_to_and_Reading_from_FilesTests.swift */; };
-		9DFDFCCB19AB63B100DCDC5D /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDFCCA19AB63B100DCDC5D /* todo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +30,6 @@
 		9D66CB3119543B7E00CDDE2A /* Writing to and Reading from FilesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Writing to and Reading from FilesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D66CB3619543B7E00CDDE2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D66CB3719543B7E00CDDE2A /* Writing_to_and_Reading_from_FilesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Writing_to_and_Reading_from_FilesTests.swift; sourceTree = "<group>"; };
-		9DFDFCCA19AB63B100DCDC5D /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +53,6 @@
 		9D66CB1B19543B7E00CDDE2A = {
 			isa = PBXGroup;
 			children = (
-				9DFDFCCA19AB63B100DCDC5D /* todo */,
 				9D66CB2619543B7E00CDDE2A /* Writing to and Reading from Files */,
 				9D66CB3419543B7E00CDDE2A /* Writing to and Reading from FilesTests */,
 				9D66CB2519543B7E00CDDE2A /* Products */,
@@ -185,7 +182,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DFDFCCB19AB63B100DCDC5D /* todo in Resources */,
 				9D66CB2C19543B7E00CDDE2A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,7 +379,6 @@
 				9D66CB3D19543B7E00CDDE2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9D66CB3E19543B7E00CDDE2A /* Build configuration list for PBXNativeTarget "Writing to and Reading from FilesTests" */ = {
 			isa = XCConfigurationList;
@@ -392,7 +387,6 @@
 				9D66CB4019543B7E00CDDE2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -26,7 +26,7 @@
 //
 //class ViewController: UIViewController {
 //                            
-//  var picker: UIPickerView?
+//  var picker: UIPickerView!
 //
 //}
 
@@ -35,14 +35,14 @@
 //
 //class ViewController: UIViewController {
 //  
-//  var picker: UIPickerView?
+//  var picker: UIPickerView!
 //  
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //    
 //    picker = UIPickerView()
-//    picker!.center = view.center
-//    view.addSubview(picker!)
+//    picker.center = view.center
+//    view.addSubview(picker)
 //  }
 //  
 //}
@@ -52,16 +52,16 @@
 //
 //class ViewController: UIViewController, UIPickerViewDataSource {
 //  
-//  var picker: UIPickerView?
+//  var picker: UIPickerView!
 //  
-//  func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int {
+//  func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
 //    if pickerView == picker{
 //      return 1
 //    }
 //    return 0
 //  }
 //  
-//  func pickerView(pickerView: UIPickerView!,
+//  func pickerView(pickerView: UIPickerView,
 //    numberOfRowsInComponent component: Int) -> Int {
 //    if pickerView == picker{
 //      return 10
@@ -73,9 +73,9 @@
 //    super.viewDidLoad()
 //    
 //    picker = UIPickerView()
-//    picker!.dataSource = self
-//    picker!.center = view.center
-//    view.addSubview(picker!)
+//    picker.dataSource = self
+//    picker.center = view.center
+//    view.addSubview(picker)
 //  }
 //  
 //}
@@ -86,16 +86,16 @@
 //class ViewController: UIViewController,
 //UIPickerViewDataSource, UIPickerViewDelegate {
 //  
-//  var picker: UIPickerView?
+//  var picker: UIPickerView!
 //  
-//  func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int {
+//  func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
 //    if pickerView == picker{
 //      return 1
 //    }
 //    return 0
 //  }
 //  
-//  func pickerView(pickerView: UIPickerView!,
+//  func pickerView(pickerView: UIPickerView,
 //    numberOfRowsInComponent component: Int) -> Int {
 //      if pickerView == picker{
 //        return 10
@@ -103,7 +103,7 @@
 //      return 0
 //  }
 //
-//  func pickerView(pickerView: UIPickerView!,
+//  func pickerView(pickerView: UIPickerView,
 //    titleForRow row: Int,
 //    forComponent component: Int) -> String!{
 //    return "\(row + 1)"
@@ -113,10 +113,10 @@
 //    super.viewDidLoad()
 //    
 //    picker = UIPickerView()
-//    picker!.dataSource = self
-//    picker!.delegate = self
-//    picker!.center = view.center
-//    view.addSubview(picker!)
+//    picker.dataSource = self
+//    picker.delegate = self
+//    picker.center = view.center
+//    view.addSubview(picker)
 //  }
 //  
 //}
@@ -127,16 +127,16 @@ import UIKit
 class ViewController: UIViewController,
 UIPickerViewDataSource, UIPickerViewDelegate {
   
-  var picker: UIPickerView?
+  var picker: UIPickerView!
   
-  func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int {
+  func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
     if pickerView == picker{
       return 1
     }
     return 0
   }
   
-  func pickerView(pickerView: UIPickerView!,
+  func pickerView(pickerView: UIPickerView,
     numberOfRowsInComponent component: Int) -> Int {
       if pickerView == picker{
         return 10
@@ -144,7 +144,7 @@ UIPickerViewDataSource, UIPickerViewDelegate {
       return 0
   }
   
-  func pickerView(pickerView: UIPickerView!,
+  func pickerView(pickerView: UIPickerView,
     titleForRow row: Int,
     forComponent component: Int) -> String!{
       return "\(row + 1)"
@@ -154,10 +154,10 @@ UIPickerViewDataSource, UIPickerViewDelegate {
     super.viewDidLoad()
     
     picker = UIPickerView()
-    picker!.dataSource = self
-    picker!.delegate = self
-    picker!.center = view.center
-    view.addSubview(picker!)
+    picker.dataSource = self
+    picker.delegate = self
+    picker.center = view.center
+    view.addSubview(picker)
   }
   
 }

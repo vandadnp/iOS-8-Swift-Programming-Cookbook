@@ -12,8 +12,6 @@
 		9D052213196166B7007563A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D052211196166B7007563A6 /* Main.storyboard */; };
 		9D052215196166B7007563A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D052214196166B7007563A6 /* Images.xcassets */; };
 		9D052221196166B7007563A6 /* Loading_Web_Pages_with_WebKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D052220196166B7007563A6 /* Loading_Web_Pages_with_WebKitTests.swift */; };
-		9D9EE75419A9F9BF0055B347 /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9D9EE75319A9F9BF0055B347 /* slides.key */; };
-		9D9EE75619A9F9C50055B347 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D9EE75519A9F9C50055B347 /* todo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +34,6 @@
 		9D05221A196166B7007563A6 /* Loading Web Pages with WebKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Loading Web Pages with WebKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D05221F196166B7007563A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D052220196166B7007563A6 /* Loading_Web_Pages_with_WebKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading_Web_Pages_with_WebKitTests.swift; sourceTree = "<group>"; };
-		9D9EE75319A9F9BF0055B347 /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
-		9D9EE75519A9F9C50055B347 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +57,6 @@
 		9D0521FF196166B7007563A6 = {
 			isa = PBXGroup;
 			children = (
-				9D9EE75519A9F9C50055B347 /* todo */,
-				9D9EE75219A8F57B0055B347 /* slides */,
 				9D05220A196166B7007563A6 /* Loading Web Pages with WebKit */,
 				9D05221D196166B7007563A6 /* Loading Web Pages with WebKitTests */,
 				9D052209196166B7007563A6 /* Products */,
@@ -113,14 +107,6 @@
 				9D05221F196166B7007563A6 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9D9EE75219A8F57B0055B347 /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9D9EE75319A9F9BF0055B347 /* slides.key */,
-			);
-			name = slides;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +191,6 @@
 			files = (
 				9D052213196166B7007563A6 /* Main.storyboard in Resources */,
 				9D052215196166B7007563A6 /* Images.xcassets in Resources */,
-				9D9EE75619A9F9C50055B347 /* todo in Resources */,
-				9D9EE75419A9F9BF0055B347 /* slides.key in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +399,6 @@
 				9D052226196166B7007563A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9D052227196166B7007563A6 /* Build configuration list for PBXNativeTarget "Loading Web Pages with WebKitTests" */ = {
 			isa = XCConfigurationList;
@@ -424,7 +407,6 @@
 				9D052229196166B7007563A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

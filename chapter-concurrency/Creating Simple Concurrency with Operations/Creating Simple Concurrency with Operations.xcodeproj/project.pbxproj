@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D28C85519AB3E9A00135AF6 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D28C85419AB3E9A00135AF6 /* todo */; };
-		9D28C85719AB419500135AF6 /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9D28C85619AB419500135AF6 /* slides.key */; };
 		9D3817D21965CB0B00386218 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3817D11965CB0B00386218 /* AppDelegate.swift */; };
 		9D3817D41965CB0B00386218 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3817D31965CB0B00386218 /* ViewController.swift */; };
 		9D3817D71965CB0B00386218 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3817D51965CB0B00386218 /* Main.storyboard */; };
@@ -28,8 +26,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9D28C85419AB3E9A00135AF6 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
-		9D28C85619AB419500135AF6 /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
 		9D3817CC1965CB0B00386218 /* Creating Simple Concurrency with Operations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Creating Simple Concurrency with Operations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3817D01965CB0B00386218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D3817D11965CB0B00386218 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,19 +56,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9D28C85319AB3E8F00135AF6 /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9D28C85619AB419500135AF6 /* slides.key */,
-			);
-			name = slides;
-			sourceTree = "<group>";
-		};
 		9D3817C31965CB0B00386218 = {
 			isa = PBXGroup;
 			children = (
-				9D28C85419AB3E9A00135AF6 /* todo */,
-				9D28C85319AB3E8F00135AF6 /* slides */,
 				9D3817CE1965CB0B00386218 /* Creating Simple Concurrency with Operations */,
 				9D3817E11965CB0B00386218 /* Creating Simple Concurrency with OperationsTests */,
 				9D3817CD1965CB0B00386218 /* Products */,
@@ -93,10 +79,10 @@
 			children = (
 				9D3817D11965CB0B00386218 /* AppDelegate.swift */,
 				9D3817D31965CB0B00386218 /* ViewController.swift */,
-				9D3817EE1965CB2D00386218 /* CountingOperation.swift */,
 				9D3817D51965CB0B00386218 /* Main.storyboard */,
 				9D3817D81965CB0B00386218 /* Images.xcassets */,
 				9D3817CF1965CB0B00386218 /* Supporting Files */,
+				9D3817EE1965CB2D00386218 /* CountingOperation.swift */,
 			);
 			path = "Creating Simple Concurrency with Operations";
 			sourceTree = "<group>";
@@ -206,8 +192,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D28C85519AB3E9A00135AF6 /* todo in Resources */,
-				9D28C85719AB419500135AF6 /* slides.key in Resources */,
 				9D3817D71965CB0B00386218 /* Main.storyboard in Resources */,
 				9D3817D91965CB0B00386218 /* Images.xcassets in Resources */,
 			);
@@ -419,7 +403,6 @@
 				9D3817EA1965CB0B00386218 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9D3817EB1965CB0B00386218 /* Build configuration list for PBXNativeTarget "Creating Simple Concurrency with OperationsTests" */ = {
 			isa = XCConfigurationList;
@@ -428,7 +411,6 @@
 				9D3817ED1965CB0B00386218 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

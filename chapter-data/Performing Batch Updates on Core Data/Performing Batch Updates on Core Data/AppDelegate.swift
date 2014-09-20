@@ -15,14 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   let entityName = NSStringFromClass(Person.classForCoder())
   
-  /* Populates the database with random person objects with random ages */
   func populateDatabase(){
     
     for counter in 0..<1000{
       
       let person = NSEntityDescription.insertNewObjectForEntityForName(
         entityName,
-        inManagedObjectContext: managedObjectContext) as Person
+        inManagedObjectContext: managedObjectContext!) as Person
       
       person.firstName = "First name \(counter)"
       person.lastName = "Last name \(counter)"
@@ -43,11 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication!,
     didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-      
-      /* Populate the database first */
-      populateDatabase()
 
-      /* Perform our batch update */
       let batch = NSBatchUpdateRequest(entityName: entityName)
       batch.propertiesToUpdate = ["age" : 18]
       batch.predicate = NSPredicate(format: "age < %@", 18 as NSNumber)
@@ -90,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   lazy var managedObjectModel: NSManagedObjectModel = {
       // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-      let modelURL = NSBundle.mainBundle().URLForResource("Performing_Batch_Updates_on_Core_Data", withExtension: "momd")
+      let modelURL = NSBundle.mainBundle().URLForResource("Performing_Batch_Updates_on_Core_Data", withExtension: "momd")!
       return NSManagedObjectModel(contentsOfURL: modelURL)
   }()
 

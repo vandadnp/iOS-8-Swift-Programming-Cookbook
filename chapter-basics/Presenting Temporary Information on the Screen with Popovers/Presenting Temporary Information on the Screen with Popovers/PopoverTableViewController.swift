@@ -10,7 +10,7 @@
 //  Vandad Nahavandipoor for his work. Feel free to visit my blog
 //  at http://vandadnp.wordpress.com for daily tips and tricks in Swift
 //  and Objective-C and various other programming languages.
-//
+//  
 //  You can purchase "iOS 8 Swift Programming Cookbook" from
 //  the following URL:
 //  http://shop.oreilly.com/product/0636920034254.do
@@ -23,30 +23,92 @@
 
 import UIKit
 
-/* An extension that can retrieve an item out of an array using an
-index path */
-//<#popovers1#>
+extension Array{
+  subscript(path: NSIndexPath) -> T{
+    return self[path.row]
+  }
+}
 
-/* An extension that can retrieve an index path from row and section 0 */
-//<#popovers2#>
+extension NSIndexPath{
+  class func firstIndexPath() -> NSIndexPath{
+    return NSIndexPath(forRow: 0, inSection: 0)
+  }
+}
 
 class PopoverTableViewController: UITableViewController {
   
-  /* Our table view cell identifier and the items
-  that we are going to place in the table view are placed here */
-  //<#popovers3#>
+  struct TableViewValues{
+    static let identifier = "Cell"
+  }
   
-  /* The cancel bar button item and the selection handler closure
-  are defined here */
-  //<#popovers4#>
+  /* This variable is defined as lazy so that its memory is allocated
+  only when it is accessed for the first time. If we don't use this variable,
+  no computation is done and no memory is allocated for this variable */
+  lazy var items: [String] = {
+    var returnValue = [String]()
+    for counter in 1...100{
+      returnValue.append("Item \(counter)")
+    }
+    return returnValue
+  }()
+  
+  var cancelBarButtonItem: UIBarButtonItem!
+  var selectionHandler: ((selectedItem: String) -> Void!)?
 
-  /* Initialization code */
-  //<#popovers5#>
+  required init(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+  }
   
-  /* Create the cancel button */
-  //<#popovers6#>
+  override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    tableView.registerClass(UITableViewCell.classForCoder(),
+      forCellReuseIdentifier: TableViewValues.identifier)
+  }
   
-  /* Display the items in the table view */
-  //<#popovers7#>
+  override init(style: UITableViewStyle) {
+    super.init(style: style)
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    cancelBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain,
+      target: self, action: "performCancel")
+    navigationItem.leftBarButtonItem = cancelBarButtonItem
+    
+  }
+  
+  func performCancel(){
+    dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    preferredContentSize = CGSize(width: 300, height: 200)
+  }
+  
+  override func tableView(tableView: UITableView,
+    didSelectRowAtIndexPath indexPath: NSIndexPath) {
+      let selectedItem = items[indexPath]
+      selectionHandler?(selectedItem: selectedItem)
+      dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+  override func tableView(tableView: UITableView,
+    numberOfRowsInSection section: Int) -> Int {
+    return items.count
+  }
+  
+  override func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
+    let cell = tableView.dequeueReusableCellWithIdentifier(
+      TableViewValues.identifier, forIndexPath: indexPath) as UITableViewCell
+    
+    cell.textLabel!.text = items[indexPath]
+    
+    return cell
+    
+  }
   
 }

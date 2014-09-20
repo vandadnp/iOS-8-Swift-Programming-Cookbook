@@ -68,18 +68,18 @@ class ViewController: UITableViewController {
     }
   }
   
-  override func tableView(tableView: UITableView!,
+  override func tableView(tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
       return newsItems.count
   }
   
-  override func tableView(tableView: UITableView!,
-    cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+  override func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       
       let cell = tableView.dequeueReusableCellWithIdentifier("Cell",
         forIndexPath: indexPath) as UITableViewCell
       
-      cell.textLabel.text = newsItems[indexPath.row].text
+      cell.textLabel!.text = newsItems[indexPath.row].text
       
       return cell
   }

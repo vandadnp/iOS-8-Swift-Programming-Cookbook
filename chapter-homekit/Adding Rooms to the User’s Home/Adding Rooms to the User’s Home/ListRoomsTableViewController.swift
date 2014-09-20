@@ -47,14 +47,14 @@ class ListRoomsTableViewController: UITableViewController, HMHomeDelegate {
     println("A room has been removed from the home")
   }
   
-  override func tableView(tableView: UITableView!,
+  override func tableView(tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
       return home.rooms.count
       
   }
   
-  override func tableView(tableView: UITableView!,
-    cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!{
+  override func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewValues.identifier, forIndexPath: indexPath)
@@ -62,15 +62,15 @@ class ListRoomsTableViewController: UITableViewController, HMHomeDelegate {
       
       let room = home.rooms[indexPath.row] as HMRoom
       
-      cell.textLabel.text = room.name
+      cell.textLabel!.text = room.name
       
       return cell
       
   }
   
-  override func tableView(tableView: UITableView!,
+  override func tableView(tableView: UITableView,
     commitEditingStyle editingStyle: UITableViewCellEditingStyle,
-    forRowAtIndexPath indexPath: NSIndexPath!) {
+    forRowAtIndexPath indexPath: NSIndexPath) {
       
       if editingStyle == .Delete{
         
@@ -98,7 +98,7 @@ class ListRoomsTableViewController: UITableViewController, HMHomeDelegate {
       
   }
   
-  override func prepareForSegue(segue: UIStoryboardSegue!,
+  override func prepareForSegue(segue: UIStoryboardSegue,
     sender: AnyObject!) {
       
       if segue.identifier == addRoomSegueIdentifier{

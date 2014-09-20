@@ -14,14 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
-  /* A function that can create a person */
   func createNewPersonWithFirstName(firstName: String,
     lastName :String,
     age: Int) -> Bool{
       
       let newPerson =
       NSEntityDescription.insertNewObjectForEntityForName("Person",
-        inManagedObjectContext: managedObjectContext) as Person
+        inManagedObjectContext: managedObjectContext!) as Person
       
       (newPerson.firstName, newPerson.lastName, newPerson.age) =
         (firstName, lastName, age)
@@ -94,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   lazy var managedObjectModel: NSManagedObjectModel = {
       // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-      let modelURL = NSBundle.mainBundle().URLForResource("Reading_Data_from_Core_Data", withExtension: "momd")
+      let modelURL = NSBundle.mainBundle().URLForResource("Reading_Data_from_Core_Data", withExtension: "momd")!
       return NSManagedObjectModel(contentsOfURL: modelURL)
   }()
 

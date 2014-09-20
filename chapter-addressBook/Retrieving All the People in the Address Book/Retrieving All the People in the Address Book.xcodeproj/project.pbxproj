@@ -12,8 +12,6 @@
 		9D4671C019840DDE00E35636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4671BE19840DDE00E35636 /* Main.storyboard */; };
 		9D4671C219840DDE00E35636 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4671C119840DDE00E35636 /* Images.xcassets */; };
 		9D4671CE19840DDE00E35636 /* Retrieving_All_the_People_in_the_Address_BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4671CD19840DDE00E35636 /* Retrieving_All_the_People_in_the_Address_BookTests.swift */; };
-		9DFDFCC519AB576400DCDC5D /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDFCC419AB576400DCDC5D /* todo */; };
-		9DFDFCC719AB599500DCDC5D /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDFCC619AB599500DCDC5D /* slides.key */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +34,6 @@
 		9D4671C719840DDE00E35636 /* Retrieving All the People in the Address BookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Retrieving All the People in the Address BookTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4671CC19840DDE00E35636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D4671CD19840DDE00E35636 /* Retrieving_All_the_People_in_the_Address_BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Retrieving_All_the_People_in_the_Address_BookTests.swift; sourceTree = "<group>"; };
-		9DFDFCC419AB576400DCDC5D /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
-		9DFDFCC619AB599500DCDC5D /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +57,6 @@
 		9D4671AC19840DDD00E35636 = {
 			isa = PBXGroup;
 			children = (
-				9DFDFCC419AB576400DCDC5D /* todo */,
-				9DFDFCC319AB575E00DCDC5D /* slides */,
 				9D4671B719840DDD00E35636 /* Retrieving All the People in the Address Book */,
 				9D4671CA19840DDE00E35636 /* Retrieving All the People in the Address BookTests */,
 				9D4671B619840DDD00E35636 /* Products */,
@@ -113,14 +107,6 @@
 				9D4671CC19840DDE00E35636 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9DFDFCC319AB575E00DCDC5D /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9DFDFCC619AB599500DCDC5D /* slides.key */,
-			);
-			name = slides;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,8 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DFDFCC519AB576400DCDC5D /* todo in Resources */,
-				9DFDFCC719AB599500DCDC5D /* slides.key in Resources */,
 				9D4671C019840DDE00E35636 /* Main.storyboard in Resources */,
 				9D4671C219840DDE00E35636 /* Images.xcassets in Resources */,
 			);
@@ -413,7 +397,6 @@
 				9D4671D319840DDE00E35636 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9D4671D419840DDE00E35636 /* Build configuration list for PBXNativeTarget "Retrieving All the People in the Address BookTests" */ = {
 			isa = XCConfigurationList;
@@ -422,7 +405,6 @@
 				9D4671D619840DDE00E35636 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

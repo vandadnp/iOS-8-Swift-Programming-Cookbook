@@ -12,7 +12,6 @@
 		9DA995B1196DBB3000BBD8EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA995AF196DBB3000BBD8EF /* Main.storyboard */; };
 		9DA995B3196DBB3000BBD8EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA995B2196DBB3000BBD8EF /* Images.xcassets */; };
 		9DA995BF196DBB3100BBD8EF /* Downloading_Asynchronously_with_NSURLConnectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA995BE196DBB3100BBD8EF /* Downloading_Asynchronously_with_NSURLConnectionTests.swift */; };
-		9DFDFCBC19AB537A00DCDC5D /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDFCBB19AB537A00DCDC5D /* todo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +34,6 @@
 		9DA995B8196DBB3100BBD8EF /* Downloading Asynchronously with NSURLConnectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Downloading Asynchronously with NSURLConnectionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA995BD196DBB3100BBD8EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA995BE196DBB3100BBD8EF /* Downloading_Asynchronously_with_NSURLConnectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloading_Asynchronously_with_NSURLConnectionTests.swift; sourceTree = "<group>"; };
-		9DFDFCBB19AB537A00DCDC5D /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +57,6 @@
 		9DA9959D196DBB3000BBD8EF = {
 			isa = PBXGroup;
 			children = (
-				9DFDFCBB19AB537A00DCDC5D /* todo */,
 				9DA995A8196DBB3000BBD8EF /* Downloading Asynchronously with NSURLConnection */,
 				9DA995BB196DBB3100BBD8EF /* Downloading Asynchronously with NSURLConnectionTests */,
 				9DA995A7196DBB3000BBD8EF /* Products */,
@@ -192,7 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DFDFCBC19AB537A00DCDC5D /* todo in Resources */,
 				9DA995B1196DBB3000BBD8EF /* Main.storyboard in Resources */,
 				9DA995B3196DBB3000BBD8EF /* Images.xcassets in Resources */,
 			);
@@ -401,7 +397,6 @@
 				9DA995C4196DBB3100BBD8EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9DA995C5196DBB3100BBD8EF /* Build configuration list for PBXNativeTarget "Downloading Asynchronously with NSURLConnectionTests" */ = {
 			isa = XCConfigurationList;
@@ -410,7 +405,6 @@
 				9DA995C7196DBB3100BBD8EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

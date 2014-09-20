@@ -25,22 +25,22 @@
 //import UIKit
 //
 //class ViewController: UIViewController {
-//  var label: UILabel?
+//  var label: UILabel!
 //}
 
 /* 2 */
 //import UIKit
 //
 //class ViewController: UIViewController {
-//  var label: UILabel?
+//  var label: UILabel!
 //  
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //    
 //    label = UILabel(frame: CGRect(x: 20, y: 100, width: 100, height: 23))
-//    label!.text = "iOS Programming Cookbook"
-//    label!.font = UIFont.boldSystemFontOfSize(14)
-//    view.addSubview(label!)
+//    label.text = "iOS Programming Cookbook"
+//    label.font = UIFont.boldSystemFontOfSize(14)
+//    view.addSubview(label)
 //    
 //  }
 //  
@@ -50,15 +50,15 @@
 //import UIKit
 //
 //class ViewController: UIViewController {
-//  var label: UILabel?
+//  var label: UILabel!
 //  
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //    
 //    label = UILabel(frame: CGRect(x: 20, y: 100, width: 100, height: 25))
-//    label!.text = "iOS Programming Cookbook"
-//    label!.font = UIFont.boldSystemFontOfSize(14)
-//    view.addSubview(label!)
+//    label.text = "iOS Programming Cookbook"
+//    label.font = UIFont.boldSystemFontOfSize(14)
+//    view.addSubview(label)
 //    
 //  }
 //  
@@ -68,17 +68,17 @@
 //import UIKit
 //
 //class ViewController: UIViewController {
-//  var label: UILabel?
+//  var label: UILabel!
 //  
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //    
 //    label = UILabel(frame: CGRect(x: 20, y: 100, width: 100, height: 70))
-//    label!.numberOfLines = 3
-//    label!.lineBreakMode = .ByWordWrapping
-//    label!.text = "iOS Programming Cookbook"
-//    label!.font = UIFont.boldSystemFontOfSize(14)
-//    view.addSubview(label!)
+//    label.numberOfLines = 3
+//    label.lineBreakMode = .ByWordWrapping
+//    label.text = "iOS Programming Cookbook"
+//    label.font = UIFont.boldSystemFontOfSize(14)
+//    view.addSubview(label)
 //    
 //  }
 //  
@@ -88,16 +88,16 @@
 //import UIKit
 //
 //class ViewController: UIViewController {
-//  var label: UILabel?
+//  var label: UILabel!
 //  
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //    
 //    label = UILabel(frame: CGRect(x: 20, y: 100, width: 100, height: 23))
-//    label!.adjustsFontSizeToFitWidth = true
-//    label!.text = "iOS Programming Cookbook"
-//    label!.font = UIFont.boldSystemFontOfSize(14)
-//    view.addSubview(label!)
+//    label.adjustsFontSizeToFitWidth = true
+//    label.text = "iOS Programming Cookbook"
+//    label.font = UIFont.boldSystemFontOfSize(14)
+//    view.addSubview(label)
 //    
 //  }
 //  
@@ -107,7 +107,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-  var label: UILabel?
+  var label: UILabel!
   
   func attributedText() -> NSAttributedString{
     
@@ -149,11 +149,11 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     label = UILabel()
-    label!.backgroundColor = UIColor.clearColor()
-    label!.attributedText = attributedText()
-    label!.sizeToFit()
-    label!.center = CGPoint(x: view.center.x, y: 100)
-    view.addSubview(label!)
+    label.backgroundColor = UIColor.clearColor()
+    label.attributedText = attributedText()
+    label.sizeToFit()
+    label.center = CGPoint(x: view.center.x, y: 100)
+    view.addSubview(label)
     
   }
   

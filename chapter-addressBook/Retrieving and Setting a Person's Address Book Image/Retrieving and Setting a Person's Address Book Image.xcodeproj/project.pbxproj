@@ -12,7 +12,6 @@
 		9D15837F1985219B008E2AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15837D1985219B008E2AC0 /* Main.storyboard */; };
 		9D1583811985219B008E2AC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D1583801985219B008E2AC0 /* Images.xcassets */; };
 		9D15838D1985219B008E2AC0 /* Retrieving_and_Setting_a_Person_s_Address_Book_ImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D15838C1985219B008E2AC0 /* Retrieving_and_Setting_a_Person_s_Address_Book_ImageTests.swift */; };
-		9DFDFCC919AB5A8500DCDC5D /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDFCC819AB5A8500DCDC5D /* todo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +34,6 @@
 		9D1583861985219B008E2AC0 /* Retrieving and Setting a Person's Address Book ImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Retrieving and Setting a Person's Address Book ImageTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D15838B1985219B008E2AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D15838C1985219B008E2AC0 /* Retrieving_and_Setting_a_Person_s_Address_Book_ImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Retrieving_and_Setting_a_Person_s_Address_Book_ImageTests.swift; sourceTree = "<group>"; };
-		9DFDFCC819AB5A8500DCDC5D /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +57,6 @@
 		9D15836B1985219B008E2AC0 = {
 			isa = PBXGroup;
 			children = (
-				9DFDFCC819AB5A8500DCDC5D /* todo */,
 				9D1583761985219B008E2AC0 /* Retrieving and Setting a Person's Address Book Image */,
 				9D1583891985219B008E2AC0 /* Retrieving and Setting a Person's Address Book ImageTests */,
 				9D1583751985219B008E2AC0 /* Products */,
@@ -192,7 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DFDFCC919AB5A8500DCDC5D /* todo in Resources */,
 				9D15837F1985219B008E2AC0 /* Main.storyboard in Resources */,
 				9D1583811985219B008E2AC0 /* Images.xcassets in Resources */,
 			);
@@ -401,7 +397,6 @@
 				9D1583921985219B008E2AC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9D1583931985219B008E2AC0 /* Build configuration list for PBXNativeTarget "Retrieving and Setting a Person's Address Book ImageTests" */ = {
 			isa = XCConfigurationList;
@@ -410,7 +405,6 @@
 				9D1583951985219B008E2AC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

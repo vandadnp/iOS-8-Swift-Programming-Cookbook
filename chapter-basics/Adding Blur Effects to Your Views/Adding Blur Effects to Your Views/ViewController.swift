@@ -32,14 +32,16 @@ class ViewController: UIViewController {
     
     /* First, create the blur effect with the "Light" style.
     All the styles are defined in UIBlurEffectStyle */
-    //<#blur1#>
+    let blurEffect = UIBlurEffect(style: .Light)
     
     /* Then create the effect view, using the blur effect that
     we just created. The effect is of type UIVisualEffect */
-    //<#blur2#>
+    let blurView = UIVisualEffectView(effect: blurEffect)
+    blurView.frame.size = CGSize(width: 200, height: 200)
+    blurView.center = view.center
     
     /* Then eventually we will add this view to our controller */
-    //<#blur3#>
+    view.addSubview(blurView)
     
   }
 

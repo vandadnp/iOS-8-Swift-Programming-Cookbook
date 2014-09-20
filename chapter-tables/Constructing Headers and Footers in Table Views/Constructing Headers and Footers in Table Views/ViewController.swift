@@ -45,18 +45,18 @@ class ViewController: UIViewController,
     }
   }
 
-  func tableView(tableView: UITableView!,
+  func tableView(tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
       return 3
   }
   
-  func tableView(tableView: UITableView!,
-    cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!{
+  func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
       
       let cell = tableView.dequeueReusableCellWithIdentifier("identifier",
         forIndexPath: indexPath) as UITableViewCell
       
-      cell.textLabel.text = "Cell \(indexPath.row)"
+      cell.textLabel!.text = "Cell \(indexPath.row)"
       
       return cell
       
@@ -91,28 +91,28 @@ class ViewController: UIViewController,
     return headerView
   }
   
-  func tableView(tableView: UITableView!,
+  func tableView(tableView: UITableView,
     heightForHeaderInSection section: Int) -> CGFloat{
       return 30
   }
   
-//  func tableView(tableView: UITableView!,
-//    viewForHeaderInSection section: Int) -> UIView!{
+//  func tableView(tableView: UITableView,
+//    viewForHeaderInSection section: Int) -> UIView?{
 //      return newViewForHeaderOrFooterWithText("Section \(section) Header")
 //  }
 //  
-//  func tableView(tableView: UITableView!,
-//    viewForFooterInSection section: Int) -> UIView!{
+//  func tableView(tableView: UITableView,
+//    viewForFooterInSection section: Int) -> UIView?{
 //      return newViewForHeaderOrFooterWithText("Section \(section) Footer")
 //  }
   
-  func tableView(tableView: UITableView!,
-    titleForHeaderInSection section: Int) -> String!{
+  func tableView(tableView: UITableView,
+    titleForHeaderInSection section: Int) -> String?{
     return "Section \(section) Header"
   }
   
-  func tableView(tableView: UITableView!,
-    titleForFooterInSection section: Int) -> String!{
+  func tableView(tableView: UITableView,
+    titleForFooterInSection section: Int) -> String?{
     return "Section \(section) Footer"
   }
   

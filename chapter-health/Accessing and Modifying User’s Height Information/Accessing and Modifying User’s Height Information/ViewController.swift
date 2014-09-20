@@ -24,8 +24,6 @@
 import UIKit
 import HealthKit
 
-/* Create an enumeration of all the units that we can have for the
-user's height */
 enum HeightUnits: String{
   case Millimeters = "Millimeters"
   case Centimeters = "Centimeters"
@@ -51,11 +49,8 @@ enum HeightUnits: String{
   
 }
 
-/* Become the data source and the delegate of our height-units table view */
-class ViewController: UIViewController , UITableViewDataSource,
-UITableViewDelegate {
+class ViewController: UIViewController{
   
-  /* Define our outlets and variables and constants */
   @IBOutlet weak var textField: UITextField!
   @IBOutlet weak var saveButton: UIButton!
   @IBOutlet weak var tableView: UITableView!
@@ -84,16 +79,15 @@ UITableViewDelegate {
     static let cellIdentifier = "Cell"
   }
   
-  /* Provide our cells to the user for every Height unit */
-  func tableView(tableView: UITableView!,
+  func tableView(tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
       return HeightUnits.allValues.count
   }
   
   /* If a new cell is selected, show the selection only for that
   cell and remove the selection from the previously-selected cell */
-  func tableView(tableView: UITableView!,
-    didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+  func tableView(tableView: UITableView,
+    didSelectRowAtIndexPath indexPath: NSIndexPath) {
       
       let previouslySelectedIndexPath = selectedIndexPath
       selectedIndexPath = indexPath
@@ -103,8 +97,8 @@ UITableViewDelegate {
       
   }
   
-  func tableView(tableView: UITableView!,
-    cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+  func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewInfo.cellIdentifier, forIndexPath: indexPath)
@@ -112,7 +106,7 @@ UITableViewDelegate {
       
       let heightUnit = HeightUnits.allValues[indexPath.row]
       
-      cell.textLabel.text = heightUnit.toRaw()
+      cell.textLabel!.text = heightUnit.toRaw()
       
       if indexPath == selectedIndexPath{
         cell.accessoryType = .Checkmark
@@ -125,7 +119,6 @@ UITableViewDelegate {
   
   func readHeightInformation(){
     
-    /* Read the height into our UI */
     let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate,
       ascending: false)
     
@@ -173,9 +166,6 @@ UITableViewDelegate {
     
   }
   
-  /* Conserve our index path and the selected height unit so that the next
-  time our UI comes up, we will immediately jump back to where the user
-  left the app last time */
   override func encodeRestorableStateWithCoder(coder: NSCoder!) {
     super.encodeRestorableStateWithCoder(coder)
     coder.encodeObject(selectedIndexPath, forKey: "selectedIndexPath")
@@ -193,7 +183,6 @@ UITableViewDelegate {
   }
   
   @IBAction func saveHeight(){
-    /* Save the user's height here with the selected unit */
     let currentlySelectedUnit = heightUnit.healthKitUnit()
     let heightQuantity = HKQuantity(unit: currentlySelectedUnit,
       doubleValue: (textField.text as NSString).doubleValue)
@@ -219,7 +208,6 @@ UITableViewDelegate {
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     
-    /* Ask the user for permission to access height information */
     if HKHealthStore.isHealthDataAvailable(){
       
       healthStore.requestAuthorizationToShareTypes(types,

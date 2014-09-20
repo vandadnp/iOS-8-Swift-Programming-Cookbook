@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D9EE7A319A9FE270055B347 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D9EE7A219A9FE270055B347 /* todo */; };
 		A603637A197D26A500208268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6036379197D26A500208268 /* AppDelegate.swift */; };
 		A603637C197D26A500208268 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603637B197D26A500208268 /* ViewController.swift */; };
 		A603637F197D26A500208268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A603637D197D26A500208268 /* Main.storyboard */; };
@@ -73,7 +72,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9D9EE7A219A9FE270055B347 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
 		A6036374197D26A500208268 /* Adding New Photo Editing Capabilities to the Photos App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Adding New Photo Editing Capabilities to the Photos App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6036378197D26A500208268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6036379197D26A500208268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 		A603636B197D26A500208268 = {
 			isa = PBXGroup;
 			children = (
-				9D9EE7A219A9FE270055B347 /* todo */,
 				A6036376197D26A500208268 /* Adding New Photo Editing Capabilities to the Photos App */,
 				A6036389197D26A600208268 /* Adding New Photo Editing Capabilities to the Photos AppTests */,
 				A60363A0197D270B00208268 /* PosterizeExtension */,
@@ -310,7 +307,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D9EE7A319A9FE270055B347 /* todo in Resources */,
 				A603637F197D26A500208268 /* Main.storyboard in Resources */,
 				A6036381197D26A500208268 /* Images.xcassets in Resources */,
 			);
@@ -553,7 +549,7 @@
 				INFOPLIST_FILE = PosterizeExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D60D0543-A6BB-4278-AE94-FA4FA8C7A817";
+				PROVISIONING_PROFILE = "03DA68F8-0286-4EBA-B627-7D2FAC77B206";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -566,7 +562,7 @@
 				INFOPLIST_FILE = PosterizeExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D60D0543-A6BB-4278-AE94-FA4FA8C7A817";
+				PROVISIONING_PROFILE = "03DA68F8-0286-4EBA-B627-7D2FAC77B206";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

@@ -66,16 +66,16 @@ NSFetchedResultsControllerDelegate {
     tableView.endUpdates()
   }
   
-  override func tableView(tableView: UITableView!,
+  override func tableView(tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
       
-      let sectionInfo = frc.sections[section] as NSFetchedResultsSectionInfo
+      let sectionInfo = frc.sections![section] as NSFetchedResultsSectionInfo
       return sectionInfo.numberOfObjects
       
   }
   
-  override func tableView(tableView: UITableView!,
-    cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!{
+  override func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewConstants.cellIdentifier,
@@ -83,8 +83,8 @@ NSFetchedResultsControllerDelegate {
       
       let person = frc.objectAtIndexPath(indexPath) as Person
       
-      cell.textLabel.text = person.firstName + " " + person.lastName
-      cell.detailTextLabel.text = "Age: \(person.age)"
+      cell.textLabel!.text = person.firstName + " " + person.lastName
+      cell.detailTextLabel!.text = "Age: \(person.age)"
       
       return cell
       
@@ -101,32 +101,32 @@ NSFetchedResultsControllerDelegate {
     
   }
   
-override func tableView(tableView: UITableView!,
-  commitEditingStyle editingStyle: UITableViewCellEditingStyle,
-  forRowAtIndexPath indexPath: NSIndexPath!){
-    
-    let personToDelete = self.frc.objectAtIndexPath(indexPath) as Person
-    
-    managedObjectContext!.deleteObject(personToDelete)
-    
-    if personToDelete.deleted{
-      var savingError: NSError?
+  override func tableView(tableView: UITableView,
+    commitEditingStyle editingStyle: UITableViewCellEditingStyle,
+    forRowAtIndexPath indexPath: NSIndexPath){
       
-      if managedObjectContext!.save(&savingError){
-        println("Successfully deleted the object")
-      } else {
-        if let error = savingError{
-          println("Failed to save the context with error = \(error)")
+      let personToDelete = self.frc.objectAtIndexPath(indexPath) as Person
+      
+      managedObjectContext!.deleteObject(personToDelete)
+      
+      if personToDelete.deleted{
+        var savingError: NSError?
+        
+        if managedObjectContext!.save(&savingError){
+          println("Successfully deleted the object")
+        } else {
+          if let error = savingError{
+            println("Failed to save the context with error = \(error)")
+          }
         }
       }
-    }
-    
-}
+      
+  }
   
-  override func tableView(tableView: UITableView!,
-    editingStyleForRowAtIndexPath indexPath: NSIndexPath!)
-    -> UITableViewCellEditingStyle{
-      return .Delete
+  override func tableView(tableView: UITableView,
+    editingStyleForRowAtIndexPath indexPath: NSIndexPath)
+    -> UITableViewCellEditingStyle {
+    return .Delete
   }
   
   override func viewDidLoad() {
@@ -147,7 +147,7 @@ override func tableView(tableView: UITableView!,
     fetchRequest.sortDescriptors = [ageSort, firstNameSort]
     
     frc = NSFetchedResultsController(fetchRequest: fetchRequest,
-      managedObjectContext: managedObjectContext,
+      managedObjectContext: managedObjectContext!,
       sectionNameKeyPath: nil,
       cacheName: nil)
     

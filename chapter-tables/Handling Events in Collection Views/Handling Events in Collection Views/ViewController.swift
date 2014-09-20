@@ -43,8 +43,8 @@ class ViewController: UICollectionViewController {
     
     let nib = UINib(nibName: "MyCollectionViewCell", bundle: nil)
     
-    collectionView.registerNib(nib, forCellWithReuseIdentifier: "cell")
-    collectionView.backgroundColor = UIColor.whiteColor()
+    collectionView!.registerNib(nib, forCellWithReuseIdentifier: "cell")
+    collectionView!.backgroundColor = UIColor.whiteColor()
   }
   
   convenience required init(coder aDecoder: NSCoder) {
@@ -62,19 +62,19 @@ class ViewController: UICollectionViewController {
   }
   
   override func numberOfSectionsInCollectionView(
-    collectionView: UICollectionView!) -> Int {
+    collectionView: UICollectionView) -> Int {
       /* Between 3 to 6 sections */
       return Int(3 + arc4random_uniform(4))
   }
   
-  override func collectionView(collectionView: UICollectionView!,
+  override func collectionView(collectionView: UICollectionView,
     numberOfItemsInSection section: Int) -> Int {
       /* Each section has between 10 to 15 cells */
       return Int(10 + arc4random_uniform(6))
   }
   
-  override func collectionView(collectionView: UICollectionView!,
-    cellForItemAtIndexPath indexPath: NSIndexPath!) -> UICollectionViewCell! {
+  override func collectionView(collectionView: UICollectionView,
+    cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
       
       let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
         "cell", forIndexPath: indexPath) as MyCollectionViewCell
@@ -86,10 +86,11 @@ class ViewController: UICollectionViewController {
       
   }
   
-  override func collectionView(collectionView: UICollectionView!,
-    didSelectItemAtIndexPath indexPath: NSIndexPath!){
+  override func collectionView(collectionView: UICollectionView,
+    didSelectItemAtIndexPath indexPath: NSIndexPath){
       
       let selectedCell = collectionView.cellForItemAtIndexPath(indexPath)
+      as UICollectionViewCell!
       
       UIView.animateWithDuration(animationDuration, animations: {
         selectedCell.alpha = 0
@@ -101,10 +102,11 @@ class ViewController: UICollectionViewController {
       
   }
   
-  override func collectionView(collectionView: UICollectionView!,
-    didHighlightItemAtIndexPath indexPath: NSIndexPath!) {
+  override func collectionView(collectionView: UICollectionView,
+    didHighlightItemAtIndexPath indexPath: NSIndexPath) {
     
       let selectedCell = collectionView.cellForItemAtIndexPath(indexPath)
+      as UICollectionViewCell!
       
       UIView.animateWithDuration(animationDuration, animations: {
         selectedCell.transform = CGAffineTransformMakeScale(4, 4)
@@ -112,10 +114,11 @@ class ViewController: UICollectionViewController {
       
   }
   
-  override func collectionView(collectionView: UICollectionView!,
-    didUnhighlightItemAtIndexPath indexPath: NSIndexPath!){
+  override func collectionView(collectionView: UICollectionView,
+    didUnhighlightItemAtIndexPath indexPath: NSIndexPath){
     
       let selectedCell = collectionView.cellForItemAtIndexPath(indexPath)
+      as UICollectionViewCell!
       
       UIView.animateWithDuration(animationDuration, animations: {
         selectedCell.transform = CGAffineTransformIdentity

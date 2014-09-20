@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D28C84319AA3BAE00135AF6 /* todo in Resources */ = {isa = PBXBuildFile; fileRef = 9D28C84219AA3BAE00135AF6 /* todo */; };
-		9D28C84619AA3DA700135AF6 /* slides.key in Resources */ = {isa = PBXBuildFile; fileRef = 9D28C84519AA3DA700135AF6 /* slides.key */; };
 		9DA11B7A1990FF7400DC5222 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA11B791990FF7400DC5222 /* AppDelegate.swift */; };
 		9DA11B7C1990FF7500DC5222 /* ListCaloriesBurnedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA11B7B1990FF7400DC5222 /* ListCaloriesBurnedTableViewController.swift */; };
 		9DA11B7F1990FF7500DC5222 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA11B7D1990FF7500DC5222 /* Main.storyboard */; };
@@ -29,8 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9D28C84219AA3BAE00135AF6 /* todo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo; sourceTree = "<group>"; };
-		9D28C84519AA3DA700135AF6 /* slides.key */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = slides.key; sourceTree = "<group>"; };
 		9DA11B741990FF7400DC5222 /* Reading and Modifying the User’s Total Calories Burned.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reading and Modifying the User’s Total Calories Burned.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA11B781990FF7400DC5222 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA11B791990FF7400DC5222 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,19 +60,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9D28C84419AA3DA100135AF6 /* slides */ = {
-			isa = PBXGroup;
-			children = (
-				9D28C84519AA3DA700135AF6 /* slides.key */,
-			);
-			name = slides;
-			sourceTree = "<group>";
-		};
 		9DA11B6B1990FF7400DC5222 = {
 			isa = PBXGroup;
 			children = (
-				9D28C84219AA3BAE00135AF6 /* todo */,
-				9D28C84419AA3DA100135AF6 /* slides */,
 				9DA11B981991004A00DC5222 /* HealthKit.framework */,
 				9DA11B761990FF7400DC5222 /* Reading and Modifying the User’s Total Calories Burned */,
 				9DA11B891990FF7500DC5222 /* Reading and Modifying the User’s Total Calories BurnedTests */,
@@ -218,8 +204,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D28C84319AA3BAE00135AF6 /* todo in Resources */,
-				9D28C84619AA3DA700135AF6 /* slides.key in Resources */,
 				9DA11B7F1990FF7500DC5222 /* Main.storyboard in Resources */,
 				9DA11B811990FF7500DC5222 /* Images.xcassets in Resources */,
 			);

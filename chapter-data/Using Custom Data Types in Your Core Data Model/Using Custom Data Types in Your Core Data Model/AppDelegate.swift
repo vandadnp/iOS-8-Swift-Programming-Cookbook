@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       /* Save the laptop with a given color first */
       let laptop = NSEntityDescription.insertNewObjectForEntityForName(
         NSStringFromClass(Laptop.classForCoder()),
-        inManagedObjectContext: managedObjectContext) as Laptop
+        inManagedObjectContext: managedObjectContext!) as Laptop
       
       laptop.model = "model name"
       laptop.color = UIColor.redColor()
@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       var fetchingError: NSError?
       let laptops = managedObjectContext!.executeFetchRequest(fetch,
-        error: &fetchingError)
+        error: &fetchingError) as [AnyObject]!
       
       /* Check for 1 because out fetch limit is 1 */
       if laptops.count == 1 && fetchingError == nil{
@@ -79,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   lazy var managedObjectModel: NSManagedObjectModel = {
       // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-      let modelURL = NSBundle.mainBundle().URLForResource("Using_Custom_Data_Types_in_Your_Core_Data_Model", withExtension: "momd")
+      let modelURL = NSBundle.mainBundle().URLForResource("Using_Custom_Data_Types_in_Your_Core_Data_Model", withExtension: "momd")!
       return NSManagedObjectModel(contentsOfURL: modelURL)
   }()
 

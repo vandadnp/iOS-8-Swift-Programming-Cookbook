@@ -47,7 +47,7 @@ AudienceSelectionViewControllerDelegate, NSURLSessionDelegate {
     /* The post button should be enabled only if we have the image data
     and the user has entered at least one character of text */
     if let data = imageData{
-      if contentText.utf16Count > 0{
+      if countElements(contentText) > 0{
         return true
       }
     }
@@ -60,7 +60,7 @@ AudienceSelectionViewControllerDelegate, NSURLSessionDelegate {
     
     placeholder = "Your comments"
     
-    let content = extensionContext.inputItems[0] as NSExtensionItem
+    let content = extensionContext!.inputItems[0] as NSExtensionItem
     let contentType = kUTTypeImage as NSString
     
     for attachment in content.attachments as [NSItemProvider]{
@@ -117,7 +117,7 @@ AudienceSelectionViewControllerDelegate, NSURLSessionDelegate {
     
     task.resume()
     
-    extensionContext.completeRequestReturningItems([], completionHandler: nil)
+    extensionContext!.completeRequestReturningItems([], completionHandler: nil)
   }
   
   lazy var audienceConfigurationItem: SLComposeSheetConfigurationItem = {

@@ -23,8 +23,6 @@
 
 import UIKit
 
-/* Create an extension on UIView that allows us to animate the tapped
-state of the buttons */
 extension UIView{
   func scaleByFactor(factor: CGFloat, animationDuration: NSTimeInterval){
     UIView.animateWithDuration(animationDuration, animations: {[weak self] in
@@ -38,12 +36,8 @@ extension UIView{
   }
 }
 
-/* This is a button. The superclass is a view to allow you
-to do more with the button if you want to */
 class KeyboardButton : UIView{
   
-  /* Instantiate the button and place it right
-  in the center of the view */
   var button: UIButton!
   
   required init(coder aDecoder: NSCoder) {
@@ -62,21 +56,24 @@ class KeyboardButton : UIView{
       forControlEvents: .AllEvents ^ (.TouchDown))
   }
   
+  func goToNormalSize(){
+    self.resetScalingWithAnimationDuration(0.1)
+  }
+  
+  func enlargeForTouchDown(){
+    self.scaleByFactor(3.0, animationDuration: 0.1)
+  }
+  
 }
 
-/* This is the actual keyboard view, which is the container */
 class KeyboardView: UIView {
   
-  /* Define our variables here */
   var buttons = [KeyboardButton]()
   let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   var nextKeyboardButton: KeyboardButton!
   let buttonWidth = 45.0 as CGFloat
   let buttonHeight = 45.0 as CGFloat
   
-  /* Define our contextual document proxy that will give us information
-  about the context in which our keyboard will be displayed and gives
-  us capability to interact with the component that is showing the keyboard */
   weak var textDocumentProxy: UITextDocumentProxy?{
   willSet(newValue){
     if let proxy = newValue{
@@ -89,7 +86,6 @@ class KeyboardView: UIView {
   }
   }
   
-  /* Position the button properly now */
   override func layoutSubviews() {
     super.layoutSubviews()
     
@@ -110,13 +106,15 @@ class KeyboardView: UIView {
       }
       
     }
+    
   }
   
-  /* Handle the tap and the backspace buttons */
   func handleTapOnButton(button: UIButton){
     let buttonText = button.titleForState(.Normal)
-    if let proxy = textDocumentProxy{
-      proxy.insertText(buttonText)
+    if let text = buttonText{
+      if let proxy = textDocumentProxy{
+        proxy.insertText(text)
+      }
     }
   }
   
@@ -126,8 +124,6 @@ class KeyboardView: UIView {
     }
   }
   
-  /* Add our buttons to the keyboard
-  also add the backspace button and the Next Keyboard buttons */
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }

@@ -56,23 +56,23 @@ NSURLSessionDownloadDelegate, NSURLSessionTaskDelegate {
       return newValue
     }
   }
-
-  func URLSession(session: NSURLSession!,
-    downloadTask: NSURLSessionDownloadTask!,
+  
+  func URLSession(session: NSURLSession,
+    downloadTask: NSURLSessionDownloadTask,
     didWriteData bytesWritten: Int64,
     totalBytesWritten: Int64,
     totalBytesExpectedToWrite: Int64){
       println("Received data")
   }
   
-  func URLSession(session: NSURLSession!,
-    downloadTask: NSURLSessionDownloadTask!,
-    didFinishDownloadingToURL location: NSURL!){
+  func URLSession(session: NSURLSession,
+    downloadTask: NSURLSessionDownloadTask,
+    didFinishDownloadingToURL location: NSURL){
       println("Finished writing the downloaded content to URL = \(location)")
   }
   
   /* We now get to know that the download procedure was finished */
-  func URLSession(session: NSURLSession!, task: NSURLSessionTask!,
+  func URLSession(session: NSURLSession, task: NSURLSessionTask!,
     didCompleteWithError error: NSError!){
     
       print("Finished ")

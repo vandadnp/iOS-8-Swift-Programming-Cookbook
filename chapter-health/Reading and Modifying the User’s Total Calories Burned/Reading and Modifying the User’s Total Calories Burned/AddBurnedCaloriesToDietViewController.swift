@@ -23,16 +23,12 @@
 
 import UIKit
 
-/* An extension on NSDate that allows us to add a specific set of minutes
-to any date */
 extension NSDate{
   func dateByAddingMinutes(minutes: Double) -> NSDate{
     return self.dateByAddingTimeInterval(minutes * 60.0)
   }
 }
 
-
-/* A structure that represents any activity that burns calories */
 struct CalorieBurner{
   var name: String
   var calories: Double
@@ -54,9 +50,6 @@ struct CalorieBurner{
   }
 }
 
-
-/* The delegate protocol for our view controller that will inform the delegate
-whenever a new burner is added to the list */
 @objc(AddBurnedCaloriesToDietViewControllerDelegate)
 protocol AddBurnedCaloriesToDietViewControllerDelegate{
   optional func addBurnedCaloriesToDietViewController(
@@ -69,7 +62,6 @@ protocol AddBurnedCaloriesToDietViewControllerDelegate{
 
 class AddBurnedCaloriesToDietViewController: UITableViewController {
   
-  /* Define our variables and constants here */
   struct TableViewValues{
     static let identifier = "Cell"
   }
@@ -104,10 +96,9 @@ class AddBurnedCaloriesToDietViewController: UITableViewController {
     
   }()
 
-  /* Pass the calorie burner to the delegate and pop */
   @IBAction func addToDiet(){
     
-    let burner = allCalorieBurners[tableView.indexPathForSelectedRow().row]
+    let burner = allCalorieBurners[tableView.indexPathForSelectedRow()!.row]
     
     if let theDelegate = delegate{
       theDelegate.addBurnedCaloriesToDietViewController?(self,
@@ -117,18 +108,17 @@ class AddBurnedCaloriesToDietViewController: UITableViewController {
         endDate: burner.endDate)
     }
     
-    navigationController.popViewControllerAnimated(true)
+    navigationController!.popViewControllerAnimated(true)
     
   }
   
-  /* Display the calorie burners on the table view */
-  override func tableView(tableView: UITableView!,
+  override func tableView(tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
     return allCalorieBurners.count
   }
   
-  override func tableView(tableView: UITableView!,
-    cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+  override func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewValues.identifier, forIndexPath: indexPath)
@@ -139,8 +129,8 @@ class AddBurnedCaloriesToDietViewController: UITableViewController {
       let caloriesAsString = formatter.stringFromValue(burner.calories,
         unit: .Kilocalorie)
       
-      cell.textLabel.text = burner.name
-      cell.detailTextLabel.text = caloriesAsString
+      cell.textLabel!.text = burner.name
+      cell.detailTextLabel!.text = caloriesAsString
       
       return cell
   }

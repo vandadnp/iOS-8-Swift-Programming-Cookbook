@@ -58,27 +58,27 @@ UITableViewDataSource, UITableViewDelegate {
     }
   }
   
-  func tableView(tableView: UITableView!,
+  func tableView(tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
       
       return allRows.count
       
   }
   
-  func tableView(tableView: UITableView!,
-    cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!{
+  func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
       
       let cell = tableView.dequeueReusableCellWithIdentifier("identifier",
         forIndexPath: indexPath) as UITableViewCell
       
-      cell.textLabel.text = allRows[indexPath.row]
+      cell.textLabel!.text = allRows[indexPath.row]
       
       return cell
       
   }
   
-  func tableView(tableView: UITableView!,
-    editingStyleForRowAtIndexPath indexPath: NSIndexPath!)
+  func tableView(tableView: UITableView,
+    editingStyleForRowAtIndexPath indexPath: NSIndexPath)
     -> UITableViewCellEditingStyle{
       return .Delete
   }
@@ -88,9 +88,9 @@ UITableViewDataSource, UITableViewDelegate {
     tableView!.setEditing(editing, animated: animated)
   }
   
-  func tableView(tableView: UITableView!,
+  func tableView(tableView: UITableView,
     commitEditingStyle editingStyle: UITableViewCellEditingStyle,
-    forRowAtIndexPath indexPath: NSIndexPath!){
+    forRowAtIndexPath indexPath: NSIndexPath){
     
       if editingStyle == .Delete{
         /* First remove this object from the source */

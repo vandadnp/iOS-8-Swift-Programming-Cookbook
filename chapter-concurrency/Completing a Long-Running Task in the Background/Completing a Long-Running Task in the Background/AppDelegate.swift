@@ -28,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             
   var window: UIWindow?
   
-  /* Our variables */
   var backgroundTaskIdentifier: UIBackgroundTaskIdentifier =
   UIBackgroundTaskInvalid
   
@@ -45,7 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func timerMethod(sender: NSTimer){
   
-    /* What we do in our timer */
     let backgroundTimeRemaining =
     UIApplication.sharedApplication().backgroundTimeRemaining
     
@@ -60,7 +58,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func applicationDidEnterBackground(application: UIApplication) {
     
-    /* Start off the timer */
     if isMultitaskingSupported() == false{
       return
     }
@@ -74,8 +71,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     backgroundTaskIdentifier =
       application.beginBackgroundTaskWithName("task1",
         expirationHandler: {[weak self] in
-          self!.endBackgroundTask()
-      })
+        self!.endBackgroundTask()
+        })
     
   }
   
@@ -91,11 +88,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           self!.backgroundTaskIdentifier)
         self!.backgroundTaskIdentifier = UIBackgroundTaskInvalid
       }
-    })
+      })
   }
 
   func applicationWillEnterForeground(application: UIApplication) {
-    /* End the task */
     if backgroundTaskIdentifier != UIBackgroundTaskInvalid{
       endBackgroundTask()
     }
