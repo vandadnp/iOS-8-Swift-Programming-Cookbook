@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let widgetUrlScheme = "widget"
   
   func application(application: UIApplication!,
-    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       return true
   }
   

@@ -17,7 +17,7 @@
 //  lazy var pedometer = CMPedometer()
 //
 //  func application(application: UIApplication!,
-//    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //      return true
 //  }
 //
@@ -64,7 +64,7 @@
 //  lazy var pedometer = CMPedometer()
 //  
 //  func application(application: UIApplication!,
-//    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //      return true
 //  }
 //  
@@ -113,7 +113,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   lazy var pedometer = CMPedometer()
   
   func application(application: UIApplication!,
-    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       return true
   }
   

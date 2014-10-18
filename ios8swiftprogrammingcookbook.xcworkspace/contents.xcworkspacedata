@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:chapter-addressBook"
+      name = "chapter-addressBook">
+      <FileRef
+         location = "group:Adding Persons to Groups/Adding Persons to Groups.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Inserting a Group Entry into the Address Book/Inserting a Group Entry into the Address Book.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Inserting a Person Entry into the Address Book/Inserting a Person Entry into the Address Book.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Requesting Access to the Address Book/Requesting Access to the Address Book.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving a Person Entity with System UI/Retrieving a Person Entity with System UI.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving a Property of a Person Entity with System UI/Retrieving a Property of a Person Entity with System UI.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving All the People in the Address Book/Retrieving All the People in the Address Book.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving and Setting a Person&apos;s Address Book Image/Retrieving and Setting a Person&apos;s Address Book Image.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving Properties of Address Book Entries/Retrieving Properties of Address Book Entries.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Searching the Address Book/Searching the Address Book.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-basics"
+      name = "chapter-basics">
+      <FileRef
+         location = "group:Accepting User Text Input with UITextField/Accepting User Text Input with UITextField.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Adding Blur Effects to Your Views/Adding Blur Effects to Your Views.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Adding Buttons to Navigation Bars Using UIBarButtonItem/Adding Buttons to Navigation Bars Using UIBarButtonItem.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Adding Buttons to the User Interface with UIButton/Adding Buttons to the User Interface with UIButton.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Creating Scrollable Content with UIScrollView/Creating Scrollable Content with UIScrollView.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Creating, Using and Customizing Switches with UISwitch/Creating, Using and Customizing Switches with UISwitch.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Displaying Alerts and Action Sheets/Displaying Alerts and Action Sheets.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Displaying an Image on a Navigation Bar/Displaying an Image on a Navigation Bar.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Displaying Images with UIImageView/Displaying Images with UIImageView.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Displaying Long Lines of Text with UITextView/Displaying Long Lines of Text with UITextView.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Displaying Progress with UIProgressView/Displaying Progress with UIProgressView.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Displaying Static Text with UILabel/Displaying Static Text with UILabel.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Grouping Compact Options with UISegmentedControl/Grouping Compact Options with UISegmentedControl.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Implementing Range Pickers with UISlider/Implementing Range Pickers with UISlider.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Introduction to Chapter (Basics)/Introduction to Chapter (Basics).xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Jumping Right Into Swift/Jumping Right Into Swift.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Loading Web Pages with UIWebView/Loading Web Pages with UIWebView.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Loading Web Pages with WebKit/Loading Web Pages with WebKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Picking the Date and Time with UIDatePicker/Picking the Date and Time with UIDatePicker.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Picking Values with the UIPickerView/Picking Values with the UIPickerView.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Presenting Custom Sharing Options with UIActivityViewController/Presenting Custom Sharing Options with UIActivityViewController.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Presenting Sharing Options with UIActivityViewController/Presenting Sharing Options with UIActivityViewController.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Presenting Temporary Information on the Screen with Popovers/Presenting Temporary Information on the Screen with Popovers.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-camera"
+      name = "chapter-camera">
+      <FileRef
+         location = "group:Detecting and Probing the Camera/Detecting and Probing the Camera.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Editing Images and Videos Right on the Device/Editing Images and Videos Right on the Device.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Reacting to Changes in Images and Videos/Reacting to Changes in Images and Videos.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Searching for and Retrieving Images and Videos/Searching for and Retrieving Images and Videos.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Storing Photos in the Photo Library/Storing Photos in the Photo Library.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Storing Videos in the Photo Library/Storing Videos in the Photo Library.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Taking Photos with the Camera/Taking Photos with the Camera.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Taking Videos with the Camera/Taking Videos with the Camera.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-cloud"
+      name = "chapter-cloud">
+      <FileRef
+         location = "group:Creating a Provision Profile/Creating a Provision Profile.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Creating and Managing Folders for Apps in iCloud/Creating and Managing Folders for Apps in iCloud.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Observing Changes to Records in CloudKit/Observing Changes to Records in CloudKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Querying the Cloud with CloudKit/Querying the Cloud with CloudKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving Data with CloudKit/Retrieving Data with CloudKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving User Information from CloudKit/Retrieving User Information from CloudKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Searching for Files and Folders in iCloud/Searching for Files and Folders in iCloud.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Setting Up Your App for CloudKit/Setting Up Your App for CloudKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Storing and Synchronizing Dictionaries in iCloud/Storing and Synchronizing Dictionaries in iCloud.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Storing Data with CloudKit/Storing Data with CloudKit.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-concurrency"
+      name = "chapter-concurrency">
+      <FileRef
+         location = "group:Adding Background Fetch Capabilities to Your Apps/Adding Background Fetch Capabilities to Your Apps.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Completing a Long-Running Task in the Background/Completing a Long-Running Task in the Background.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Creating Dependency Between Operations/Creating Dependency Between Operations.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Creating Simple Concurrency with Operations/Creating Simple Concurrency with Operations.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Firing Periodic Tasks/Firing Periodic Tasks.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Grouping Tasks Together/Grouping Tasks Together.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Handling Location Changes in the Background/Handling Location Changes in the Background.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Handling Network Connections in the Background/Handling Network Connections in the Background.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Performing a Task Only Once/Performing a Task Only Once.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Performing Non-UI Related Tasks/Performing Non-UI Related Tasks.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Performing Tasks After a Delay/Performing Tasks After a Delay.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Performing UI-Related Tasks/Performing UI-Related Tasks.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Playing Audio in the Background/Playing Audio in the Background.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Scheduling a Background Activity/Scheduling a Background Activity.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-data"
+      name = "chapter-data">
+      <FileRef
+         location = "group:Boosting Data Access in Table Views/Boosting Data Access in Table Views.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Deleting Data from Core Data/Deleting Data from Core Data.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Fetching Data in the Background/Fetching Data in the Background.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Implementing Relationships in Core Data/Implementing Relationships in Core Data.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Introduction to Core Data/Introduction to Core Data.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Performing Batch Updates on Core Data/Performing Batch Updates on Core Data.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Reading Data from Core Data/Reading Data from Core Data.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Sorting Data in Core Data/Sorting Data in Core Data.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Using Custom Data Types in Your Core Data Model/Using Custom Data Types in Your Core Data Model.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Writing to Core Data/Writing to Core Data.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-datesCaneldarsEvents"
+      name = "chapter-datesCaneldarsEvents">
+      <FileRef
+         location = "group:Accessing the Contents of Calendars/Accessing the Contents of Calendars.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Adding Alarms to Calendars/Adding Alarms to Calendars.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Adding Events to Calendars/Adding Events to Calendars.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Adding Recurring Events to Calendars/Adding Recurring Events to Calendars.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Constructing Date Objects/Constructing Date Objects.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Removing Events From Calendars/Removing Events From Calendars.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Requesting Permission to Access Calendars/Requesting Permission to Access Calendars.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving Calendar Groups/Retrieving Calendar Groups.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving the Attendees of an Event/Retrieving the Attendees of an Event.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-dynamics"
+      name = "chapter-dynamics">
+      <FileRef
+         location = "group:Adding a Dynamic Snap Effect to Your UI Components/Adding a Dynamic Snap Effect to Your UI Components.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Adding Gravity to Your UI Components/Adding Gravity to Your UI Components.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Animating Your UI Components With a Push/Animating Your UI Components With a Push.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Assigning Characteristics to Your Dynamic Effects/Assigning Characteristics to Your Dynamic Effects.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Attaching Multiple Dynamic Items to Each Other/Attaching Multiple Dynamic Items to Each Other.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Detecting and Reacting to Collisions Between UI Components/Detecting and Reacting to Collisions Between UI Components.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-extensions"
+      name = "chapter-extensions">
+      <FileRef
+         location = "group:Adding New Photo Editing Capabilities to the Photos App/Adding New Photo Editing Capabilities to the Photos App.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Adding Widgets to the Notification Center/Adding Widgets to the Notification Center.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Building Custom Keyboards/Building Custom Keyboards.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Creating a Service Within Your App with Action Extensions/Creating a Service Within Your App with Action Extensions.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Providing a Custom Sharing Extension to iOS/Providing a Custom Sharing Extension to iOS.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-fileManagement"
+      name = "chapter-fileManagement">
+      <FileRef
+         location = "group:Creating Folders on Disk/Creating Folders on Disk.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Deleting Files and Folders/Deleting Files and Folders.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Enumerating Files and Folders/Enumerating Files and Folders.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Finding the Path of the Most Useful Folders on Disk/Finding the Path of the Most Useful Folders on Disk.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Saving Objects to Files/Saving Objects to Files.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Writing to and Reading from Files/Writing to and Reading from Files.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-gestures"
+      name = "chapter-gestures">
+      <FileRef
+         location = "group:Detecting Long Press Gestures/Detecting Long Press Gestures.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Detecting Panning and Dragging Gestures/Detecting Panning and Dragging Gestures.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Detecting Pinch Gestures/Detecting Pinch Gestures.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Detecting Rotation Gestures/Detecting Rotation Gestures.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Detecting Screen Edge Pan Gestures/Detecting Screen Edge Pan Gestures.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Detecting Swipe Gestures/Detecting Swipe Gestures.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Detecting Tap Gestures/Detecting Tap Gestures.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-graphics"
+      name = "chapter-graphics">
+      <FileRef
+         location = "group:Adding Shadows to Shapes/Adding Shadows to Shapes.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Animating Views/Animating Views.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Constructing Paths/Constructing Paths.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Constructing Resizable Images/Constructing Resizable Images.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Drawing Gradients/Drawing Gradients.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Drawing Images/Drawing Images.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Drawing Lines/Drawing Lines.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Drawing Rectangles/Drawing Rectangles.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Drawing Text/Drawing Text.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Introduction to Graphics and Animations/Introduction to Graphics and Animations.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Transforming Views/Transforming Views.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-health"
+      name = "chapter-health">
+      <FileRef
+         location = "group:Accessing and Modifying User&#x2019;s Height Information/Accessing and Modifying User&#x2019;s Height Information.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Converting Between Units/Converting Between Units.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Observing Changes to User&#x2019;s Health Information/Observing Changes to User&#x2019;s Health Information.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Reading and Modifying the User&#x2019;s Total Calories Burned/Reading and Modifying the User&#x2019;s Total Calories Burned.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving and Modifying User&#x2019;s Weight Information/Retrieving and Modifying User&#x2019;s Weight Information.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving User&#x2019;s Date of Birth/Retrieving User&#x2019;s Date of Birth.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Setting up Your App for HealthKit/Setting up Your App for HealthKit.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-homekit"
+      name = "chapter-homekit">
+      <FileRef
+         location = "group:Adding Rooms to the User&#x2019;s Home/Adding Rooms to the User&#x2019;s Home.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Discovering and Managing HomeKit Enabled Accessories/Discovering and Managing HomeKit Enabled Accessories.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Grouping Services of HomeKit Accessories/Grouping Services of HomeKit Accessories.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Interacting with HomeKit Accessories/Interacting with HomeKit Accessories.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Managing the User&#x2019;s Home in HomeKit/Managing the User&#x2019;s Home in HomeKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Simulating HomeKit Accessories/Simulating HomeKit Accessories.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Specifying Zones in the User&#x2019;s Home/Specifying Zones in the User&#x2019;s Home.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-maps"
+      name = "chapter-maps">
+      <FileRef
+         location = "group:Customizing the View of the Map with a Camera/Customizing the View of the Map with a Camera.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Defining and Processing iBeacons - Destination/Defining and Processing iBeacons - Destination.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Defining and Processing iBeacons - Source/Defining and Processing iBeacons - Source.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Detecting Which Floor the User is on in a Building/Detecting Which Floor the User is on in a Building.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Displaying Custom Pins on a Map View/Displaying Custom Pins on a Map View.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Displaying Directions on The Map/Displaying Directions on The Map.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Displaying Pins on a Map View/Displaying Pins on a Map View.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Pinpointing the Location of a Device/Pinpointing the Location of a Device.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Searching on a Map View/Searching on a Map View.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-motion"
+      name = "chapter-motion">
+      <FileRef
+         location = "group:Detecting Shakes on an iOS Device/Detecting Shakes on an iOS Device.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Detecting the Availability of a Gyroscope/Detecting the Availability of a Gyroscope.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Detecting the Availability of an Accelerometer/Detecting the Availability of an Accelerometer.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving Accelerometer Data/Retrieving Accelerometer Data.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving Altitude Data/Retrieving Altitude Data.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving Gyroscope Data/Retrieving Gyroscope Data.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving Pedometer Data/Retrieving Pedometer Data.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-multimedia"
+      name = "chapter-multimedia">
+      <FileRef
+         location = "group:Accessing the Music Library/Accessing the Music Library.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Capturing Thumbnails from Video Files/Capturing Thumbnails from Video Files.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Playing Audio Files/Playing Audio Files.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Playing Video Files/Playing Video Files.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Recording Audio/Recording Audio.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-networking"
+      name = "chapter-networking">
+      <FileRef
+         location = "group:Creating a Tunneled VPN Connection/Creating a Tunneled VPN Connection.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Customizing URL Requests/Customizing URL Requests.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Downloading Asynchronously with NSURLConnection/Downloading Asynchronously with NSURLConnection.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Downloading Data in the Background Using NSURLSession/Downloading Data in the Background Using NSURLSession.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Downloading Data Using NSURLSession/Downloading Data Using NSURLSession.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Downloading Synchronously with NSURLConnection/Downloading Synchronously with NSURLConnection.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Handling Timeouts in Asynchronous Connections/Handling Timeouts in Asynchronous Connections.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Integrating Social Sharing into Your Apps/Integrating Social Sharing into Your Apps.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Sending HTTP Requests with NSURLConnection/Sending HTTP Requests with NSURLConnection.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Serializing and Deserializing JSON Objects/Serializing and Deserializing JSON Objects.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Uploading Data Using NSURLSession/Uploading Data Using NSURLSession.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-notification"
+      name = "chapter-notification">
+      <FileRef
+         location = "group:Delivering Push Notifications to Your App/Delivering Push Notifications to Your App.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Handling Local System Notifications/Handling Local System Notifications.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Listening and Reacting to Keyboard Notifications/Listening and Reacting to Keyboard Notifications.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Listening for and Reacting to Local Notifications/Listening for and Reacting to Local Notifications.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Listening for and Reacting to Notifications/Listening for and Reacting to Notifications.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Reacting to Push Notifications/Reacting to Push Notifications.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Scheduling Local Notifications/Scheduling Local Notifications.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Sending Notifications/Sending Notifications.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Setting Up Your App for Push Notifications/Setting Up Your App for Push Notifications.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-security"
+      name = "chapter-security">
+      <FileRef
+         location = "group:Authenticating the User with Touch ID/Authenticating the User with Touch ID.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Deleting Exiting Values in the Keychain/Deleting Exiting Values in the Keychain.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Enabling Security and Protection for Your Apps/Enabling Security and Protection for Your Apps.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Finding Values in the Keychain/Finding Values in the Keychain.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Sharing Keychain Data Between Multiple Apps - Reading/Sharing Keychain Data Between Multiple Apps - Reading.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Sharing Keychain Data Between Multiple Apps - Writing/Sharing Keychain Data Between Multiple Apps - Writing.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Storing Files Securely in the App Sandbox/Storing Files Securely in the App Sandbox.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Storing Values in the Keychain/Storing Values in the Keychain.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Updating Existing Values in the Keychain/Updating Existing Values in the Keychain.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Writing to and Reading Keychain Data from iCloud/Writing to and Reading Keychain Data from iCloud.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:chapter-tables"
+      name = "chapter-tables">
+      <FileRef
+         location = "group:Adding Custom Interactions to Collection Views/Adding Custom Interactions to Collection Views.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Constructing Headers and Footers in Table Views/Constructing Headers and Footers in Table Views.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Displaying a Refresh Control for Table Views/Displaying a Refresh Control for Table Views.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Enabling Swipe Deletion of Table View Cells/Enabling Swipe Deletion of Table View Cells.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Feeding Custom Cells to Collection Views Using .xib Files/Feeding Custom Cells to Collection Views Using .xib Files.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Handling Events in Collection Views/Handling Events in Collection Views.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Populating a Table View with Data/Populating a Table View with Data.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Providing Basic Content to a Collection View/Providing Basic Content to a Collection View.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Providing Header and Footer in a Collection View/Providing Header and Footer in a Collection View.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>

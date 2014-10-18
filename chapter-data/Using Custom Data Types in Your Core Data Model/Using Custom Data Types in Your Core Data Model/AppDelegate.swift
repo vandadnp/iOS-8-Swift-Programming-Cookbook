@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   func application(application: UIApplication!,
-    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       
       /* Save the laptop with a given color first */
       let laptop = NSEntityDescription.insertNewObjectForEntityForName(

@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
   
   func application(application: UIApplication!,
-    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       
       NSNotificationCenter.defaultCenter().addObserver(self,
         selector: "handleSettingsChanged:",

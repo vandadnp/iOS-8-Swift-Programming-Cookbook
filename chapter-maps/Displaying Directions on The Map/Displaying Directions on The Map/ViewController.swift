@@ -58,10 +58,10 @@ MKMapViewDelegate, CLLocationManagerDelegate {
           
           /* Convert the CoreLocation destination
           placemark to a MapKit placemark */
-          /* Get the placemark of the destination address */
           let placemark = placemarks[0] as CLPlacemark
           let destinationCoordinates =
           placemark.location.coordinate
+          /* Get the placemark of the destination address */
           let destination = MKPlacemark(coordinate: destinationCoordinates,
             addressDictionary: nil)
           

@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   lazy var queue = NSOperationQueue()
   
   func application(application: UIApplication!,
-    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       
       
       if manager.gyroAvailable{

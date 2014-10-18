@@ -51,7 +51,7 @@ import UIKit
 //  }
 //  
 //  func application(application: UIApplication,
-//    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //      
 //      let oldEstate = Car(classification: .Estate, year: 1980)
 //      let estate = Car(classification: .Estate, year: 2010)
@@ -86,7 +86,7 @@ import UIKit
 //  var window: UIWindow?
 //  
 //  func application(application: UIApplication,
-//    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //      
 //      if let classification = CarClassification.fromRaw("Estate"){
 //        let volvoV50 = Car(classification: classification)
@@ -124,7 +124,7 @@ import UIKit
 //  var window: UIWindow?
 //  
 //  func application(application: UIApplication,
-//    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //      
 //      var vandad = Person(fullName: "Vandad Nahavandipoor", age: 29)
 //      var sameAgeVandad = vandad++
@@ -168,7 +168,7 @@ import UIKit
 //  var window: UIWindow?
 //  
 //  func application(application: UIApplication,
-//    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //      
 //      let andy = Person(firstName: "Andy", lastName: "Oram")
 //      let someoneElse = Person(firstName: "Andy", lastName: "Oram")
@@ -194,7 +194,7 @@ import UIKit
 //  var window: UIWindow?
 //  
 //  func application(application: UIApplication,
-//    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //      
 //      /* Bitwise OR operator */
 //      let byte3 = 0b01010101 | 0b10101010 /* = 0b11111111 */
@@ -234,7 +234,7 @@ import UIKit
 //  }
 //  
 //  func application(application: UIApplication!,
-//    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //      
 //      var vandad = Person(firstName: "Vandad", lastName: "Nahavandipoor")
 //      changeFirstNameOf(vandad, to: "VANDAD")
@@ -265,7 +265,7 @@ import UIKit
 //  }
 //
 //  func application(application: UIApplication!,
-//    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //      
 //      var vandad = Person(firstName: "Vandad", lastName: "Nahavandipoor")
 //      changeFirstNameOf(vandad, to: "VANDAD")
@@ -282,7 +282,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(application: UIApplication!,
-    didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       
 //      let integerValue = 10
 //      let stringValue = "Swift"
