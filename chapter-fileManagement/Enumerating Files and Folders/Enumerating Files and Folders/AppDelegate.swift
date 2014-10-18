@@ -30,7 +30,7 @@ import UIKit
 //  var window: UIWindow?
 //
 //  func application(application: UIApplication,
-//    didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //
 //    var error:NSError?
 //    let fileManager = NSFileManager()
@@ -172,7 +172,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
   
   func application(application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
     
     let appBundleContents = contentsOfAppBundle()
     

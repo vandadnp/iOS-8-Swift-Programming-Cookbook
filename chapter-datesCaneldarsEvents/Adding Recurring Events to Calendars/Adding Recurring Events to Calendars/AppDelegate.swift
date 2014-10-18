@@ -275,7 +275,7 @@ func createRecurringEventInStore(store: EKEventStore, calendar: EKCalendar)
     
   }
 
-  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
     example1()
     self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
     // Override point for customization after application launch.

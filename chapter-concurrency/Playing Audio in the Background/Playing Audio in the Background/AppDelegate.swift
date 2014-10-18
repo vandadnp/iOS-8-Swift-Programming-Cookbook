@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate {
   var audioPlayer: AVAudioPlayer?
 
   func application(application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       
       let dispatchQueue =
       dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)

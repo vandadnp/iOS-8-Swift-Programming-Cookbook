@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   func application(application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
     
       let keyToSearchFor = "Full Name"
       let service = NSBundle.mainBundle().bundleIdentifier!

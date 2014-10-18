@@ -32,18 +32,19 @@ CLLocationManagerDelegate {
   var locationManager: CLLocationManager! = nil
   var isExecutingInBackground = false
   
-func locationManager(manager: CLLocationManager!,
-  didUpdateToLocation newLocation: CLLocation!,
-  fromLocation oldLocation: CLLocation!){
-    if isExecutingInBackground{
-      /* We are in the background. Do not do any heavy processing */
-    } else {
-      /* We are in the foreground. Do any processing that you wish */
-    }
-}
+  func locationManager(manager: CLLocationManager!,
+    didUpdateToLocation newLocation: CLLocation!,
+    fromLocation oldLocation: CLLocation!){
+      if isExecutingInBackground{
+        /* We are in the background. Do not do any heavy processing */
+      } else {
+        /* We are in the foreground. Do any processing that you wish */
+      }
+  }
   
   func application(application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+    didFinishLaunchingWithOptions
+    launchOptions: [NSObject : AnyObject]?) -> Bool {
     locationManager = CLLocationManager()
     locationManager.desiredAccuracy = kCLLocationAccuracyBest
     locationManager.delegate = self

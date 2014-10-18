@@ -30,7 +30,7 @@
 //  var window: UIWindow?
 //
 //  func application(application: UIApplication,
-//    didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //
 //      let urlAsString = "http://www.apple.com"
 //      let url = NSURL(string: urlAsString)
@@ -68,7 +68,7 @@
 //  var window: UIWindow?
 //
 //  func application(application: UIApplication,
-//    didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //
 //      let urlAsString = "http://www.apple.com"
 //      let url = NSURL(string: urlAsString)
@@ -104,7 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   func application(application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       
       let dispatchQueue =
       dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
