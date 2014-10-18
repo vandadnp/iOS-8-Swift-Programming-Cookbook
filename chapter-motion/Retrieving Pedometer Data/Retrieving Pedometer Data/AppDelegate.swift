@@ -21,7 +21,7 @@
 //      return true
 //  }
 //
-//  func applicationDidBecomeActive(application: UIApplication!) {
+//  func applicationDidBecomeActive(application: UIApplication) {
 //    if CMPedometer.isStepCountingAvailable(){
 //
 //      pedometer.startPedometerUpdatesFromDate(NSDate(), withHandler: {
@@ -36,7 +36,7 @@
 //    }
 //  }
 //
-//  func applicationWillResignActive(application: UIApplication!) {
+//  func applicationWillResignActive(application: UIApplication) {
 //    pedometer.stopPedometerUpdates()
 //  }
 //
@@ -68,7 +68,7 @@
 //      return true
 //  }
 //  
-//  func applicationDidBecomeActive(application: UIApplication!) {
+//  func applicationDidBecomeActive(application: UIApplication) {
 //    
 //    /* Can we ask for distance updates? */
 //    if CMPedometer.isDistanceAvailable(){
@@ -87,7 +87,7 @@
 //    }
 //  }
 //  
-//  func applicationWillResignActive(application: UIApplication!) {
+//  func applicationWillResignActive(application: UIApplication) {
 //    pedometer.stopPedometerUpdates()
 //  }
 //  
@@ -117,7 +117,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       return true
   }
   
-  func applicationDidBecomeActive(application: UIApplication!) {
+  func applicationDidBecomeActive(application: UIApplication) {
     
     /* Can we ask for floor climb/descending updates? */
     if CMPedometer.isFloorCountingAvailable(){
@@ -136,7 +136,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
   }
   
-  func applicationWillResignActive(application: UIApplication!) {
+  func applicationWillResignActive(application: UIApplication) {
     pedometer.stopPedometerUpdates()
   }
   
