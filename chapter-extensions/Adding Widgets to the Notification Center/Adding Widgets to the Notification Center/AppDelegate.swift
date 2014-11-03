@@ -33,7 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let widgetUrlScheme = "widget"
   
   func application(application: UIApplication!,
-    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+    didFinishLaunchingWithOptions
+    launchOptions: [NSObject : AnyObject]?) -> Bool {
       return true
   }
   
@@ -42,7 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       if url.scheme == widgetUrlScheme{
         
-        /* Goes through our extension to convert String to NSIndexPath */
+        /* Goes through our extension to convert 
+        String to NSIndexPath */
         let indexPath: NSIndexPath = url.host!.toIndexPath()
         
         /* Now do your work with the index path */

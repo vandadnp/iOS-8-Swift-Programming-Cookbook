@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var returnedAttributes: Unmanaged<AnyObject>? = nil
     let results = Int(SecItemCopyMatching(query, &returnedAttributes))
     
-    if results == errSecSuccess{
+    if results == Int(errSecSuccess){
       
       let attributes = returnedAttributes!.takeRetainedValue() as NSDictionary
       
@@ -76,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       var result: Unmanaged<AnyObject>? = nil
       let found = Int(SecItemCopyMatching(query, &result))
       
-      if found == errSecSuccess{
+      if found == Int(errSecSuccess){
         
         let newData = "Mark Tremonti".dataUsingEncoding(NSUTF8StringEncoding,
           allowLossyConversion: false)
@@ -88,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let updated = Int(SecItemUpdate(query, update))
         
-        if updated == errSecSuccess{
+        if updated == Int(errSecSuccess){
           println("Successfully updated the existing value")
           readExistingValue()
         } else {

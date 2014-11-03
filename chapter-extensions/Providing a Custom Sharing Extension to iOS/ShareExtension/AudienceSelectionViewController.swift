@@ -45,10 +45,10 @@ class AudienceSelectionViewController: UITableViewController {
   
   var delegate: AudienceSelectionViewControllerDelegate?
   
-  var audience = Audience.Everyone.toRaw()
+  var audience = Audience.Everyone.rawValue
   
   class func defaultAudience() -> String{
-    return Audience.Everyone.toRaw()
+    return Audience.Everyone.rawValue
   }
   
   required init(coder aDecoder: NSCoder) {
@@ -77,9 +77,9 @@ class AudienceSelectionViewController: UITableViewController {
         TableViewValues.identifier,
         forIndexPath: indexPath) as UITableViewCell
       
-      let text = Audience.allValues[indexPath.row].toRaw()
+      let text = Audience.allValues[indexPath.row].rawValue
       
-      cell.textLabel!.text = text
+      cell.textLabel.text = text
       
       if text == audience{
         cell.accessoryType = .Checkmark
@@ -94,7 +94,7 @@ class AudienceSelectionViewController: UITableViewController {
     didSelectRowAtIndexPath indexPath: NSIndexPath) {
       
       if let theDelegate = delegate{
-        let selectedAudience = Audience.allValues[indexPath.row].toRaw()
+        let selectedAudience = Audience.allValues[indexPath.row].rawValue
         theDelegate.audienceSelectionViewController!(self,
           selectedValue: selectedAudience)
         

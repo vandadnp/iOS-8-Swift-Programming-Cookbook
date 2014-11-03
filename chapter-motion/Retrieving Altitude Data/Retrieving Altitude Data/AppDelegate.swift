@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   lazy var queue = NSOperationQueue()
 
   func application(application: UIApplication!,
-    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+    didFinishLaunchingWithOptions launchOptions:
+    [NSObject : AnyObject]?) -> Bool {
     return true
   }
   

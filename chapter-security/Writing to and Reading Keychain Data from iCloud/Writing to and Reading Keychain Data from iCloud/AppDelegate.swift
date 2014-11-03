@@ -69,9 +69,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let status = Int(SecItemAdd(secItem, &result))
       
       switch status{
-      case errSecSuccess:
+      case Int(errSecSuccess):
         println("Successfully stored the value")
-      case errSecDuplicateItem:
+      case Int(errSecDuplicateItem):
         println("This item is already saved. Cannot duplicate it")
       default:
         println("An error occurred with code \(status)")

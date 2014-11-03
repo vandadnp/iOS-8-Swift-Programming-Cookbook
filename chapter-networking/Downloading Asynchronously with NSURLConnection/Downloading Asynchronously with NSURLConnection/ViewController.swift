@@ -32,7 +32,7 @@
 //    /* Construct the URL and the request to send to the connection */
 //    let urlAsString = "http://www.apple.com"
 //    let url = NSURL(string: urlAsString)
-//    let urlRequest = NSURLRequest(URL: url)
+//    let urlRequest = NSURLRequest(URL: url!)
 //    
 //    /* We will do the asynchronous request on our own queue */
 //    let queue = NSOperationQueue()
@@ -84,7 +84,7 @@ class ViewController: UIViewController {
     /* Construct the URL and the request to send to the connection */
     let urlAsString = "http://www.apple.com"
     let url = NSURL(string: urlAsString)
-    let urlRequest = NSURLRequest(URL: url)
+    let urlRequest = NSURLRequest(URL: url!)
     
     /* We will do the asynchronous request on our own queue */
     let queue = NSOperationQueue()

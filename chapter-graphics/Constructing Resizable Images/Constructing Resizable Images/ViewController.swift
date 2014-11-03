@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     button.titleLabel!.font = UIFont.systemFontOfSize(15)
     
     /* Construct the stretchable image */
-    let image = UIImage(named: "Button").resizableImageWithCapInsets(
+    let image = UIImage(named: "Button")!.resizableImageWithCapInsets(
       UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14))
     
     /* Set the background image of the button */

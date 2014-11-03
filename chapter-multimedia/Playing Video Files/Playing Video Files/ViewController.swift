@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     
     if let theReason = reason{
       
-      let reasonValue = MPMovieFinishReason.fromRaw(theReason.integerValue)
+      let reasonValue = MPMovieFinishReason(rawValue: theReason.integerValue)
       
       switch reasonValue!{
       case .PlaybackEnded:

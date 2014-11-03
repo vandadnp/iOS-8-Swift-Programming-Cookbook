@@ -45,7 +45,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
       
       /* We will attempt to get a reusable
       identifier for the pin we are about to create */
-      let pinReusableIdentifier = senderAnnotation.pinColor.toRaw()
+      let pinReusableIdentifier = senderAnnotation.pinColor.rawValue
       
       /* Using the identifier we retrieved above, we will
       attempt to reuse a pin in the sender Map View */

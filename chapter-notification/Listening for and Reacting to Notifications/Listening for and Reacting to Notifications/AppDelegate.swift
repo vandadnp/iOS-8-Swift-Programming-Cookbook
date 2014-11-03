@@ -42,7 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   func application(application: UIApplication!,
-    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+    didFinishLaunchingWithOptions launchOptions:
+    [NSObject : AnyObject]?) -> Bool {
     
       let steveJobs = Person()
       
@@ -56,9 +57,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         object: self,
         userInfo: userInfo)
       
-      /* The person class is currently listening for this notification. That class
-      will extract the first name and last name from it and set its own first
-      name and last name based on the userInfo dictionary of the notification. */
+      /* The person class is currently listening for this
+      notification. That class will extract the first name and last name 
+      from it and set its own first name and last name based on the
+      userInfo dictionary of the notification. */
       NSNotificationCenter.defaultCenter().postNotification(notification)
       
       /* Here is proof */

@@ -36,7 +36,7 @@
 //    let urlAsString = "http://www.yahoo.com"
 //    let url = NSURL(string: urlAsString)
 //
-//    let urlRequest = NSURLRequest(URL: url)
+//    let urlRequest = NSURLRequest(URL: url!)
 //
 //    var response: NSURLResponse?
 //    var error: NSError?
@@ -80,7 +80,7 @@ class ViewController: UIViewController {
     let urlAsString = "http://www.yahoo.com"
     let url = NSURL(string: urlAsString)
     
-    let urlRequest = NSURLRequest(URL: url)
+    let urlRequest = NSURLRequest(URL: url!)
     
     var response: NSURLResponse?
     var error: NSError?

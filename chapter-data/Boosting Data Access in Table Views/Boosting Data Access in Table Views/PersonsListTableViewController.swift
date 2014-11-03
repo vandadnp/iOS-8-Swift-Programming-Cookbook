@@ -83,7 +83,7 @@ NSFetchedResultsControllerDelegate {
       
       let person = frc.objectAtIndexPath(indexPath) as Person
       
-      cell.textLabel!.text = person.firstName + " " + person.lastName
+      cell.textLabel.text = person.firstName + " " + person.lastName
       cell.detailTextLabel!.text = "Age: \(person.age)"
       
       return cell

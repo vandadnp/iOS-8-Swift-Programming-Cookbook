@@ -35,7 +35,7 @@ class ViewController: UICollectionViewController {
   
   
   func randomImage() -> UIImage{
-    return allImages[Int(arc4random_uniform(UInt32(allImages.count)))]
+    return allImages[Int(arc4random_uniform(UInt32(allImages.count)))]!
   }
   
   override init(collectionViewLayout layout: UICollectionViewLayout!) {
@@ -43,8 +43,8 @@ class ViewController: UICollectionViewController {
     
     let nib = UINib(nibName: "MyCollectionViewCell", bundle: nil)
     
-    collectionView!.registerNib(nib, forCellWithReuseIdentifier: "cell")
-    collectionView!.backgroundColor = UIColor.whiteColor()
+    collectionView.registerNib(nib, forCellWithReuseIdentifier: "cell")
+    collectionView.backgroundColor = UIColor.whiteColor()
   }
   
   convenience required init(coder aDecoder: NSCoder) {

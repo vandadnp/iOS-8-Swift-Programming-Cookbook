@@ -116,7 +116,7 @@ class ViewController: UIViewController {
       [weak self] (subscription: CKSubscription!, error: NSError!) in
       
       if error != nil{
-        if CKErrorCode.fromRaw(error.code)! == .UnknownItem{
+        if error.code == CKErrorCode.UnknownItem.rawValue{
           println("This subscription doesn't exist. Creating it now...")
           
           self!.database.saveSubscription(self!.subscription(),

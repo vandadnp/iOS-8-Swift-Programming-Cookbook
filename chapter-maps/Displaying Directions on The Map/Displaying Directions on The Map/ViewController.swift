@@ -62,7 +62,8 @@ MKMapViewDelegate, CLLocationManagerDelegate {
           let destinationCoordinates =
           placemark.location.coordinate
           /* Get the placemark of the destination address */
-          let destination = MKPlacemark(coordinate: destinationCoordinates,
+          let destination = MKPlacemark(coordinate:
+            destinationCoordinates,
             addressDictionary: nil)
           
           request.setDestination(MKMapItem(placemark: destination))
@@ -75,8 +76,9 @@ MKMapViewDelegate, CLLocationManagerDelegate {
           directions.calculateDirectionsWithCompletionHandler{
             (response: MKDirectionsResponse!, error: NSError!) in
             
-            /* You can manually parse the response, but in here we will take
-            a shortcut and use the Maps app to display our source and
+            /* You can manually parse the response, but in 
+            here we will take a shortcut and use the Maps app
+            to display our source and
             destination. We didn't have to make this API call at all,
             as we already had the map items before, but this is to
             demonstrate that the directions response contains more
@@ -87,7 +89,8 @@ MKMapViewDelegate, CLLocationManagerDelegate {
               MKLaunchOptionsDirectionsModeKey:
               MKLaunchOptionsDirectionsModeDriving]
             
-            MKMapItem.openMapsWithItems([response.source, response.destination],
+            MKMapItem.openMapsWithItems(
+              [response.source, response.destination],
               launchOptions: launchOptions)
           }
           
@@ -99,7 +102,8 @@ MKMapViewDelegate, CLLocationManagerDelegate {
   func locationManager(manager: CLLocationManager!,
     didChangeAuthorizationStatus status: CLAuthorizationStatus){
       
-      print("The authorization status of location services is changed to: ")
+      print("The authorization status of location " +
+        "services is changed to: ")
       
       switch CLLocationManager.authorizationStatus(){
       case .Denied:

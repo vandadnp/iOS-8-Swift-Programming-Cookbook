@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       var returnedData: Unmanaged<AnyObject>? = nil
       let results = Int(SecItemCopyMatching(query, &returnedData))
       
-      if results == errSecSuccess{
+      if results == Int(errSecSuccess){
         
         let data = returnedData!.takeRetainedValue() as NSData
         

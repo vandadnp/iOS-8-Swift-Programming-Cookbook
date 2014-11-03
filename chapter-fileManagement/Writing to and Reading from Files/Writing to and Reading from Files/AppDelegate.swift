@@ -116,7 +116,7 @@ if (succeeded){
     if data.writeToFile(path, atomically: true){
       println("Wrote the data")
       let readData = NSData(contentsOfFile: path)
-      if readData.isEqualToData(data){
+      if readData!.isEqualToData(data){
         println("Read the same data")
       } else {
         println("Not the same data")

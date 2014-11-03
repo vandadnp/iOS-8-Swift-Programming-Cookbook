@@ -97,7 +97,7 @@ class ViewController: UIViewController, UITableViewDataSource {
       let cell = tableView.dequeueReusableCellWithIdentifier("identifier",
         forIndexPath: indexPath) as UITableViewCell
       
-      cell.textLabel!.text = "Section \(indexPath.section), " +
+      cell.textLabel.text = "Section \(indexPath.section), " +
       "Cell \(indexPath.row)"
       
       return cell

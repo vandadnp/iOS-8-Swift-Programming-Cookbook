@@ -58,64 +58,8 @@ class ViewController: UIViewController {
 //
 //}
 
-/* 3 */
-//import UIKit
-//
-//class ViewController: UIViewController {
-//
-//  /* returns NSData or NSError */
-//  func dataForUrl(url: NSURL) -> AnyObject{
-//    let request = NSURLRequest(URL: url)
-//
-//    var error: NSError?
-//    let data = NSURLConnection.sendSynchronousRequest(request,
-//      returningResponse: nil,
-//      error: &error)
-//
-//    if let theError = error{
-//      return theError
-//    } else {
-//      return data
-//    }
-//
-//  }
-//
-//  override func viewDidLoad() {
-//    super.viewDidLoad()
-//
-//    /* Put whatever URL that you wish, here */
-//    let url = NSURL(string: "http://www.apple.com")
-//
-//    /* Our invocation operation points to our operation selector
-//      which we coded before */
-//    let operation = NSInvocationOperation(target: self,
-//      selector: "dataForUrl:",
-//      object: url)
-//
-//    /* We set the completion block in order to read the results
-//    of our operation when it is done */
-//    operation.completionBlock = {
-//
-//      if operation.result is NSData{
-//        println("Data came back = \(operation.result)")
-//      } else if operation.result is NSError{
-//        println("Error occurred = \(operation.result)")
-//      } else {
-//        println("Unknown results came out of the operation")
-//      }
-//
-//    }
-//
-//    /* And now we will submit our operation to a queue in order for it
-//    to get executed */
-//    let operationQueue = NSOperationQueue()
-//    operationQueue.addOperation(operation)
-//
-//  }
-//
-//}
 
-/* 4 */
+/* 3 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -124,7 +68,7 @@ class ViewController: UIViewController {
 //    
 //    for url in urls{
 //      
-//      let request = NSURLRequest(URL: url)
+//      let request = NSURLRequest(URL: url!)
 //      NSURLConnection.sendAsynchronousRequest(request,
 //        queue: NSOperationQueue.currentQueue(),
 //        completionHandler: {(response: NSURLResponse!,

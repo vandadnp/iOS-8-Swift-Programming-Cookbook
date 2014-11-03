@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     case Estate = "Estate"
     
     func zoneId() -> CKRecordZoneID{
-      let zoneId = CKRecordZoneID(zoneName: self.toRaw(),
+      let zoneId = CKRecordZoneID(zoneName: self.rawValue,
         ownerName: CKOwnerDefaultName)
       return zoneId
     }
@@ -104,7 +104,7 @@ class ViewController: UIViewController {
   //      if error != nil{
   //        println("An error occurred")
   //
-  //        if error.code == CKErrorCode.UnknownItem.toRaw(){
+  //        if error.code == CKErrorCode.UnknownItem.rawValue{
   //          println("This error means that the record was not found.")
   //          println("Saving the record...")
   //
@@ -169,7 +169,7 @@ class ViewController: UIViewController {
       if error != nil{
         println("An error occurred")
         
-        if error.code == CKErrorCode.UnknownItem.toRaw(){
+        if error.code == CKErrorCode.UnknownItem.rawValue{
           println("This error means that the record was not found.")
           println("Saving the record...")
           
@@ -194,7 +194,7 @@ class ViewController: UIViewController {
         
         /* Now make your changes to the record */
         let colorKey = "color"
-        let newColor = Color.randomColor().toRaw()
+        let newColor = Color.randomColor().rawValue
         var oldColor = record.valueForKey(colorKey) as? String
         if oldColor == nil{
           oldColor = "Unknown"

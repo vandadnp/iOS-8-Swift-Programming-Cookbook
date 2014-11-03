@@ -67,7 +67,7 @@
 //    case Estate = "Estate"
 //    
 //    func zoneId() -> CKRecordZoneID{
-//      let zoneId = CKRecordZoneID(zoneName: self.toRaw(),
+//      let zoneId = CKRecordZoneID(zoneName: self.rawValue,
 //        ownerName: CKOwnerDefaultName)
 //      return zoneId
 //    }
@@ -147,7 +147,7 @@ class ViewController: UIViewController {
     case Estate = "Estate"
     
     func zoneId() -> CKRecordZoneID{
-      let zoneId = CKRecordZoneID(zoneName: self.toRaw(),
+      let zoneId = CKRecordZoneID(zoneName: self.rawValue,
         ownerName: CKOwnerDefaultName)
       return zoneId
     }

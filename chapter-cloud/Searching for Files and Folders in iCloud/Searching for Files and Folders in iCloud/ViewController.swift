@@ -61,8 +61,8 @@ class ViewController: UIViewController {
           
           var savingError: NSError?
           if fileManager.setUbiquitous(true,
-            itemAtURL: sourceUrl,
-            destinationURL: destinationUrl,
+            itemAtURL: sourceUrl!,
+            destinationURL: destinationUrl!,
             error: &savingError){
               println("Successfully moved the file to the cloud...")
           } else {

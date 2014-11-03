@@ -92,6 +92,8 @@ class ViewController: UIViewController{
       let previouslySelectedIndexPath = selectedIndexPath
       selectedIndexPath = indexPath
       
+      UITableViewCellSelectionStyle.Blue.rawValue
+      
       tableView.reloadRowsAtIndexPaths([previouslySelectedIndexPath,
         selectedIndexPath], withRowAnimation: .Automatic)
       
@@ -106,7 +108,7 @@ class ViewController: UIViewController{
       
       let heightUnit = HeightUnits.allValues[indexPath.row]
       
-      cell.textLabel!.text = heightUnit.toRaw()
+      cell.textLabel.text = heightUnit.rawValue
       
       if indexPath == selectedIndexPath{
         cell.accessoryType = .Checkmark
@@ -166,17 +168,18 @@ class ViewController: UIViewController{
     
   }
   
-  override func encodeRestorableStateWithCoder(coder: NSCoder!) {
+  override func encodeRestorableStateWithCoder(coder: NSCoder) {
     super.encodeRestorableStateWithCoder(coder)
     coder.encodeObject(selectedIndexPath, forKey: "selectedIndexPath")
-    coder.encodeObject(heightUnit.toRaw(), forKey: "heightUnit")
+    coder.encodeObject(heightUnit.rawValue, forKey: "heightUnit")
   }
   
-  override func decodeRestorableStateWithCoder(coder: NSCoder!) {
+  override func decodeRestorableStateWithCoder(coder: NSCoder) {
     super.decodeRestorableStateWithCoder(coder)
     selectedIndexPath = coder.decodeObjectForKey("selectedIndexPath")
       as NSIndexPath
-    if let newUnit = HeightUnits.fromRaw(coder.decodeObjectForKey("heightUnit")
+    if let newUnit = HeightUnits(rawValue:
+      coder.decodeObjectForKey("heightUnit")
       as String){
         heightUnit = newUnit
     }

@@ -35,7 +35,7 @@ class ViewController: UICollectionViewController {
   
   
   func randomImage() -> UIImage{
-    return allImages[Int(arc4random_uniform(UInt32(allImages.count)))]
+    return allImages[Int(arc4random_uniform(UInt32(allImages.count)))]!
   }
   
   override init(collectionViewLayout layout: UICollectionViewLayout!) {
@@ -43,21 +43,21 @@ class ViewController: UICollectionViewController {
     
     /* Register the nib with the collection view for easy retrieval */
     let nib = UINib(nibName: "MyCollectionViewCell", bundle: nil)
-    collectionView!.registerNib(nib, forCellWithReuseIdentifier: "cell")
+    collectionView.registerNib(nib, forCellWithReuseIdentifier: "cell")
     
     /* Register the header's nib */
     let headerNib = UINib(nibName: "Header", bundle: nil)
-    collectionView!.registerNib(headerNib,
+    collectionView.registerNib(headerNib,
       forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
       withReuseIdentifier: "header")
     
     /* Register the footer's nib */
     let footerNib = UINib(nibName: "Footer", bundle: nil)
-    collectionView!.registerNib(footerNib,
+    collectionView.registerNib(footerNib,
       forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
       withReuseIdentifier: "footer")
     
-    collectionView!.backgroundColor = UIColor.whiteColor()
+    collectionView.backgroundColor = UIColor.whiteColor()
   }
   
 convenience required init(coder aDecoder: NSCoder) {

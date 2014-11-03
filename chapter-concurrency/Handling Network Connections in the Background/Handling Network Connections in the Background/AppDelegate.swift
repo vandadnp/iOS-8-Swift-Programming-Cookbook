@@ -34,7 +34,7 @@
 //
 //      let urlAsString = "http://www.apple.com"
 //      let url = NSURL(string: urlAsString)
-//      let urlRequest = NSURLRequest(URL: url)
+//      let urlRequest = NSURLRequest(URL: url!)
 //      let queue = NSOperationQueue()
 //
 //      NSURLConnection.sendAsynchronousRequest(urlRequest,
@@ -72,7 +72,7 @@
 //
 //      let urlAsString = "http://www.apple.com"
 //      let url = NSURL(string: urlAsString)
-//      let urlRequest = NSURLRequest(URL: url)
+//      let urlRequest = NSURLRequest(URL: url!)
 //      let queue = NSOperationQueue()
 //      var error: NSError?
 //
@@ -114,7 +114,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         rather big in size */
         let urlAsString = "http://www.apple.com"
         let url = NSURL(string: urlAsString)
-        let urlRequest = NSURLRequest(URL: url)
+        let urlRequest = NSURLRequest(URL: url!)
         let queue = NSOperationQueue()
         var error: NSError?
         

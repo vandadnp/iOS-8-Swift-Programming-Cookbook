@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     case Estate = "Estate"
     
     func zoneId() -> CKRecordZoneID{
-      let zoneId = CKRecordZoneID(zoneName: self.toRaw(),
+      let zoneId = CKRecordZoneID(zoneName: self.rawValue,
         ownerName: CKOwnerDefaultName)
       return zoneId
     }
@@ -180,7 +180,7 @@ class ViewController: UIViewController {
   func useOrSaveZone(#zoneIsCreatedAlready: Bool, forCarType: CarType){
     
     if zoneIsCreatedAlready{
-      println("Found the \(forCarType.toRaw()) zone. " +
+      println("Found the \(forCarType.rawValue) zone. " +
         "It's been created already")
       saveCarsForType(forCarType)
     } else {
@@ -227,10 +227,10 @@ class ViewController: UIViewController {
         
         for zone in zones as [CKRecordZone]{
           
-          if zone.zoneID.zoneName == CarType.Hatchback.toRaw(){
+          if zone.zoneID.zoneName == CarType.Hatchback.rawValue{
             foundHatchbackZone = true
           }
-          else if zone.zoneID.zoneName == CarType.Estate.toRaw(){
+          else if zone.zoneID.zoneName == CarType.Estate.rawValue{
             foundEstateZone = true
           }
         }

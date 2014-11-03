@@ -31,9 +31,8 @@ class ViewController: UICollectionViewController {
     UIImage(named: "3")
   ]
   
-  
   func randomImage() -> UIImage{
-    return allImages[Int(arc4random_uniform(UInt32(allImages.count)))]
+    return allImages[Int(arc4random_uniform(UInt32(allImages.count)))]!
   }
   
   override func viewDidLoad() {
@@ -42,14 +41,14 @@ class ViewController: UICollectionViewController {
     let pinch = UIPinchGestureRecognizer(target: self,
       action: "handlePinches:")
     
-    for recognizer in collectionView!.gestureRecognizers as
+    for recognizer in collectionView.gestureRecognizers as
       [UIGestureRecognizer]{
         if recognizer is UIPinchGestureRecognizer{
           recognizer.requireGestureRecognizerToFail(pinch)
         }
     }
     
-    collectionView!.addGestureRecognizer(pinch)
+    collectionView.addGestureRecognizer(pinch)
     
   }
   
@@ -57,7 +56,7 @@ class ViewController: UICollectionViewController {
     
     let defaultLayoutItemSize = CGSize(width: 80, height: 120)
     
-    let layout = collectionView!.collectionViewLayout
+    let layout = collectionView.collectionViewLayout
       as UICollectionViewFlowLayout
     
     layout.itemSize =
@@ -73,8 +72,8 @@ class ViewController: UICollectionViewController {
     
     let nib = UINib(nibName: "MyCollectionViewCell", bundle: nil)
     
-    collectionView!.registerNib(nib, forCellWithReuseIdentifier: "cell")
-    collectionView!.backgroundColor = UIColor.whiteColor()
+    collectionView.registerNib(nib, forCellWithReuseIdentifier: "cell")
+    collectionView.backgroundColor = UIColor.whiteColor()
     
   }
   

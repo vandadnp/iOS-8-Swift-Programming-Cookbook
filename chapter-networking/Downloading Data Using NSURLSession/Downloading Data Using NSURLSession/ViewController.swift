@@ -49,7 +49,7 @@
 //    /* Now attempt to download the contents of the URL */
 //    let url = NSURL(string: "<# place a URL here #>")
 //
-//    let task = session.dataTaskWithURL(url,
+//    let task = session.dataTaskWithURL(url!,
 //      completionHandler: {[weak self] (data: NSData!,
 //        response: NSURLResponse!,
 //        error: NSError!) in
@@ -115,7 +115,7 @@
 //    /* Now attempt to download the contents of the URL */
 //    let url = NSURL(string: "<# place a URL here #>")
 //
-//    let task = session.downloadTaskWithURL(url,
+//    let task = session.downloadTaskWithURL(url!,
 //      completionHandler: {[weak self] (url: NSURL!,
 //        response: NSURLResponse!,
 //        error: NSError!) in
@@ -239,7 +239,7 @@ NSURLSessionDataDelegate {
     /* Now attempt to download the contents of the URL */
     let url = NSURL(string: "<# place your URL here #>")
     
-    let task = session.dataTaskWithURL(url, completionHandler: nil)
+    let task = session.dataTaskWithURL(url!, completionHandler: nil)
     
     task.start()
     

@@ -48,7 +48,7 @@
 //      var valueAttributes: Unmanaged<AnyObject>? = nil
 //      let results = Int(SecItemCopyMatching(query, &valueAttributes))
 //
-//      if results == errSecSuccess{
+//      if results == Int(errSecSuccess){
 //
 //        let attributes = valueAttributes!.takeRetainedValue() as NSDictionary
 //
@@ -106,7 +106,7 @@ func application(application: UIApplication,
     var returnedData: Unmanaged<AnyObject>? = nil
     let results = Int(SecItemCopyMatching(query, &returnedData))
 
-    if results == errSecSuccess{
+    if results == Int(errSecSuccess){
 
       let data = returnedData!.takeRetainedValue() as NSData
 

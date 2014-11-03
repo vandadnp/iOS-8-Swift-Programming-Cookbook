@@ -53,13 +53,17 @@ class ViewController: UIViewController {
     let firstNumber = 111
     let secondNumber = 222
     
-    let firstOperation = NSInvocationOperation(target: self,
-      selector: "firstOperationEntry:",
-      object: firstNumber)
+    let firstOperation = NSBlockOperation {[weak self] () -> Void in
+      if let strongSelf = self{
+        strongSelf.firstOperationEntry(firstNumber)
+      }
+    }
     
-    let secondOperation = NSInvocationOperation(target: self,
-      selector: "secondOperationEntry:",
-      object: secondNumber)
+    let secondOperation = NSBlockOperation {[weak self] () -> Void in
+      if let strongSelf = self{
+        strongSelf.secondOperationEntry(secondNumber)
+      }
+    }
     
     let operationQueue = NSOperationQueue()
     

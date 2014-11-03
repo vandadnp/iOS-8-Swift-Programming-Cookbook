@@ -121,7 +121,7 @@ PHContentEditingController {
         options: .DataReadingMappedIfSafe,
         error: nil)
       
-      let image = UIImage(data: data)
+      let image = UIImage(data: data!)
       
       strongSelf.imageView.image = image
       })

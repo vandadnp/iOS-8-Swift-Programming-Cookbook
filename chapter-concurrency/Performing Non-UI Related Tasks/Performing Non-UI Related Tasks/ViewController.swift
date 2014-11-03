@@ -89,7 +89,7 @@
 //        "images/wireless_hero.jpg"
 //        
 //        let url = NSURL(string: urlAsString)
-//        let urlRequest = NSURLRequest(URL: url)
+//        let urlRequest = NSURLRequest(URL: url!)
 //        var downloadError: NSError?
 //        
 //        let imageData = NSURLConnection.sendSynchronousRequest(urlRequest,

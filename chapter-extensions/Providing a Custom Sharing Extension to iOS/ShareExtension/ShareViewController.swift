@@ -108,7 +108,7 @@ AudienceSelectionViewControllerDelegate, NSURLSessionDelegate {
     
     let url = NSURL(string: "https://<# your url goes here#>/&text=" +
       self.contentText)
-    let request = NSMutableURLRequest(URL: url)
+    let request = NSMutableURLRequest(URL: url!)
     request.HTTPMethod = "POST"
     request.HTTPBody = imageData!
     

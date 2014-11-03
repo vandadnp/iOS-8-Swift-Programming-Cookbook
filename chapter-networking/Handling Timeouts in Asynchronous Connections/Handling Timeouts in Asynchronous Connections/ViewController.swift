@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     let url = NSURL(string: urlAsString)
     
     /* Set the timeout on our request here */
-    let urlRequest = NSURLRequest(URL: url,
+    let urlRequest = NSURLRequest(URL: url!,
       cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData,
       timeoutInterval: 15.0)
     

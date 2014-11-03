@@ -72,7 +72,7 @@ class StringReverserActivity: UIActivity {
   }
   
   override func activityImage() -> UIImage {
-    return UIImage(named: "Reverse")
+    return UIImage(named: "Reverse")!
   }
   
   override func canPerformWithActivityItems(

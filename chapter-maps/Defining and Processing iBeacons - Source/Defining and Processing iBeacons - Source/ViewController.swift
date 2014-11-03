@@ -110,7 +110,7 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate {
         NSUTF8StringEncoding,
         allowLossyConversion: false)
       
-      let theUUid = CBUUID.UUIDWithNSUUID(uuid)
+      let theUUid = CBUUID(NSUUID: uuid)
       
       let dataToBeAdvertised:[String: AnyObject!] = [
         CBAdvertisementDataLocalNameKey : "Sample peripheral",

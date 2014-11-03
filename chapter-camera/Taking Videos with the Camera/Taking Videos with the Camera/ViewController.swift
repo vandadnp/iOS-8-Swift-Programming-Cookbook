@@ -56,7 +56,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
                 options: .MappedRead,
                 error: &dataReadingError)
               
-              if videoData.length == 0{
+              if videoData!.length == 0{
                 /* We were able to read the data */
                 println("Successfully loaded the data")
               } else {

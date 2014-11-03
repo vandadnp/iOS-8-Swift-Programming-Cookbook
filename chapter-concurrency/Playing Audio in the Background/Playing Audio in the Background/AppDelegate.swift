@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate {
         let filePath = NSBundle.mainBundle().pathForResource("MySong",
           ofType:"mp3")
         
-        let fileData = NSData.dataWithContentsOfFile(filePath!,
+        let fileData = NSData(contentsOfFile: filePath!,
           options: .DataReadingMappedIfSafe,
           error: nil)
         
@@ -89,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate {
     let interruptionTypeAsObject =
     notification.userInfo![AVAudioSessionInterruptionTypeKey] as NSNumber
     
-    let interruptionType = AVAudioSessionInterruptionType.fromRaw(
+    let interruptionType = AVAudioSessionInterruptionType(rawValue:
       interruptionTypeAsObject.unsignedLongValue)
     
     if let type = interruptionType{

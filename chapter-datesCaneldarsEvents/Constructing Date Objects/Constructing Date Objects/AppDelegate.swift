@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func example1(){
     
-    let date = NSCalendar.currentCalendar().dateWithEra(GregorianEra.AD.toRaw(),
+    let date = NSCalendar.currentCalendar().dateWithEra(GregorianEra.AD.rawValue,
       year: 2014,
       month: 12,
       day: 25,

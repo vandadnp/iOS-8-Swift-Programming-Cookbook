@@ -59,7 +59,8 @@ class ViewController: UITableViewController {
     }
   }
   
-  /* We are being told new news items are available. Reload the table view */
+  /* We are being told that new news items are available. 
+  Reload the table view */
   func handleNewsItemsChanged(notification: NSNotification) {
     if self.isBeingPresented(){
       tableView.reloadData()
@@ -79,7 +80,7 @@ class ViewController: UITableViewController {
       let cell = tableView.dequeueReusableCellWithIdentifier("Cell",
         forIndexPath: indexPath) as UITableViewCell
       
-      cell.textLabel!.text = newsItems[indexPath.row].text
+      cell.textLabel.text = newsItems[indexPath.row].text
       
       return cell
   }

@@ -81,7 +81,7 @@ class ViewController: UIViewController, NSURLSessionDelegate,
       allowLossyConversion: false)
     
     let url = NSURL(string: "<# place your upload URL here #>")
-    let request = NSMutableURLRequest(URL: url)
+    let request = NSMutableURLRequest(URL: url!)
     request.HTTPMethod = "POST"
     let task = session.uploadTaskWithRequest(request, fromData: dataToUpload)
     

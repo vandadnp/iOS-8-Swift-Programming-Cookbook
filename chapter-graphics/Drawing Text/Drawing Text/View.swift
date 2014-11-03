@@ -31,7 +31,7 @@ class View: UIView {
     let helveticaBold = UIFont(name: fontName, size: 40.0)
     let string = "Some String" as NSString
     string.drawAtPoint(CGPointMake(40.0, 180.0),
-      withAttributes: [NSFontAttributeName : helveticaBold])
+      withAttributes: [NSFontAttributeName : helveticaBold!])
   }
   
 }

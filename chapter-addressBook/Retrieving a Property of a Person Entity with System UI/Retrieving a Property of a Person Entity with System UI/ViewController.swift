@@ -61,9 +61,13 @@ ABPeoplePickerNavigationControllerDelegate {
       let address: NSDictionary = ABMultiValueCopyValueAtIndex(addresses,
         index).takeRetainedValue() as NSDictionary
       
-      println("Country = \(address[kABPersonAddressCountryKey])")
-      println("City = \(address[kABPersonAddressCityKey])")
-      println("Street = \(address[kABPersonAddressStreetKey])")
+      let country = address[kABPersonAddressCountryKey as String] as String
+      let city = address[kABPersonAddressCityKey as String] as String
+      let street = address[kABPersonAddressStreetKey as String] as String
+      
+      println("Country = \(country)")
+      println("City = \(city)")
+      println("Street = \(street)")
       
   }
   

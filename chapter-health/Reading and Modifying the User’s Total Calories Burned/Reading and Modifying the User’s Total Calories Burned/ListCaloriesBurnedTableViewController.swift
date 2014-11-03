@@ -33,7 +33,7 @@ extension NSDate{
       minute: 0,
       second: 0,
       ofDate: self,
-      options: .WrapComponents)
+      options: .WrapComponents)!
   }
 }
 
@@ -91,7 +91,7 @@ AddBurnedCaloriesToDietViewControllerDelegate {
     NSCalendar.currentCalendar().dateByAddingUnit(.DayCalendarUnit,
       value: 1, toDate: NSDate(), options: options)
     
-    let beginningOfTomorrow = tomorrowDate.beginningOfDay()
+    let beginningOfTomorrow = tomorrowDate!.beginningOfDay()
     
     return HKQuery.predicateForSamplesWithStartDate(beginningOfToday,
       endDate: beginningOfTomorrow,
@@ -319,7 +319,7 @@ AddBurnedCaloriesToDietViewControllerDelegate {
       let caloriesAsString = formatter.stringFromValue(burner.calories,
         unit: .Kilocalorie)
       
-      cell.textLabel!.text = burner.name
+      cell.textLabel.text = burner.name
       cell.detailTextLabel!.text = caloriesAsString
       
       return cell

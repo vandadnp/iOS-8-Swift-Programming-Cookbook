@@ -70,32 +70,32 @@ import UIKit
 //  
 //}
 
-//enum CarClassification: String{
-//  case Estate = "Estate"
-//  case Hatchback = "Hatchback"
-//  case Saloon = "Saloon"
-//}
-//
-//struct Car{
-//  let classification: CarClassification
-//}
-//
-//@UIApplicationMain
-//class AppDelegate: UIResponder, UIApplicationDelegate {
-//  
-//  var window: UIWindow?
-//  
-//  func application(application: UIApplication,
-//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
-//      
-//      if let classification = CarClassification.fromRaw("Estate"){
-//        let volvoV50 = Car(classification: classification)
-//      }
-//      
-//      return true
-//  }
-//  
-//}
+enum CarClassification: String{
+  case Estate = "Estate"
+  case Hatchback = "Hatchback"
+  case Saloon = "Saloon"
+}
+
+struct Car{
+  let classification: CarClassification
+}
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+  
+  var window: UIWindow?
+  
+  func application(application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+      
+      if let classification = CarClassification(rawValue: "Estate"){
+        let volvoV50 = Car(classification: classification)
+      }
+      
+      return true
+  }
+  
+}
 
 //class Person{
 //  var age: Int
@@ -253,7 +253,7 @@ import UIKit
 //  }
 //  
 //}
-//
+
 //@UIApplicationMain
 //class AppDelegate: UIResponder, UIApplicationDelegate {
 //                            
@@ -276,35 +276,35 @@ import UIKit
 //
 //}
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-                            
-  var window: UIWindow?
-
-  func application(application: UIApplication!,
-    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
-      
+//@UIApplicationMain
+//class AppDelegate: UIResponder, UIApplicationDelegate {
+//                            
+//  var window: UIWindow?
+//
+//  func application(application: UIApplication!,
+//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+//      
 //      let integerValue = 10
 //      let stringValue = "Swift"
 //      let doubleValue = 10.0
-      
-      let integerFromDouble: Int = 10.7
-      /* The value of this variable is 10 
-      since the compiler truncated the value to an integer*/
-
-
+//      
+//      let integerFromDouble = 10.7 as Int
+//      /* The value of this variable is 10 
+//      since the compiler truncated the value to an integer*/
+//
+//
 //      var myString = "Swi"
 //      myString += "ft"
-//      /* myString is now "Swift" */
-      
+//    /* myString is now "Swift" */
+//    
 //      let allStrings = ["Swift", "Objective-C"]
-      
+//    
 //      var allStrings = [String]()
 //      allStrings.append("Swift")
 //      allStrings.append("Objective-C")
 //      /* Our array is now ["Swift", "Objective-C"] */
-      
-
+//    
+//
 //      var allStrings = [String]()
 //      allStrings.append("Swift")
 //      allStrings.append("Objective-C")
@@ -314,7 +314,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //      allStrings.insert("C++", atIndex: 0)
 //      
 //      println(allStrings[0]) /* Prints out "C++" */
-      
+//      
 //      let allFullNames = [
 //        "Vandad"  : "Nahavandipoor",
 //        "Andy"    : "Oram",
@@ -322,8 +322,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //      ]
 //      
 //      println(allFullNames["Vandad"]) /* Prints out "Nahavandipoor" */
-      
-      
+//    
+//    
 //      var allFullNames = [
 //        "Vandad"  : "Nahavandipoor",
 //        "Andy"    : "Oram",
@@ -331,16 +331,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //      ]
 //      
 //      allFullNames["Rachel"] = "Roumeliotis"
-      
+//      
 //      let personInformation = [
 //        "numberOfChildren"  : 2,
 //        "age"               : 32,
 //        "name"              : "Random person",
 //        "job"               : "Something cool",
 //        ] as [String : AnyObject]
-      
-    return true
-  }
-
-}
+//      
+//    return true
+//  }
+//
+//}
 

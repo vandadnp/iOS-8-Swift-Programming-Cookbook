@@ -83,7 +83,7 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
       
       let home = homeManager.homes[indexPath.row] as HMHome
       
-      cell.textLabel!.text = home.name
+      cell.textLabel.text = home.name
       cell.accessoryType = .DisclosureIndicator
       
       return cell
@@ -114,7 +114,7 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
           as ListRoomsTableViewController
         controller.homeManager = homeManager
         
-        let home = homeManager.homes[tableView.indexPathForSelectedRow().row]
+        let home = homeManager.homes[tableView.indexPathForSelectedRow()!.row]
           as HMHome
         
         controller.home = home
@@ -160,7 +160,7 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
     /* Don't let the user add another home while they are editing
     the list of homes. This makes sure the user focuses on the task
     at hand */
-    self.navigationItem.rightBarButtonItem.enabled = !editing
+    self.navigationItem.rightBarButtonItem!.enabled = !editing
   }
   
   override func viewWillAppear(animated: Bool) {

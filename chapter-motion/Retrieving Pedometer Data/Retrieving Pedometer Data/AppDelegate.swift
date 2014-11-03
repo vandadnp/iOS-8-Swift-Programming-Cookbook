@@ -17,7 +17,8 @@
 //  lazy var pedometer = CMPedometer()
 //
 //  func application(application: UIApplication!,
-//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+//    didFinishLaunchingWithOptions launchOptions:
+//    [NSObject : AnyObject]?) -> Bool {
 //      return true
 //  }
 //
@@ -64,10 +65,11 @@
 //  lazy var pedometer = CMPedometer()
 //  
 //  func application(application: UIApplication!,
-//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+//    didFinishLaunchingWithOptions launchOptions:
+//    [NSObject : AnyObject]?) -> Bool {
 //      return true
 //  }
-//  
+//
 //  func applicationDidBecomeActive(application: UIApplication) {
 //    
 //    /* Can we ask for distance updates? */
@@ -113,7 +115,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   lazy var pedometer = CMPedometer()
   
   func application(application: UIApplication!,
-    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+    didFinishLaunchingWithOptions launchOptions:
+    [NSObject : AnyObject]?) -> Bool {
       return true
   }
   

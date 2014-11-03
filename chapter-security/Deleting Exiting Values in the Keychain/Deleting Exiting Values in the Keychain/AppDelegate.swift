@@ -47,10 +47,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       var result: Unmanaged<AnyObject>? = nil
       let foundExisting = Int(SecItemCopyMatching(query, &result))
       
-      if foundExisting == errSecSuccess{
+      if foundExisting == Int(errSecSuccess){
         
         let deleted = Int(SecItemDelete(query))
-        if deleted == errSecSuccess{
+        if deleted == Int(errSecSuccess){
           println("Successfully deleted the item")
         } else {
           println("Failed to delete the item")

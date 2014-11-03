@@ -30,7 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(application: UIApplication!,
-    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+    didFinishLaunchingWithOptions launchOptions:
+    [NSObject : AnyObject]?) -> Bool {
 
       let entityName = NSStringFromClass(Person.classForCoder())
 
@@ -72,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   lazy var managedObjectModel: NSManagedObjectModel = {
       // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
       let modelURL = NSBundle.mainBundle().URLForResource("Writing_to_Core_Data", withExtension: "momd")!
-      return NSManagedObjectModel(contentsOfURL: modelURL)
+      return NSManagedObjectModel(contentsOfURL: modelURL)!
   }()
 
   lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
@@ -89,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
           dict[NSLocalizedFailureReasonErrorKey] = failureReason
           dict[NSUnderlyingErrorKey] = error
-          error = NSError.errorWithDomain("YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
+          error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
           // Replace this with code to handle the error appropriately.
           // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
           NSLog("Unresolved error \(error), \(error!.userInfo)")

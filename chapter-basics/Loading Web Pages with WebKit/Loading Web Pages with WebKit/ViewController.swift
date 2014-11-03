@@ -86,7 +86,7 @@
 //    if let theWebView = webView{
 //      /* Load a web page into our web view */
 //      let url = NSURL(string: "http://www.apple.com")
-//      let urlRequest = NSURLRequest(URL: url)
+//      let urlRequest = NSURLRequest(URL: url!)
 //      theWebView.loadRequest(urlRequest)
 //      theWebView.navigationDelegate = self
 //      view.addSubview(theWebView)
@@ -143,7 +143,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     if let theWebView = webView{
       /* Load a web page into our web view */
       let url = NSURL(string: "http://www.apple.com")
-      let urlRequest = NSURLRequest(URL: url)
+      let urlRequest = NSURLRequest(URL: url!)
       theWebView.loadRequest(urlRequest)
       theWebView.navigationDelegate = self
       view.addSubview(theWebView)

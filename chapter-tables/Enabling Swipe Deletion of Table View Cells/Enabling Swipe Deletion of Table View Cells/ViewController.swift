@@ -71,7 +71,7 @@ UITableViewDataSource, UITableViewDelegate {
       let cell = tableView.dequeueReusableCellWithIdentifier("identifier",
         forIndexPath: indexPath) as UITableViewCell
       
-      cell.textLabel!.text = allRows[indexPath.row]
+      cell.textLabel.text = allRows[indexPath.row]
       
       return cell
       

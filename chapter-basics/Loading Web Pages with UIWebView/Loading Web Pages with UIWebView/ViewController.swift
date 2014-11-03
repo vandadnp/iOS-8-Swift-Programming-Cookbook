@@ -56,7 +56,7 @@
 //    view.addSubview(webView)
 //    
 //    let url = NSURL(string: "http://www.apple.com")
-//    let request = NSURLRequest(URL: url)
+//    let request = NSURLRequest(URL: url!)
 //    
 //    webView.loadRequest(request)
 //    
@@ -97,7 +97,7 @@ override func viewDidLoad() {
   view.addSubview(webView)
   
   let url = NSURL(string: "http://www.apple.com")
-  let request = NSURLRequest(URL: url)
+  let request = NSURLRequest(URL: url!)
   
   webView.loadRequest(request)
   

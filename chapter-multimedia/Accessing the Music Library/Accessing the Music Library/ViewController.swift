@@ -128,7 +128,7 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
     if let state = stateAsObject{
       
       /* Make your decision based on the state of the player */
-      switch MPMusicPlaybackState.fromRaw(state.integerValue)!{
+      switch MPMusicPlaybackState(rawValue: state.integerValue)!{
       case .Stopped:
         /* Here the media player has stopped playing the queue. */
         println("Stopped")

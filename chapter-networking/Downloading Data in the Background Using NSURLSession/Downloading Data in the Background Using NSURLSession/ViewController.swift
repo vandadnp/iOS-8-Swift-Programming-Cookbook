@@ -125,7 +125,7 @@ NSURLSessionDownloadDelegate, NSURLSessionTaskDelegate {
     /* Now attempt to download the contents of the URL */
     let url = NSURL(string: "<# place your URL here #>")
     
-    let task = session.downloadTaskWithURL(url)
+    let task = session.downloadTaskWithURL(url!)
     
     /* Our own extension on the task adds the start method */
     task.start()

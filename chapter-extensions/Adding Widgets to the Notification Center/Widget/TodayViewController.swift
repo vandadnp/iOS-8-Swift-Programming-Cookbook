@@ -33,7 +33,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
         TableViewConstants.cellIdentifier,
         forIndexPath: indexPath) as UITableViewCell
       
-      cell.textLabel!.text = items[indexPath.row]
+      cell.textLabel.text = items[indexPath.row]
       
       return cell
       
@@ -79,7 +79,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
     didSelectRowAtIndexPath indexPath: NSIndexPath) {
       let urlAsString = "widget://" + "\(indexPath.section)-\(indexPath.row)"
       let url = NSURL(string: urlAsString)
-      self.extensionContext!.openURL(url, completionHandler: nil)
+      self.extensionContext!.openURL(url!, completionHandler: nil)
       tableView.deselectRowAtIndexPath(indexPath, animated: false)
   }
   

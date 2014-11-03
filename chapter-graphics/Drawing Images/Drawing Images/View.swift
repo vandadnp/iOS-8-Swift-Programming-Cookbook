@@ -34,8 +34,8 @@ class View: UIView {
   override func drawRect(rect: CGRect)
   {
     let image = UIImage(named: "Safari")
-    image.drawAtPoint(CGPoint(x: 0, y: 20))
-    image.drawInRect(CGRect(x: 50.0, y: 10.0, width: 40.0, height: 35.0))
+    image!.drawAtPoint(CGPoint(x: 0, y: 20))
+    image!.drawInRect(CGRect(x: 50.0, y: 10.0, width: 40.0, height: 35.0))
   }
   
 }

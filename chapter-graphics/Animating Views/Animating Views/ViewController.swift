@@ -29,11 +29,12 @@ class ViewController: UIViewController {
 //  var safariImageView:UIImageView
 //  let safariImage = UIImage(named: "Safari")
 //  
-//  override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+//  override init(nibName nibNameOrNil: String!,
+//    bundle nibBundleOrNil: NSBundle!) {
 //    safariImageView = UIImageView(image: safariImage)
 //    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 //  }
-//  
+//
 //  required init(coder aDecoder: NSCoder) {
 //    safariImageView = UIImageView(image: safariImage)
 //    super.init(coder: aDecoder)
@@ -68,89 +69,88 @@ class ViewController: UIViewController {
 //  }
   
   /* 2 */
-//  var safariImageView1:UIImageView
-//  var safariImageView2:UIImageView
-//  
-//  var bottomRightRect:CGRect{
-//  get{
-//    return CGRect(
-//      x: self.view.bounds.size.width - 100,
-//      y: self.view.bounds.size.height - 100,
-//      width: 100,
-//      height: 100)
-//  }
-//  }
-//  
-//  let topLeftRect = CGRect(x: 0, y: 0, width: 100, height: 100)
-//  let image = UIImage(named: "Safari")
-//  
-//  override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
-//    safariImageView1 = UIImageView(image: image)
-//    safariImageView2 = UIImageView(image: image)
-//    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-//  }
-//  
-//  required init(coder aDecoder: NSCoder) {
-//    safariImageView1 = UIImageView(image: image)
-//    safariImageView2 = UIImageView(image: image)
-//    super.init(coder: aDecoder)
-//  }
-//  
-//  override func viewDidLoad() {
-//    super.viewDidLoad()
-//    
-//    safariImageView1.frame = topLeftRect
-//    safariImageView2.frame = bottomRightRect
-//    self.view.addSubview(safariImageView1)
-//    self.view.addSubview(safariImageView2)
-//  }
-//  
-//  func startTopLeftImageViewAnimation(){
-//    
-//    /* Start from top left corner */
-//    safariImageView1.frame = topLeftRect
-//    
-//    safariImageView1.alpha = 1
-//    
-//    UIView.animateWithDuration(3, animations: {
-//      [weak self] in
-//      self!.safariImageView1.frame = self!.bottomRightRect
-//      self!.safariImageView1.alpha = 0
-//      }, completion: {
-//      [weak self] (finished: Bool) in
-//        self!.safariImageView1.removeFromSuperview()
-//      })
-//
-//  }
-//  
-//  func startBottomRightViewAnimationAfterDelay(paramDelay: CGFloat){
-//    
-//    /* Start from bottom right corner */
-//    safariImageView2.frame = bottomRightRect
-//    
-//    safariImageView2.alpha = 1
-//    
-//    UIView.animateWithDuration(3, delay: paramDelay,
-//      options: UIViewAnimationOptions.fromRaw(0)!,
-//      animations: {
-//        [weak self] in
-//        self!.safariImageView2.frame = self!.topLeftRect
-//        self!.safariImageView2.alpha = 0
-//      },
-//      completion: {
-//        [weak self] (finished: Bool) in
-//        self!.safariImageView2.removeFromSuperview()
-//      })
-//    
-//  }
-//  
-//  override func viewDidAppear(animated: Bool){
-//    super.viewDidAppear(animated)
-//    
-//    startTopLeftImageViewAnimation()
-//    startBottomRightViewAnimationAfterDelay(2)
-//    
-//  }
+  var safariImageView1:UIImageView
+  var safariImageView2:UIImageView
+  
+  var bottomRightRect:CGRect{
+  get{
+    return CGRect(
+      x: self.view.bounds.size.width - 100,
+      y: self.view.bounds.size.height - 100,
+      width: 100,
+      height: 100)
+  }
+  }
+  
+  let topLeftRect = CGRect(x: 0, y: 0, width: 100, height: 100)
+  let image = UIImage(named: "Safari")
+  
+  override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+    safariImageView1 = UIImageView(image: image)
+    safariImageView2 = UIImageView(image: image)
+    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+  }
+  
+  required init(coder aDecoder: NSCoder) {
+    safariImageView1 = UIImageView(image: image)
+    safariImageView2 = UIImageView(image: image)
+    super.init(coder: aDecoder)
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    safariImageView1.frame = topLeftRect
+    safariImageView2.frame = bottomRightRect
+    self.view.addSubview(safariImageView1)
+    self.view.addSubview(safariImageView2)
+  }
+  
+  func startTopLeftImageViewAnimation(){
+    
+    /* Start from top left corner */
+    safariImageView1.frame = topLeftRect
+    
+    safariImageView1.alpha = 1
+    
+    UIView.animateWithDuration(3, animations: {
+      [weak self] in
+      self!.safariImageView1.frame = self!.bottomRightRect
+      self!.safariImageView1.alpha = 0
+      }, completion: {
+      [weak self] (finished: Bool) in
+        self!.safariImageView1.removeFromSuperview()
+      })
+
+  }
+  
+  func startBottomRightViewAnimationAfterDelay(paramDelay: CGFloat){
+    
+    /* Start from bottom right corner */
+    safariImageView2.frame = bottomRightRect
+    
+    safariImageView2.alpha = 1
+    
+    UIView.animateWithDuration(3, delay: NSTimeInterval(paramDelay),
+      options: UIViewAnimationOptions(rawValue: 0),
+      animations: {
+        [weak self] in
+        self!.safariImageView2.frame = self!.topLeftRect
+        self!.safariImageView2.alpha = 0
+      },
+      completion: {[weak self] (finished: Bool) in
+        self!.safariImageView2.removeFromSuperview()
+    })
+    
+  }
+  
+  override func viewDidAppear(animated: Bool){
+    super.viewDidAppear(animated)
+    
+    startTopLeftImageViewAnimation()
+    startBottomRightViewAnimationAfterDelay(2)
+    
+  }
   
   /* 3 */
 //  var safariImageView:UIImageView
@@ -176,59 +176,66 @@ class ViewController: UIViewController {
 //    safariImageView.center = self.view.center
 //    
 //    /* Begin the animation */
+//    
+//    UIView.animateWithDuration(5, animations: {[weak self] in
+//      if let strongSelf = self{
+//        strongSelf.safariImageView.transform =
+//          CGAffineTransformMakeRotation(
+//            CGFloat((90.0 * M_PI) / 180.0))
+//      }
+//      
+//      }) {[weak self] (finished: Bool) in
+//      
+//        if let strongSelf = self{
+//          UIView.animateWithDuration(5, animations: {
+//            strongSelf.safariImageView.transform =
+//            CGAffineTransformIdentity
+//          })
+//        }
+//    }
+//  
+//  }
+  
+  /* 4 */
+//  var safariImageView:UIImageView
+//  let image = UIImage(named: "Safari")
+//  
+//  override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+//    safariImageView = UIImageView(image: image)
+//    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+//  }
+//  
+//  required init(coder aDecoder: NSCoder) {
+//    safariImageView = UIImageView(image: image)
+//    super.init(coder: aDecoder)
+//  }
+//  
+//  override func viewDidLoad() {
+//    self.view.addSubview(safariImageView)
+//  }
+//  
+//  override func viewDidAppear(animated: Bool) {
+//    super.viewDidAppear(animated)
+//    
+//    /* Place the image view at the center of
+//    the view of this view controller */
+//    safariImageView.center = self.view.center
+//    
+//    /* Make sure no translation is applied to this image view */
+//    safariImageView.transform = CGAffineTransformIdentity;
+//    
+//    
+//    /* Make the image view twice as large in
+//    width and height */
+//    
+//    /* Begin the animation */
 //    UIView.animateWithDuration(5, animations: {
 //      [weak self] in
 //      /* Rotate the image view 90 degrees */
 //      self!.safariImageView.transform =
-//        CGAffineTransformMakeRotation((90.0 * M_PI) / 180.0)
-//      },
-//      completion: {[weak self] (finished: Bool) in
-//        UIView.animateWithDuration(5, animations: {
-//          self!.safariImageView.transform =  CGAffineTransformIdentity
-//          })
-//      })
+//        CGAffineTransformMakeScale(2, 2)
+//    })
 //  }
-  
-  /* 4 */
-var safariImageView:UIImageView
-let image = UIImage(named: "Safari")
-
-override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
-  safariImageView = UIImageView(image: image)
-  super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-}
-
-required init(coder aDecoder: NSCoder) {
-  safariImageView = UIImageView(image: image)
-  super.init(coder: aDecoder)
-}
-
-override func viewDidLoad() {
-  self.view.addSubview(safariImageView)
-}
-
-override func viewDidAppear(animated: Bool) {
-  super.viewDidAppear(animated)
-  
-  /* Place the image view at the center of 
-  the view of this view controller */
-  safariImageView.center = self.view.center
-  
-  /* Make sure no translation is applied to this image view */
-  safariImageView.transform = CGAffineTransformIdentity;
-  
-  
-  /* Make the image view twice as large in
-  width and height */
-
-  /* Begin the animation */
-  UIView.animateWithDuration(5, animations: {
-    [weak self] in
-    /* Rotate the image view 90 degrees */
-    self!.safariImageView.transform =
-      CGAffineTransformMakeScale(2, 2)
-    })
-}
 
   
 }

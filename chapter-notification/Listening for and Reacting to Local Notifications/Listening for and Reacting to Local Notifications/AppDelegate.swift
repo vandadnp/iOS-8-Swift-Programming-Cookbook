@@ -88,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /* Do we have a value? */
         let value =
-        launchOptions[UIApplicationLaunchOptionsLocalNotificationKey]
+        options[UIApplicationLaunchOptionsLocalNotificationKey]
           as? UILocalNotification
         
         if let notification = value{

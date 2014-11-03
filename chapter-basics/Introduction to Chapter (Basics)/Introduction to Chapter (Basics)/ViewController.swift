@@ -32,7 +32,7 @@ class ViewController: UIViewController {
   }
   
   func example2(){
-    let integerFromDouble: Int = 10.7
+    let integerFromDouble = 10.7 as Int
     /* The value of this variable is 10
     because the compiler truncated the value to an integer*/
   }

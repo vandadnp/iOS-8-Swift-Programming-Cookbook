@@ -121,7 +121,7 @@ func audioPlayerEndInterruption(player: AVAudioPlayer!,
       AVFormatIDKey : kAudioFormatMPEG4AAC as NSNumber,
       AVSampleRateKey : 16000.0 as NSNumber,
       AVNumberOfChannelsKey : 1 as NSNumber,
-      AVEncoderAudioQualityKey : AVAudioQuality.Low.toRaw() as NSNumber
+      AVEncoderAudioQualityKey : AVAudioQuality.Low.rawValue as NSNumber
     ]
     
   }

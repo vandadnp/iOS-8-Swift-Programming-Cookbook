@@ -27,7 +27,7 @@ import MapKit
 /* This will allow us to check for equality between two items
 of type PinColor */
 func == (left: PinColor, right: PinColor) -> Bool{
-  return left.toRaw() == right.toRaw()
+  return left.rawValue == right.rawValue
 }
 
 /* The various pin colors that our annotation can have */
