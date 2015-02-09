@@ -10,31 +10,31 @@
 	<string>Adding Persons to Groups</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F0E34773117208A82F87A9711AD23C44CCB7F10A</key>
-		<string>https://vandad.np%2540gmail.com@atlas-server.oreilly.com/git/1234000002130.git</string>
+		<key>FAE4317C0AD339F317935F9863494CB31647F712</key>
+		<string>github.com:vandadnp/iOS-8-Swift-Programming-Cookbook.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>projects/chapter-addressBook/Adding Persons to Groups/Adding Persons to Groups.xcodeproj</string>
+	<string>chapter-addressBook/Adding Persons to Groups/Adding Persons to Groups.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F0E34773117208A82F87A9711AD23C44CCB7F10A</key>
-		<string>../../../../..</string>
+		<key>FAE4317C0AD339F317935F9863494CB31647F712</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://vandad.np%2540gmail.com@atlas-server.oreilly.com/git/1234000002130.git</string>
+	<string>github.com:vandadnp/iOS-8-Swift-Programming-Cookbook.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F0E34773117208A82F87A9711AD23C44CCB7F10A</string>
+	<string>FAE4317C0AD339F317935F9863494CB31647F712</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F0E34773117208A82F87A9711AD23C44CCB7F10A</string>
+			<string>FAE4317C0AD339F317935F9863494CB31647F712</string>
 			<key>IDESourceControlWCCName</key>
-			<string>ios8cookbook</string>
+			<string>iOS-8-Swift-Programming-Cookbook</string>
 		</dict>
 	</array>
 </dict>

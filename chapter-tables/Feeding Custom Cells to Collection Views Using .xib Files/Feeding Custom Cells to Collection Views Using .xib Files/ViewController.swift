@@ -40,8 +40,8 @@ class ViewController: UICollectionViewController {
     
     let nib = UINib(nibName: "MyCollectionViewCell", bundle: nil)
     
-    collectionView.registerNib(nib, forCellWithReuseIdentifier: "cell")
-    collectionView.backgroundColor = UIColor.whiteColor()
+    collectionView!.registerNib(nib, forCellWithReuseIdentifier: "cell")
+    collectionView!.backgroundColor = UIColor.whiteColor()
   }
   
   convenience required init(coder aDecoder: NSCoder) {

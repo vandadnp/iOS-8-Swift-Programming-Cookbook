@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITableViewDataSource {
       let cell = tableView.dequeueReusableCellWithIdentifier("identifier",
         forIndexPath: indexPath) as UITableViewCell
       
-      cell.textLabel.text = "\(allTimes[indexPath.row])"
+      cell.textLabel!.text = "\(allTimes[indexPath.row])"
       
       return cell
       

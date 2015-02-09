@@ -105,7 +105,7 @@ class PopoverTableViewController: UITableViewController {
     let cell = tableView.dequeueReusableCellWithIdentifier(
       TableViewValues.identifier, forIndexPath: indexPath) as UITableViewCell
     
-    cell.textLabel.text = items[indexPath]
+    cell.textLabel!.text = items[indexPath]
     
     return cell
     

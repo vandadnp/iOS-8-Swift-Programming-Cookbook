@@ -80,7 +80,7 @@ class ViewController: UITableViewController {
       let cell = tableView.dequeueReusableCellWithIdentifier("Cell",
         forIndexPath: indexPath) as UITableViewCell
       
-      cell.textLabel.text = newsItems[indexPath.row].text
+      cell.textLabel!.text = newsItems[indexPath.row].text
       
       return cell
   }

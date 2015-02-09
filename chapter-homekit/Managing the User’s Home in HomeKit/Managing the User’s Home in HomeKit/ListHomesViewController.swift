@@ -53,7 +53,7 @@
 //      
 //      let home = homeManager.homes[indexPath.row] as HMHome
 //      
-//      cell.textLabel.text = home.name
+//      cell.textLabel!.text = home.name
 //      
 //      return cell
 //      
@@ -142,7 +142,7 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
       
       let home = homeManager.homes[indexPath.row] as HMHome
       
-      cell.textLabel.text = home.name
+      cell.textLabel!.text = home.name
       
       return cell
       

@@ -49,7 +49,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
       print("The authorization status of location services is changed to: ")
       
       switch CLLocationManager.authorizationStatus(){
-      case .Authorized:
+      case .AuthorizedAlways:
         println("Authorized")
       case .AuthorizedWhenInUse:
         println("Authorized when in use")
@@ -97,7 +97,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
       
       /* Do we have authorization to access location services? */
       switch CLLocationManager.authorizationStatus(){
-      case .Authorized:
+      case .AuthorizedAlways:
         /* Yes, always */
         createLocationManager(startImmediately: true)
       case .AuthorizedWhenInUse:

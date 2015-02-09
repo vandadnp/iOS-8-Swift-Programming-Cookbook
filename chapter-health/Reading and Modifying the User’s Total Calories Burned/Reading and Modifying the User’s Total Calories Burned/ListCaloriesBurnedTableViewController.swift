@@ -319,7 +319,7 @@ AddBurnedCaloriesToDietViewControllerDelegate {
       let caloriesAsString = formatter.stringFromValue(burner.calories,
         unit: .Kilocalorie)
       
-      cell.textLabel.text = burner.name
+      cell.textLabel!.text = burner.name
       cell.detailTextLabel!.text = caloriesAsString
       
       return cell

@@ -33,7 +33,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
         TableViewConstants.cellIdentifier,
         forIndexPath: indexPath) as UITableViewCell
       
-      cell.textLabel.text = items[indexPath.row]
+      cell.textLabel!.text = items[indexPath.row]
       
       return cell
       

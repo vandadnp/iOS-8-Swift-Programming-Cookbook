@@ -62,7 +62,7 @@ class ListRoomsTableViewController: UITableViewController, HMHomeDelegate {
       
       let room = home.rooms[indexPath.row] as HMRoom
       
-      cell.textLabel.text = room.name
+      cell.textLabel!.text = room.name
       
       return cell
       

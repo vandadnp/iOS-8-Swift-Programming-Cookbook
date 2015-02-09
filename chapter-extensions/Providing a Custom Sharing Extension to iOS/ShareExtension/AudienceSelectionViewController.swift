@@ -79,7 +79,7 @@ class AudienceSelectionViewController: UITableViewController {
       
       let text = Audience.allValues[indexPath.row].rawValue
       
-      cell.textLabel.text = text
+      cell.textLabel!.text = text
       
       if text == audience{
         cell.accessoryType = .Checkmark

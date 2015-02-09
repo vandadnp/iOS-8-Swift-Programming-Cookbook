@@ -108,7 +108,7 @@ class ViewController: UIViewController{
       
       let heightUnit = HeightUnits.allValues[indexPath.row]
       
-      cell.textLabel.text = heightUnit.rawValue
+      cell.textLabel!.text = heightUnit.rawValue
       
       if indexPath == selectedIndexPath{
         cell.accessoryType = .Checkmark
