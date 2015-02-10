@@ -13,8 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
-  func application(application: UIApplication!,
-    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData!) {
+  func application(application: UIApplication,
+    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
     
       /* Each byte in the data will be translated to its hex value like 0x01 or
       0xAB excluding the 0x part, so for 1 byte, we will need 2 characters to
@@ -35,12 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
   }
   
-  func application(application: UIApplication!,
-    didFailToRegisterForRemoteNotificationsWithError error: NSError!){
+  func application(application: UIApplication,
+    didFailToRegisterForRemoteNotificationsWithError error: NSError){
       
   }
   
-  func application(application: UIApplication!,
+  func application(application: UIApplication,
     didFinishLaunchingWithOptions launchOptions:
     [NSObject : AnyObject]?) -> Bool {
       

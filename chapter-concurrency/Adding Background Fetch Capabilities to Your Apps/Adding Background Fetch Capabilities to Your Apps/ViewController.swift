@@ -78,7 +78,7 @@ class ViewController: UITableViewController {
     cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       
       let cell = tableView.dequeueReusableCellWithIdentifier("Cell",
-        forIndexPath: indexPath) as UITableViewCell
+        forIndexPath: indexPath) as! UITableViewCell
       
       cell.textLabel!.text = newsItems[indexPath.row].text
       

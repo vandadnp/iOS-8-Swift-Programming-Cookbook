@@ -33,8 +33,8 @@ class ActionViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    for item in extensionContext!.inputItems as [NSExtensionItem]{
-      for provider in item.attachments as [NSItemProvider]{
+    for item in extensionContext!.inputItems as! [NSExtensionItem]{
+      for provider in item.attachments as! [NSItemProvider]{
         if provider.hasItemConformingToTypeIdentifier(type){
           provider.loadItemForTypeIdentifier(type, options: nil,
             completionHandler: {[weak self]

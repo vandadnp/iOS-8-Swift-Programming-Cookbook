@@ -32,14 +32,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   let widgetUrlScheme = "widget"
   
-  func application(application: UIApplication!,
+  func application(application: UIApplication,
     didFinishLaunchingWithOptions
     launchOptions: [NSObject : AnyObject]?) -> Bool {
       return true
   }
   
-  func application(application: UIApplication!,
-    handleOpenURL url: NSURL!) -> Bool {
+  func application(application: UIApplication,
+    handleOpenURL url: NSURL) -> Bool {
       
       if url.scheme == widgetUrlScheme{
         

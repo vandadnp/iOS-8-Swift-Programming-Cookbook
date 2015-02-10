@@ -19,7 +19,7 @@ class AddPersonViewController: UIViewController {
   func createNewPerson(sender: AnyObject){
     
     let appDelegate = UIApplication.sharedApplication().delegate
-      as AppDelegate
+      as! AppDelegate
     
     let managedObjectContext = appDelegate.managedObjectContext
     

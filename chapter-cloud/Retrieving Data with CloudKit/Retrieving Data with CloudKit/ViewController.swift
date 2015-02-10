@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     }
     
     if let name = recordName{
-      if countElements(name) == 0{
+      if count(name) == 0{
         createNewRecordName()
       } else {
         println("The previously generated record ID was recovered")

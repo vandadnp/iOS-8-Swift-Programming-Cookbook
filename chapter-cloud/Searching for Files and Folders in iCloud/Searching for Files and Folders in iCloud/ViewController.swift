@@ -162,16 +162,16 @@ class ViewController: UIViewController {
     metadataQuery.disableUpdates()
     metadataQuery.stopQuery()
     
-    for item in metadataQuery.results as [NSMetadataItem]{
+    for item in metadataQuery.results as! [NSMetadataItem]{
       
       let itemName = item.valueForAttribute(NSMetadataItemFSNameKey)
-        as String
+        as! String
       
       let itemUrl = item.valueForAttribute(NSMetadataItemURLKey)
-        as NSURL
+        as! NSURL
       
       let itemSize = item.valueForAttribute(NSMetadataItemFSSizeKey)
-        as Int
+        as! Int
       
       println("Item name = \(itemName)")
       println("Item url = \(itemUrl)")

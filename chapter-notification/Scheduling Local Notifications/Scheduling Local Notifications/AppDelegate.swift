@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
-  func application(application: UIApplication!,
+  func application(application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       
       /* First ask the user if we are
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       return true
   }
   
-  func application(application: UIApplication!,
+  func application(application: UIApplication,
     didRegisterUserNotificationSettings
     notificationSettings: UIUserNotificationSettings!){
       

@@ -69,8 +69,8 @@ class ViewController: UIViewController{
   let heightQuantityType = HKQuantityType.quantityTypeForIdentifier(
     HKQuantityTypeIdentifierHeight)
   
-  lazy var types: NSSet = {
-    return NSSet(object: self.heightQuantityType)
+  lazy var types: Set<NSObject>! = {
+    return Set([self.heightQuantityType])
     }()
   
   lazy var healthStore = HKHealthStore()
@@ -104,7 +104,7 @@ class ViewController: UIViewController{
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewInfo.cellIdentifier, forIndexPath: indexPath)
-        as UITableViewCell
+        as! UITableViewCell
       
       let heightUnit = HeightUnits.allValues[indexPath.row]
       

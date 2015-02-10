@@ -67,8 +67,8 @@ AddBurnedCaloriesToDietViewControllerDelegate {
   let burnedEnergyQuantityType = HKQuantityType.quantityTypeForIdentifier(
     HKQuantityTypeIdentifierActiveEnergyBurned)
   
-  lazy var types: NSSet = {
-    return NSSet(object: self.burnedEnergyQuantityType)
+  lazy var types: Set<NSObject>! = {
+    return Set([self.burnedEnergyQuantityType])
     }()
   
   lazy var query: HKObserverQuery = {[weak self] in
@@ -168,7 +168,7 @@ AddBurnedCaloriesToDietViewControllerDelegate {
           
           strongSelf.allCaloriesBurned = [CalorieBurner]()
           
-          for sample in results as [HKQuantitySample]{
+          for sample in results as! [HKQuantitySample]{
             
             let burnerName = sample.metadata[HKMetadataKeyExerciseName]
               as? NSString
@@ -176,7 +176,7 @@ AddBurnedCaloriesToDietViewControllerDelegate {
             let caloriesAsString =
             strongSelf.formatter.stringFromValue(calories, unit: .Kilocalorie)
             
-            let burner = CalorieBurner(name: burnerName!,
+            let burner = CalorieBurner(name: String(burnerName!),
               calories: calories,
               startDate: sample.startDate,
               endDate: sample.endDate)
@@ -295,7 +295,7 @@ AddBurnedCaloriesToDietViewControllerDelegate {
       
       if segue.identifier == segueIdentifier{
         let controller = segue.destinationViewController
-          as AddBurnedCaloriesToDietViewController
+          as! AddBurnedCaloriesToDietViewController
         
         controller.delegate = self
       }
@@ -312,7 +312,7 @@ AddBurnedCaloriesToDietViewControllerDelegate {
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewValues.identifier, forIndexPath: indexPath)
-        as UITableViewCell
+        as! UITableViewCell
       
       let burner = allCaloriesBurned[indexPath.row]
       

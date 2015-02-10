@@ -31,7 +31,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewConstants.cellIdentifier,
-        forIndexPath: indexPath) as UITableViewCell
+        forIndexPath: indexPath) as! UITableViewCell
       
       cell.textLabel!.text = items[indexPath.row]
       

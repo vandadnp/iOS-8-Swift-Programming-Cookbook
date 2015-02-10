@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return "lastName"
   }
 
-  func application(application: UIApplication!,
+  func application(application: UIApplication,
     didFinishLaunchingWithOptions launchOptions:
     [NSObject : AnyObject]?) -> Bool {
     

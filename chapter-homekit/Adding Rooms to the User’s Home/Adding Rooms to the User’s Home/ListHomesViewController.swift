@@ -79,7 +79,7 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewValues.identifier, forIndexPath: indexPath)
-        as UITableViewCell
+        as! UITableViewCell
       
       let home = homeManager.homes[indexPath.row] as HMHome
       

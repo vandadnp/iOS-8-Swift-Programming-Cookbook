@@ -233,7 +233,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    person.firstName = to
 //  }
 //  
-//  func application(application: UIApplication!,
+//  func application(application: UIApplication,
 //    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //      
 //      var vandad = Person(firstName: "Vandad", lastName: "Nahavandipoor")
@@ -253,7 +253,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //  }
 //  
 //}
-
+//
 //@UIApplicationMain
 //class AppDelegate: UIResponder, UIApplicationDelegate {
 //                            
@@ -264,7 +264,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    /* person.firstName is VANDAD now and only in this function */
 //  }
 //
-//  func application(application: UIApplication!,
+//  func application(application: UIApplication,
 //    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //      
 //      var vandad = Person(firstName: "Vandad", lastName: "Nahavandipoor")
@@ -281,7 +281,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                            
 //  var window: UIWindow?
 //
-//  func application(application: UIApplication!,
+//  func application(application: UIApplication,
 //    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //      
 //      let integerValue = 10

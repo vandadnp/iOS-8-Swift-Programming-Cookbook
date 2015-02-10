@@ -58,7 +58,7 @@ class ListRoomsTableViewController: UITableViewController, HMHomeDelegate {
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewValues.identifier, forIndexPath: indexPath)
-        as UITableViewCell
+        as! UITableViewCell
       
       let room = home.rooms[indexPath.row] as HMRoom
       

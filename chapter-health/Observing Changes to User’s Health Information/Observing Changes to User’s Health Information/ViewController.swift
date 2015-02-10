@@ -28,9 +28,9 @@ class ViewController: UIViewController {
                             
   let weightQuantityType = HKQuantityType.quantityTypeForIdentifier(
     HKQuantityTypeIdentifierBodyMass)
-
-  lazy var types: NSSet = {
-    return NSSet(object: self.weightQuantityType)
+  
+  lazy var types: Set<NSObject>! = {
+    return Set([self.weightQuantityType])
     }()
   
   lazy var healthStore = HKHealthStore()
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
         
         if results.count > 0{
           
-          for sample in results as [HKQuantitySample]{
+          for sample in results as! [HKQuantitySample]{
             /* Get the weight in kilograms from the quantity */
             let weightInKilograms = sample.quantity.doubleValueForUnit(
               HKUnit.gramUnitWithMetricPrefix(.Kilo))

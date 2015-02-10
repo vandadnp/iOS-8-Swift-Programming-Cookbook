@@ -54,7 +54,7 @@ class ViewController: UIViewController,
     cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
       
       let cell = tableView.dequeueReusableCellWithIdentifier("identifier",
-        forIndexPath: indexPath) as UITableViewCell
+        forIndexPath: indexPath) as! UITableViewCell
       
       cell.textLabel!.text = "Cell \(indexPath.row)"
       

@@ -35,9 +35,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
   let weightQuantityType = HKQuantityType.quantityTypeForIdentifier(
     HKQuantityTypeIdentifierBodyMass)
   
-  lazy var types: NSSet = {
-    return NSSet(object: self.weightQuantityType)
-  }()
+  lazy var types: Set<NSObject>! = {
+    return Set([self.weightQuantityType])
+    }()
   
   lazy var healthStore = HKHealthStore()
   

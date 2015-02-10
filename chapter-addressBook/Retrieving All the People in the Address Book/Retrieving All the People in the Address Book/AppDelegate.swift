@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       &error).takeRetainedValue() as ABAddressBookRef
     }()
   
-  func application(application: UIApplication!,
+  func application(application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       
       switch ABAddressBookGetAuthorizationStatus(){

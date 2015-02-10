@@ -21,7 +21,7 @@ NSFetchedResultsControllerDelegate {
   
   var managedObjectContext: NSManagedObjectContext?{
   return (UIApplication.sharedApplication().delegate
-    as AppDelegate).managedObjectContext
+    as! AppDelegate).managedObjectContext
   }
   
   func addNewPerson(sender: AnyObject){
@@ -40,36 +40,36 @@ NSFetchedResultsControllerDelegate {
     
   }
   
-  func controllerWillChangeContent(controller: NSFetchedResultsController!) {
+  func controllerWillChangeContent(controller: NSFetchedResultsController) {
     tableView.beginUpdates()
   }
   
-  func controller(controller: NSFetchedResultsController!,
-    didChangeObject anObject: AnyObject!,
-    atIndexPath indexPath: NSIndexPath!,
+  func controller(controller: NSFetchedResultsController,
+    didChangeObject anObject: AnyObject,
+    atIndexPath indexPath: NSIndexPath?,
     forChangeType type: NSFetchedResultsChangeType,
-    newIndexPath: NSIndexPath!) {
+    newIndexPath: NSIndexPath?) {
       
       if type == .Delete{
-        tableView.deleteRowsAtIndexPaths([indexPath],
+        tableView.deleteRowsAtIndexPaths([indexPath!],
           withRowAnimation: .Automatic)
       }
         
       else if type == .Insert{
-        tableView.insertRowsAtIndexPaths([newIndexPath],
+        tableView.insertRowsAtIndexPaths([newIndexPath!],
           withRowAnimation: .Automatic)
       }
       
   }
   
-  func controllerDidChangeContent(controller: NSFetchedResultsController!) {
+  func controllerDidChangeContent(controller: NSFetchedResultsController) {
     tableView.endUpdates()
   }
   
   override func tableView(tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
       
-      let sectionInfo = frc.sections![section] as NSFetchedResultsSectionInfo
+      let sectionInfo = frc.sections![section] as! NSFetchedResultsSectionInfo
       return sectionInfo.numberOfObjects
       
   }
@@ -79,9 +79,9 @@ NSFetchedResultsControllerDelegate {
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewConstants.cellIdentifier,
-        forIndexPath: indexPath) as UITableViewCell
+        forIndexPath: indexPath) as! UITableViewCell
       
-      let person = frc.objectAtIndexPath(indexPath) as Person
+      let person = frc.objectAtIndexPath(indexPath) as! Person
       
       cell.textLabel!.text = person.firstName + " " + person.lastName
       cell.detailTextLabel!.text = "Age: \(person.age)"
@@ -105,7 +105,7 @@ NSFetchedResultsControllerDelegate {
     commitEditingStyle editingStyle: UITableViewCellEditingStyle,
     forRowAtIndexPath indexPath: NSIndexPath){
       
-      let personToDelete = self.frc.objectAtIndexPath(indexPath) as Person
+      let personToDelete = self.frc.objectAtIndexPath(indexPath) as! Person
       
       managedObjectContext!.deleteObject(personToDelete)
       

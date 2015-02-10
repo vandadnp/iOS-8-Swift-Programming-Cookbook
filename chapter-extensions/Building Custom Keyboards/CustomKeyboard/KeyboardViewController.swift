@@ -28,7 +28,7 @@ class KeyboardViewController: UIInputViewController {
   /* Load our custom keyboard view up here */
   override func loadView() {
     let loadedView = KeyboardView(frame: CGRectZero)
-    loadedView.textDocumentProxy = (textDocumentProxy as UITextDocumentProxy)
+    loadedView.textDocumentProxy = (textDocumentProxy as! UITextDocumentProxy)
     loadedView.nextKeyboardButton.button.addTarget(self,
       action: "advanceToNextInputMode", forControlEvents: .TouchUpInside)
     view = loadedView

@@ -182,7 +182,7 @@ class ViewController: UIViewController {
     let smallestYearToLookFor = 2013
     
     let predicate = NSPredicate(format: "maker = %@ AND year >= %@",
-      makerToLookFor, smallestYearToLookFor as NSNumber)
+      makerToLookFor, NSNumber(integer: smallestYearToLookFor))
     
     let query = CKQuery(recordType: "MyCar", predicate: predicate)
     

@@ -36,11 +36,11 @@ class ViewController: UIViewController {
       
       if completed && activityError == nil{
         
-        let item = returnedItems[0] as NSExtensionItem
+        let item = returnedItems[0] as! NSExtensionItem
         
         if let attachments = item.attachments{
           
-          let attachment = attachments[0] as NSItemProvider
+          let attachment = attachments[0] as! NSItemProvider
           
           if attachment.hasItemConformingToTypeIdentifier(type){
             attachment.loadItemForTypeIdentifier(type, options: nil,
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
                 if error != nil{
                   strongSelf.textField.text = "\(error)"
                 } else {
-                  if let value = item as? NSString{
+                  if let value = item as? String{
                     strongSelf.textField.text = value
                   }
                 }

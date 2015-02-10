@@ -14,8 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             
   var window: UIWindow?
 
-  func application(application: UIApplication!,
-    didReceiveRemoteNotification userInfo: [NSObject : AnyObject]!) {
+  func application(application: UIApplication,
+    didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
       
       println("A new record is generated and we received a push")
       
@@ -42,20 +42,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       object: nil)
   }
   
-  func application(application: UIApplication!,
-    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData!) {
+  func application(application: UIApplication,
+    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
       
       println("Successfully registered for remote notifications")
       goAheadWithSubscriptionCreation()
     
   }
   
-  func application(application: UIApplication!,
-    didFailToRegisterForRemoteNotificationsWithError error: NSError!){
+  func application(application: UIApplication,
+    didFailToRegisterForRemoteNotificationsWithError error: NSError){
       println("Failed to receive remote notifications")
   }
   
-  func application(application: UIApplication!,
+  func application(application: UIApplication,
     didRegisterUserNotificationSettings
     notificationSettings: UIUserNotificationSettings!) {
       
@@ -73,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
   }
 
-  func application(application: UIApplication!,
+  func application(application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       
       var needToRequestSettingChanges = true

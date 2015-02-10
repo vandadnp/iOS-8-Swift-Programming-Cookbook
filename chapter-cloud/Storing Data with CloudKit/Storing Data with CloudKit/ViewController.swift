@@ -225,7 +225,7 @@ class ViewController: UIViewController {
         var foundEstateZone = false
         var foundHatchbackZone = false
         
-        for zone in zones as [CKRecordZone]{
+        for zone in zones as! [CKRecordZone]{
           
           if zone.zoneID.zoneName == CarType.Hatchback.rawValue{
             foundHatchbackZone = true

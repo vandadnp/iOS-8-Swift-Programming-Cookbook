@@ -14,14 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
-  func application(application: UIApplication!,
+  func application(application: UIApplication,
     didFinishLaunchingWithOptions launchOptions:
     [NSObject : AnyObject]?) -> Bool {
       
       /* Save the laptop with a given color first */
       let laptop = NSEntityDescription.insertNewObjectForEntityForName(
         NSStringFromClass(Laptop.classForCoder()),
-        inManagedObjectContext: managedObjectContext!) as Laptop
+        inManagedObjectContext: managedObjectContext!) as! Laptop
       
       laptop.model = "model name"
       laptop.color = UIColor.redColor()
@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       /* Check for 1 because out fetch limit is 1 */
       if laptops.count == 1 && fetchingError == nil{
         
-        let fetchedLaptop = laptops[0] as Laptop
+        let fetchedLaptop = laptops[0] as! Laptop
         
         if fetchedLaptop.color == UIColor.redColor(){
           println("Right colored laptop was fetched")
@@ -75,7 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   lazy var applicationDocumentsDirectory: NSURL = {
       // The directory the application uses to store the Core Data store file. This code uses a directory named "com.pixolity.ios.coredata" in the application's documents Application Support directory.
       let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-      return urls[urls.count-1] as NSURL
+      return urls[urls.count-1] as! NSURL
   }()
 
   lazy var managedObjectModel: NSManagedObjectModel = {
@@ -94,7 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
           coordinator = nil
           // Report any error we got.
-          let dict = NSMutableDictionary()
+          var dict = [String: AnyObject]()
           dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
           dict[NSLocalizedFailureReasonErrorKey] = failureReason
           dict[NSUnderlyingErrorKey] = error

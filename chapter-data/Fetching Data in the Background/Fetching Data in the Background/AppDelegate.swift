@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     for counter in 0..<1000{
       let person = NSEntityDescription.insertNewObjectForEntityForName(
         NSStringFromClass(Person.classForCoder()),
-        inManagedObjectContext: managedObjectContext!) as Person
+        inManagedObjectContext: managedObjectContext!) as! Person
       
       person.firstName = "First name \(counter)"
       person.lastName = "Last name \(counter)"
@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
   }
   
-  func application(application: UIApplication!,
+  func application(application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       
       /* Set up the background context */
@@ -73,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var fetchError: NSError?
         let personIds = backgroundContext.executeFetchRequest(
           self!.newFetchRequest(),
-          error: &fetchError) as [NSManagedObjectID]
+          error: &fetchError) as! [NSManagedObjectID]
         
         if fetchError == nil{
           
@@ -83,7 +83,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           context using their IDs */
           dispatch_async(dispatch_get_main_queue(), {
             for personId in personIds{
-              let person = mainContext!.objectWithID(personId) as Person
+              let person = mainContext!.objectWithID(personId) as! Person
               self!.mutablePersons.append(person)
             }
             self!.processPersons()
@@ -107,7 +107,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   lazy var applicationDocumentsDirectory: NSURL = {
       // The directory the application uses to store the Core Data store file. This code uses a directory named "com.pixolity.ios.coredata" in the application's documents Application Support directory.
       let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-      return urls[urls.count-1] as NSURL
+      return urls[urls.count-1] as! NSURL
   }()
 
   lazy var managedObjectModel: NSManagedObjectModel = {
@@ -126,7 +126,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
           coordinator = nil
           // Report any error we got.
-          let dict = NSMutableDictionary()
+          var dict = [String: AnyObject]()
           dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
           dict[NSLocalizedFailureReasonErrorKey] = failureReason
           dict[NSUnderlyingErrorKey] = error

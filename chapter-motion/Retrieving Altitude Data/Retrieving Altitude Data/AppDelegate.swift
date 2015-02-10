@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   /* A private queue on which altitude updates will be delivered to us */
   lazy var queue = NSOperationQueue()
 
-  func application(application: UIApplication!,
+  func application(application: UIApplication,
     didFinishLaunchingWithOptions launchOptions:
     [NSObject : AnyObject]?) -> Bool {
     return true

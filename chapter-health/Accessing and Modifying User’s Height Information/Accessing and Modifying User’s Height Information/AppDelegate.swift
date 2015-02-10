@@ -28,17 +28,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             
   var window: UIWindow?
 
-  func application(application: UIApplication!,
+  func application(application: UIApplication,
     shouldRestoreApplicationState coder: NSCoder!) -> Bool {
     return true
   }
   
-  func application(application: UIApplication!,
+  func application(application: UIApplication,
     shouldSaveApplicationState coder: NSCoder!) -> Bool {
       return true
   }
 
-  func application(application: UIApplication!,
+  func application(application: UIApplication,
     didFinishLaunchingWithOptions
     launchOptions: [NSObject : AnyObject]?) -> Bool {
     return true
