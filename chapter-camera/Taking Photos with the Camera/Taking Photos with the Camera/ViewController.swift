@@ -33,8 +33,8 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   var beenHereBefore = false
   var controller: UIImagePickerController?
   
-  func imagePickerController(picker: UIImagePickerController!,
-    didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!){
+  func imagePickerController(picker: UIImagePickerController,
+    didFinishPickingMediaWithInfo info: [NSObject : AnyObject]){
       
       println("Picker returned successfully")
       
@@ -43,7 +43,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
       if let type:AnyObject = mediaType{
         
         if type is String{
-          let stringType = type as String
+          let stringType = type as! String
           
           if stringType == kUTTypeMovie as NSString{
             let urlOfVideo = info[UIImagePickerControllerMediaURL] as? NSURL
@@ -72,7 +72,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
       picker.dismissViewControllerAnimated(true, completion: nil)
   }
   
-  func imagePickerControllerDidCancel(picker: UIImagePickerController!) {
+  func imagePickerControllerDidCancel(picker: UIImagePickerController) {
     println("Picker was cancelled")
     picker.dismissViewControllerAnimated(true, completion: nil)
   }
@@ -85,7 +85,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     sourceType: UIImagePickerControllerSourceType) -> Bool{
       
       let availableMediaTypes =
-      UIImagePickerController.availableMediaTypesForSourceType(sourceType) as
+      UIImagePickerController.availableMediaTypesForSourceType(sourceType) as!
         [String]?
       
       if let types = availableMediaTypes{
@@ -100,7 +100,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   }
 
   func doesCameraSupportTakingPhotos() -> Bool{
-    return cameraSupportsMedia(kUTTypeImage as NSString, sourceType: .Camera)
+    return cameraSupportsMedia(kUTTypeImage as NSString as! String, sourceType: .Camera)
   }
   
   override func viewDidAppear(animated: Bool) {

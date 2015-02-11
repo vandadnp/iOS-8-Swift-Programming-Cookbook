@@ -29,11 +29,11 @@ class Person: NSObject{
   
   func handleSetPersonInfoNotification(notification: NSNotification){
     
-    firstName = notification.userInfo![AppDelegate.personInfoKeyFirstName()]
-      as? NSString
+    firstName = (notification.userInfo![AppDelegate.personInfoKeyFirstName()]
+      as? NSString)! as String
     
-    lastName = notification.userInfo![AppDelegate.personInfoKeyLastName()]
-      as? NSString
+    lastName = (notification.userInfo![AppDelegate.personInfoKeyLastName()]
+    as? NSString)! as String
     
   }
   

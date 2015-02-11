@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //let fileManager = NSFileManager()
 //let urls = fileManager.URLsForDirectory(
 //  NSSearchPathDirectory.DocumentDirectory,
-//  inDomains: NSSearchPathDomainMask.UserDomainMask) as [NSURL]
+//  inDomains: NSSearchPathDomainMask.UserDomainMask) as! [NSURL]
 //
 //if urls.count > 0{
 //  var documentsFolder = urls[0]
@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let fileManager = NSFileManager()
     let urls = fileManager.URLsForDirectory(
       NSSearchPathDirectory.CachesDirectory,
-      inDomains: NSSearchPathDomainMask.UserDomainMask) as [NSURL]
+      inDomains: NSSearchPathDomainMask.UserDomainMask) as! [NSURL]
     
     if urls.count > 0{
       let documentsFolder = urls[0]

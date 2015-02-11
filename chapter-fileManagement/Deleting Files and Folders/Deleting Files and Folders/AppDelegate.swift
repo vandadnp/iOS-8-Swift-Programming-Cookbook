@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       for counter in 1...5{
         let fileName = NSString(format: "%lu.txt", counter)
-        let path = folder.stringByAppendingPathComponent(fileName)
+        let path = folder.stringByAppendingPathComponent(String(fileName))
         let fileContents = "Some text"
         var error:NSError?
         if fileContents.writeToFile(path,
@@ -89,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       var error:NSError?
       let contents = fileManager.contentsOfDirectoryAtPath(folder,
-        error: &error) as [String]
+        error: &error) as! [String]
       
       if let theError = error{
         println("An error occurred = \(theError)")

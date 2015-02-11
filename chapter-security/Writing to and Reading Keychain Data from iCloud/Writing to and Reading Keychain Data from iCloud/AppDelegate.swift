@@ -43,27 +43,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       /* First delete the existing one if one exists. We don't have to do this
       but SecItemAdd will fail if an existing value is in the keychain. */
       let query = [
-        kSecClass as NSString :
-        kSecClassGenericPassword as NSString,
+        kSecClass as! String :
+        kSecClassGenericPassword as! String,
         
-        kSecAttrService as NSString : service,
-        kSecAttrAccessGroup as NSString : accessGroup,
-        kSecAttrAccount as NSString : key,
-        kSecAttrSynchronizable as NSString : kCFBooleanTrue
-        ] as NSDictionary
+        kSecAttrService as! String : service,
+        kSecAttrAccessGroup as! String : accessGroup,
+        kSecAttrAccount as! String : key,
+        kSecAttrSynchronizable as! String : kCFBooleanTrue
+        ]
       
       SecItemDelete(query)
       
-      let secItem = [
-        kSecClass as NSString :
-        kSecClassGenericPassword as NSString,
+      let secItem: NSDictionary = [
+        kSecClass as! String :
+        kSecClassGenericPassword as! String,
         
-        kSecAttrService as NSString : service,
-        kSecAttrAccessGroup as NSString : accessGroup,
-        kSecAttrAccount as NSString : key,
-        kSecValueData as NSString : valueData!,
-        kSecAttrSynchronizable as NSString : kCFBooleanTrue
-        ] as NSDictionary
+        kSecAttrService as! String : service,
+        kSecAttrAccessGroup as! String : accessGroup,
+        kSecAttrAccount as! String : key,
+        kSecValueData as! String : valueData!,
+        kSecAttrSynchronizable as! String : kCFBooleanTrue
+        ]
       
       var result: Unmanaged<AnyObject>? = nil
       let status = Int(SecItemAdd(secItem, &result))

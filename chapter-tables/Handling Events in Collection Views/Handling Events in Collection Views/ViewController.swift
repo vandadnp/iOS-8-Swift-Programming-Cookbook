@@ -38,7 +38,7 @@ class ViewController: UICollectionViewController {
     return allImages[Int(arc4random_uniform(UInt32(allImages.count)))]!
   }
   
-  override init(collectionViewLayout layout: UICollectionViewLayout!) {
+  override init(collectionViewLayout layout: UICollectionViewLayout) {
     super.init(collectionViewLayout: layout)
     
     let nib = UINib(nibName: "MyCollectionViewCell", bundle: nil)
@@ -77,7 +77,7 @@ class ViewController: UICollectionViewController {
     cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
       
       let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
-        "cell", forIndexPath: indexPath) as MyCollectionViewCell
+        "cell", forIndexPath: indexPath) as! MyCollectionViewCell
       
       cell.imageViewBackgroundImage.image = randomImage()
       cell.imageViewBackgroundImage.contentMode = .ScaleAspectFit

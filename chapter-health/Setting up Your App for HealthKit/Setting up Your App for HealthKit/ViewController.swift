@@ -38,16 +38,16 @@ class ViewController: UIViewController {
   lazy var healthStore = HKHealthStore()
   
   /* The type of data that we wouldn't write into the health store */
-  lazy var typesToShare: NSSet = {
-    return NSSet(objects: self.heightQuantity,
-      self.weightQuantity)
+  lazy var typesToShare: Set<NSObject> = {
+    return Set([self.heightQuantity,
+      self.weightQuantity])
   }()
   
   /* We want to read this type of data */
-  lazy var typesToRead: NSSet = {
-    return NSSet(objects: self.heightQuantity,
+  lazy var typesToRead: Set<NSObject> = {
+    return Set([self.heightQuantity,
       self.weightQuantity,
-      self.heartRateQuantity)
+      self.heartRateQuantity])
   }()
   
   /* Ask for permission to access the health store */

@@ -45,7 +45,7 @@ HMAccessoryBrowserDelegate {
   
   var homeManager: HMHomeManager!
   
-  func homeManagerDidUpdateHomes(manager: HMHomeManager!) {
+  func homeManagerDidUpdateHomes(manager: HMHomeManager) {
     
     manager.addHomeWithName(randomHomeName, completionHandler: {[weak self]
       (home: HMHome!, error: NSError!) in
@@ -78,7 +78,7 @@ HMAccessoryBrowserDelegate {
   }
   
   func findCharacteristicsOfService(service: HMService){
-    for characteristic in service.characteristics as [HMCharacteristic]{
+    for characteristic in service.characteristics as! [HMCharacteristic]{
       println("   Characteristic type = " +
         "\(characteristic.characteristicType)")
     }
@@ -86,7 +86,7 @@ HMAccessoryBrowserDelegate {
   
   func findServicesForAccessory(accessory: HMAccessory){
     println("Finding services for this accessory...")
-    for service in accessory.services as [HMService]{
+    for service in accessory.services as! [HMService]{
       println(" Service name = \(service.name)")
       println(" Service type = \(service.serviceType)")
       
@@ -95,7 +95,7 @@ HMAccessoryBrowserDelegate {
     }
   }
   
-  func accessoryBrowser(browser: HMAccessoryBrowser!,
+  func accessoryBrowser(browser: HMAccessoryBrowser,
     didFindNewAccessory accessory: HMAccessory!) {
       
       println("Found a new accessory")
@@ -132,7 +132,7 @@ HMAccessoryBrowserDelegate {
       
   }
   
-  func accessoryBrowser(browser: HMAccessoryBrowser!,
+  func accessoryBrowser(browser: HMAccessoryBrowser,
     didRemoveNewAccessory accessory: HMAccessory!){
       
       println("An accessory has been removed")

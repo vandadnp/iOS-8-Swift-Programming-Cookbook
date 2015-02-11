@@ -113,7 +113,7 @@ class ViewController: UIViewController {
     
     let string = "iOS SDK" as NSString
     
-    let result = NSMutableAttributedString(string: string)
+    let result = NSMutableAttributedString(string: String(string))
     
     let attributesForFirstWord = [
       NSFontAttributeName : UIFont.boldSystemFontOfSize(60),

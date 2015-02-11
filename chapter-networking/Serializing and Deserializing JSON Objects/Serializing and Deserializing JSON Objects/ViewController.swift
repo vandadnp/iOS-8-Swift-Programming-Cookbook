@@ -132,11 +132,11 @@ class ViewController: UIViewController {
       println("Successfully deserialized...")
       
       if jsonObject is NSDictionary{
-        let deserializedDictionary = jsonObject as NSDictionary
+        let deserializedDictionary = jsonObject as! NSDictionary
         println("Deserialized JSON Dictionary = \(deserializedDictionary)")
       }
       else if jsonObject is NSArray{
-        let deserializedArray = jsonObject as NSArray
+        let deserializedArray = jsonObject as! NSArray
         println("Deserialized JSON Array = \(deserializedArray)")
       }
       else {

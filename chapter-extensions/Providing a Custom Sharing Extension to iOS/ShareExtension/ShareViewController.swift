@@ -47,7 +47,7 @@ AudienceSelectionViewControllerDelegate, NSURLSessionDelegate {
     /* The post button should be enabled only if we have the image data
     and the user has entered at least one character of text */
     if let data = imageData{
-      if countElements(contentText) > 0{
+      if count(contentText) > 0{
         return true
       }
     }
@@ -60,8 +60,8 @@ AudienceSelectionViewControllerDelegate, NSURLSessionDelegate {
     
     placeholder = "Your comments"
     
-    let content = extensionContext!.inputItems[0] as NSExtensionItem
-    let contentType = kUTTypeImage as NSString
+    let content = extensionContext!.inputItems[0] as! NSExtensionItem
+    let contentType = kUTTypeImage as String
     
     for attachment in content.attachments as! [NSItemProvider]{
       if attachment.hasItemConformingToTypeIdentifier(contentType){

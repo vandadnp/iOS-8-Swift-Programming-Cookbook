@@ -137,7 +137,7 @@ class ViewController: UIViewController{
         if results.count > 0{
           
           /* We only have one sample really */
-          let sample = results[0] as HKQuantitySample
+          let sample = results[0] as! HKQuantitySample
           /* Get the height in the currently-selected unit */
           let currentlySelectedUnit = strongSelf.heightUnit.healthKitUnit()
           
@@ -177,10 +177,10 @@ class ViewController: UIViewController{
   override func decodeRestorableStateWithCoder(coder: NSCoder) {
     super.decodeRestorableStateWithCoder(coder)
     selectedIndexPath = coder.decodeObjectForKey("selectedIndexPath")
-      as NSIndexPath
+      as! NSIndexPath
     if let newUnit = HeightUnits(rawValue:
       coder.decodeObjectForKey("heightUnit")
-      as String){
+      as! String){
         heightUnit = newUnit
     }
   }

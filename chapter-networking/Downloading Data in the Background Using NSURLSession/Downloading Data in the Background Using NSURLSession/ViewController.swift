@@ -72,8 +72,8 @@ NSURLSessionDownloadDelegate, NSURLSessionTaskDelegate {
   }
   
   /* We now get to know that the download procedure was finished */
-  func URLSession(session: NSURLSession, task: NSURLSessionTask!,
-    didCompleteWithError error: NSError!){
+  func URLSession(session: NSURLSession, task: NSURLSessionTask,
+    didCompleteWithError error: NSError?){
     
       print("Finished ")
       

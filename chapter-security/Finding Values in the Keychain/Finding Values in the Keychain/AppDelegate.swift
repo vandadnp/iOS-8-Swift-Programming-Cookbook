@@ -36,12 +36,12 @@
 //      let service = NSBundle.mainBundle().bundleIdentifier!
 //
 //      let query = [
-//        kSecClass as NSString :
-//        kSecClassGenericPassword as NSString,
+//        kSecClass as! String :
+//        kSecClassGenericPassword as! String,
 //
-//        kSecAttrService as NSString : service,
-//        kSecAttrAccount as NSString : keyToSearchFor,
-//        kSecReturnAttributes as NSString : kCFBooleanTrue,
+//        kSecAttrService as! String : service,
+//        kSecAttrAccount as! String : keyToSearchFor,
+//        kSecReturnAttributes as! String : kCFBooleanTrue,
 //      ] as NSDictionary
 //
 //
@@ -50,19 +50,19 @@
 //
 //      if results == Int(errSecSuccess){
 //
-//        let attributes = valueAttributes!.takeRetainedValue() as NSDictionary
+//        let attributes = valueAttributes!.takeRetainedValue() as! NSDictionary
 //
-//        let key = attributes[kSecAttrAccount as NSString]
+//        let key = attributes[kSecAttrAccount as! String]
 //          as String
 //
-//        let accessGroup = attributes[kSecAttrAccessGroup as NSString] as String
+//        let accessGroup = attributes[kSecAttrAccessGroup as! String] as String
 //
 //        let creationDate = attributes[kSecAttrCreationDate as NSString] as NSDate
 //
 //        let modifiedDate = attributes[
 //          kSecAttrModificationDate as NSString] as NSDate
 //
-//        let serviceValue = attributes[kSecAttrService as NSString] as String
+//        let serviceValue = attributes[kSecAttrService as! String] as String
 //
 //        println("Key = \(key)")
 //        println("Access Group = \(accessGroup)")
@@ -95,20 +95,20 @@ func application(application: UIApplication,
     let service = NSBundle.mainBundle().bundleIdentifier!
 
     let query = [
-      kSecClass as NSString :
-      kSecClassGenericPassword as NSString,
+      kSecClass as! String :
+      kSecClassGenericPassword as! String,
 
-      kSecAttrService as NSString : service,
-      kSecAttrAccount as NSString : keyToSearchFor,
-      kSecReturnData as NSString : kCFBooleanTrue,
-      ] as NSDictionary
+      kSecAttrService as! String : service,
+      kSecAttrAccount as! String : keyToSearchFor,
+      kSecReturnData as! String : kCFBooleanTrue,
+      ]
 
     var returnedData: Unmanaged<AnyObject>? = nil
     let results = Int(SecItemCopyMatching(query, &returnedData))
 
     if results == Int(errSecSuccess){
 
-      let data = returnedData!.takeRetainedValue() as NSData
+      let data = returnedData!.takeRetainedValue() as! NSData
 
       let value = NSString(data: data, encoding: NSUTF8StringEncoding)
 

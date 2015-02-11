@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(application: UIApplication,
     didRegisterUserNotificationSettings
-    notificationSettings: UIUserNotificationSettings!){
+    notificationSettings: UIUserNotificationSettings){
       
       if notificationSettings.types == nil{
         /* The user did not allow us to send notifications */

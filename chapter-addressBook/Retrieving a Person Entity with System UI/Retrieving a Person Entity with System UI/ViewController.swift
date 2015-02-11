@@ -63,7 +63,7 @@
 //      
 //      for index in 0..<countOfPhones{
 //        let phone = ABMultiValueCopyValueAtIndex(phones,
-//          index).takeRetainedValue() as String
+//          index).takeRetainedValue() as! String
 //        
 //        println(phone)
 //        

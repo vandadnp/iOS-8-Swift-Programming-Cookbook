@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   func application(application: UIApplication,
-    didReceiveLocalNotification notification: UILocalNotification!) {
+    didReceiveLocalNotification notification: UILocalNotification) {
     
       let key1Value = notification.userInfo!["Key 1"] as? NSString
       let key2Value = notification.userInfo!["Key 2"] as? NSString
@@ -104,7 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(application: UIApplication,
     didRegisterUserNotificationSettings
-    notificationSettings: UIUserNotificationSettings!){
+    notificationSettings: UIUserNotificationSettings){
       
       if notificationSettings.types == nil{
         /* The user did not allow us to send notifications */

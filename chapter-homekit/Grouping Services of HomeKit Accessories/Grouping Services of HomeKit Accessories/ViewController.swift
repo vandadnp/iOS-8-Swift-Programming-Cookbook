@@ -28,7 +28,7 @@ extension HMCharacteristic{
   
   func containsProperty(paramProperty: String) -> Bool{
     if let propeties = self.properties{
-      for property in properties as [String]{
+      for property in properties as! [String]{
         if property == paramProperty{
           return true
         }
@@ -66,7 +66,7 @@ HMAccessoryBrowserDelegate {
     
     /* Can we find the old value? */
     if let name = defaults.stringForKey(homeNameKey){
-      if countElements(name) > 0 {
+      if count(name) > 0 {
         return name
       }
     }
@@ -124,15 +124,15 @@ HMAccessoryBrowserDelegate {
     
   }
   
-  func homeManagerDidUpdateHomes(manager: HMHomeManager!) {
+  func homeManagerDidUpdateHomes(manager: HMHomeManager) {
     
-    for home in manager.homes as [HMHome]{
+    for home in manager.homes as! [HMHome]{
       if home.name == homeName{
         
         println("Found the home")
         self.home = home
         
-        for room in home.rooms as [HMRoom]{
+        for room in home.rooms as! [HMRoom]{
           if room.name == roomName{
             println("Found the room")
             self.room = room
@@ -156,7 +156,7 @@ HMAccessoryBrowserDelegate {
     
   }
   
-  func accessoryBrowser(browser: HMAccessoryBrowser!,
+  func accessoryBrowser(browser: HMAccessoryBrowser,
     didFindNewAccessory accessory: HMAccessory!) {
       
       println("Found an accessory...")
@@ -195,9 +195,9 @@ HMAccessoryBrowserDelegate {
     completionHandler: ((NSError!) -> Void)?){
     
     if let accessories = room.accessories{
-      for accessory in accessories as [HMAccessory]{
+      for accessory in accessories as! [HMAccessory]{
         if let services = accessory.services{
-          for service in services as [HMService]{
+          for service in services as! [HMService]{
             if (service.name as NSString).rangeOfString("switch",
               options: .CaseInsensitiveSearch).location != NSNotFound{
                 /* This is a switch, add it to the service group */
@@ -216,7 +216,7 @@ HMAccessoryBrowserDelegate {
   func enumerateServicesInServiceGroup(serviceGroup: HMServiceGroup){
     println("Discovering all the services in this service group...")
     if let services = serviceGroup.services{
-      for service in services as [HMService]{
+      for service in services as! [HMService]{
         println(service)
       }
     }
@@ -244,7 +244,7 @@ HMAccessoryBrowserDelegate {
     
     /* Find out if we already have our switch service group or not */
     if let groups = home.serviceGroups{
-      for serviceGroup in groups as [HMServiceGroup]{
+      for serviceGroup in groups as! [HMServiceGroup]{
         if serviceGroup.name == switchServiceGroupName{
           switchServiceGroup = serviceGroup
         }

@@ -86,11 +86,11 @@
 //  func calculateAndDisplayTextFieldLengthWithText(text: String){
 //    
 //    var characterOrCharacters = "Character"
-//    if countElements(text) != 1{
+//    if count(text) != 1{
 //      characterOrCharacters += "s"
 //    }
 //    
-//    let stringLength = countElements(text)
+//    let stringLength = count(text)
 //    
 //    label.text = "\(stringLength) \(characterOrCharacters)"
 //    

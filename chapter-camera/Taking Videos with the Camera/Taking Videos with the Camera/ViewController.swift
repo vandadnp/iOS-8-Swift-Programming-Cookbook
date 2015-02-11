@@ -33,8 +33,8 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   var beenHereBefore = false
   var controller: UIImagePickerController?
   
-  func imagePickerController(picker: UIImagePickerController!,
-    didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!){
+  func imagePickerController(picker: UIImagePickerController,
+    didFinishPickingMediaWithInfo info: [NSObject : AnyObject]){
       
       println("Picker returned successfully")
       
@@ -76,7 +76,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
       picker.dismissViewControllerAnimated(true, completion: nil)
   }
   
-  func imagePickerControllerDidCancel(picker: UIImagePickerController!) {
+  func imagePickerControllerDidCancel(picker: UIImagePickerController) {
     println("Picker was cancelled")
     picker.dismissViewControllerAnimated(true, completion: nil)
   }

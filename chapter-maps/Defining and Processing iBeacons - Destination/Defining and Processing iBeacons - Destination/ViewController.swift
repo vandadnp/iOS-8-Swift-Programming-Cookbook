@@ -55,7 +55,7 @@ func locationManager(manager: CLLocationManager!,
       print("Found a beacon with the proximity of = ")
       
       /* How close are we to the beacon? */
-      for beacon in beacons as [CLBeacon]{
+      for beacon in beacons as! [CLBeacon]{
         switch beacon.proximity{
         case .Far:
           println("Far")

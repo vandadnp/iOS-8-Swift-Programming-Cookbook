@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     type: EKSourceType,
     title: String) -> EKSource?{
       
-      for source in eventStore.sources() as [EKSource]{
+      for source in eventStore.sources() as! [EKSource]{
         if source.sourceType.value == type.value &&
           source.title.caseInsensitiveCompare(title) ==
           NSComparisonResult.OrderedSame{
@@ -51,13 +51,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     source: EKSource,
     eventType: EKEntityType) -> EKCalendar?{
       
-      for calendar in source.calendarsForEntityType(eventType).allObjects
-        as [EKCalendar]{
-          if calendar.title.caseInsensitiveCompare(title) ==
-            NSComparisonResult.OrderedSame &&
-            calendar.type.value == type.value{
-              return calendar
-          }
+      for calendar in source.calendarsForEntityType(eventType) as! Set<EKCalendar>{
+        if calendar.title.caseInsensitiveCompare(title) ==
+          NSComparisonResult.OrderedSame &&
+          calendar.type.value == type.value{
+            return calendar
+        }
       }
       
       return nil
@@ -88,7 +87,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     /* Fetch all the events that fall between the
     starting and the ending dates */
-    let events = store.eventsMatchingPredicate(searchPredicate) as [EKEvent]
+    let events = store.eventsMatchingPredicate(searchPredicate)
+      as! [EKEvent]
     
     /* Array of NSString equivalents of the values
     in the EKParticipantRole enumeration */
@@ -137,7 +137,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         continue
       }
       
-      for attendee in event.attendees as [EKParticipant]{
+      for attendee in event.attendees as! [EKParticipant]{
         println("Attendee name = \(attendee.name)")
         
         let role = attendeeRole[Int(attendee.participantRole.value)]

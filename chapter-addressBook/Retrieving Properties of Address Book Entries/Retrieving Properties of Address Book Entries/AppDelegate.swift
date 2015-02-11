@@ -77,10 +77,10 @@
 //    for person: ABRecordRef in allPeople{
 //      
 //      let firstName = ABRecordCopyValue(person,
-//        kABPersonFirstNameProperty).takeRetainedValue() as String
+//        kABPersonFirstNameProperty).takeRetainedValue() as! String
 //      
 //      let lastName = ABRecordCopyValue(person,
-//        kABPersonLastNameProperty).takeRetainedValue() as String
+//        kABPersonLastNameProperty).takeRetainedValue() as! String
 //      
 //      let email: ABMultiValueRef = ABRecordCopyValue(person,
 //        kABPersonEmailProperty).takeRetainedValue()
@@ -151,7 +151,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     for counter in 0..<ABMultiValueGetCount(emails){
       
       let email = ABMultiValueCopyValueAtIndex(emails,
-        counter).takeRetainedValue() as String
+        counter).takeRetainedValue() as! String
       
       println(email)
       
@@ -168,9 +168,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     for person: ABRecordRef in allPeople{
       
       let firstName = ABRecordCopyValue(person,
-        kABPersonFirstNameProperty).takeRetainedValue() as String
+        kABPersonFirstNameProperty).takeRetainedValue() as! String
       let lastName = ABRecordCopyValue(person,
-        kABPersonLastNameProperty).takeRetainedValue() as String
+        kABPersonLastNameProperty).takeRetainedValue() as! String
       
       println("First name = \(firstName)")
       println("Last name = \(lastName)")

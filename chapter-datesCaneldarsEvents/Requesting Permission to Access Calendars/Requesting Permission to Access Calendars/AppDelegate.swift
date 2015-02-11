@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ]
     
     let calendars = eventStore.calendarsForEntityType(EKEntityTypeEvent)
-      as [EKCalendar]
+      as! [EKCalendar]
     
     for calendar in calendars{
       

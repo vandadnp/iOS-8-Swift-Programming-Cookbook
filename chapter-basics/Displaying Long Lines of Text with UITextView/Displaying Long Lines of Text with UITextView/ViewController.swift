@@ -69,7 +69,7 @@ class ViewController: UIViewController {
   
     /* Get the frame of the keyboard */
     let keyboardRectAsObject =
-    notification.userInfo![UIKeyboardFrameEndUserInfoKey] as NSValue
+    notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
     
     /* Place it in a CGRect */
     var keyboardRect = CGRectZero

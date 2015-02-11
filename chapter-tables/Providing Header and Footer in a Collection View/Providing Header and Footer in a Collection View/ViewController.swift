@@ -89,7 +89,7 @@ convenience required init(coder aDecoder: NSCoder) {
       
       let view = collectionView.dequeueReusableSupplementaryViewOfKind(kind,
         withReuseIdentifier: identifier,
-        forIndexPath: indexPath) as UICollectionReusableView
+        forIndexPath: indexPath) as! UICollectionReusableView
       
       if kind == UICollectionElementKindSectionHeader{
         if let header = view as? Header{
@@ -124,7 +124,7 @@ convenience required init(coder aDecoder: NSCoder) {
     cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
       
       let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
-        "cell", forIndexPath: indexPath) as MyCollectionViewCell
+        "cell", forIndexPath: indexPath) as! MyCollectionViewCell
       
       cell.imageViewBackgroundImage.image = randomImage()
       cell.imageViewBackgroundImage.contentMode = .ScaleAspectFit

@@ -76,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     type: EKSourceType,
     title: String) -> EKSource?{
       
-      for source in eventStore.sources() as [EKSource]{
+      for source in eventStore.sources() as! [EKSource]{
         if source.sourceType.value == type.value &&
           source.title.caseInsensitiveCompare(title) ==
           NSComparisonResult.OrderedSame{
@@ -93,13 +93,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     source: EKSource,
     eventType: EKEntityType) -> EKCalendar?{
       
-      for calendar in source.calendarsForEntityType(eventType).allObjects
-        as [EKCalendar]{
-          if calendar.title.caseInsensitiveCompare(title) ==
-            NSComparisonResult.OrderedSame &&
-            calendar.type.value == type.value{
-              return calendar
-          }
+      for calendar in source.calendarsForEntityType(eventType) as! Set<EKCalendar>{
+        if calendar.title.caseInsensitiveCompare(title) ==
+          NSComparisonResult.OrderedSame &&
+          calendar.type.value == type.value{
+            return calendar
+        }
       }
       
       return nil
@@ -135,7 +134,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         calendars: [calendar])
       
       /* Get all the events that match the parameters */
-      let events = store.eventsMatchingPredicate(predicate) as [EKEvent]
+      let events = store.eventsMatchingPredicate(predicate)
+        as! [EKEvent]
       
       if events.count > 0{
         
@@ -222,7 +222,7 @@ func createRecurringEventInStore(store: EKEventStore, calendar: EKCalendar)
     
     /* Create an Event Kit date from this date */
     let recurringEnd = EKRecurrenceEnd.recurrenceEndWithEndDate(
-      oneYearFromNow) as EKRecurrenceEnd
+      oneYearFromNow) as! EKRecurrenceEnd
     
     /* And the recurring rule. This event happens every
     month (EKRecurrenceFrequencyMonthly), once a month (interval:1)

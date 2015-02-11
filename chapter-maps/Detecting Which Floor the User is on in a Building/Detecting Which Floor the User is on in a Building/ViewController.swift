@@ -35,7 +35,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
       println("Updated locations... \(__FUNCTION__)")
     
       if locations.count > 0{
-        let location = (locations as [CLLocation])[0]
+        let location = (locations as! [CLLocation])[0]
         println("Location found = \(location)")
         if let theFloor = location.floor{
           println("The floor information is = \(theFloor)")

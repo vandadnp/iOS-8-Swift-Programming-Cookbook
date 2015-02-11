@@ -30,7 +30,7 @@ class ViewController: UICollectionViewController {
     UIColor.greenColor(),
     UIColor.blueColor()]
   
-  override init(collectionViewLayout layout: UICollectionViewLayout!) {
+  override init(collectionViewLayout layout: UICollectionViewLayout) {
     super.init(collectionViewLayout: layout)
     
     collectionView!.registerClass(UICollectionViewCell.classForCoder(),
@@ -70,7 +70,7 @@ class ViewController: UICollectionViewController {
       
       let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
         "cell",
-        forIndexPath: indexPath) as UICollectionViewCell
+        forIndexPath: indexPath) as! UICollectionViewCell
       
       cell.backgroundColor = allSectionColors[indexPath.section]
       

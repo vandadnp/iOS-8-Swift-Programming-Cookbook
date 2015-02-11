@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     /* Find out what the reason was for the player to stop */
     let reason =
     notification.userInfo![MPMoviePlayerPlaybackDidFinishReasonUserInfoKey]
-      as NSNumber?
+      as! NSNumber?
     
     if let theReason = reason{
       

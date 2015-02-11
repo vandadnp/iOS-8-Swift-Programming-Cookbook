@@ -29,7 +29,7 @@ class ViewController: UITableViewController {
   
   /* Our news items comes from the app delegate */
   var newsItems: [NewsItem]{
-  let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+  let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
   return appDelegate.newsItems
   }
   

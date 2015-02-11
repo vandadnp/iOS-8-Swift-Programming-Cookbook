@@ -137,7 +137,7 @@ class ViewController: UIViewController {
     /* Get the document folder(s) */
     let folders = NSSearchPathForDirectoriesInDomains(.DocumentDirectory,
       .UserDomainMask,
-      true) as [String]
+      true) as! [String]
     
     /* Did we find anything? */
     if folders.count == 0{
@@ -204,8 +204,8 @@ class ViewController: UIViewController {
           /* Now sort the numbers */
           randomNumbers!.sortUsingComparator({
             (obj1: AnyObject!, obj2: AnyObject!) -> NSComparisonResult in
-            let number1 = obj1 as NSNumber
-            let number2 = obj2 as NSNumber
+            let number1 = obj1 as! NSNumber
+            let number2 = obj2 as! NSNumber
             return number1.compare(number2)
             })
         }

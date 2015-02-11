@@ -121,7 +121,7 @@ class ViewController: UIViewController, HMHomeManagerDelegate{
       completionHandler: self.roomAddedToHomeCompletionHandler)
   }
   
-  func homeManagerDidUpdateHomes(manager: HMHomeManager!) {
+  func homeManagerDidUpdateHomes(manager: HMHomeManager) {
     
     manager.addHomeWithName(randomHomeName, completionHandler: {
       [weak self](home: HMHome!, error :NSError!) in

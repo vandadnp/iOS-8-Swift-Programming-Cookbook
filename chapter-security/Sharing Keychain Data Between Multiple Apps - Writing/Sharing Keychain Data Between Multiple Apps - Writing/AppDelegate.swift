@@ -40,13 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /* First delete the existing one if one exists. We don't have to do this
     but SecItemAdd will fail if an existing value is in the keychain. */
     let query = [
-      kSecClass as NSString :
-      kSecClassGenericPassword as NSString,
+      kSecClass as! String :
+      kSecClassGenericPassword as! String,
       
-      kSecAttrService as NSString : service,
-      kSecAttrAccessGroup as NSString : accessGroup,
-      kSecAttrAccount as NSString : key
-      ] as NSDictionary
+      kSecAttrService as! String : service,
+      kSecAttrAccessGroup as! String : accessGroup,
+      kSecAttrAccount as! String : key
+      ]
     
     
     SecItemDelete(query)
@@ -57,14 +57,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       allowLossyConversion: false)
     
     let secItem = [
-      kSecClass as NSString :
-      kSecClassGenericPassword as NSString,
+      kSecClass as! String :
+      kSecClassGenericPassword as! String,
       
-      kSecAttrService as NSString : service,
-      kSecAttrAccount as NSString : key,
-      kSecAttrAccessGroup as NSString : accessGroup,
-      kSecValueData as NSString : valueData!,
-      ] as NSDictionary
+      kSecAttrService as! String : service,
+      kSecAttrAccount as! String : key,
+      kSecAttrAccessGroup as! String : accessGroup,
+      kSecValueData as! String : valueData!,
+      ]
     
     var result: Unmanaged<AnyObject>? = nil
     let status = Int(SecItemAdd(secItem, &result))

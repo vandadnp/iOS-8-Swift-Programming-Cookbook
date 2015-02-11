@@ -41,7 +41,7 @@ class ViewController: UICollectionViewController {
     let pinch = UIPinchGestureRecognizer(target: self,
       action: "handlePinches:")
     
-    for recognizer in collectionView!.gestureRecognizers as
+    for recognizer in collectionView!.gestureRecognizers as!
       [UIGestureRecognizer]{
         if recognizer is UIPinchGestureRecognizer{
           recognizer.requireGestureRecognizerToFail(pinch)
@@ -57,7 +57,7 @@ class ViewController: UICollectionViewController {
     let defaultLayoutItemSize = CGSize(width: 80, height: 120)
     
     let layout = collectionView!.collectionViewLayout
-      as UICollectionViewFlowLayout
+      as! UICollectionViewFlowLayout
     
     layout.itemSize =
       CGSize(width: defaultLayoutItemSize.width * pinch.scale,
@@ -67,7 +67,7 @@ class ViewController: UICollectionViewController {
     
   }
 
-  override init(collectionViewLayout layout: UICollectionViewLayout!) {
+  override init(collectionViewLayout layout: UICollectionViewLayout) {
     super.init(collectionViewLayout: layout)
     
     let nib = UINib(nibName: "MyCollectionViewCell", bundle: nil)
@@ -107,7 +107,7 @@ class ViewController: UICollectionViewController {
     cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
       
       let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
-        "cell", forIndexPath: indexPath) as MyCollectionViewCell
+        "cell", forIndexPath: indexPath) as! MyCollectionViewCell
       
       cell.imageViewBackgroundImage.image = randomImage()
       cell.imageViewBackgroundImage.contentMode = .ScaleAspectFit

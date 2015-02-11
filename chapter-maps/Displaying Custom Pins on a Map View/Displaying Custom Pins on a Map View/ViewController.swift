@@ -41,7 +41,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
       
       /* First typecast the annotation for which the Map View has
       fired this delegate message */
-      let senderAnnotation = annotation as MyAnnotation
+      let senderAnnotation = annotation as! MyAnnotation
       
       /* We will attempt to get a reusable
       identifier for the pin we are about to create */

@@ -32,12 +32,12 @@ class StringReverserActivity: UIActivity {
   */
   var activityItems = [NSString]()
   
-  func reverseOfString(string: NSString) -> NSString{
+  func reverseOfString(string: String) -> String{
     
     var result = ""
     var characters = [Character]()
     
-    for character in string as String{
+    for character in string{
       characters.append(character)
     }
     
@@ -54,7 +54,7 @@ class StringReverserActivity: UIActivity {
     var reversedStrings = ""
     
     for string in activityItems{
-      reversedStrings += reverseOfString(string) + "\n"
+      reversedStrings += reverseOfString(String(string)) + "\n"
     }
     
     /* Do whatever that you need to do, with all these
@@ -91,8 +91,8 @@ class StringReverserActivity: UIActivity {
   override func prepareWithActivityItems(paramActivityItems: [AnyObject]) {
     
     for object:AnyObject in paramActivityItems{
-      if object is NSString{
-        activityItems.append(object as NSString)
+      if object is String{
+        activityItems.append(NSString(string: object as! String))
       }
     }
     

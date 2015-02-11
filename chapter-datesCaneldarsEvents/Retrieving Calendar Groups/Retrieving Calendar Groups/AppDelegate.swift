@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   //    var icloudEventSource: EKSource?
   //
   //    let eventStore = EKEventStore()
-  //    for source in eventStore.sources() as [EKSource]{
+  //    for source in eventStore.sources() as! [EKSource]{
   //      if source.sourceType.value == EKSourceTypeCalDAV.value &&
   //        source.title.lowercaseString == "icloud"{
   //          icloudEventSource = source
@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var icloudEventSource: EKSource?
     
     let eventStore = EKEventStore()
-    for source in eventStore.sources() as [EKSource]{
+    for source in eventStore.sources() as! [EKSource]{
       if source.sourceType.value == EKSourceTypeCalDAV.value &&
         source.title.lowercaseString == "icloud"{
           icloudEventSource = source
@@ -64,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       let calendars = source.calendarsForEntityType(EKEntityTypeEvent)
       
-      for calendar in calendars.allObjects as [EKCalendar]{
+      for calendar in calendars as! Set<EKCalendar>{
         println(calendar)
       }
       

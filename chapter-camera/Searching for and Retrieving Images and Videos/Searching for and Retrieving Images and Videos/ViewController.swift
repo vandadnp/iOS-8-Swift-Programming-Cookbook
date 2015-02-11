@@ -89,7 +89,7 @@ class ViewController: UIViewController {
       stop: UnsafeMutablePointer<ObjCBool>) in
       
       if object is PHAsset{
-        let asset = object as PHAsset
+        let asset = object as! PHAsset
         
         let imageSize = CGSize(width: asset.pixelWidth,
           height: asset.pixelHeight)

@@ -34,9 +34,9 @@ class ViewController: UIViewController, NSURLSessionDelegate,
   
   var session: NSURLSession!
   
-  func URLSession(session: NSURLSession!,
-    task: NSURLSessionTask!,
-    didCompleteWithError error: NSError!){
+  func URLSession(session: NSURLSession,
+    task: NSURLSessionTask,
+    didCompleteWithError error: NSError?){
       
       /* Now you have your data in the mutableData property */
       session.finishTasksAndInvalidate()

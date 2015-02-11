@@ -141,19 +141,19 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
   var squareViews = [AnyObject]()
   var animator: UIDynamicAnimator?
   
-  func collisionBehavior(behavior: UICollisionBehavior!,
-    beganContactForItem item: UIDynamicItem!,
-    withBoundaryIdentifier identifier: NSCopying!,
+  func collisionBehavior(behavior: UICollisionBehavior,
+    beganContactForItem item: UIDynamicItem,
+    withBoundaryIdentifier identifier: NSCopying,
     atPoint p: CGPoint){
       
       if identifier as? String == bottomBoundary{
         UIView.animateWithDuration(1, animations: {
-          let view = item as UIView
+          let view = item as! UIView
           view.backgroundColor = UIColor.redColor()
           view.alpha = 0
           view.transform = CGAffineTransformMakeScale(2, 2)
           }, completion:{(finished: Bool) in
-            let view = item as UIView
+            let view = item as! UIView
             behavior.removeItem(item)
             view.removeFromSuperview()
           })

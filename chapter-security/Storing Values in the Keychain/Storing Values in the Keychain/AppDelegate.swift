@@ -40,13 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
       let service = NSBundle.mainBundle().bundleIdentifier!
       
       let secItem = [
-        kSecClass as NSString :
-      kSecClassGenericPassword as NSString,
+        kSecClass as! String :
+      kSecClassGenericPassword as! String,
         
-        kSecAttrService as NSString : service,
-        kSecAttrAccount as NSString : key,
-        kSecValueData as NSString : valueData!,
-        ] as NSDictionary
+        kSecAttrService as! String : service,
+        kSecAttrAccount as! String : key,
+        kSecValueData as! String : valueData!,
+        ]
       
       var result: Unmanaged<AnyObject>? = nil
       let status = Int(SecItemAdd(secItem, &result))

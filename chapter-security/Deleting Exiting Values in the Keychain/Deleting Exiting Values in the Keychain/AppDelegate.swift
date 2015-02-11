@@ -36,12 +36,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let service = NSBundle.mainBundle().bundleIdentifier!
       
       let query = [
-        kSecClass as NSString :
-      kSecClassGenericPassword as NSString,
+        kSecClass as! String :
+        kSecClassGenericPassword as! String,
         
-        kSecAttrService as NSString : service,
-        kSecAttrAccount as NSString : keyToSearchFor,
-        ] as NSDictionary
+        kSecAttrService as! String : service,
+        kSecAttrAccount as! String : keyToSearchFor,
+        ]
       
       
       var result: Unmanaged<AnyObject>? = nil

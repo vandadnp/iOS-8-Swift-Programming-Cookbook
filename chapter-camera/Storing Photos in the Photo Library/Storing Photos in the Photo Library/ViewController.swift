@@ -44,8 +44,8 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
       }
   }
   
-  func imagePickerController(picker: UIImagePickerController!,
-    didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!){
+  func imagePickerController(picker: UIImagePickerController,
+    didFinishPickingMediaWithInfo info: [NSObject : AnyObject]){
       
       println("Picker returned successfully")
       
@@ -54,16 +54,16 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
       if let type:AnyObject = mediaType{
         
         if type is String{
-          let stringType = type as String
+          let stringType = type as! String
             
           if stringType == kUTTypeImage as NSString{
             
             var theImage: UIImage!
             
             if picker.allowsEditing{
-              theImage = info[UIImagePickerControllerEditedImage] as UIImage
+              theImage = info[UIImagePickerControllerEditedImage] as! UIImage
             } else {
-              theImage = info[UIImagePickerControllerOriginalImage] as UIImage
+              theImage = info[UIImagePickerControllerOriginalImage] as! UIImage
             }
             
             
@@ -100,7 +100,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     sourceType: UIImagePickerControllerSourceType) -> Bool{
       
       let availableMediaTypes =
-      UIImagePickerController.availableMediaTypesForSourceType(sourceType) as
+      UIImagePickerController.availableMediaTypesForSourceType(sourceType) as!
         [String]?
       
       if let types = availableMediaTypes{
@@ -115,7 +115,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   }
   
   func doesCameraSupportTakingPhotos() -> Bool{
-    return cameraSupportsMedia(kUTTypeImage as NSString, sourceType: .Camera)
+    return cameraSupportsMedia(kUTTypeImage as NSString as! String, sourceType: .Camera)
   }
   
   override func viewDidAppear(animated: Bool) {

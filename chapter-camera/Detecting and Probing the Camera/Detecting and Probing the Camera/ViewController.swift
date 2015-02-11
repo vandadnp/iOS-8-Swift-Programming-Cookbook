@@ -107,7 +107,7 @@ class ViewController: UIViewController {
     sourceType: UIImagePickerControllerSourceType) -> Bool{
 
       let availableMediaTypes =
-      UIImagePickerController.availableMediaTypesForSourceType(sourceType) as
+      UIImagePickerController.availableMediaTypesForSourceType(sourceType) as!
         [String]?
       
       if let types = availableMediaTypes{
@@ -122,11 +122,11 @@ class ViewController: UIViewController {
   }
 
   func doesCameraSupportShootingVideos() -> Bool{
-    return cameraSupportsMedia(kUTTypeMovie as NSString, sourceType: .Camera)
+    return cameraSupportsMedia(kUTTypeMovie as NSString as! String, sourceType: .Camera)
   }
 
   func doesCameraSupportTakingPhotos() -> Bool{
-    return cameraSupportsMedia(kUTTypeImage as NSString, sourceType: .Camera)
+    return cameraSupportsMedia(kUTTypeImage as NSString as! String, sourceType: .Camera)
   }
   
   func isFrontCameraAvailable() -> Bool{

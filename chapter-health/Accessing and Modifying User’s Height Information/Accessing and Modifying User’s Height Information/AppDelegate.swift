@@ -29,12 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(application: UIApplication,
-    shouldRestoreApplicationState coder: NSCoder!) -> Bool {
+    shouldRestoreApplicationState coder: NSCoder) -> Bool {
     return true
   }
   
   func application(application: UIApplication,
-    shouldSaveApplicationState coder: NSCoder!) -> Bool {
+    shouldSaveApplicationState coder: NSCoder) -> Bool {
       return true
   }
 

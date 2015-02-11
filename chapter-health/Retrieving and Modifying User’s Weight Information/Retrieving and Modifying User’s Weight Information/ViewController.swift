@@ -81,7 +81,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if results.count > 0{
           
           /* We only have one sample really */
-          let sample = results[0] as HKQuantitySample
+          let sample = results[0] as! HKQuantitySample
           /* Get the weight in kilograms from the quantity */
           let weightInKilograms = sample.quantity.doubleValueForUnit(
             HKUnit.gramUnitWithMetricPrefix(.Kilo))
@@ -124,7 +124,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
   }
   
-  func textFieldShouldReturn(textField: UITextField!) -> Bool {
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
     textField.resignFirstResponder()
     return true
   }

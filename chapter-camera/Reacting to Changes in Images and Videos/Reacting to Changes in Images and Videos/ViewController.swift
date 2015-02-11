@@ -62,7 +62,7 @@ class ViewController: UIViewController, PHPhotoLibraryChangeObserver {
   
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
-    buttonChange = UIButton.buttonWithType(.System) as UIButton
+    buttonChange = UIButton.buttonWithType(.System) as! UIButton
     buttonChange.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
     buttonChange.setTitle("Change photo", forState: .Normal)
     buttonChange.addTarget(self,

@@ -40,14 +40,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let accessGroup = "F3FU372W5M.*"
       
       let query = [
-        kSecClass as NSString :
-        kSecClassGenericPassword as NSString,
+        kSecClass as! String :
+        kSecClassGenericPassword as! String,
         
-        kSecAttrService as NSString : service,
-        kSecAttrAccessGroup as NSString : accessGroup,
-        kSecAttrAccount as NSString : key,
-        kSecReturnData as NSString : kCFBooleanTrue,
-        ] as NSDictionary
+        kSecAttrService as! String : service,
+        kSecAttrAccessGroup as! String : accessGroup,
+        kSecAttrAccount as! String : key,
+        kSecReturnData as! String : kCFBooleanTrue,
+        ]
       
       
       var returnedData: Unmanaged<AnyObject>? = nil
@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       if results == Int(errSecSuccess){
         
-        let data = returnedData!.takeRetainedValue() as NSData
+        let data = returnedData!.takeRetainedValue() as! NSData
         
         let value = NSString(data: data, encoding: NSUTF8StringEncoding)
         

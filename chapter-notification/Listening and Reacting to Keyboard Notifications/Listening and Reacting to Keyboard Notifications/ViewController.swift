@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var textField: UITextField!
   @IBOutlet weak var scrollView: UIScrollView!
   
-  func textFieldShouldReturn(textField: UITextField!) -> Bool {
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
     textField.resignFirstResponder()
     return true
   }
@@ -43,10 +43,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
       gets displayed on the screen. We will animate our contents using
       the same animation duration */
       let animationDurationObject =
-      info[UIKeyboardAnimationDurationUserInfoKey] as NSValue
+      info[UIKeyboardAnimationDurationUserInfoKey] as! NSValue
       
       let keyboardEndRectObject =
-      info[UIKeyboardFrameEndUserInfoKey] as NSValue
+      info[UIKeyboardFrameEndUserInfoKey] as! NSValue
       
       var animationDuration = 0.0
       var keyboardEndRect = CGRectZero
@@ -87,7 +87,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     if let info = userInfo{
       let animationDurationObject =
       info[UIKeyboardAnimationDurationUserInfoKey]
-        as NSValue
+        as! NSValue
       
       var animationDuration = 0.0;
       

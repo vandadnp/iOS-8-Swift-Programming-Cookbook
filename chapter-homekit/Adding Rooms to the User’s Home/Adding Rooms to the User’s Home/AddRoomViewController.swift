@@ -32,7 +32,7 @@ class AddRoomViewController: UIViewController{
   
   @IBAction func addRoom(){
     
-    if countElements(textField.text) == 0{
+    if count(textField.text) == 0{
       UIAlertController.showAlertControllerOnHostController(self,
         title: "Room name", message: "Please enter the room name",
         buttonTitle: "OK")

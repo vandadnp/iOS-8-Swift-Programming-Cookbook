@@ -183,9 +183,9 @@ NSURLSessionDataDelegate {
   
   /* This method will get called on a random thread because
   we have not provided an operation queue to our session */
-  func URLSession(session: NSURLSession!,
-    dataTask: NSURLSessionDataTask!,
-    didReceiveData data: NSData!) {
+  func URLSession(session: NSURLSession,
+    dataTask: NSURLSessionDataTask,
+    didReceiveData data: NSData) {
       
       data.enumerateByteRangesUsingBlock{[weak self]
         (pointer: UnsafePointer<()>,
@@ -197,9 +197,9 @@ NSURLSessionDataDelegate {
       
   }
   
-  func URLSession(session: NSURLSession!,
-    task: NSURLSessionTask!,
-    didCompleteWithError error: NSError!){
+  func URLSession(session: NSURLSession,
+    task: NSURLSessionTask,
+    didCompleteWithError error: NSError?){
       
       /* Now you have your data in the mutableData property */
       session.finishTasksAndInvalidate()

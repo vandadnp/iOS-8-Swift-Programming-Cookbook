@@ -104,7 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let result = fileManager.contentsOfDirectoryAtURL(bundleUrl,
       includingPropertiesForKeys: propertiesToGet,
       options: nil,
-      error: &error) as [NSURL]
+      error: &error) as! [NSURL]
     
     if let theError = error{
       println("An error occurred")
@@ -121,7 +121,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       &value,
       forKey: property,
       error: &error) && value != nil{
-        let number = value as NSNumber
+        let number = value as! NSNumber
         return number.boolValue ? "YES" : "NO"
     }
     

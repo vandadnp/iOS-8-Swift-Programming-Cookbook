@@ -39,11 +39,11 @@ class ListRoomsTableViewController: UITableViewController, HMHomeDelegate {
   
   let addRoomSegueIdentifier = "addRoom"
   
-  func home(home: HMHome!, didAddRoom room: HMRoom!) {
+  func home(home: HMHome, didAddRoom room: HMRoom!) {
     println("Added a new room to the home")
   }
   
-  func home(home: HMHome!, didRemoveRoom room: HMRoom!) {
+  func home(home: HMHome, didRemoveRoom room: HMRoom!) {
     println("A room has been removed from the home")
   }
   
@@ -60,7 +60,7 @@ class ListRoomsTableViewController: UITableViewController, HMHomeDelegate {
         TableViewValues.identifier, forIndexPath: indexPath)
         as! UITableViewCell
       
-      let room = home.rooms[indexPath.row] as HMRoom
+      let room = home.rooms[indexPath.row] as! HMRoom
       
       cell.textLabel!.text = room.name
       
@@ -74,7 +74,7 @@ class ListRoomsTableViewController: UITableViewController, HMHomeDelegate {
       
       if editingStyle == .Delete{
         
-        let room = home.rooms[indexPath.row] as HMRoom
+        let room = home.rooms[indexPath.row] as! HMRoom
         home.removeRoom(room, completionHandler: {[weak self]
           (error: NSError!) in
           
@@ -104,7 +104,7 @@ class ListRoomsTableViewController: UITableViewController, HMHomeDelegate {
       if segue.identifier == addRoomSegueIdentifier{
         
         let controller = segue.destinationViewController
-          as AddRoomViewController
+          as! AddRoomViewController
         
         controller.homeManager = homeManager
         controller.home = home

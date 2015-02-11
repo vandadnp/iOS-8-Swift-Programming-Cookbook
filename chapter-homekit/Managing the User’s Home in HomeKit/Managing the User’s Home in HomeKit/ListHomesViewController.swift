@@ -51,7 +51,7 @@
 //        TableViewValues.identifier, forIndexPath: indexPath)
 //        as! UITableViewCell
 //      
-//      let home = homeManager.homes[indexPath.row] as HMHome
+//      let home = homeManager.homes[indexPath.row] as! HMHome
 //      
 //      cell.textLabel!.text = home.name
 //      
@@ -59,7 +59,7 @@
 //      
 //  }
 //  
-//  func homeManagerDidUpdateHomes(manager: HMHomeManager!) {
+//  func homeManagerDidUpdateHomes(manager: HMHomeManager) {
 //    tableView.reloadData()
 //  }
 //  
@@ -69,7 +69,7 @@
 //      if segue.identifier == segueIdentifier{
 //        
 //        let controller = segue.destinationViewController
-//          as AddHomeViewController
+//          as! AddHomeViewController
 //        controller.homeManager = homeManager
 //        
 //      }
@@ -140,7 +140,7 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
         TableViewValues.identifier, forIndexPath: indexPath)
         as! UITableViewCell
       
-      let home = homeManager.homes[indexPath.row] as HMHome
+      let home = homeManager.homes[indexPath.row] as! HMHome
       
       cell.textLabel!.text = home.name
       
@@ -148,11 +148,11 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
       
   }
   
-  func homeManager(manager: HMHomeManager!, didRemoveHome home: HMHome!) {
+  func homeManager(manager: HMHomeManager, didRemoveHome home: HMHome!) {
     println("A home has been deleted")
   }
   
-  func homeManagerDidUpdateHomes(manager: HMHomeManager!) {
+  func homeManagerDidUpdateHomes(manager: HMHomeManager) {
     tableView.reloadData()
   }
   
@@ -162,7 +162,7 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
       if segue.identifier == segueIdentifier{
         
         let controller = segue.destinationViewController
-          as AddHomeViewController
+          as! AddHomeViewController
         controller.homeManager = homeManager
         
       }
@@ -177,7 +177,7 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
       
       if editingStyle == .Delete{
         
-        let home = homeManager.homes[indexPath.row] as HMHome
+        let home = homeManager.homes[indexPath.row] as! HMHome
         homeManager.removeHome(home, completionHandler: {[weak self]
           (error: NSError!) in
           

@@ -134,11 +134,11 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let segments = NSArray(objects:
+    let segments = [
       "Red",
       UIImage(named: "blueDot")!,
       "Green",
-      "Yellow")
+      "Yellow"]
     
     segmentedControl = UISegmentedControl(items: segments)
     segmentedControl.center = view.center

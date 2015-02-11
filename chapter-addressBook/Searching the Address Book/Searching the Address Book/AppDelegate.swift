@@ -46,10 +46,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       for person: ABRecordRef in people{
         
         let firstName = ABRecordCopyValue(person,
-          kABPersonFirstNameProperty).takeRetainedValue() as String
+          kABPersonFirstNameProperty).takeRetainedValue() as! String
         
         let lastName = ABRecordCopyValue(person,
-          kABPersonLastNameProperty).takeRetainedValue() as String
+          kABPersonLastNameProperty).takeRetainedValue() as! String
                       
             if firstName == paramFirstName &&
               lastName == paramLastName{
@@ -69,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       for group: ABRecordRef in groups{
         
         let groupName = ABRecordCopyValue(group,
-          kABGroupNameProperty).takeRetainedValue() as String
+          kABGroupNameProperty).takeRetainedValue() as! String
         
         if groupName == name{
           return true

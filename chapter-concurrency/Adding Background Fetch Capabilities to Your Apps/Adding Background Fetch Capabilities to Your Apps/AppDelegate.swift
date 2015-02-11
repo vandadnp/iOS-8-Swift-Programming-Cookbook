@@ -71,7 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(application: UIApplication,
     performFetchWithCompletionHandler completionHandler:
-    ((UIBackgroundFetchResult) -> Void)!){
+    ((UIBackgroundFetchResult) -> Void)){
       
       if self.fetchNewsItems(){
         completionHandler(.NewData)

@@ -87,7 +87,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate {
     /* Audio Session is interrupted. The player will be paused here */
     
     let interruptionTypeAsObject =
-    notification.userInfo![AVAudioSessionInterruptionTypeKey] as NSNumber
+    notification.userInfo![AVAudioSessionInterruptionTypeKey] as! NSNumber
     
     let interruptionType = AVAudioSessionInterruptionType(rawValue:
       interruptionTypeAsObject.unsignedLongValue)

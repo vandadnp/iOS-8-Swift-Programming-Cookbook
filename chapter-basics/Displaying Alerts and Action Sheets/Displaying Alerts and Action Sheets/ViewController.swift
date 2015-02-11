@@ -80,7 +80,7 @@ class ViewController: UIViewController {
       handler: {[weak self] (paramAction:UIAlertAction!) in
         
         if let textFields = self!.controller?.textFields{
-          let theTextFields = textFields as [UITextField]
+          let theTextFields = textFields as! [UITextField]
           let userName = theTextFields[0].text
           println("Your username is \(userName)")
         }

@@ -341,7 +341,7 @@
 				INFOPLIST_FILE = "Writing to and Reading Keychain Data from iCloud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -356,7 +356,7 @@
 				INFOPLIST_FILE = "Writing to and Reading Keychain Data from iCloud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

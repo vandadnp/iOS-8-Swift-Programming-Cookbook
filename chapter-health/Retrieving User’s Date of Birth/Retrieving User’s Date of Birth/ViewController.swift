@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     HKCharacteristicTypeIdentifierDateOfBirth)
   
   lazy var types: Set<NSObject>! = {
-    return Set([self.dateOrBirthCharacteristicType])
+    return Set([self.dateOfBirthCharacteristicType])
     }()
   
   lazy var healthStore = HKHealthStore()

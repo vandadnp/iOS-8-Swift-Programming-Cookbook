@@ -111,7 +111,7 @@ func audioPlayerEndInterruption(player: AVAudioPlayer!,
     
   }
   
-  func audioRecordingSettings() -> NSDictionary{
+  func audioRecordingSettings() -> [NSObject : AnyObject]{
     
     /* Let's prepare the audio recorder options in the dictionary.
     Later we will use this dictionary to instantiate an audio

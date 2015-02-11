@@ -44,10 +44,10 @@ import UIKit
   
   required init(coder aDecoder: NSCoder) {
       self.firstName = aDecoder.decodeObjectForKey(SerializationKey.firstName)
-        as String
+        as! String
     
       self.lastName = aDecoder.decodeObjectForKey(SerializationKey.lastName)
-        as String
+        as! String
   }
   
   func encodeWithCoder(aCoder: NSCoder) {
@@ -74,7 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     NSKeyedArchiver.archiveRootObject(firstPerson, toFile: path)
     
     var secondPerson = NSKeyedUnarchiver.unarchiveObjectWithFile(path)
-      as Person!
+      as! Person!
     
     if firstPerson == secondPerson{
       println("Both persons are the same")

@@ -49,24 +49,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func example2(){
     
-var error:NSError?
-let path = NSTemporaryDirectory() + "MyFile.txt"
-
-let succeeded = "Hello, World!".writeToFile(path,
-  atomically: true,
-  encoding: NSUTF8StringEncoding,
-  error: &error)
-
-if (succeeded){
-  /* Now read from the same file */
-  let readString = NSString(contentsOfFile: path,
-    encoding: NSUTF8StringEncoding, error: nil) as String
-  println("The read string is: \(readString)")
-} else {
-  if let theError = error{
-    println("Could not write. Error = \(theError)")
-  }
-}
+    var error:NSError?
+    let path = NSTemporaryDirectory() + "MyFile.txt"
+    
+    let succeeded = "Hello, World!".writeToFile(path,
+      atomically: true,
+      encoding: NSUTF8StringEncoding,
+      error: &error)
+    
+    if (succeeded){
+      /* Now read from the same file */
+      let readString = NSString(contentsOfFile: path,
+        encoding: NSUTF8StringEncoding, error: nil) as! String
+      println("The read string is: \(readString)")
+    } else {
+      if let theError = error{
+        println("Could not write. Error = \(theError)")
+      }
+    }
     
   }
   

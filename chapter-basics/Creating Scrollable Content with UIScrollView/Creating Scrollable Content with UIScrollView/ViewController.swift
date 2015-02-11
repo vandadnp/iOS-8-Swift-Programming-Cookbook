@@ -70,7 +70,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     scrollView.alpha = 1
   }
   
-  func scrollViewDidEndDragging(scrollView: UIScrollView!,
+  func scrollViewDidEndDragging(scrollView: UIScrollView,
     willDecelerate decelerate: Bool){
       scrollView.alpha = 1
   }

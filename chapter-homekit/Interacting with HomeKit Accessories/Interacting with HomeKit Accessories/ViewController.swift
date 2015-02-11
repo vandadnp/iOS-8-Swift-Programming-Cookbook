@@ -28,7 +28,7 @@ extension HMCharacteristic{
   
   func containsProperty(paramProperty: String) -> Bool{
     if let propeties = self.properties{
-      for property in properties as [String]{
+      for property in properties as! [String]{
         if property == paramProperty{
           return true
         }
@@ -65,7 +65,7 @@ HMAccessoryBrowserDelegate {
     
     /* Can we find the old value? */
     if let name = defaults.stringForKey(homeNameKey){
-      if countElements(name) > 0 {
+      if count(name) > 0 {
         return name
       }
     }
@@ -124,15 +124,15 @@ HMAccessoryBrowserDelegate {
     
   }
   
-  func homeManagerDidUpdateHomes(manager: HMHomeManager!) {
+  func homeManagerDidUpdateHomes(manager: HMHomeManager) {
     
-    for home in manager.homes as [HMHome]{
+    for home in manager.homes as! [HMHome]{
       if home.name == homeName{
         
         println("Found the home")
         self.home = home
         
-        for room in home.rooms as [HMRoom]{
+        for room in home.rooms as! [HMRoom]{
           if room.name == roomName{
             println("Found the room")
             self.room = room
@@ -156,7 +156,7 @@ HMAccessoryBrowserDelegate {
     
   }
   
-  func accessoryBrowser(browser: HMAccessoryBrowser!,
+  func accessoryBrowser(browser: HMAccessoryBrowser,
     didFindNewAccessory accessory: HMAccessory!) {
       
       println("Found an accessory...")
@@ -200,8 +200,8 @@ HMAccessoryBrowserDelegate {
     
     println("Finding the brightness characteristic of the projector...")
     
-    for service in projectorAccessory.services as [HMService]{
-      for characteristic in service.characteristics as [HMCharacteristic]{
+    for service in projectorAccessory.services as! [HMService]{
+      for characteristic in service.characteristics as! [HMCharacteristic]{
         if characteristic.characteristicType == HMCharacteristicTypeBrightness{
           println("Found it")
           brightnessCharacteristic = characteristic
@@ -229,7 +229,7 @@ HMAccessoryBrowserDelegate {
           println("Read the brightness value. Setting it now...")
           
           if brightnessCharacteristic.isWritable(){
-            let newValue = (brightnessCharacteristic.value as Float) - 1.0
+            let newValue = (brightnessCharacteristic.value as! Float) - 1.0
             brightnessCharacteristic.writeValue(newValue,
               completionHandler: {(error: NSError!) in
                 
@@ -261,7 +261,7 @@ HMAccessoryBrowserDelegate {
   func findCinemaRoomProjectorAccessory(){
     
     if let accessories = room.accessories{
-      for accessory in accessories as [HMAccessory]{
+      for accessory in accessories as! [HMAccessory]{
         if accessory.name == accessoryName{
           println("Found the projector accessory in the room")
           self.projectorAccessory = accessory

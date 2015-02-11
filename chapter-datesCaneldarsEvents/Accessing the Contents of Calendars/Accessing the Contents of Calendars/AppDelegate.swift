@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     type: EKSourceType,
     title: String) -> EKSource?{
       
-      for source in eventStore.sources() as [EKSource]{
+      for source in eventStore.sources() as! [EKSource]{
         if source.sourceType.value == type.value &&
           source.title.caseInsensitiveCompare(title) ==
           NSComparisonResult.OrderedSame{
@@ -51,13 +51,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     source: EKSource,
     eventType: EKEntityType) -> EKCalendar?{
       
-      for calendar in source.calendarsForEntityType(eventType).allObjects
-        as [EKCalendar]{
-          if calendar.title.caseInsensitiveCompare(title) ==
-            NSComparisonResult.OrderedSame &&
-            calendar.type.value == type.value{
-              return calendar
-          }
+      for calendar in source.calendarsForEntityType(eventType)
+        as! Set<EKCalendar>{
+        if calendar.title.caseInsensitiveCompare(title) ==
+          NSComparisonResult.OrderedSame &&
+          calendar.type.value == type.value{
+            return calendar
+        }
       }
       
       return nil
@@ -111,7 +111,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /* Fetch all the events that fall between
     the starting and the ending dates */
     let events = eventStore.eventsMatchingPredicate(searchPredicate)
-      as [EKEvent]
+      as! [EKEvent]
     
     if events.count == 0{
       println("No events could be found")

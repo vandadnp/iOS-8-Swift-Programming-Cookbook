@@ -53,7 +53,7 @@ MKMapViewDelegate, CLLocationManagerDelegate {
       search.startWithCompletionHandler{
         (response: MKLocalSearchResponse!, error: NSError!) in
         
-        for item in response.mapItems as [MKMapItem]{
+        for item in response.mapItems as! [MKMapItem]{
           
           println("Item name = \(item.name)")
           println("Item phone number = \(item.phoneNumber)")
