@@ -2,6 +2,37 @@
 <Workspace
    version = "1.0">
    <Group
+      location = "group:chapter-datesCalendarsEvents"
+      name = "chapter-datesCalendarsEvents">
+      <FileRef
+         location = "group:Retrieving the Attendees of an Event/Retrieving the Attendees of an Event.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Retrieving Calendar Groups/Retrieving Calendar Groups.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Requesting Permission to Access Calendars/Requesting Permission to Access Calendars.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Removing Events From Calendars/Removing Events From Calendars.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Constructing Date Objects/Constructing Date Objects.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Adding Recurring Events to Calendars/Adding Recurring Events to Calendars.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Adding Events to Calendars/Adding Events to Calendars.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Adding Alarms to Calendars/Adding Alarms to Calendars.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Accessing the Contents of Calendars/Accessing the Contents of Calendars.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
       location = "group:chapter-addressBook"
       name = "chapter-addressBook">
       <FileRef
@@ -248,37 +279,6 @@
       </FileRef>
       <FileRef
          location = "group:Writing to Core Data/Writing to Core Data.xcodeproj">
-      </FileRef>
-   </Group>
-   <Group
-      location = "group:chapter-datesCaneldarsEvents"
-      name = "chapter-datesCalendarsEvents">
-      <FileRef
-         location = "group:../chapter-datesCalendarsEvents/Retrieving the Attendees of an Event/Retrieving the Attendees of an Event.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:../chapter-datesCalendarsEvents/Retrieving Calendar Groups/Retrieving Calendar Groups.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:../chapter-datesCalendarsEvents/Requesting Permission to Access Calendars/Requesting Permission to Access Calendars.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:../chapter-datesCalendarsEvents/Removing Events From Calendars/Removing Events From Calendars.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:../chapter-datesCalendarsEvents/Constructing Date Objects/Constructing Date Objects.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:../chapter-datesCalendarsEvents/Adding Recurring Events to Calendars/Adding Recurring Events to Calendars.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:../chapter-datesCalendarsEvents/Adding Events to Calendars/Adding Events to Calendars.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:../chapter-datesCalendarsEvents/Adding Alarms to Calendars/Adding Alarms to Calendars.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:../chapter-datesCalendarsEvents/Accessing the Contents of Calendars/Accessing the Contents of Calendars.xcodeproj">
       </FileRef>
    </Group>
    <Group
