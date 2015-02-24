@@ -53,7 +53,7 @@ class PopoverTableViewController: UITableViewController {
   }()
   
   var cancelBarButtonItem: UIBarButtonItem!
-  var selectionHandler: ((selectedItem: String) -> Void!)?
+  var selectionHandler: ((selectedItem: String) -> Void)?
 
   override func viewDidLoad() {
     super.viewDidLoad()

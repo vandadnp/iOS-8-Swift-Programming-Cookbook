@@ -61,7 +61,7 @@ AudienceSelectionViewControllerDelegate, NSURLSessionDelegate {
     placeholder = "Your comments"
     
     let content = extensionContext!.inputItems[0] as! NSExtensionItem
-    let contentType = kUTTypeImage as String
+    let contentType = kUTTypeImage as! String
     
     for attachment in content.attachments as! [NSItemProvider]{
       if attachment.hasItemConformingToTypeIdentifier(contentType){

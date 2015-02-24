@@ -43,9 +43,9 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
       if let type:AnyObject = mediaType{
         
         if type is String{
-          let stringType = type as String
+          let stringType = type as! String
           
-          if stringType == kUTTypeMovie as NSString{
+          if stringType == kUTTypeMovie as! String{
             let urlOfVideo = info[UIImagePickerControllerMediaURL] as? NSURL
             if let url = urlOfVideo{
               
@@ -89,7 +89,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     sourceType: UIImagePickerControllerSourceType) -> Bool{
       
       let availableMediaTypes =
-      UIImagePickerController.availableMediaTypesForSourceType(sourceType) as
+      UIImagePickerController.availableMediaTypesForSourceType(sourceType) as!
         [String]?
       
       if let types = availableMediaTypes{
@@ -104,7 +104,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   }
   
   func doesCameraSupportShootingVideos() -> Bool{
-    return cameraSupportsMedia(kUTTypeMovie as NSString, sourceType: .Camera)
+    return cameraSupportsMedia(kUTTypeMovie as! String, sourceType: .Camera)
   }
   
   /* 1 */
@@ -126,7 +126,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   //      if let theController = controller{
   //        theController.sourceType = .Camera
   //
-  //        theController.mediaTypes = [kUTTypeMovie as NSString]
+  //        theController.mediaTypes = [kUTTypeMovie as! String]
   //
   //        theController.allowsEditing = true
   //        theController.delegate = self
@@ -158,7 +158,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
       if let theController = controller{
         theController.sourceType = .Camera
         
-        theController.mediaTypes = [kUTTypeMovie as NSString]
+        theController.mediaTypes = [kUTTypeMovie as! String]
         
         theController.allowsEditing = true
         theController.delegate = self

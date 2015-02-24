@@ -45,14 +45,14 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         if type is String{
           let stringType = type as! String
           
-          if stringType == kUTTypeMovie as NSString{
+          if stringType == kUTTypeMovie as! String{
             let urlOfVideo = info[UIImagePickerControllerMediaURL] as? NSURL
             if let url = urlOfVideo{
               println("Video URL = \(url)")
             }
           }
             
-          else if stringType == kUTTypeImage as NSString as NSString{
+          else if stringType == kUTTypeImage as! String{
             /* Let's get the metadata. This is only for images. Not videos */
             let metadata = info[UIImagePickerControllerMediaMetadata]
               as? NSDictionary
@@ -100,7 +100,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   }
 
   func doesCameraSupportTakingPhotos() -> Bool{
-    return cameraSupportsMedia(kUTTypeImage as NSString as! String, sourceType: .Camera)
+    return cameraSupportsMedia(kUTTypeImage as! String, sourceType: .Camera)
   }
   
   override func viewDidAppear(animated: Bool) {
@@ -121,7 +121,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
       if let theController = controller{
         theController.sourceType = .Camera
         
-        theController.mediaTypes = [kUTTypeImage as NSString]
+        theController.mediaTypes = [kUTTypeImage as! String]
         
         theController.allowsEditing = true
         theController.delegate = self

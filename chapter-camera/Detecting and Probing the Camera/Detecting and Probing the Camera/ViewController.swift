@@ -71,11 +71,11 @@
 //  }
 //  
 //  func doesCameraSupportShootingVideos() -> Bool{
-//    return cameraSupportsMedia(kUTTypeMovie as NSString, sourceType: .Camera)
+//    return cameraSupportsMedia(kUTTypeMovie as! String, sourceType: .Camera)
 //  }
 //  
 //  func doesCameraSupportTakingPhotos() -> Bool{
-//    return cameraSupportsMedia(kUTTypeImage as NSString, sourceType: .Camera)
+//    return cameraSupportsMedia(kUTTypeImage as! String, sourceType: .Camera)
 //  }
 //  
 //  override func viewDidLoad() {
@@ -122,11 +122,11 @@ class ViewController: UIViewController {
   }
 
   func doesCameraSupportShootingVideos() -> Bool{
-    return cameraSupportsMedia(kUTTypeMovie as NSString as! String, sourceType: .Camera)
+    return cameraSupportsMedia(kUTTypeMovie as! String, sourceType: .Camera)
   }
 
   func doesCameraSupportTakingPhotos() -> Bool{
-    return cameraSupportsMedia(kUTTypeImage as NSString as! String, sourceType: .Camera)
+    return cameraSupportsMedia(kUTTypeImage as! String, sourceType: .Camera)
   }
   
   func isFrontCameraAvailable() -> Bool{

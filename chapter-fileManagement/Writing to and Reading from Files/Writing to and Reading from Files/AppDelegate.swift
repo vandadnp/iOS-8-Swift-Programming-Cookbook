@@ -111,7 +111,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func example5(){
     let path = NSTemporaryDirectory() + "MyFile.txt"
-    let chars = [CUnsignedChar("a"), CUnsignedChar("b")]
+    let chars = [CUnsignedChar(ascii: "a"), CUnsignedChar(ascii: "b")]
     let data = NSData(bytes: chars, length: 2)
     if data.writeToFile(path, atomically: true){
       println("Wrote the data")

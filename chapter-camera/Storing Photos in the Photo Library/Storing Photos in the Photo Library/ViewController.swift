@@ -56,7 +56,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         if type is String{
           let stringType = type as! String
             
-          if stringType == kUTTypeImage as NSString{
+          if stringType == kUTTypeImage as! String{
             
             var theImage: UIImage!
             
@@ -115,7 +115,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   }
   
   func doesCameraSupportTakingPhotos() -> Bool{
-    return cameraSupportsMedia(kUTTypeImage as NSString as! String, sourceType: .Camera)
+    return cameraSupportsMedia(kUTTypeImage as! String, sourceType: .Camera)
   }
   
   override func viewDidAppear(animated: Bool) {
@@ -136,7 +136,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
       if let theController = controller{
         theController.sourceType = .Camera
         
-        theController.mediaTypes = [kUTTypeImage as NSString]
+        theController.mediaTypes = [kUTTypeImage as! String]
         
         theController.allowsEditing = true
         theController.delegate = self

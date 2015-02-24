@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func imageForPerson(person: ABRecordRef) -> UIImage?{
     
-    let data = ABPersonCopyImageData(person).takeRetainedValue() as! NSData
+    let data = ABPersonCopyImageData(person).takeRetainedValue() as NSData
     
     let image = UIImage(data: data)
     return image
