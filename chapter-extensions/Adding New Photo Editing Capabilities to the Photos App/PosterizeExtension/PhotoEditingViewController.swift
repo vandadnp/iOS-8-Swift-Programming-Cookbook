@@ -59,9 +59,9 @@ PHContentEditingController {
   func dataFromCiImage(image: CIImage) -> NSData{
     let glContext = EAGLContext(API: .OpenGLES2)
     let context = CIContext(EAGLContext: glContext)
-    let imageRef = context.createCGImage(image, fromRect: image.extent())
+    let imageRef = context.createCGImage(image, fromRect: image.extent)
     let image = UIImage(CGImage: imageRef, scale: 1.0, orientation: .Up)
-    return UIImageJPEGRepresentation(image, 1.0)
+    return UIImageJPEGRepresentation(image, 1.0)!
   }
   
   /* This takes the input and converts it to the output. The output
@@ -70,16 +70,16 @@ PHContentEditingController {
     PHContentEditingOutput{
       
       /* Get the required information from the asset */
-      let url = input.fullSizeImageURL
+      let url = input.fullSizeImageURL!
       let orientation = input.fullSizeImageOrientation
       
       /* Retrieve an instance of CIImage to apply our filter to */
       let inputImage =
       CIImage(contentsOfURL: url,
-        options: nil).imageByApplyingOrientation(orientation)
+        options: nil)!.imageByApplyingOrientation(orientation)
       
       /* Apply the filter to our image */
-      let filter = CIFilter(name: filterName)
+      let filter = CIFilter(name: filterName)!
       filter.setDefaults()
       filter.setValue(inputImage, forKey: kCIInputImageKey)
       let outputImage = filter.outputImage
@@ -98,7 +98,7 @@ PHContentEditingController {
         PHAdjustmentData(formatIdentifier: editFormatIdentifier,
           formatVersion: editFormatVersion,
           data: filterName.dataUsingEncoding(NSUTF8StringEncoding,
-            allowLossyConversion: false))
+            allowLossyConversion: false)!)
       
       return output
       
@@ -117,9 +117,13 @@ PHContentEditingController {
     dispatch_async(dispatch_get_main_queue(), {[weak self] in
       let strongSelf = self!
       
-      let data = NSData(contentsOfURL: strongSelf.output.renderedContentURL,
-        options: .DataReadingMappedIfSafe,
-        error: nil)
+      let data: NSData?
+      do {
+        data = try NSData(contentsOfURL: strongSelf.output.renderedContentURL,
+                options: .DataReadingMappedIfSafe)
+      } catch _ {
+        data = nil
+      }
       
       let image = UIImage(data: data!)
       

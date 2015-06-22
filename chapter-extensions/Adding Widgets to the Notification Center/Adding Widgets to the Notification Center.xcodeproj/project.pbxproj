@@ -12,7 +12,6 @@
 		A65234B71976792400D7029A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65234B51976792400D7029A /* Main.storyboard */; };
 		A65234B91976792400D7029A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65234B81976792400D7029A /* Images.xcassets */; };
 		A65234C51976792400D7029A /* Adding_Widgets_to_the_Notification_CenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65234C41976792400D7029A /* Adding_Widgets_to_the_Notification_CenterTests.swift */; };
-		A65234D51976793600D7029A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A65234D41976793600D7029A /* NotificationCenter.framework */; };
 		A65234DA1976793600D7029A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65234D91976793600D7029A /* TodayViewController.swift */; };
 		A65234DC1976793600D7029A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65234DB1976793600D7029A /* MainInterface.storyboard */; };
 		A65234DF1976793600D7029A /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A65234D21976793600D7029A /* Widget.appex */; };
@@ -67,7 +66,6 @@
 		A65234C31976792400D7029A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A65234C41976792400D7029A /* Adding_Widgets_to_the_Notification_CenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adding_Widgets_to_the_Notification_CenterTests.swift; sourceTree = "<group>"; };
 		A65234D21976793600D7029A /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		A65234D41976793600D7029A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		A65234D81976793600D7029A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A65234D91976793600D7029A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A65234DB1976793600D7029A /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A65234D51976793600D7029A /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +157,6 @@
 		A65234D31976793600D7029A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A65234D41976793600D7029A /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -247,7 +243,8 @@
 		A65234A41976792400D7029A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					A65234AB1976792400D7029A = {
@@ -387,6 +384,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -453,6 +451,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Adding Widgets to the Notification Center/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -464,6 +463,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Adding Widgets to the Notification Center/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -482,6 +482,7 @@
 				);
 				INFOPLIST_FILE = "Adding Widgets to the Notification CenterTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -497,6 +498,7 @@
 				);
 				INFOPLIST_FILE = "Adding Widgets to the Notification CenterTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -511,6 +513,7 @@
 				);
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app.ext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -521,6 +524,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app.ext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};

@@ -47,13 +47,13 @@ class KeyboardButton : UIView{
   init(buttonTitle: String){
     super.init(frame: CGRectZero)
     button = UIButton(frame: bounds)
-    button.autoresizingMask = .FlexibleWidth | .FlexibleHeight
+    button.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
     addSubview(button)
     button.setTitle(buttonTitle, forState: .Normal)
     button.addTarget(self, action: "enlargeForTouchDown",
       forControlEvents: .TouchDown)
     button.addTarget(self, action: "goToNormalSize",
-      forControlEvents: .AllEvents ^ (.TouchDown))
+      forControlEvents: UIControlEvents(rawValue: UIControlEvents.AllEvents.rawValue ^ UIControlEvents.TouchDown.rawValue))
   }
   
   func goToNormalSize(){
@@ -134,7 +134,7 @@ class KeyboardView: UIView {
     backgroundColor = UIColor.lightGrayColor()
     
     /* Create all the buttons */
-    for character in characters{
+    for character in characters.characters{
       let keyboardButton = KeyboardButton(buttonTitle: "\(character)")
       buttons.append(keyboardButton)
       keyboardButton.button.addTarget(self, action: "handleTapOnButton:",

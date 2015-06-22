@@ -10,7 +10,7 @@
 //  Vandad Nahavandipoor for his work. Feel free to visit my blog
 //  at http://vandadnp.wordpress.com for daily tips and tricks in Swift
 //  and Objective-C and various other programming languages.
-//  
+//
 //  You can purchase "iOS 8 Swift Programming Cookbook" from
 //  the following URL:
 //  http://shop.oreilly.com/product/0636920034254.do
@@ -37,20 +37,16 @@ class ActionViewController: UIViewController {
       for provider in item.attachments as! [NSItemProvider]{
         if provider.hasItemConformingToTypeIdentifier(type){
           provider.loadItemForTypeIdentifier(type, options: nil,
-            completionHandler: {[weak self]
-              (item: NSSecureCoding!, error: NSError!) in
+            completionHandler: {
+              (item: NSSecureCoding?, error: NSError?) in
               
-              let strongSelf = self!
-              
-              if error != nil{
-                strongSelf.textView.text = "\(error)"
-              } else {
-                if let loadedItem = item as? String{
-                  strongSelf.textView.text = loadedItem.uppercaseString
-                }
+              if let error = error{
+                self.textView.text = "\(error)"
+              } else if let loadedItem = item as? String{
+                self.textView.text = loadedItem.uppercaseString
               }
               
-            })
+          })
         }
       }
     }

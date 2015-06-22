@@ -46,8 +46,8 @@ AudienceSelectionViewControllerDelegate, NSURLSessionDelegate {
   override func isContentValid() -> Bool {
     /* The post button should be enabled only if we have the image data
     and the user has entered at least one character of text */
-    if let data = imageData{
-      if count(contentText) > 0{
+    if let _ = imageData{
+      if contentText.characters.count > 0{
         return true
       }
     }
@@ -61,7 +61,7 @@ AudienceSelectionViewControllerDelegate, NSURLSessionDelegate {
     placeholder = "Your comments"
     
     let content = extensionContext!.inputItems[0] as! NSExtensionItem
-    let contentType = kUTTypeImage as! String
+    let contentType = kUTTypeImage as String
     
     for attachment in content.attachments as! [NSItemProvider]{
       if attachment.hasItemConformingToTypeIdentifier(contentType){
@@ -69,17 +69,15 @@ AudienceSelectionViewControllerDelegate, NSURLSessionDelegate {
         let dispatchQueue =
         dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
         
-        dispatch_async(dispatchQueue, {[weak self] in
-          
-          let strongSelf = self!
+        dispatch_async(dispatchQueue, {
           
           attachment.loadItemForTypeIdentifier(contentType,
             options: nil,
-            completionHandler: {(content: NSSecureCoding!, error: NSError!) in
+            completionHandler: {content, error in
               if let data = content as? NSData{
                 dispatch_async(dispatch_get_main_queue(), {
-                  strongSelf.imageData = data
-                  strongSelf.validateContent()
+                  self.imageData = data
+                  self.validateContent()
                   })
               }
             })
@@ -113,9 +111,9 @@ AudienceSelectionViewControllerDelegate, NSURLSessionDelegate {
     request.HTTPBody = imageData!
     
     let task = session.uploadTaskWithRequest(request,
-      fromData: request.HTTPBody)
+      fromData: request.HTTPBody!)
     
-    task.resume()
+    task!.resume()
     
     extensionContext!.completeRequestReturningItems([], completionHandler: nil)
   }

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FAE4317C0AD339F317935F9863494CB31647F712",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F0E34773117208A82F87A9711AD23C44CCB7F10A" : 0,
+    "FAE4317C0AD339F317935F9863494CB31647F712" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D8B790B1-BFB6-426B-B031-CC502476A621",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F0E34773117208A82F87A9711AD23C44CCB7F10A" : "ios8cookbook",
+    "FAE4317C0AD339F317935F9863494CB31647F712" : "iOS-8-Swift-Programming-Cookbook"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Building Custom Keyboards",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "chapter-extensions\/Building Custom Keyboards\/Building Custom Keyboards.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/vandad.np%2540gmail.com@atlas-server.oreilly.com\/git\/1234000002130.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F0E34773117208A82F87A9711AD23C44CCB7F10A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:vandadnp\/iOS-8-Swift-Programming-Cookbook.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FAE4317C0AD339F317935F9863494CB31647F712"
+    }
+  ]
+}

@@ -12,8 +12,6 @@
 		A603637F197D26A500208268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A603637D197D26A500208268 /* Main.storyboard */; };
 		A6036381197D26A500208268 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6036380197D26A500208268 /* Images.xcassets */; };
 		A603638D197D26A600208268 /* Adding_New_Photo_Editing_Capabilities_to_the_Photos_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A603638C197D26A600208268 /* Adding_New_Photo_Editing_Capabilities_to_the_Photos_AppTests.swift */; };
-		A603639D197D270B00208268 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A603639C197D270B00208268 /* PhotosUI.framework */; };
-		A603639F197D270B00208268 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A603639E197D270B00208268 /* Photos.framework */; };
 		A60363A4197D270B00208268 /* PhotoEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60363A3197D270B00208268 /* PhotoEditingViewController.swift */; };
 		A60363A6197D270B00208268 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A60363A5197D270B00208268 /* MainInterface.storyboard */; };
 		A60363A9197D270B00208268 /* PosterizeExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A603639A197D270B00208268 /* PosterizeExtension.appex */; };
@@ -82,8 +80,6 @@
 		A603638B197D26A600208268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A603638C197D26A600208268 /* Adding_New_Photo_Editing_Capabilities_to_the_Photos_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adding_New_Photo_Editing_Capabilities_to_the_Photos_AppTests.swift; sourceTree = "<group>"; };
 		A603639A197D270B00208268 /* PosterizeExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PosterizeExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		A603639C197D270B00208268 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
-		A603639E197D270B00208268 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		A60363A2197D270B00208268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A60363A3197D270B00208268 /* PhotoEditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditingViewController.swift; sourceTree = "<group>"; };
 		A60363A5197D270B00208268 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
@@ -108,8 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A603639D197D270B00208268 /* PhotosUI.framework in Frameworks */,
-				A603639F197D270B00208268 /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +171,6 @@
 		A603639B197D270B00208268 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A603639C197D270B00208268 /* PhotosUI.framework */,
-				A603639E197D270B00208268 /* Photos.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -267,7 +259,8 @@
 		A603636C197D26A500208268 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					A6036373197D26A500208268 = {
@@ -417,6 +410,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -484,6 +478,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
 				INFOPLIST_FILE = "Adding New Photo Editing Capabilities to the Photos App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -496,6 +491,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Adding New Photo Editing Capabilities to the Photos App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -515,6 +511,7 @@
 				);
 				INFOPLIST_FILE = "Adding New Photo Editing Capabilities to the Photos AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -530,6 +527,7 @@
 				);
 				INFOPLIST_FILE = "Adding New Photo Editing Capabilities to the Photos AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -548,6 +546,7 @@
 				);
 				INFOPLIST_FILE = PosterizeExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app.ext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "03DA68F8-0286-4EBA-B627-7D2FAC77B206";
 				SKIP_INSTALL = YES;
@@ -561,6 +560,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = PosterizeExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app.ext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "03DA68F8-0286-4EBA-B627-7D2FAC77B206";
 				SKIP_INSTALL = YES;
