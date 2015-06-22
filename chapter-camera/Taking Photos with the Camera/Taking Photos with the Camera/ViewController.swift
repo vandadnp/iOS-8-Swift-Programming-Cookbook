@@ -34,9 +34,9 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   var controller: UIImagePickerController?
   
   func imagePickerController(picker: UIImagePickerController,
-    didFinishPickingMediaWithInfo info: [NSObject : AnyObject]){
+    didFinishPickingMediaWithInfo info: [String: AnyObject]){
       
-      println("Picker returned successfully")
+      print("Picker returned successfully")
       
       let mediaType:AnyObject? = info[UIImagePickerControllerMediaType]
       
@@ -45,14 +45,14 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         if type is String{
           let stringType = type as! String
           
-          if stringType == kUTTypeMovie as! String{
+          if stringType == kUTTypeMovie as String{
             let urlOfVideo = info[UIImagePickerControllerMediaURL] as? NSURL
             if let url = urlOfVideo{
-              println("Video URL = \(url)")
+              print("Video URL = \(url)")
             }
           }
             
-          else if stringType == kUTTypeImage as! String{
+          else if stringType == kUTTypeImage as String{
             /* Let's get the metadata. This is only for images. Not videos */
             let metadata = info[UIImagePickerControllerMediaMetadata]
               as? NSDictionary
@@ -60,8 +60,8 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
               let image = info[UIImagePickerControllerOriginalImage]
                 as? UIImage
               if let theImage = image{
-                println("Image Metadata = \(theMetaData)")
-                println("Image = \(theImage)")
+                print("Image Metadata = \(theMetaData)")
+                print("Image = \(theImage)")
               }
             }
           }
@@ -73,7 +73,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   }
   
   func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-    println("Picker was cancelled")
+    print("Picker was cancelled")
     picker.dismissViewControllerAnimated(true, completion: nil)
   }
 
@@ -85,7 +85,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     sourceType: UIImagePickerControllerSourceType) -> Bool{
       
       let availableMediaTypes =
-      UIImagePickerController.availableMediaTypesForSourceType(sourceType) as!
+      UIImagePickerController.availableMediaTypesForSourceType(sourceType) as
         [String]?
       
       if let types = availableMediaTypes{
@@ -100,7 +100,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   }
 
   func doesCameraSupportTakingPhotos() -> Bool{
-    return cameraSupportsMedia(kUTTypeImage as! String, sourceType: .Camera)
+    return cameraSupportsMedia(kUTTypeImage as String, sourceType: .Camera)
   }
   
   override func viewDidAppear(animated: Bool) {
@@ -121,7 +121,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
       if let theController = controller{
         theController.sourceType = .Camera
         
-        theController.mediaTypes = [kUTTypeImage as! String]
+        theController.mediaTypes = [kUTTypeImage as String]
         
         theController.allowsEditing = true
         theController.delegate = self
@@ -130,7 +130,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
       }
       
     } else {
-      println("Camera is not available")
+      print("Camera is not available")
     }
     
   }

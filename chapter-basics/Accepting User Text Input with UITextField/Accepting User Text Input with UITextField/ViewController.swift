@@ -29,8 +29,8 @@
 //  var textField: UITextField!
 //  
 //}
-
-/* 2 */
+//
+///* 2 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -55,8 +55,8 @@
 //  }
 //  
 //}
-
-/* 3 */
+//
+///* 3 */
 //import UIKit
 //
 //class ViewController: UIViewController, UITextFieldDelegate {
@@ -64,8 +64,8 @@
 //  <# the rest of your code goes here #>
 //  
 //}
-
-/* 4 */
+//
+///* 4 */
 //import UIKit
 //
 //class ViewController: UIViewController, UITextFieldDelegate {
@@ -74,8 +74,8 @@
 //  var label: UILabel!
 //  
 //}
-
-/* 5 */
+//
+///* 5 */
 //import UIKit
 //
 //class ViewController: UIViewController, UITextFieldDelegate {
@@ -86,11 +86,11 @@
 //  func calculateAndDisplayTextFieldLengthWithText(text: String){
 //    
 //    var characterOrCharacters = "Character"
-//    if count(text) != 1{
+//    if text.characters.count != 1{
 //      characterOrCharacters += "s"
 //    }
 //    
-//    let stringLength = count(text)
+//    let stringLength = text.characters.count
 //    
 //    label.text = "\(stringLength) \(characterOrCharacters)"
 //    
@@ -101,7 +101,11 @@
 //    shouldChangeCharactersInRange range: NSRange,
 //    replacementString string: String) -> Bool{
 //      
-//      let text = paramTextField.text as NSString
+//      guard let textFieldText = paramTextField.text else {
+//        return false
+//      }
+//      
+//      let text = NSString(string: textFieldText)
 //      
 //      let wholeText =
 //      text.stringByReplacingCharactersInRange(
@@ -133,13 +137,13 @@
 //    
 //    label = UILabel(frame: CGRect(x: 38, y: 61, width: 220, height: 31))
 //    view.addSubview(label)
-//    calculateAndDisplayTextFieldLengthWithText(textField.text)
+//    calculateAndDisplayTextFieldLengthWithText(textField.text!)
 //    
 //  }
 //
 //}
-
-/* 6 */
+//
+///* 6 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -161,8 +165,8 @@
 //  }
 //
 //}
-
-/* 7 */
+//
+///* 7 */
 import UIKit
 
 class ViewController: UIViewController {

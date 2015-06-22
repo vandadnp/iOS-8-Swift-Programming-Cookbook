@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication,
     didFinishLaunchingWithOptions
     launchOptions: [NSObject : AnyObject]?) -> Bool {
-      var vandad = Person(firstName: "Vandad", lastName: "Nahavandipoor")
+      let vandad = Person(firstName: "Vandad", lastName: "Nahavandipoor")
       changeFirstNameOf(vandad, to: "VANDAD")
       /* vandad.firstName is now VANDAD */
       return true

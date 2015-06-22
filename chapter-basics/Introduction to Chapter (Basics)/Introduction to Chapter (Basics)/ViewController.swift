@@ -29,12 +29,16 @@ class ViewController: UIViewController {
     let integerValue = 10
     let stringValue = "Swift"
     let doubleValue = 10.0
+    print(integerValue)
+    print(stringValue)
+    print(doubleValue)
   }
   
   func example2(){
     let integerFromDouble = 10.7 as Int
     /* The value of this variable is 10
     because the compiler truncated the value to an integer*/
+    print(integerFromDouble)
   }
   
   func example3(){
@@ -45,6 +49,7 @@ class ViewController: UIViewController {
   
   func example4(){
     let allStrings = ["Swift", "Objective-C"]
+    print(allStrings)
   }
   
   func example5(){
@@ -59,11 +64,11 @@ class ViewController: UIViewController {
     allStrings.append("Swift")
     allStrings.append("Objective-C")
     
-    println(allStrings[0]) /* Prints out "Swift" */
+    print(allStrings[0]) /* Prints out "Swift" */
     
     allStrings.insert("C++", atIndex: 0)
     
-    println(allStrings[0]) /* Prints out "C++" */
+    print(allStrings[0]) /* Prints out "C++" */
   }
   
   func example7(){
@@ -72,7 +77,7 @@ class ViewController: UIViewController {
       "Andy"    : "Oram",
       "Molly"   : "Lindstedt"
     ]
-    println(allFullNames["Vandad"]) /* Prints out "Nahavandipoor" */
+    print(allFullNames["Vandad"]) /* Prints out "Nahavandipoor" */
   }
 
   func example8(){
@@ -92,6 +97,7 @@ class ViewController: UIViewController {
       "name"              : "Random person",
       "job"               : "Something cool",
       ] as [String : AnyObject]
+    print(personInformation)
   }
   
   func example10(){
@@ -103,10 +109,6 @@ class ViewController: UIViewController {
       }
       
     }
-  }
-  
-  func example11(){
-    
   }
   
   override func viewDidLoad() {

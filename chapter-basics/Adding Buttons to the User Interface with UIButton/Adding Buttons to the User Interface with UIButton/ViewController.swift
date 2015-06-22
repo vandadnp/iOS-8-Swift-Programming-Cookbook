@@ -35,17 +35,17 @@
 //  var button: UIButton!
 //  
 //  func buttonIsPressed(sender: UIButton){
-//    println("Button is pressed.")
+//    print("Button is pressed.")
 //  }
 //  
 //  func buttonIsTapped(sender: UIButton){
-//    println("Button is tapped.")
+//    print("Button is tapped.")
 //  }
 //  
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //    
-//    button = UIButton.buttonWithType(.System) as? UIButton
+//    button = UIButton(type: .System)
 //    
 //    button.frame = CGRect(x: 110, y: 70, width: 100, height: 44)
 //    
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
     let normalImage = UIImage(named: "NormalBlueButton")
     let highlightedImage = UIImage(named: "HighlightedBlueButton")
     
-    button = UIButton.buttonWithType(.Custom) as? UIButton
+    button = UIButton(type: .Custom)
     button.frame = CGRect(x: 110, y: 70, width: 100, height: 44)
     
     button.setTitle("Normal", forState: .Normal)

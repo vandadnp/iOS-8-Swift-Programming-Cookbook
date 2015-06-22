@@ -35,13 +35,13 @@
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //    
-//    print("Camera is ")
+//    print("Camera is ", appendNewline: false)
 //    
 //    if isCameraAvailable() == false{
-//      print("not ")
+//      print("not ", appendNewline: false)
 //    }
 //    
-//    println("available")
+//    print("available")
 //    
 //  }
 //
@@ -59,9 +59,12 @@
 //      
 //      let availableMediaTypes =
 //      UIImagePickerController.availableMediaTypesForSourceType(sourceType)
-//        as [String]
 //      
-//      for type in availableMediaTypes{
+//      guard let types = availableMediaTypes else {
+//        return false
+//      }
+//      
+//      for type in types{
 //        if type == mediaType{
 //          return true
 //        }
@@ -71,32 +74,32 @@
 //  }
 //  
 //  func doesCameraSupportShootingVideos() -> Bool{
-//    return cameraSupportsMedia(kUTTypeMovie as! String, sourceType: .Camera)
+//    return cameraSupportsMedia(kUTTypeMovie as String, sourceType: .Camera)
 //  }
 //  
 //  func doesCameraSupportTakingPhotos() -> Bool{
-//    return cameraSupportsMedia(kUTTypeImage as! String, sourceType: .Camera)
+//    return cameraSupportsMedia(kUTTypeImage as String, sourceType: .Camera)
 //  }
 //  
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //    
 //    if doesCameraSupportTakingPhotos(){
-//      println("The camera supports taking photos")
+//      print("The camera supports taking photos")
 //    } else {
-//      println("The camera does not support taking photos")
+//      print("The camera does not support taking photos")
 //    }
 //    
 //    if doesCameraSupportShootingVideos(){
-//      println("The camera supports shooting videos")
+//      print("The camera supports shooting videos")
 //    } else {
-//      println("The camera does not support shooting videos")
+//      print("The camera does not support shooting videos")
 //    }
 //    
 //  }
 //  
 //}
-
+//
 /* 3 */
 import UIKit
 import MobileCoreServices
@@ -107,7 +110,7 @@ class ViewController: UIViewController {
     sourceType: UIImagePickerControllerSourceType) -> Bool{
 
       let availableMediaTypes =
-      UIImagePickerController.availableMediaTypesForSourceType(sourceType) as!
+      UIImagePickerController.availableMediaTypesForSourceType(sourceType) as
         [String]?
       
       if let types = availableMediaTypes{
@@ -122,11 +125,11 @@ class ViewController: UIViewController {
   }
 
   func doesCameraSupportShootingVideos() -> Bool{
-    return cameraSupportsMedia(kUTTypeMovie as! String, sourceType: .Camera)
+    return cameraSupportsMedia(kUTTypeMovie as String, sourceType: .Camera)
   }
 
   func doesCameraSupportTakingPhotos() -> Bool{
-    return cameraSupportsMedia(kUTTypeImage as! String, sourceType: .Camera)
+    return cameraSupportsMedia(kUTTypeImage as String, sourceType: .Camera)
   }
   
   func isFrontCameraAvailable() -> Bool{
@@ -149,37 +152,37 @@ class ViewController: UIViewController {
     super.viewDidLoad()
 
     if isFrontCameraAvailable(){
-      println("The front camera is available")
+      print("The front camera is available")
       if isFlashAvailableOnFrontCamera(){
-        println("The front camera is equipped with a flash")
+        print("The front camera is equipped with a flash")
       } else {
-        println("The front camera is not equipped with a flash")
+        print("The front camera is not equipped with a flash")
       }
     } else {
-      println("The front camera is not available")
+      print("The front camera is not available")
     }
     
     if isRearCameraAvailable(){
-      println("The rear camera is available")
+      print("The rear camera is available")
       if isFlashAvailableOnRearCamera(){
-        println("The rear camera is equipped with a flash")
+        print("The rear camera is equipped with a flash")
       } else {
-        println("The rear camera is not equipped with a flash")
+        print("The rear camera is not equipped with a flash")
       }
     } else {
-      println("The rear camera is not available")
+      print("The rear camera is not available")
     }
     
     if doesCameraSupportTakingPhotos(){
-      println("The camera supports taking photos")
+      print("The camera supports taking photos")
     } else {
-      println("The camera does not support taking photos")
+      print("The camera does not support taking photos")
     }
     
     if doesCameraSupportShootingVideos(){
-      println("The camera supports shooting videos")
+      print("The camera supports shooting videos")
     } else {
-      println("The camera does not support shooting videos")
+      print("The camera does not support shooting videos")
     }
 
   }

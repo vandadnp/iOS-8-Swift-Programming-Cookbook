@@ -29,8 +29,8 @@
 //  var picker: UIPickerView!
 //
 //}
-
-/* 2 */
+//
+///* 2 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -46,8 +46,8 @@
 //  }
 //  
 //}
-
-/* 3 */
+//
+///* 3 */
 //import UIKit
 //
 //class ViewController: UIViewController, UIPickerViewDataSource {
@@ -79,8 +79,8 @@
 //  }
 //  
 //}
-
-/* 4 */
+//
+///* 4 */
 //import UIKit
 //
 //class ViewController: UIViewController,
@@ -105,7 +105,7 @@
 //
 //  func pickerView(pickerView: UIPickerView,
 //    titleForRow row: Int,
-//    forComponent component: Int) -> String!{
+//    forComponent component: Int) -> String?{
 //    return "\(row + 1)"
 //  }
 //  
@@ -120,7 +120,7 @@
 //  }
 //  
 //}
-
+//
 /* 5 */
 import UIKit
 
@@ -146,7 +146,7 @@ UIPickerViewDataSource, UIPickerViewDelegate {
   
   func pickerView(pickerView: UIPickerView,
     titleForRow row: Int,
-    forComponent component: Int) -> String!{
+    forComponent component: Int) -> String?{
       return "\(row + 1)"
   }
   

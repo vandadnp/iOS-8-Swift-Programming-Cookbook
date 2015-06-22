@@ -43,26 +43,26 @@ class ViewController: UIViewController, PHPhotoLibraryChangeObserver {
   /* The image view that we will use to display the newest photo */
   var imageView: UIImageView?
   
-  func photoLibraryDidChange(changeInstance: PHChange!) {
+  func photoLibraryDidChange(changeInstance: PHChange) {
     
-    println("Image is changed now")
+    print("Image is changed now")
     
-    dispatch_async(dispatch_get_main_queue(), {[weak self] in
+    dispatch_async(dispatch_get_main_queue(), {
       
-      let change = changeInstance.changeDetailsForObject(self!.lastPhoto)
-      if change != nil{
-        self!.lastPhoto = change.objectAfterChanges as? PHAsset
-        if change.assetContentChanged{
-          self!.retrieveImageForAsset(self!.lastPhoto!)
-        }
+      guard let change = changeInstance.changeDetailsForObject(self.lastPhoto!) else {
+        return
       }
+        self.lastPhoto = change.objectAfterChanges as? PHAsset
+        if change.assetContentChanged{
+          self.retrieveImageForAsset(self.lastPhoto!)
+        }
       })
     
   }
   
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
-    buttonChange = UIButton.buttonWithType(.System) as! UIButton
+    buttonChange = UIButton(type: .System)
     buttonChange.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
     buttonChange.setTitle("Change photo", forState: .Normal)
     buttonChange.addTarget(self,
@@ -103,13 +103,13 @@ class ViewController: UIViewController, PHPhotoLibraryChangeObserver {
           /* Flip the hidden flag */
           let request = PHAssetChangeRequest(forAsset: asset)
           request.hidden = !asset.hidden
-          }, completionHandler: {[weak self](success: Bool, error: NSError!) in
+          }, completionHandler: {(success, error) in
             
             if success{
-              println("Successfully changed the photo")
+              print("Successfully changed the photo")
             } else {
               dispatch_async(dispatch_get_main_queue(), {
-                self!.displayAlertWithTitle("Failed",
+                self.displayAlertWithTitle("Failed",
                   message: "Failed to change the photo properties")
                 })
             }
@@ -138,29 +138,28 @@ class ViewController: UIViewController, PHPhotoLibraryChangeObserver {
     
     PHCachingImageManager().requestImageForAsset(asset,
       targetSize: imageSize,
-      contentMode: .AspectFit,
+      contentMode: PHImageContentMode.AspectFit,
       options: imageFetchingOptions(),
-      resultHandler: {[weak self] (image: UIImage!,
-        info: [NSObject : AnyObject]!) in
+      resultHandler: {(image: UIImage?,
+        info: [NSObject : AnyObject]?) in
         
         dispatch_async(dispatch_get_main_queue(), {
           
-          if let theImageView = self!.imageView{
+          if let theImageView = self.imageView{
             theImageView.removeFromSuperview()
           }
           if image != nil{
-            self!.imageView = UIImageView(image: image)
-            if let imageView = self!.imageView{
+            self.imageView = UIImageView(image: image)
+            if let imageView = self.imageView{
               imageView.contentMode = .ScaleAspectFit
-              imageView.frame = self!.view.bounds
-              self!.view.addSubview(imageView)
-              self!.buttonChange.center = self!.view.center
-              self!.view.addSubview(self!.buttonChange)
+              imageView.frame = self.view.bounds
+              self.view.addSubview(imageView)
+              self.buttonChange.center = self.view.center
+              self.view.addSubview(self.buttonChange)
             }
             
-            
           } else {
-            println("No image data came back")
+            print("No image data came back")
           }
           
           })
@@ -180,12 +179,7 @@ class ViewController: UIViewController, PHPhotoLibraryChangeObserver {
     let assetResults = PHAsset.fetchAssetsWithMediaType(.Image,
       options: options)
     
-    if assetResults == nil{
-      println("Found no results")
-      return
-    } else {
-      println("Found \(assetResults.count) results")
-    }
+    print("Found \(assetResults.count) results")
     
     if let lastPhoto = assetResults[0] as? PHAsset{
       self.lastPhoto = lastPhoto

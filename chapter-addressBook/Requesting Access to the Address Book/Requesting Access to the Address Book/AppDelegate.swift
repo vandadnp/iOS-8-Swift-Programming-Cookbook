@@ -46,11 +46,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       switch ABAddressBookGetAuthorizationStatus(){
       case .Authorized:
-        println("Already authorized")
+        print("Already authorized")
         createAddressBook()
         /* Now you can use the address book */
       case .Denied:
-        println("You are denied access to address book")
+        print("You are denied access to address book")
         
       case .NotDetermined:
         createAddressBook()
@@ -59,19 +59,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             {(granted: Bool, error: CFError!) in
               
               if granted{
-                println("Access is granted")
+                print("Access is granted")
               } else {
-                println("Access is not granted")
+                print("Access is not granted")
               }
               
             })
         }
         
       case .Restricted:
-        println("Access is restricted")
+        print("Access is restricted")
         
-      default:
-        println("Unhandled")
       }
       
       return true

@@ -153,6 +153,7 @@
 		9D158316198508E6008E2AC0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
@@ -397,6 +398,7 @@
 				9D15833C198508E6008E2AC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D15833D198508E6008E2AC0 /* Build configuration list for PBXNativeTarget "Adding Persons to GroupsTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +407,7 @@
 				9D15833F198508E6008E2AC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

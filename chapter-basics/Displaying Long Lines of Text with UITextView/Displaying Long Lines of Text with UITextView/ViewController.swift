@@ -29,8 +29,8 @@
 //  var textView: UITextView?
 //
 //}
-
-/* 2 */
+//
+///* 2 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -54,8 +54,8 @@
 //  }
 //  
 //}
-
-/* 3 */
+//
+///* 3 */
 import UIKit
 
 class ViewController: UIViewController {

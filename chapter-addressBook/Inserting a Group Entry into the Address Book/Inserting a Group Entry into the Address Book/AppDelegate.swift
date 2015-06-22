@@ -53,28 +53,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if couldAddRecord{
           
-          println("Successfully added the new group")
+          print("Successfully added the new group")
           
           if ABAddressBookHasUnsavedChanges(inAddressBook){
             error = nil
             let couldSaveAddressBook =
             ABAddressBookSave(inAddressBook, &error)
             if couldSaveAddressBook{
-              println("Successfully saved the address book")
+              print("Successfully saved the address book")
             } else {
-              println("Failed to save the address book")
+              print("Failed to save the address book")
               return nil
             }
           } else {
-            println("No unsaved changes")
+            print("No unsaved changes")
             return nil
           }
         } else {
-          println("Could not add a new group")
+          print("Could not add a new group")
           return nil
         }
       } else {
-        println("Failed to set the name of the group")
+        print("Failed to set the name of the group")
         return nil
       }
       
@@ -88,10 +88,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     newGroupWithName("Personal Coaches",
       inAddressBook: addressBook)
     
-    if let group: ABRecordRef = personalCoachesGroup{
-      println("Successfully created the group")
+    if let _: ABRecordRef = personalCoachesGroup{
+      print("Successfully created the group")
     } else {
-      println("Could not create the group")
+      print("Could not create the group")
     }
     
   }
@@ -101,10 +101,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       switch ABAddressBookGetAuthorizationStatus(){
       case .Authorized:
-        println("Already authorized")
+        print("Already authorized")
         createNewGroupInAddressBook(addressBook)
       case .Denied:
-        println("You are denied access to address book")
+        print("You are denied access to address book")
         
       case .NotDetermined:
         ABAddressBookRequestAccessWithCompletion(addressBook,
@@ -112,18 +112,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             if granted{
               let strongSelf = self!
-              println("Access is granted")
+              print("Access is granted")
               strongSelf.createNewGroupInAddressBook(strongSelf.addressBook)
             } else {
-              println("Access is not granted")
+              print("Access is not granted")
             }
             
           })
       case .Restricted:
-        println("Access is restricted")
-        
-      default:
-        println("Unhandled")
+        print("Access is restricted")
       }
       
       return true

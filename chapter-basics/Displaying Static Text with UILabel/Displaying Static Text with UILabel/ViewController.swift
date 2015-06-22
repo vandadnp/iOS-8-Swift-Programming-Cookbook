@@ -27,8 +27,8 @@
 //class ViewController: UIViewController {
 //  var label: UILabel!
 //}
-
-/* 2 */
+//
+///* 2 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -45,8 +45,8 @@
 //  }
 //  
 //}
-
-/* 3 */
+//
+///* 3 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -63,8 +63,8 @@
 //  }
 //  
 //}
-
-/* 4 */
+//
+///* 4 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -83,8 +83,8 @@
 //  }
 //  
 //}
-
-/* 5 */
+//
+///* 5 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -102,8 +102,8 @@
 //  }
 //  
 //}
-
-/* 6 */
+//
+///* 6 */
 import UIKit
 
 class ViewController: UIViewController {

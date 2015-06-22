@@ -37,8 +37,8 @@
 //  }
 //
 //}
-
-/* 2 */
+//
+///* 2 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -65,8 +65,8 @@
 //  }
 //
 //}
-
-/* 3 */
+//
+///* 3 */
 import UIKit
 
 class ViewController: UIViewController, UIWebViewDelegate {
@@ -79,7 +79,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     UIApplication.sharedApplication().networkActivityIndicatorVisible = false
   }
   
-  func webView(webView: UIWebView, didFailLoadWithError error: NSError){
+  func webView(webView: UIWebView, didFailLoadWithError error: NSError?){
     UIApplication.sharedApplication().networkActivityIndicatorVisible = false
   }
   

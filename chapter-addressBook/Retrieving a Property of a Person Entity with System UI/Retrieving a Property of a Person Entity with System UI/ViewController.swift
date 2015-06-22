@@ -43,13 +43,13 @@ ABPeoplePickerNavigationControllerDelegate {
   }
   
   func peoplePickerNavigationControllerDidCancel(
-    peoplePicker: ABPeoplePickerNavigationController!){
+    peoplePicker: ABPeoplePickerNavigationController){
       /* Mandatory to implement */
   }
   
   func peoplePickerNavigationController(
-    peoplePicker: ABPeoplePickerNavigationController!,
-    didSelectPerson person: ABRecordRef!,
+    peoplePicker: ABPeoplePickerNavigationController,
+    didSelectPerson person: ABRecordRef,
     property: ABPropertyID,
     identifier: ABMultiValueIdentifier) {
       
@@ -65,9 +65,9 @@ ABPeoplePickerNavigationControllerDelegate {
       let city = address[kABPersonAddressCityKey as String] as! String
       let street = address[kABPersonAddressStreetKey as String] as! String
       
-      println("Country = \(country)")
-      println("City = \(city)")
-      println("Street = \(street)")
+      print("Country = \(country)")
+      print("City = \(city)")
+      print("Street = \(street)")
       
   }
   

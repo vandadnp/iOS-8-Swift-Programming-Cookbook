@@ -37,11 +37,11 @@ class StringReverserActivity: UIActivity {
     var result = ""
     var characters = [Character]()
     
-    for character in string{
+    for character in string.characters{
       characters.append(character)
     }
     
-    for character in characters.reverse(){
+    for character in Array(characters.reverse()){
       result += "\(character)"
     }
     
@@ -59,7 +59,7 @@ class StringReverserActivity: UIActivity {
     
     /* Do whatever that you need to do, with all these
     reversed strings */
-    println(reversedStrings)
+    print(reversedStrings)
     
   }
   

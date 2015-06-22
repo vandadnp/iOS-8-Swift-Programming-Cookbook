@@ -37,8 +37,8 @@
 //  }
 //
 //}
-
-/* 2 */
+//
+///* 2 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -53,13 +53,13 @@
 //    view.addSubview(datePicker)
 //    
 //    let currentDate = datePicker.date
-//    println(currentDate)
+//    print(currentDate)
 //    
 //  }
 //  
 //}
-
-/* 3 */
+//
+///* 3 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -67,7 +67,7 @@
 //  var datePicker: UIDatePicker!
 //  
 //  func datePickerDateChanged(datePicker: UIDatePicker){
-//    println("Selected date = \(datePicker.date)")
+//    print("Selected date = \(datePicker.date)")
 //  }
 //  
 //  override func viewDidLoad() {
@@ -84,8 +84,8 @@
 //  }
 //  
 //}
-
-/* 4 */
+//
+///* 4 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -112,8 +112,8 @@
 //  }
 //  
 //}
-
-/* 5 */
+//
+///* 5 */
 import UIKit
 
 class ViewController: UIViewController {

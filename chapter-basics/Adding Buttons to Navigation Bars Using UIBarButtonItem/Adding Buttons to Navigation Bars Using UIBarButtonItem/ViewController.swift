@@ -27,7 +27,7 @@
 //class ViewController: UIViewController {
 //  
 //  func performAdd(sender: UIBarButtonItem){
-//    println("Add method got called")
+//    print("Add method got called")
 //  }
 //                            
 //  override func viewDidLoad() {
@@ -42,14 +42,14 @@
 //  }
 //
 //}
-
-/* 2 */
+//
+///* 2 */
 //import UIKit
 //
 //class ViewController: UIViewController {
 //  
 //  func performAdd(sender: UIBarButtonItem){
-//    println("Add method got called")
+//    print("Add method got called")
 //  }
 //  
 //  override func viewDidLoad() {
@@ -63,17 +63,17 @@
 //  }
 //  
 //}
-
-/* 3 */
+//
+///* 3 */
 //import UIKit
 //
 //class ViewController: UIViewController {
 //
 //  func switchIsChanged(sender: UISwitch){
 //    if sender.on{
-//      println("Switch is on")
+//      print("Switch is on")
 //    } else {
-//      println("Switch is off")
+//      print("Switch is off")
 //    }
 //  }
 //
@@ -93,8 +93,8 @@
 //  }
 //
 //}
-
-/* 4 */
+//
+///* 4 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -104,9 +104,9 @@
 //  func segmentedControlTapped(sender: UISegmentedControl){
 //    
 //    if sender.selectedSegmentIndex < items.count{
-//      println(items[sender.selectedSegmentIndex])
+//      print(items[sender.selectedSegmentIndex])
 //    } else {
-//      println("Unknown button is pressed")
+//      print("Unknown button is pressed")
 //    }
 //    
 //  }
@@ -140,10 +140,10 @@ class ViewController: UIViewController {
     
     let segmentedControl = UISegmentedControl(items: items)
     
-let rightBarButton =
-UIBarButtonItem(customView:segmentedControl)
-
-navigationItem.setRightBarButtonItem(rightBarButton, animated: true)
+    let rightBarButton =
+    UIBarButtonItem(customView:segmentedControl)
+    
+    navigationItem.setRightBarButtonItem(rightBarButton, animated: true)
     
   }
   

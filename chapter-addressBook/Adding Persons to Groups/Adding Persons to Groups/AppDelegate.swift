@@ -56,9 +56,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let couldAddPerson = ABAddressBookAddRecord(inAddressBook, person, &error)
     
     if couldAddPerson{
-      println("Successfully added the person")
+      print("Successfully added the person")
     } else {
-      println("Failed to add the person.")
+      print("Failed to add the person.")
       return nil
     }
     
@@ -68,17 +68,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let couldSaveAddressBook = ABAddressBookSave(inAddressBook, &error)
       
       if couldSaveAddressBook{
-        println("Successfully saved the address book")
+        print("Successfully saved the address book")
       } else {
-        println("Failed to save the address book.")
+        print("Failed to save the address book.")
       }
     }
     
     if couldSetFirstName && couldSetLastName{
-      println("Successfully set the first name " +
+      print("Successfully set the first name " +
         "and the last name of the person")
     } else {
-      println("Failed to set the first name and/or " +
+      print("Failed to set the first name and/or " +
         "the last name of the person")
     }
     
@@ -104,28 +104,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if couldAddRecord{
           
-          println("Successfully added the new group")
+          print("Successfully added the new group")
           
           if ABAddressBookHasUnsavedChanges(inAddressBook){
             error = nil
             let couldSaveAddressBook =
             ABAddressBookSave(inAddressBook, &error)
             if couldSaveAddressBook{
-              println("Successfully saved the address book")
+              print("Successfully saved the address book")
             } else {
-              println("Failed to save the address book")
+              print("Failed to save the address book")
               return nil
             }
           } else {
-            println("No unsaved changes")
+            print("No unsaved changes")
             return nil
           }
         } else {
-          println("Could not add a new group")
+          print("Could not add a new group")
           return nil
         }
       } else {
-        println("Failed to set the name of the group")
+        print("Failed to set the name of the group")
         return nil
       }
       
@@ -146,7 +146,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         &error)
       
       if added == false{
-        println("Could not add the person to the group")
+        print("Could not add the person to the group")
         return false
       }
       
@@ -156,13 +156,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let couldSaveAddressBook = ABAddressBookSave(saveToAddressBook,
           &error)
         if couldSaveAddressBook{
-          println("Successfully added the person to the group")
+          print("Successfully added the person to the group")
           added = true
         } else {
-          println("Failed to save the address book")
+          print("Failed to save the address book")
         }
       } else {
-        println("No changes were saved")
+        print("No changes were saved")
       }
       
       return added
@@ -181,17 +181,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       if let group: ABRecordRef = entrepreneursGroup{
         if addPerson(richard, toGroup: group, saveToAddressBook: addressBook){
-          println("Successfully added Richard Branson to the group")
+          print("Successfully added Richard Branson to the group")
         } else {
-          println("Failed to add Richard Branson to the group")
+          print("Failed to add Richard Branson to the group")
         }
                 
       } else {
-        println("Failed to create the group")
+        print("Failed to create the group")
       }
       
     } else {
-      println("Failed to create an entity for Richard Branson")
+      print("Failed to create an entity for Richard Branson")
     }
     
   }
@@ -201,29 +201,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       switch ABAddressBookGetAuthorizationStatus(){
       case .Authorized:
-        println("Already authorized")
+        print("Already authorized")
         addPersonsAndGroupsToAddressBook(addressBook)
       case .Denied:
-        println("You are denied access to address book")
+        print("You are denied access to address book")
       case .NotDetermined:
         ABAddressBookRequestAccessWithCompletion(addressBook,
           {[weak self] (granted: Bool, error: CFError!) in
             
             if granted{
               let strongSelf = self!
-              println("Access is granted")
+              print("Access is granted")
               strongSelf.addPersonsAndGroupsToAddressBook(
                 strongSelf.addressBook)
             } else {
-              println("Access is not granted")
+              print("Access is not granted")
             }
             
           })
       case .Restricted:
-        println("Access is restricted")
+        print("Access is restricted")
         
       default:
-        println("Unhandled")
+        print("Unhandled")
       }
       
       return true

@@ -42,11 +42,11 @@ import UIKit
 //  func classifyCar(car: Car){
 //    switch car.classification{
 //    case .Estate where car.year >= 2013:
-//      println("This is a good and usable estate car")
+//      print("This is a good and usable estate car")
 //    case .Hatchback where car.year >= 2010:
-//      println("This is an okay hatchback car")
+//      print("This is an okay hatchback car")
 //    default:
-//      println("Unhandled case")
+//      print("Unhandled case")
 //    }
 //  }
 //  
@@ -69,34 +69,34 @@ import UIKit
 //  }
 //  
 //}
-
-enum CarClassification: String{
-  case Estate = "Estate"
-  case Hatchback = "Hatchback"
-  case Saloon = "Saloon"
-}
-
-struct Car{
-  let classification: CarClassification
-}
-
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-  
-  var window: UIWindow?
-  
-  func application(application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
-      
-      if let classification = CarClassification(rawValue: "Estate"){
-        let volvoV50 = Car(classification: classification)
-      }
-      
-      return true
-  }
-  
-}
-
+//
+//enum CarClassification: String{
+//  case Estate = "Estate"
+//  case Hatchback = "Hatchback"
+//  case Saloon = "Saloon"
+//}
+//
+//struct Car{
+//  let classification: CarClassification
+//}
+//
+//@UIApplicationMain
+//class AppDelegate: UIResponder, UIApplicationDelegate {
+//  
+//  var window: UIWindow?
+//  
+//  func application(application: UIApplication,
+//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+//      
+//      if let classification = CarClassification(rawValue: "Estate"){
+//        let volvoV50 = Car(classification: classification)
+//      }
+//      
+//      return true
+//  }
+//  
+//}
+//
 //class Person{
 //  var age: Int
 //  var fullName: String
@@ -145,7 +145,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //  }
 //  
 //}
-
+//
 //struct Person{
 //  var (firstName, lastName) = ("", "")
 //  init (firstName: String, lastName: String){
@@ -175,17 +175,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //      
 //      if andy == someoneElse{
 //        /* This will be printed */
-//        println("They are the same")
+//        print("They are the same")
 //      } else {
 //        /* We won't get here in this case */
-//        println("They are not the same")
+//        print("They are not the same")
 //      }
 //      
 //      return true
 //  }
 //  
 //}
-
+//
 //typealias byte = UInt8
 //
 //@UIApplicationMain
@@ -215,7 +215,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //  }
 //  
 //}
-
+//
 //class Person{
 //  var (firstName, lastName) = ("", "")
 //  init (firstName: String, lastName: String){
@@ -244,7 +244,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //  }
 //  
 //}
-
+//
 //struct Person{
 //  var firstName, lastName: String
 //  
@@ -267,80 +267,85 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //  func application(application: UIApplication,
 //    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
 //      
-//      var vandad = Person(firstName: "Vandad", lastName: "Nahavandipoor")
+//      let vandad = Person(firstName: "Vandad", lastName: "Nahavandipoor")
 //      changeFirstNameOf(vandad, to: "VANDAD")
 //      /* vandad.firstName is still Vandad */
+//      print(vandad.firstName)
 //      
 //    return true
 //  }
 //
 //}
 
-//@UIApplicationMain
-//class AppDelegate: UIResponder, UIApplicationDelegate {
-//                            
-//  var window: UIWindow?
-//
-//  func application(application: UIApplication,
-//    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
-//      
-//      let integerValue = 10
-//      let stringValue = "Swift"
-//      let doubleValue = 10.0
-//      
-//      let integerFromDouble = 10.7 as Int
-//      /* The value of this variable is 10 
-//      since the compiler truncated the value to an integer*/
-//
-//
-//      var myString = "Swi"
-//      myString += "ft"
-//    /* myString is now "Swift" */
-//    
-//      let allStrings = ["Swift", "Objective-C"]
-//    
-//      var allStrings = [String]()
-//      allStrings.append("Swift")
-//      allStrings.append("Objective-C")
-//      /* Our array is now ["Swift", "Objective-C"] */
-//    
-//
-//      var allStrings = [String]()
-//      allStrings.append("Swift")
-//      allStrings.append("Objective-C")
-//      
-//      println(allStrings[0]) /* Prints out "Swift" */
-//      
-//      allStrings.insert("C++", atIndex: 0)
-//      
-//      println(allStrings[0]) /* Prints out "C++" */
-//      
-//      let allFullNames = [
-//        "Vandad"  : "Nahavandipoor",
-//        "Andy"    : "Oram",
-//        "Molly"   : "Lindstedt"
-//      ]
-//      
-//      println(allFullNames["Vandad"]) /* Prints out "Nahavandipoor" */
-//    
-//    
-//      var allFullNames = [
-//        "Vandad"  : "Nahavandipoor",
-//        "Andy"    : "Oram",
-//        "Molly"   : "Lindstedt"
-//      ]
-//      
-//      allFullNames["Rachel"] = "Roumeliotis"
-//      
-//      let personInformation = [
-//        "numberOfChildren"  : 2,
-//        "age"               : 32,
-//        "name"              : "Random person",
-//        "job"               : "Something cool",
-//        ] as [String : AnyObject]
-//      
-//    return true
-//  }
-//
-//}
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+                            
+  var window: UIWindow?
+
+  func application(application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+      
+      let integerValue = 10
+      let stringValue = "Swift"
+      let doubleValue = 10.0
+      let integerFromDouble = 10.7 as Int
+      
+      print(integerValue, stringValue, doubleValue, integerFromDouble)
+      /* The value of this variable is 10 
+      since the compiler truncated the value to an integer*/
+
+
+      var myString = "Swi"
+      myString += "ft"
+    /* myString is now "Swift" */
+    
+      let allStringsConst = ["Swift", "Objective-C"]
+      print(allStringsConst)
+    
+      var allStrings = [String]()
+      allStrings.append("Swift")
+      allStrings.append("Objective-C")
+      /* Our array is now ["Swift", "Objective-C"] */
+    
+
+      var myStrings = [String]()
+      myStrings.append("Swift")
+      myStrings.append("Objective-C")
+      
+      print(myStrings[0]) /* Prints out "Swift" */
+      
+      myStrings.insert("C++", atIndex: 0)
+      
+      print(myStrings[0]) /* Prints out "C++" */
+      
+      let allFullNames = [
+        "Vandad"  : "Nahavandipoor",
+        "Andy"    : "Oram",
+        "Molly"   : "Lindstedt"
+      ]
+      
+      print(allFullNames["Vandad"]) /* Prints out "Nahavandipoor" */
+    
+    
+      var myFullNames = [
+        "Vandad"  : "Nahavandipoor",
+        "Andy"    : "Oram",
+        "Molly"   : "Lindstedt"
+      ]
+      
+      myFullNames["Rachel"] = "Roumeliotis"
+      
+      let personInformation = [
+        "numberOfChildren"  : 2,
+        "age"               : 32,
+        "name"              : "Random person",
+        "job"               : "Something cool",
+        ] as [String : AnyObject]
+      
+      print(personInformation)
+      
+    return true
+  }
+
+}
 

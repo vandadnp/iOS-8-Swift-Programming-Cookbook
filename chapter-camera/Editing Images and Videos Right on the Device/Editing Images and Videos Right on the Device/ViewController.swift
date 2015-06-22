@@ -10,7 +10,7 @@
 //  Vandad Nahavandipoor for his work. Feel free to visit my blog
 //  at http://vandadnp.wordpress.com for daily tips and tricks in Swift
 //  and Objective-C and various other programming languages.
-//  
+//
 //  You can purchase "iOS 8 Swift Programming Cookbook" from
 //  the following URL:
 //  http://shop.oreilly.com/product/0636920034254.do
@@ -39,9 +39,9 @@ class ViewController: UIViewController {
   func dataFromCiImage(image: CIImage) -> NSData{
     let glContext = EAGLContext(API: .OpenGLES2)
     let context = CIContext(EAGLContext: glContext)
-    let imageRef = context.createCGImage(image, fromRect: image.extent())
+    let imageRef = context.createCGImage(image, fromRect: image.extent)
     let image = UIImage(CGImage: imageRef, scale: 1.0, orientation: .Up)
-    return UIImageJPEGRepresentation(image, 1.0)
+    return UIImageJPEGRepresentation(image, 1.0)!
   }
   
   /* A little handy method that allows us to perform a block
@@ -64,29 +64,38 @@ class ViewController: UIViewController {
         return false
       }
     }
-    
-  /* Now ask the system if we are allowed to edit the given asset */
-  asset.requestContentEditingInputWithOptions(requestOptions,
-    completionHandler: {[weak self](input: PHContentEditingInput!,
-      info: [NSObject : AnyObject]!) in
+
+    /* Now ask the system if we are allowed to edit the given asset */
+    asset.requestContentEditingInputWithOptions(requestOptions,
+      completionHandler: {(input: PHContentEditingInput?,
+        info: [NSObject : AnyObject]) in
+        
+        guard let input = input,
+          let url = input.fullSizeImageURL else {
+            return
+        }
         
         /* Get the required information from the asset */
-        let url = input.fullSizeImageURL
         let orientation = input.fullSizeImageOrientation
         
         /* Retrieve an instance of CIImage to apply our filter to */
-        let inputImage =
-        CIImage(contentsOfURL: url,
-          options: nil).imageByApplyingOrientation(orientation)
+        
+        guard let image = CIImage(contentsOfURL: url, options: nil) else {
+          return
+        }
+        
+        let inputImage = image.imageByApplyingOrientation(orientation)
         
         /* Apply the filter to our image */
-        let filter = CIFilter(name: self!.filterName)
+        guard let filter = CIFilter(name: self.filterName) else {
+          return
+        }
         filter.setDefaults()
         filter.setValue(inputImage, forKey: kCIInputImageKey)
         let outputImage = filter.outputImage
         
         /* Get the data of our edited image */
-        let editedImageData = self!.dataFromCiImage(outputImage)
+        let editedImageData = self.dataFromCiImage(outputImage)
         
         /* The results of editing our image are encapsulated here */
         let output = PHContentEditingOutput(contentEditingInput: input)
@@ -95,30 +104,30 @@ class ViewController: UIViewController {
         editedImageData.writeToURL(output.renderedContentURL,
           atomically: true)
         output.adjustmentData =
-          PHAdjustmentData(formatIdentifier: self!.editFormatIdentifier,
-            formatVersion: self!.editFormatVersion,
-            data: self!.filterName.dataUsingEncoding(NSUTF8StringEncoding,
-              allowLossyConversion: false))
+          PHAdjustmentData(formatIdentifier: self.editFormatIdentifier,
+            formatVersion: self.editFormatVersion,
+            data: self.filterName.dataUsingEncoding(NSUTF8StringEncoding,
+              allowLossyConversion: false)!)
         
-      /* Now perform our changes */
-      PHPhotoLibrary.sharedPhotoLibrary().performChanges({
-        /* This is the change object and its output is the output object
-        that we created previously */
-        let change = PHAssetChangeRequest(forAsset: asset)
-        change.contentEditingOutput = output
-        }, completionHandler: {[weak self] (success: Bool, error: NSError!) in
-          
-          self!.performOnMainThread{
-            if success{
-              self!.displayAlertWithTitle("Succeeded",
-                message: "Successfully edited the image")
-            } else {
-              self!.displayAlertWithTitle("Failed",
-                message: "Could not edit the image. Error = \(error)")
+        /* Now perform our changes */
+        PHPhotoLibrary.sharedPhotoLibrary().performChanges({
+          /* This is the change object and its output is the output object
+          that we created previously */
+          let change = PHAssetChangeRequest(forAsset: asset)
+          change.contentEditingOutput = output
+          }, completionHandler: {(success, error) in
+            
+            self.performOnMainThread{
+              if success{
+                self.displayAlertWithTitle("Succeeded",
+                  message: "Successfully edited the image")
+              } else {
+                self.displayAlertWithTitle("Failed",
+                  message: "Could not edit the image. Error = \(error)")
+              }
             }
-          }
-          
-        })
+            
+          })
         
         
       })
@@ -140,14 +149,7 @@ class ViewController: UIViewController {
     let assetResults = PHAsset.fetchAssetsWithMediaType(.Image,
       options: options)
     
-    if assetResults == nil{
-      println("Found no results")
-      return
-    } else {
-      println("Found \(assetResults.count) results")
-    }
-    
-    let imageManager = PHCachingImageManager()
+    print("Found \(assetResults.count) results")
     
     if let asset = assetResults[0] as? PHAsset{
       editAsset(asset)
@@ -185,7 +187,7 @@ class ViewController: UIViewController {
           self!.displayAlertWithTitle("Access",
             message: "I could not access the photo library")
         }
-        })
+      })
       
     }
     

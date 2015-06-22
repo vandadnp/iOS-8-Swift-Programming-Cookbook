@@ -43,18 +43,18 @@ class ViewController: UIViewController {
         library.writeVideoAtPathToSavedPhotosAlbum(url,
           completionBlock: {(url: NSURL!, error: NSError!) in
             
-            println(url)
+            print(url)
             
             if let theError = error{
-              println("Error happened while saving the video")
-              println("The error is = \(theError)")
+              print("Error happened while saving the video")
+              print("The error is = \(theError)")
             } else {
-              println("no errors happened")
+              print("no errors happened")
             }
             
           })
       } else {
-        println("Could not find the video in the app bundle")
+        print("Could not find the video in the app bundle")
       }
       
     }

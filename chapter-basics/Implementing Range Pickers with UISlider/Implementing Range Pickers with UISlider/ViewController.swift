@@ -41,8 +41,8 @@
 //  }
 //
 //}
-
-/* 2 */
+//
+///* 2 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -50,7 +50,7 @@
 //  var slider: UISlider!
 //  
 //  func sliderValueChanged(slider: UISlider){
-//    println("Slider's new value is \(slider.value)")
+//    print("Slider's new value is \(slider.value)")
 //  }
 //  
 //  override func viewDidLoad() {
@@ -71,8 +71,8 @@
 //  }
 //  
 //}
-
-/* 3 */
+//
+///* 3 */
 import UIKit
 
 class ViewController: UIViewController {

@@ -34,9 +34,9 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   var controller: UIImagePickerController?
   
   func imagePickerController(picker: UIImagePickerController,
-    didFinishPickingMediaWithInfo info: [NSObject : AnyObject]){
+    didFinishPickingMediaWithInfo info: [String: AnyObject]){
       
-      println("Picker returned successfully")
+      print("Picker returned successfully")
       
       let mediaType:AnyObject? = info[UIImagePickerControllerMediaType]
       
@@ -45,25 +45,30 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         if type is String{
           let stringType = type as! String
           
-          if stringType == kUTTypeMovie as! String{
+          if stringType == kUTTypeMovie as String{
             let urlOfVideo = info[UIImagePickerControllerMediaURL] as? NSURL
             if let url = urlOfVideo{
               
-              println("Url of video = \(url)")
+              print("Url of video = \(url)")
               
               var dataReadingError: NSError?
-              let videoData = NSData(contentsOfURL: url,
-                options: .MappedRead,
-                error: &dataReadingError)
+              let videoData: NSData?
+              do {
+                videoData = try NSData(contentsOfURL: url,
+                                options: .MappedRead)
+              } catch let error as NSError {
+                dataReadingError = error
+                videoData = nil
+              }
               
               if videoData!.length == 0{
                 /* We were able to read the data */
-                println("Successfully loaded the data")
+                print("Successfully loaded the data")
               } else {
                 /* We failed to read the data. Use the dataReadingError
                 variable to determine what the error is */
                 if let error = dataReadingError{
-                  println("Failed to load the data with error  = \(error)")
+                  print("Failed to load the data with error  = \(error)")
                 }
               }
               
@@ -77,7 +82,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   }
   
   func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-    println("Picker was cancelled")
+    print("Picker was cancelled")
     picker.dismissViewControllerAnimated(true, completion: nil)
   }
   
@@ -89,7 +94,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     sourceType: UIImagePickerControllerSourceType) -> Bool{
       
       let availableMediaTypes =
-      UIImagePickerController.availableMediaTypesForSourceType(sourceType) as!
+      UIImagePickerController.availableMediaTypesForSourceType(sourceType) as
         [String]?
       
       if let types = availableMediaTypes{
@@ -104,41 +109,41 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   }
   
   func doesCameraSupportShootingVideos() -> Bool{
-    return cameraSupportsMedia(kUTTypeMovie as! String, sourceType: .Camera)
+    return cameraSupportsMedia(kUTTypeMovie as String, sourceType: .Camera)
   }
   
   /* 1 */
-  //  override func viewDidAppear(animated: Bool) {
-  //    super.viewDidAppear(animated)
-  //
-  //    if beenHereBefore{
-  //      /* Only display the picker once as the viewDidAppear: method gets
-  //      called whenever the view of our view controller gets displayed */
-  //      return;
-  //    } else {
-  //      beenHereBefore = true
-  //    }
-  //
-  //    if isCameraAvailable() && doesCameraSupportShootingVideos(){
-  //
-  //      controller = UIImagePickerController()
-  //
-  //      if let theController = controller{
-  //        theController.sourceType = .Camera
-  //
-  //        theController.mediaTypes = [kUTTypeMovie as! String]
-  //
-  //        theController.allowsEditing = true
-  //        theController.delegate = self
-  //
-  //        presentViewController(theController, animated: true, completion: nil)
-  //      }
-  //
-  //    } else {
-  //      println("Camera is not available")
-  //    }
-  //
-  //  }
+//    override func viewDidAppear(animated: Bool) {
+//      super.viewDidAppear(animated)
+//  
+//      if beenHereBefore{
+//        /* Only display the picker once as the viewDidAppear: method gets
+//        called whenever the view of our view controller gets displayed */
+//        return;
+//      } else {
+//        beenHereBefore = true
+//      }
+//  
+//      if isCameraAvailable() && doesCameraSupportShootingVideos(){
+//  
+//        controller = UIImagePickerController()
+//  
+//        if let theController = controller{
+//          theController.sourceType = .Camera
+//  
+//          theController.mediaTypes = [kUTTypeMovie as String]
+//  
+//          theController.allowsEditing = true
+//          theController.delegate = self
+//  
+//          presentViewController(theController, animated: true, completion: nil)
+//        }
+//  
+//      } else {
+//        print("Camera is not available")
+//      }
+//  
+//    }
   
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
@@ -158,7 +163,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
       if let theController = controller{
         theController.sourceType = .Camera
         
-        theController.mediaTypes = [kUTTypeMovie as! String]
+        theController.mediaTypes = [kUTTypeMovie as String]
         
         theController.allowsEditing = true
         theController.delegate = self
@@ -173,7 +178,7 @@ UINavigationControllerDelegate, UIImagePickerControllerDelegate {
       }
       
     } else {
-      println("Camera is not available")
+      print("Camera is not available")
     }
     
   }

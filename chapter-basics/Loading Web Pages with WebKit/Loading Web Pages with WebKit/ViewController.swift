@@ -42,8 +42,8 @@
 //  
 //  /* Do not allow links to be tapped */
 //  func webView(webView: WKWebView,
-//    decidePolicyForNavigationAction navigationAction: WKNavigationAction!,
-//    decisionHandler: ((WKNavigationActionPolicy) -> Void)!){
+//    decidePolicyForNavigationAction navigationAction: WKNavigationAction,
+//    decisionHandler: ((WKNavigationActionPolicy) -> Void)){
 //      
 //      /* Do not allow links to be tapped */
 //      if navigationAction.navigationType == .LinkActivated{
@@ -96,8 +96,8 @@
 //  }
 //  
 //}
-
-/* 2 */
+//
+///* 2 */
 import UIKit
 import WebKit
 
@@ -120,7 +120,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     decidePolicyForNavigationResponse navigationResponse: WKNavigationResponse,
     decisionHandler: ((WKNavigationResponsePolicy) -> Void)){
     
-      println(navigationResponse.response.MIMEType)
+      print(navigationResponse.response.MIMEType)
       
       decisionHandler(.Allow)
       

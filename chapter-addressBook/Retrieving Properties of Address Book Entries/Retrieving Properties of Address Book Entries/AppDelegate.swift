@@ -41,28 +41,25 @@
 //      
 //      switch ABAddressBookGetAuthorizationStatus(){
 //      case .Authorized:
-//        println("Already authorized")
+//        print("Already authorized")
 //        readAllPeopleInAddressBook(addressBook)
 //      case .Denied:
-//        println("You are denied access to address book")
+//        print("You are denied access to address book")
 //      case .NotDetermined:
 //        ABAddressBookRequestAccessWithCompletion(addressBook,
 //          {[weak self] (granted: Bool, error: CFError!) in
 //            
 //            if granted{
 //              let strongSelf = self!
-//              println("Access is granted")
+//              print("Access is granted")
 //              strongSelf.readAllPeopleInAddressBook(strongSelf.addressBook)
 //            } else {
-//              println("Access is not granted")
+//              print("Access is not granted")
 //            }
 //            
 //          })
 //      case .Restricted:
-//        println("Access is restricted")
-//        
-//      default:
-//        println("Unhandled")
+//        print("Access is restricted")
 //      }
 //      
 //      return true
@@ -85,9 +82,9 @@
 //      let email: ABMultiValueRef = ABRecordCopyValue(person,
 //        kABPersonEmailProperty).takeRetainedValue()
 //      
-//      println("First name = \(firstName)")
-//      println("Last name = \(lastName)")
-//      println("Email = \(email)")
+//      print("First name = \(firstName)")
+//      print("Last name = \(lastName)")
+//      print("Email = \(email)")
 //      
 //    }
 //    
@@ -115,10 +112,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       switch ABAddressBookGetAuthorizationStatus(){
       case .Authorized:
-        println("Already authorized")
+        print("Already authorized")
         readAllPeopleInAddressBook(addressBook)
       case .Denied:
-        println("You are denied access to address book")
+        print("You are denied access to address book")
         
       case .NotDetermined:
         ABAddressBookRequestAccessWithCompletion(addressBook,
@@ -126,18 +123,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             if granted{
               let strongSelf = self!
-              println("Access is granted")
+              print("Access is granted")
               strongSelf.readAllPeopleInAddressBook(strongSelf.addressBook)
             } else {
-              println("Access is not granted")
+              print("Access is not granted")
             }
             
           })
       case .Restricted:
-        println("Access is restricted")
+        print("Access is restricted")
         
-      default:
-        println("Unhandled")
       }
       
       return true
@@ -153,7 +148,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let email = ABMultiValueCopyValueAtIndex(emails,
         counter).takeRetainedValue() as! String
       
-      println(email)
+      print(email)
       
     }
     
@@ -172,8 +167,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let lastName = ABRecordCopyValue(person,
         kABPersonLastNameProperty).takeRetainedValue() as! String
       
-      println("First name = \(firstName)")
-      println("Last name = \(lastName)")
+      print("First name = \(firstName)")
+      print("Last name = \(lastName)")
       
       readEmailsForPerson(person)
       

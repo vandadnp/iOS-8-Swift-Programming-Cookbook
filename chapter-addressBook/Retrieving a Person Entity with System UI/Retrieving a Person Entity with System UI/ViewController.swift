@@ -93,13 +93,13 @@ ABPeoplePickerNavigationControllerDelegate {
   }
 
   func peoplePickerNavigationControllerDidCancel(
-    peoplePicker: ABPeoplePickerNavigationController!){
+    peoplePicker: ABPeoplePickerNavigationController){
     /* Mandatory to implement */
   }
   
   func peoplePickerNavigationController(
-    peoplePicker: ABPeoplePickerNavigationController!,
-    didSelectPerson person: ABRecordRef!) {
+    peoplePicker: ABPeoplePickerNavigationController,
+    didSelectPerson person: ABRecordRef) {
 
       /* Do we know which picker this is? */
       if peoplePicker != personPicker{
@@ -113,7 +113,7 @@ ABPeoplePickerNavigationControllerDelegate {
         emails).takeRetainedValue() as NSArray
       
       for email in allEmails{
-        println(email)
+        print(email)
       }
       
   }

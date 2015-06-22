@@ -92,7 +92,7 @@ class PopoverTableViewController: UITableViewController {
     cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
     let cell = tableView.dequeueReusableCellWithIdentifier(
-      TableViewValues.identifier, forIndexPath: indexPath) as! UITableViewCell
+      TableViewValues.identifier, forIndexPath: indexPath) as UITableViewCell
     
     cell.textLabel!.text = items[indexPath]
     

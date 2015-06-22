@@ -40,10 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       switch ABAddressBookGetAuthorizationStatus(){
       case .Authorized:
-        println("Already authorized")
+        print("Already authorized")
         readFromAddressBook(addressBook)
       case .Denied:
-        println("You are denied access to address book")
+        print("You are denied access to address book")
         
       case .NotDetermined:
         ABAddressBookRequestAccessWithCompletion(addressBook,
@@ -51,18 +51,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             if granted{
               let strongSelf = self!
-              println("Access is granted")
+              print("Access is granted")
               strongSelf.readFromAddressBook(strongSelf.addressBook)
             } else {
-              println("Access is not granted")
+              print("Access is not granted")
             }
             
           })
       case .Restricted:
-        println("Access is restricted")
+        print("Access is restricted")
         
-      default:
-        println("Unhandled")
       }
       
       return true
@@ -75,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       addressBook).takeRetainedValue() as NSArray
 
     for person: ABRecordRef in allPeople{
-      println(person)
+      print(person)
     }
     
   }

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FAE4317C0AD339F317935F9863494CB31647F712",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F0E34773117208A82F87A9711AD23C44CCB7F10A" : 0,
+    "FAE4317C0AD339F317935F9863494CB31647F712" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E61CEF57-0940-4BF9-9613-B52669B094C3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F0E34773117208A82F87A9711AD23C44CCB7F10A" : "ios8cookbook",
+    "FAE4317C0AD339F317935F9863494CB31647F712" : "iOS-8-Swift-Programming-Cookbook"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Accepting User Text Input with UITextField",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "chapter-basics\/Accepting User Text Input with UITextField\/Accepting User Text Input with UITextField.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/vandad.np%2540gmail.com@atlas-server.oreilly.com\/git\/1234000002130.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F0E34773117208A82F87A9711AD23C44CCB7F10A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:vandadnp\/iOS-8-Swift-Programming-Cookbook.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FAE4317C0AD339F317935F9863494CB31647F712"
+    }
+  ]
+}
