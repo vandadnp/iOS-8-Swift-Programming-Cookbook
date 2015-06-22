@@ -39,54 +39,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       "Birthday",
     ]
     
-    let calendars = eventStore.calendarsForEntityType(EKEntityTypeEvent)
-      as! [EKCalendar]
+    let calendars = eventStore.calendarsForEntityType(.Event)
     
     for calendar in calendars{
       
-      println("Calendar title = \(calendar.title)")
-      println("Calendar type = \(calendarTypes[Int(calendar.type.value)])")
+      print("Calendar title = \(calendar.title)")
+      print("Calendar type = \(calendarTypes[Int(calendar.type.rawValue)])")
       
       let color = UIColor(CGColor: calendar.CGColor)
-      println("Calendar color = \(color)")
+      print("Calendar color = \(color)")
       
       if calendar.allowsContentModifications{
-        println("This calendar allows modifications")
+        print("This calendar allows modifications")
       } else {
-        println("This calendar does not allow modifications")
+        print("This calendar does not allow modifications")
       }
       
-      println("--------------------------")
+      print("--------------------------")
       
     }
     
   }
   
   func displayAccessDenied(){
-    println("Access to the event store is denied.")
+    print("Access to the event store is denied.")
   }
   
   func displayAccessRestricted(){
-    println("Access to the event store is restricted.")
+    print("Access to the event store is restricted.")
   }
   
   func example1(){
     
     let eventStore = EKEventStore()
     
-    switch EKEventStore.authorizationStatusForEntityType(EKEntityTypeEvent){
+    switch EKEventStore.authorizationStatusForEntityType(.Event){
       
     case .Authorized:
       extractEventEntityCalendarsOutOfStore(eventStore)
     case .Denied:
       displayAccessDenied()
     case .NotDetermined:
-      eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion:
-        {[weak self] (granted: Bool, error: NSError!) -> Void in
+      eventStore.requestAccessToEntityType(.Event, completion:
+        {granted, error in
           if granted{
-            self!.extractEventEntityCalendarsOutOfStore(eventStore)
+            self.extractEventEntityCalendarsOutOfStore(eventStore)
           } else {
-            self!.displayAccessDenied()
+            self.displayAccessDenied()
           }
         })
     case .Restricted:

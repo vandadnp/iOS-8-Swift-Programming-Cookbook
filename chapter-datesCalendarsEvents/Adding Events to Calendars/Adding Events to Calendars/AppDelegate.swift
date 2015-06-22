@@ -40,12 +40,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       /* If a calendar does not allow modification of its contents
       then we cannot insert an event into it */
       if inCalendar.allowsContentModifications == false{
-        println("The selected calendar does not allow modifications.")
+        print("The selected calendar does not allow modifications.")
         return false
       }
       
       /* Create an event */
-      var event = EKEvent(eventStore: inEventStore)
+      let event = EKEvent(eventStore: inEventStore)
       event.calendar = inCalendar
       
       /* Set the properties of the event such as its title,
@@ -58,13 +58,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       /* Finally, save the event into the calendar */
       var error:NSError?
       
-      let result = inEventStore.saveEvent(event,
-        span: EKSpanThisEvent,
-        error: &error)
+      let result: Bool
+      do {
+        try inEventStore.saveEvent(event,
+                span: .ThisEvent)
+        result = true
+      } catch let error1 as NSError {
+        error = error1
+        result = false
+      }
       
       if result == false{
         if let theError = error{
-          println("An error occurred \(theError)")
+          print("An error occurred \(theError)")
         }
       }
       
@@ -76,8 +82,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     type: EKSourceType,
     title: String) -> EKSource?{
       
-      for source in eventStore.sources() as! [EKSource]{
-        if source.sourceType.value == type.value &&
+      for source in eventStore.sources() as [EKSource]{
+        if source.sourceType.rawValue == type.rawValue &&
           source.title.caseInsensitiveCompare(title) ==
           NSComparisonResult.OrderedSame{
             return source
@@ -93,10 +99,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     source: EKSource,
     eventType: EKEntityType) -> EKCalendar?{
       
-      for calendar in source.calendarsForEntityType(eventType) as! Set<EKCalendar>{
+      for calendar in source.calendarsForEntityType(eventType) as Set<EKCalendar>{
         if calendar.title.caseInsensitiveCompare(title) ==
           NSComparisonResult.OrderedSame &&
-          calendar.type.value == type.value{
+          calendar.type.rawValue == type.rawValue{
             return calendar
         }
       }
@@ -107,21 +113,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func insertEventIntoStore(store: EKEventStore){
     
     let icloudSource = sourceInEventStore(store,
-      type: EKSourceTypeCalDAV,
+      type: .CalDAV,
       title: "iCloud")
     
     if icloudSource == nil{
-      println("You have not configured iCloud for your device.")
+      print("You have not configured iCloud for your device.")
       return
     }
     
     let calendar = calendarWithTitle("Calendar",
-      type: EKCalendarTypeCalDAV,
+      type: .CalDAV,
       source: icloudSource!,
-      eventType: EKEntityTypeEvent)
+      eventType: .Event)
     
     if calendar == nil{
-      println("Could not find the calendar we were looking for.")
+      print("Could not find the calendar we were looking for.")
       return
     }
     
@@ -139,38 +145,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       inCalendar: calendar!,
       inEventStore: store,
       notes: ""){
-        println("Successfully created the event.")
+        print("Successfully created the event.")
     } else {
-      println("Failed to create the event.")
+      print("Failed to create the event.")
     }
     
   }
   
   func displayAccessDenied(){
-    println("Access to the event store is denied.")
+    print("Access to the event store is denied.")
   }
   
   func displayAccessRestricted(){
-    println("Access to the event store is restricted.")
+    print("Access to the event store is restricted.")
   }
   
   func example1(){
     
     let eventStore = EKEventStore()
     
-    switch EKEventStore.authorizationStatusForEntityType(EKEntityTypeEvent){
+    switch EKEventStore.authorizationStatusForEntityType(.Event){
       
     case .Authorized:
       insertEventIntoStore(eventStore)
     case .Denied:
       displayAccessDenied()
     case .NotDetermined:
-      eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion:
-        {[weak self] (granted: Bool, error: NSError!) -> Void in
+      eventStore.requestAccessToEntityType(.Event, completion:
+        {granted, error in
           if granted{
-            self!.insertEventIntoStore(eventStore)
+            self.insertEventIntoStore(eventStore)
           } else {
-            self!.displayAccessDenied()
+            self.displayAccessDenied()
           }
         })
     case .Restricted:

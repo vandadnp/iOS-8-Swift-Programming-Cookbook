@@ -45,9 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       nanosecond: 40)
     
     if date != nil{
-      println("The date is \(date)")
+      print("The date is \(date)")
     } else {
-      println("Could not construct the date")
+      print("Could not construct the date")
     }
     
   }
@@ -56,15 +56,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let now = NSDate()
     
-    println(now)
+    print(now)
     
     let newDate = NSCalendar.currentCalendar().dateByAddingUnit(
-      .CalendarUnitHour,
+      .Hour,
       value: 10,
       toDate: now,
       options:.MatchNextTime)
     
-    println(newDate)
+    print(newDate)
     
   }
   
@@ -78,7 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func example4(){
     
-    var components = NSDateComponents()
+    let components = NSDateComponents()
     components.year = 2015
     components.month = 3
     components.day = 20
@@ -86,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     components.minute = 20
     components.second = 30
     let date = NSCalendar.currentCalendar().dateFromComponents(components)
-    println(date)
+    print(date)
     
   }
   

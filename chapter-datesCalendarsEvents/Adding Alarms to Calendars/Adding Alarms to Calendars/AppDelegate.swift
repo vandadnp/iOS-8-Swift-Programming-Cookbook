@@ -34,8 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     type: EKSourceType,
     title: String) -> EKSource?{
       
-      for source in eventStore.sources() as! [EKSource]{
-        if source.sourceType.value == type.value &&
+      for source in eventStore.sources() as [EKSource]{
+        if source.sourceType.rawValue == type.rawValue &&
           source.title.caseInsensitiveCompare(title) ==
           NSComparisonResult.OrderedSame{
             return source
@@ -52,10 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     eventType: EKEntityType) -> EKCalendar?{
       
       for calendar in source.calendarsForEntityType(eventType)
-        as! Set<EKCalendar>{
+        as Set<EKCalendar>{
         if calendar.title.caseInsensitiveCompare(title) ==
           NSComparisonResult.OrderedSame &&
-          calendar.type.value == type.value{
+          calendar.type.rawValue == type.rawValue{
             return calendar
         }
       }
@@ -64,11 +64,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
   
   func displayAccessDenied(){
-    println("Access to the event store is denied.")
+    print("Access to the event store is denied.")
   }
   
   func displayAccessRestricted(){
-    println("Access to the event store is restricted.")
+    print("Access to the event store is restricted.")
   }
   
   func addAlarmToCalendarWithStore(store: EKEventStore, calendar: EKCalendar){
@@ -90,11 +90,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     eventWithAlarm.title = "Event with Alarm"
     eventWithAlarm.addAlarm(alarm)
     
-    var error:NSError?
-    if store.saveEvent(eventWithAlarm, span: EKSpanThisEvent, error: &error){
-      println("Saved an event that fires 60 seconds from now.")
-    } else if let theError = error{
-      println("Failed to save the event. Error = \(theError)")
+    do {
+      try store.saveEvent(eventWithAlarm, span: .ThisEvent)
+      print("Saved an event that fires 60 seconds from now.")
+    } catch let error as NSError {
+        print("Failed to save the event. Error = \(error)")
     }
     
   }
@@ -102,21 +102,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func addAlarmToCalendarWithStore(store: EKEventStore){
     
     let icloudSource = sourceInEventStore(store,
-      type: EKSourceTypeCalDAV,
+      type: .CalDAV,
       title: "iCloud")
     
     if icloudSource == nil{
-      println("You have not configured iCloud for your device.")
+      print("You have not configured iCloud for your device.")
       return
     }
     
     let calendar = calendarWithTitle("Calendar",
-      type: EKCalendarTypeCalDAV,
+      type: .CalDAV,
       source: icloudSource!,
-      eventType: EKEntityTypeEvent)
+      eventType: .Event)
     
     if calendar == nil{
-      println("Could not find the calendar we were looking for.")
+      print("Could not find the calendar we were looking for.")
       return
     }
     
@@ -128,19 +128,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let eventStore = EKEventStore()
     
-    switch EKEventStore.authorizationStatusForEntityType(EKEntityTypeEvent){
+    switch EKEventStore.authorizationStatusForEntityType(.Event){
       
     case .Authorized:
       addAlarmToCalendarWithStore(eventStore)
     case .Denied:
       displayAccessDenied()
     case .NotDetermined:
-      eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion:
-        {[weak self] (granted: Bool, error: NSError!) -> Void in
+      eventStore.requestAccessToEntityType(.Event, completion:
+        {(granted: Bool, error: NSError?) -> Void in
           if granted{
-            self!.addAlarmToCalendarWithStore(eventStore)
+            self.addAlarmToCalendarWithStore(eventStore)
           } else {
-            self!.displayAccessDenied()
+            self.displayAccessDenied()
           }
         })
     case .Restricted:

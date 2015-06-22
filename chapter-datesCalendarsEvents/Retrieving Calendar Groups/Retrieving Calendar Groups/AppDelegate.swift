@@ -29,77 +29,77 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
-  //  func findIcloudEventSource(){
-  //    var icloudEventSource: EKSource?
-  //
-  //    let eventStore = EKEventStore()
-  //    for source in eventStore.sources() as! [EKSource]{
-  //      if source.sourceType.value == EKSourceTypeCalDAV.value &&
-  //        source.title.lowercaseString == "icloud"{
-  //          icloudEventSource = source
-  //      }
-  //    }
-  //
-  //    if let source = icloudEventSource{
-  //      println("The iCloud event source was found = \(source)")
-  //    } else {
-  //      println("Could not find the iCloud event source")
-  //    }
-  //
-  //  }
+//    func findIcloudEventSource(){
+//      var icloudEventSource: EKSource?
+//  
+//      let eventStore = EKEventStore()
+//      for source in eventStore.sources(){
+//        if source.sourceType.rawValue == EKSourceType.CalDAV.rawValue &&
+//          source.title.lowercaseString == "icloud"{
+//            icloudEventSource = source
+//        }
+//      }
+//  
+//      if let source = icloudEventSource{
+//        print("The iCloud event source was found = \(source)")
+//      } else {
+//        print("Could not find the iCloud event source")
+//      }
+//  
+//    }
   
   func findIcloudEventSource(){
     var icloudEventSource: EKSource?
     
     let eventStore = EKEventStore()
-    for source in eventStore.sources() as! [EKSource]{
-      if source.sourceType.value == EKSourceTypeCalDAV.value &&
+    for source in eventStore.sources(){
+      if source.sourceType.rawValue == EKSourceType.CalDAV.rawValue &&
         source.title.lowercaseString == "icloud"{
           icloudEventSource = source
       }
     }
     
     if let source = icloudEventSource{
-      println("The iCloud event source was found = \(source)")
+      print("The iCloud event source was found = \(source)")
       
-      let calendars = source.calendarsForEntityType(EKEntityTypeEvent)
+      let calendars = source.calendarsForEntityType(.Event)
       
-      for calendar in calendars as! Set<EKCalendar>{
-        println(calendar)
+      for calendar in calendars{
+        print(calendar)
       }
       
     } else {
-      println("Could not find the iCloud event source")
+      print("Could not find the iCloud event source")
     }
     
   }
   
   
   func displayAccessDenied(){
-    println("Access to the event store is denied.")
+    print("Access to the event store is denied.")
   }
   
   func displayAccessRestricted(){
-    println("Access to the event store is restricted.")
+    print("Access to the event store is restricted.")
   }
   
   func example1(){
     
     let eventStore = EKEventStore()
     
-    switch EKEventStore.authorizationStatusForEntityType(EKEntityTypeEvent){
+    switch EKEventStore.authorizationStatusForEntityType(.Event){
       
     case .Authorized:
       findIcloudEventSource()
     case .Denied:
       displayAccessDenied()
     case .NotDetermined:
-      eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion:
-        {[weak self] (granted: Bool, error: NSError!) -> Void in
+      eventStore.requestAccessToEntityType(.Event, completion:
+        {granted, error in
           if granted{
-            self!.findIcloudEventSource()
+            self.findIcloudEventSource()
           } else {
-            self!.displayAccessDenied()
+            self.displayAccessDenied()
           }
         })
     case .Restricted:
