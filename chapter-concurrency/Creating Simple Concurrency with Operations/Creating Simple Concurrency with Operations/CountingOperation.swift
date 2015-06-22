@@ -44,10 +44,10 @@ class CountingOperation: NSOperation {
     while isTaskFinished == false &&
       self.finished == false{
         for counter in startingCount..<endingCount{
-          println("Count = \(counter)")
-          println("Current thread = \(NSThread.currentThread())")
-          println("Main thread = \(NSThread.mainThread())")
-          println("---------------------------------")
+          print("Count = \(counter)", appendNewline: false)
+          print("Current thread = \(NSThread.currentThread())", appendNewline: false)
+          print("Main thread = \(NSThread.mainThread())", appendNewline: false)
+          print("---------------------------------", appendNewline: false)
         }
         
         isTaskFinished = true

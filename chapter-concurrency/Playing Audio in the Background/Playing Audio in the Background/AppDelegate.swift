@@ -10,7 +10,7 @@
 //  Vandad Nahavandipoor for his work. Feel free to visit my blog
 //  at http://vandadnp.wordpress.com for daily tips and tricks in Swift
 //  and Objective-C and various other programming languages.
-//  
+//
 //  You can purchase "iOS 8 Swift Programming Cookbook" from
 //  the following URL:
 //  http://shop.oreilly.com/product/0636920034254.do
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate {
   
   var window: UIWindow?
   var audioPlayer: AVAudioPlayer?
-
+  
   func application(application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       
@@ -38,47 +38,60 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate {
       
       dispatch_async(dispatchQueue, {[weak self] in
         
-        var audioSessionError: NSError?
         let audioSession = AVAudioSession.sharedInstance()
         NSNotificationCenter.defaultCenter().addObserver(self!,
           selector: "handleInterruption:",
           name: AVAudioSessionInterruptionNotification,
           object: nil)
         
-        audioSession.setActive(true, error: nil)
+        do {
+          try audioSession.setActive(true)
+        } catch _ {
+        }
         
-        if audioSession.setCategory(AVAudioSessionCategoryPlayback,
-          error: &audioSessionError){
-            println("Successfully set the audio session")
-        } else {
-          println("Could not set the audio session")
+        do {
+          try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+          print("Successfully set the audio session")
+        } catch let error as NSError {
+          print("Could not set the audio session \(error)")
+        } catch {
+          fatalError()
         }
         
         let filePath = NSBundle.mainBundle().pathForResource("MySong",
           ofType:"mp3")
         
-        let fileData = NSData(contentsOfFile: filePath!,
-          options: .DataReadingMappedIfSafe,
-          error: nil)
+        let fileData: NSData?
+        do {
+          fileData = try NSData(contentsOfFile: filePath!,
+            options: .DataReadingMappedIfSafe)
+        } catch _ {
+          fileData = nil
+        }
         
-        var error:NSError?
-        
-        /* Start the audio player */
-        self!.audioPlayer = AVAudioPlayer(data: fileData, error: &error)
+        do {
+          /* Start the audio player */
+          self!.audioPlayer = try AVAudioPlayer(data: fileData!)
+        } catch let error as NSError {
+          self!.audioPlayer = nil
+          print("Error = \(error)")
+        } catch {
+          fatalError()
+        }
         
         /* Did we get an instance of AVAudioPlayer? */
         if let theAudioPlayer = self!.audioPlayer{
-          theAudioPlayer.delegate = self;
+          theAudioPlayer.delegate = self
           if theAudioPlayer.prepareToPlay() &&
             theAudioPlayer.play(){
-              println("Successfully started playing")
+              print("Successfully started playing")
           } else {
-            println("Failed to play")
+            print("Failed to play")
           }
         } else {
           /* Handle the failure of instantiating the audio player */
         }
-      })
+        })
       
       return true
   }
@@ -102,10 +115,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate {
     
   }
   
-  func audioPlayerDidFinishPlaying(player: AVAudioPlayer!,
+  func audioPlayerDidFinishPlaying(player: AVAudioPlayer,
     successfully flag: Bool){
       
-      println("Finished playing the song")
+      print("Finished playing the song")
       
       /* The flag parameter tells us if the playback was successfully
       finished or not */

@@ -153,6 +153,7 @@
 		9DF43D7419645056005D9BA1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
@@ -399,6 +400,7 @@
 				9DF43D9A19645056005D9BA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9DF43D9B19645056005D9BA1 /* Build configuration list for PBXNativeTarget "Scheduling a Background ActivityTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +409,7 @@
 				9DF43D9D19645056005D9BA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

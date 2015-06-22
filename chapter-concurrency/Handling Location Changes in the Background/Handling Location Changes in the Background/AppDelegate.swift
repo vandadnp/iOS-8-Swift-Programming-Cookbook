@@ -32,9 +32,9 @@ CLLocationManagerDelegate {
   var locationManager: CLLocationManager! = nil
   var isExecutingInBackground = false
   
-  func locationManager(manager: CLLocationManager!,
-    didUpdateToLocation newLocation: CLLocation!,
-    fromLocation oldLocation: CLLocation!){
+  func locationManager(manager: CLLocationManager,
+    didUpdateToLocation newLocation: CLLocation,
+    fromLocation oldLocation: CLLocation){
       if isExecutingInBackground{
         /* We are in the background. Do not do any heavy processing */
       } else {
@@ -69,11 +69,6 @@ CLLocationManagerDelegate {
     detection accuracy */
     locationManager.desiredAccuracy = kCLLocationAccuracyBest
   }
-
-  
-
-  
-
 
 }
 

@@ -27,13 +27,13 @@ class ViewController: UIViewController {
   
   func performWorkForParameter(param: AnyObject?, operationName: String){
     if let theParam: AnyObject = param{
-      println("First operation - Object = \(theParam)")
+      print("First operation - Object = \(theParam)")
     }
     
-    println("\(operationName) Operation - " +
+    print("\(operationName) Operation - " +
       "Main Thread = \(NSThread.mainThread())")
     
-    println("\(operationName) Operation - " +
+    print("\(operationName) Operation - " +
       "Current Thread = \(NSThread.currentThread())")
   }
   
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
     operationQueue.addOperation(firstOperation)
     operationQueue.addOperation(secondOperation)
     
-    println("Main thread is here")
+    print("Main thread is here")
     
   }
 

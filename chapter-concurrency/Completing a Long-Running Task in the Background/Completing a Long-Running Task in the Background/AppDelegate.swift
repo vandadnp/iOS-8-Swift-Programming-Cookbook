@@ -48,9 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UIApplication.sharedApplication().backgroundTimeRemaining
     
     if backgroundTimeRemaining == DBL_MAX{
-      println("Background Time Remaining = Undetermined")
+      print("Background Time Remaining = Undetermined")
     } else {
-      println("Background Time Remaining = " +
+      print("Background Time Remaining = " +
         "\(backgroundTimeRemaining) Seconds")
     }
   

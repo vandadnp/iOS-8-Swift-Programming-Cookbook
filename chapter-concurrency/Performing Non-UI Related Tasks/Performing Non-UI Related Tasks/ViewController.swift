@@ -10,7 +10,7 @@
 //  Vandad Nahavandipoor for his work. Feel free to visit my blog
 //  at http://vandadnp.wordpress.com for daily tips and tricks in Swift
 //  and Objective-C and various other programming languages.
-//  
+//
 //  You can purchase "iOS 8 Swift Programming Cookbook" from
 //  the following URL:
 //  http://shop.oreilly.com/product/0636920034254.do
@@ -21,54 +21,55 @@
 //  report them to O'Reilly at the following URL:
 //  http://www.oreilly.com/catalog/errata.csp?isbn=0636920034254
 
+/* 1 */
 //import UIKit
 //
 //class ViewController: UIViewController {
-//  
+//
 //  func printFrom1To1000(){
-//    
+//
 //    for counter in 0..<1000{
-//      println("Counter = \(counter) - Thread = \(NSThread.currentThread())")
+//      print("Counter = \(counter) - Thread = \(NSThread.currentThread())")
 //    }
-//    
+//
 //  }
-//  
+//
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
-//    
+//
 //    let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 //    dispatch_sync(queue, printFrom1To1000)
 //    dispatch_sync(queue, printFrom1To1000)
-//    
+//
 //  }
 //
 //}
-
-/* 2 */
+//
+//// 2
 //import UIKit
 //
 //class ViewController: UIViewController {
-//  
+//
 //  override func viewDidAppear(animated: Bool) {
 //    super.viewDidAppear(animated)
-//    
+//
 //    let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 //    dispatch_async(queue, {
-//      
+//
 //      dispatch_sync(queue, {
 //        /* Download the image here */
 //        })
-//      
+//
 //      dispatch_sync(dispatch_get_main_queue(), {
 //        /* Show the image to the user here on the main queue */
 //        })
-//      
+//
 //      })
 //  }
-//  
+//
 //}
-
-/* 3 */
+//
+////3
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -92,23 +93,31 @@
 //        let urlRequest = NSURLRequest(URL: url!)
 //        var downloadError: NSError?
 //        
-//        let imageData = NSURLConnection.sendSynchronousRequest(urlRequest,
-//          returningResponse: nil, error: &downloadError)
+//        let imageData: NSData?
+//        do {
+//          imageData = try NSURLConnection.sendSynchronousRequest(urlRequest,
+//            returningResponse: nil)
+//        } catch let error as NSError {
+//          downloadError = error
+//          imageData = nil
+//        } catch {
+//          fatalError()
+//        }
 //        
 //        if let error = downloadError{
-//          println("Error happened = \(error)")
-//        } else {
+//          print("Error happened = \(error)")
+//        } else if let imageData = imageData{
 //          
 //          if imageData.length > 0{
 //            image = UIImage(data: imageData)
 //            /* Now we have the image */
 //          } else {
-//            println("No data could get downloaded from the URL")
+//            print("No data could get downloaded from the URL")
 //          }
 //          
 //        }
 //        
-//        })
+//      })
 //      
 //      dispatch_sync(dispatch_get_main_queue(), {
 //        /* Show the image to the user here on the main queue */
@@ -120,38 +129,38 @@
 //          self!.view.addSubview(imageView)
 //        }
 //        
-//        })
+//      })
 //      
 //      })
 //  }
 //  
 //}
-
-/* 4 */
+//
+////4
 import UIKit
 
 class ViewController: UIViewController {
-  
+
   func fileLocation() -> String?{
-  
+
     /* Get the document folder(s) */
     let folders = NSSearchPathForDirectoriesInDomains(.DocumentDirectory,
       .UserDomainMask,
-      true) as! [String]
-    
+      true) as [String]
+
     /* Did we find anything? */
     if folders.count == 0{
       return nil
     }
-    
+
     /* Get the first folder */
     let documentsFolder = folders[0]
-    
+
     /* Append the filename to the end of the documents path */
     return documentsFolder.stringByAppendingPathComponent("list.txt")
-    
+
   }
-  
+
   func hasFileAlreadyBeenCreated() -> Bool{
     let fileManager = NSFileManager()
     if let theLocation = fileLocation(){
@@ -159,40 +168,40 @@ class ViewController: UIViewController {
     }
     return false
   }
-  
+
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
-    
+
     let concurrentQueue =
       dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
-    
+
     /* If we have not already saved an array of 10,000
     random numbers to the disk before, generate these numbers now
     and then save them to the disk in an array */
     dispatch_async(concurrentQueue, {[weak self] in
-      
+
       let numberOfValuesRequired = 10000
-      
-      
+
+
       if self!.hasFileAlreadyBeenCreated() == false{
         dispatch_sync(concurrentQueue, {
-          
+
           var arrayOfRandomNumbers = [Int]()
-          
+
           for _ in 0..<numberOfValuesRequired{
             let randomNumber = Int(arc4random())
             arrayOfRandomNumbers.append(randomNumber)
           }
-          
+
           /* Now let's write the array to disk */
           let array = arrayOfRandomNumbers as NSArray
           array.writeToFile(self!.fileLocation()!, atomically: true)
-          
+
           })
       }
-      
+
       var randomNumbers: NSMutableArray?
-      
+
       /* Read the numbers from disk and sort them in an
       ascending fashion */
       dispatch_sync(concurrentQueue, {
@@ -200,7 +209,7 @@ class ViewController: UIViewController {
         if self!.hasFileAlreadyBeenCreated(){
           randomNumbers = NSMutableArray(
             contentsOfFile: self!.fileLocation()!)
-          
+
           /* Now sort the numbers */
           randomNumbers!.sortUsingComparator({
             (obj1: AnyObject!, obj2: AnyObject!) -> NSComparisonResult in
@@ -210,24 +219,24 @@ class ViewController: UIViewController {
             })
         }
         })
-      
-      
+
+
       dispatch_async(dispatch_get_main_queue(), {
         if let numbers = randomNumbers{
-          
+
           if numbers.count > 0{
             /* Refresh the UI here using the numbers in the
             randomNumbers array */
-            println("The sorted array was read back from disk = \(numbers)")
+            print("The sorted array was read back from disk = \(numbers)")
           } else {
-            println("The numbers array is emtpy")
+            print("The numbers array is emtpy")
           }
-          
+
         }
         })
-      
+
       })
-    
+
   }
-  
+
 }

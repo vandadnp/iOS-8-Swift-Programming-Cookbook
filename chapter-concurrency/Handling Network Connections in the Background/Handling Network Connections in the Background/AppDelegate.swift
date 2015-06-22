@@ -10,7 +10,7 @@
 //  Vandad Nahavandipoor for his work. Feel free to visit my blog
 //  at http://vandadnp.wordpress.com for daily tips and tricks in Swift
 //  and Objective-C and various other programming languages.
-//  
+//
 //  You can purchase "iOS 8 Swift Programming Cookbook" from
 //  the following URL:
 //  http://shop.oreilly.com/product/0636920034254.do
@@ -39,27 +39,27 @@
 //
 //      NSURLConnection.sendAsynchronousRequest(urlRequest,
 //        queue: queue,
-//        completionHandler: {(response: NSURLResponse!,
-//          data: NSData!,
-//          error: NSError!) in
+//        completionHandler: {(response: NSURLResponse?,
+//          data: NSData?,
+//          error: NSError?) in
 //
-//        if data.length > 0 && error == nil{
-//          /* Date did come back */
-//        }
-//        else if data.length == 0 && error == nil{
-//          /* No data came back */
-//        }
-//        else if error != nil{
-//          /* Error happened. Make sure you handle this properly */
-//        }
+//          if let data = data where data.length > 0 && error == nil{
+//            /* Date did come back */
+//          }
+//          else if let data = data where data.length == 0 && error == nil{
+//            /* No data came back */
+//          } else if error != nil{
+//            /* Error happened. Make sure you handle this properly */
+//          }
+//
 //        })
 //
 //      return true
 //  }
 //
 //}
-
-/* 2 */
+//
+///* 2 */
 //import UIKit
 //
 //@UIApplicationMain
@@ -73,12 +73,16 @@
 //      let urlAsString = "http://www.apple.com"
 //      let url = NSURL(string: urlAsString)
 //      let urlRequest = NSURLRequest(URL: url!)
-//      let queue = NSOperationQueue()
 //      var error: NSError?
 //
-//      let data = NSURLConnection.sendSynchronousRequest(urlRequest,
-//        returningResponse: nil,
-//        error: &error)
+//      let data: NSData?
+//      do {
+//          data = try NSURLConnection.sendSynchronousRequest(urlRequest,
+//                  returningResponse: nil)
+//      } catch let error1 as NSError {
+//          error = error1
+//          data = nil
+//      }
 //
 //      if data != nil && error == nil{
 //        /* Date did come back */
@@ -94,8 +98,8 @@
 //  }
 //
 //}
-
-/* 3 */
+//
+///* 3 */
 import UIKit
 
 @UIApplicationMain
@@ -115,12 +119,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let urlAsString = "http://www.apple.com"
         let url = NSURL(string: urlAsString)
         let urlRequest = NSURLRequest(URL: url!)
-        let queue = NSOperationQueue()
         var error: NSError?
         
-        let data = NSURLConnection.sendSynchronousRequest(urlRequest,
-          returningResponse: nil,
-          error: &error)
+        let data: NSData?
+        do {
+          data = try NSURLConnection.sendSynchronousRequest(urlRequest,
+            returningResponse: nil)
+        } catch let error1 as NSError {
+          error = error1
+          data = nil
+        } catch {
+          fatalError()
+        }
         
         if data != nil && error == nil{
           /* Date did come back */
@@ -131,7 +141,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else if error != nil{
           /* Error happened. Make sure you handle this properly */
         }
-        })
+      })
       
       return true
   }

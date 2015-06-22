@@ -31,12 +31,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   func paint(paramTimer: NSTimer){
-    println("Painting")
+    print("Painting")
   }
   
   func startPainting(){
     stopPainting()
-    println("Starting painting...")
+    print("Starting painting...")
     paintingTimer = NSTimer.scheduledTimerWithTimeInterval(1.0,
       target: self,
       selector: "paint:",

@@ -10,7 +10,7 @@
 //  Vandad Nahavandipoor for his work. Feel free to visit my blog
 //  at http://vandadnp.wordpress.com for daily tips and tricks in Swift
 //  and Objective-C and various other programming languages.
-//  
+//
 //  You can purchase "iOS 8 Swift Programming Cookbook" from
 //  the following URL:
 //  http://shop.oreilly.com/product/0636920034254.do
@@ -21,32 +21,32 @@
 //  report them to O'Reilly at the following URL:
 //  http://www.oreilly.com/catalog/errata.csp?isbn=0636920034254
 
-/* 1 */
+///* 1 */
 //import UIKit
 //
 //class ViewController: UIViewController {
-//  
+//
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
-//    
+//
 //    dispatch_async(dispatch_get_main_queue(), {[weak self] in
-//      
+//
 //      let alertController = UIAlertController(title: "GCD",
 //        message: "GCD is amazing!",
 //        preferredStyle: .Alert)
-//      
+//
 //      alertController.addAction(UIAlertAction(title: "OK",
 //        style: .Default,
 //        handler: nil))
-//      
+//
 //      self!.presentViewController(alertController,
 //        animated: true,
 //        completion: nil)
-//      
+//
 //      })
-//    
+//
 //    }
-//  
+//
 //}
 
 /* 2 */
@@ -58,9 +58,9 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     dispatch_async(dispatch_get_main_queue(), {
-      println("Current thread = \(NSThread.currentThread())")
-      println("Main thread = \(NSThread.mainThread())")
-      })
+      print("Current thread = \(NSThread.currentThread())")
+      print("Main thread = \(NSThread.mainThread())")
+    })
     
   }
   

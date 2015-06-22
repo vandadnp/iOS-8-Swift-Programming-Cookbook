@@ -28,9 +28,6 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-let delay = dispatch_time(DISPATCH_TIME_NOW,
-  Int64((1.0 / 2.0) * Double(NSEC_PER_SEC)));
-    
     let delayInSeconds = 2.0
     
     let delayInNanoSeconds =

@@ -30,7 +30,7 @@ class ViewController: UIViewController {
   
   func executedOnlyOnce(){
     numberOfEntries++;
-    println("Executed \(numberOfEntries) time(s)")
+    print("Executed \(numberOfEntries) time(s)")
     
   }
                             
