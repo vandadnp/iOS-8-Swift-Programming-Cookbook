@@ -21,7 +21,7 @@
 //  report them to O'Reilly at the following URL:
 //  http://www.oreilly.com/catalog/errata.csp?isbn=0636920034254
 
-/* 1 */
+///* 1 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -34,7 +34,7 @@
 //
 //class ViewController: UIViewController {
 //  
-//  var squareViews = [AnyObject]()
+//  var squareViews = [UIDynamicItem]()
 //  var animator: UIDynamicAnimator?
 //  
 //  override func viewDidAppear(animated: Bool) {
@@ -76,12 +76,12 @@
 //  
 //}
 
-/* 3 */
+//// 3 
 //import UIKit
 //
 //class ViewController: UIViewController {
 //  
-//  var squareViews = [AnyObject]()
+//  var squareViews = [UIDynamicItem]()
 //  var animator: UIDynamicAnimator?
 //  
 //  override func viewDidAppear(animated: Bool) {
@@ -132,18 +132,18 @@
 //  
 //}
 
-/* 4 */
+///* 4 */
 import UIKit
 
 class ViewController: UIViewController, UICollisionBehaviorDelegate {
   
   let bottomBoundary = "bottomBoundary"
-  var squareViews = [AnyObject]()
+  var squareViews = [UIDynamicItem]()
   var animator: UIDynamicAnimator?
   
   func collisionBehavior(behavior: UICollisionBehavior,
     beganContactForItem item: UIDynamicItem,
-    withBoundaryIdentifier identifier: NSCopying,
+    withBoundaryIdentifier identifier: NSCopying?,
     atPoint p: CGPoint){
       
       if identifier as? String == bottomBoundary{

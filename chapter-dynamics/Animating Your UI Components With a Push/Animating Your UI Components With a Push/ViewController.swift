@@ -95,7 +95,7 @@ class ViewController: UIViewController {
       collision.translatesReferenceBoundsIntoBoundary = true
       pushBehavior = UIPushBehavior(items: [theSquareView], mode: .Continuous)
       animator!.addBehavior(collision)
-      animator!.addBehavior(pushBehavior)
+      animator!.addBehavior(pushBehavior!)
     }
     
   }
