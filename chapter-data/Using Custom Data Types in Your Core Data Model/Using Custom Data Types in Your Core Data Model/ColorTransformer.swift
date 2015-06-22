@@ -30,7 +30,7 @@ class ColorTransformer: NSValueTransformer {
     var alpha: CGFloat = 0
     color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
     
-    var components = [red, green, blue, alpha]
+    let components = [red, green, blue, alpha]
     let dataFromColors = NSData(bytes: components,
       length: sizeofValue(components))
     

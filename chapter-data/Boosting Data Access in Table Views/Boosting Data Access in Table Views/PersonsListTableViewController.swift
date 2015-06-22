@@ -45,7 +45,7 @@ NSFetchedResultsControllerDelegate {
   }
   
   func controller(controller: NSFetchedResultsController,
-    didChangeObject anObject: AnyObject,
+    didChangeObject anObject: NSManagedObject,
     atIndexPath indexPath: NSIndexPath?,
     forChangeType type: NSFetchedResultsChangeType,
     newIndexPath: NSIndexPath?) {
@@ -69,7 +69,7 @@ NSFetchedResultsControllerDelegate {
   override func tableView(tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
       
-      let sectionInfo = frc.sections![section] as! NSFetchedResultsSectionInfo
+      let sectionInfo = frc.sections![section] as NSFetchedResultsSectionInfo
       return sectionInfo.numberOfObjects
       
   }
@@ -79,7 +79,7 @@ NSFetchedResultsControllerDelegate {
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewConstants.cellIdentifier,
-        forIndexPath: indexPath) as! UITableViewCell
+        forIndexPath: indexPath) as UITableViewCell
       
       let person = frc.objectAtIndexPath(indexPath) as! Person
       
@@ -110,14 +110,12 @@ NSFetchedResultsControllerDelegate {
       managedObjectContext!.deleteObject(personToDelete)
       
       if personToDelete.deleted{
-        var savingError: NSError?
         
-        if managedObjectContext!.save(&savingError){
-          println("Successfully deleted the object")
-        } else {
-          if let error = savingError{
-            println("Failed to save the context with error = \(error)")
-          }
+        do {
+          try managedObjectContext!.save()
+          print("Successfully deleted the object")
+        } catch let error as NSError {
+          print("Failed to save the context with error = \(error)")
         }
       }
       
@@ -152,11 +150,11 @@ NSFetchedResultsControllerDelegate {
       cacheName: nil)
     
     frc.delegate = self
-    var fetchingError: NSError?
-    if frc.performFetch(&fetchingError){
-      println("Successfully fetched")
-    } else {
-      println("Failed to fetch")
+    do {
+      try frc.performFetch()
+      print("Successfully fetched")
+    } catch let error as NSError {
+      print("Failed to fetch \(error)")
     }
     
   }

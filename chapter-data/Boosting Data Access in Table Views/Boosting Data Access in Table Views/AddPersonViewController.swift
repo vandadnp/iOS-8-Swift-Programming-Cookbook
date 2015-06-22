@@ -25,27 +25,26 @@ class AddPersonViewController: UIViewController {
     
     let newPerson =
     NSEntityDescription.insertNewObjectForEntityForName("Person",
-      inManagedObjectContext: managedObjectContext!) as? Person
+      inManagedObjectContext: managedObjectContext) as? Person
     
     if let person = newPerson{
-      person.firstName = textFieldFirstName.text
-      person.lastName = textFieldLastName.text
-      if let age = textFieldAge.text.toInt(){
+      person.firstName = textFieldFirstName.text!
+      person.lastName = textFieldLastName.text!
+      if let age = Int(textFieldAge.text!){
         person.age = age
       } else {
         person.age = 18
       }
       
-      var savingError: NSError?
-      
-      if managedObjectContext!.save(&savingError){
+      do {
+        try managedObjectContext.save()
         navigationController!.popViewControllerAnimated(true)
-      } else {
-        println("Failed to save the managed object context")
+      } catch let error as NSError {
+        print("Failed to save the managed object context \(error)")
       }
       
     } else {
-      println("Failed to create the new person object")
+      print("Failed to create the new person object")
     }
     
   }
