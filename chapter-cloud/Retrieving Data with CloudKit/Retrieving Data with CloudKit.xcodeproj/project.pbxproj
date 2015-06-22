@@ -12,7 +12,6 @@
 		A62BF0EA197A7CD10027539E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62BF0E8197A7CD10027539E /* Main.storyboard */; };
 		A62BF0EC197A7CD10027539E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A62BF0EB197A7CD10027539E /* Images.xcassets */; };
 		A62BF0F8197A7CD10027539E /* Retrieving_Data_with_CloudKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62BF0F7197A7CD10027539E /* Retrieving_Data_with_CloudKitTests.swift */; };
-		A62BF103197A7D4D0027539E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62BF102197A7D4D0027539E /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +35,6 @@
 		A62BF0F6197A7CD10027539E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A62BF0F7197A7CD10027539E /* Retrieving_Data_with_CloudKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Retrieving_Data_with_CloudKitTests.swift; sourceTree = "<group>"; };
 		A62BF101197A7D4B0027539E /* Retrieving Data with CloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Retrieving Data with CloudKit.entitlements"; sourceTree = "<group>"; };
-		A62BF102197A7D4D0027539E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A62BF103197A7D4D0027539E /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +58,6 @@
 		A62BF0D6197A7CD10027539E = {
 			isa = PBXGroup;
 			children = (
-				A62BF102197A7D4D0027539E /* CloudKit.framework */,
 				A62BF0E1197A7CD10027539E /* Retrieving Data with CloudKit */,
 				A62BF0F4197A7CD10027539E /* Retrieving Data with CloudKitTests */,
 				A62BF0E0197A7CD10027539E /* Products */,
@@ -159,7 +155,8 @@
 		A62BF0D7197A7CD10027539E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					A62BF0DE197A7CD10027539E = {
@@ -275,6 +272,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -343,6 +341,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
 				INFOPLIST_FILE = "Retrieving Data with CloudKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -356,6 +355,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Retrieving Data with CloudKit/Retrieving Data with CloudKit.entitlements";
 				INFOPLIST_FILE = "Retrieving Data with CloudKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -375,6 +375,7 @@
 				);
 				INFOPLIST_FILE = "Retrieving Data with CloudKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixolity.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -390,6 +391,7 @@
 				);
 				INFOPLIST_FILE = "Retrieving Data with CloudKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixolity.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};

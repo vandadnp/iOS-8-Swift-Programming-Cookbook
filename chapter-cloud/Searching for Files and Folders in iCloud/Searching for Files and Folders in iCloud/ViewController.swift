@@ -2,11 +2,26 @@
 //  ViewController.swift
 //  Searching for Files and Folders in iCloud
 //
-//  Created by vandad on 207//14.
+//  Created by Vandad Nahavandipoor on 7/11/14.
 //  Copyright (c) 2014 Pixolity Ltd. All rights reserved.
 //
+//  These example codes are written for O'Reilly's iOS 8 Swift Programming Cookbook
+//  If you use these solutions in your apps, you can give attribution to
+//  Vandad Nahavandipoor for his work. Feel free to visit my blog
+//  at http://vandadnp.wordpress.com for daily tips and tricks in Swift
+//  and Objective-C and various other programming languages.
+//
+//  You can purchase "iOS 8 Swift Programming Cookbook" from
+//  the following URL:
+//  http://shop.oreilly.com/product/0636920034254.do
+//
+//  If you have any questions, you can contact me directly
+//  at vandad.np@gmail.com
+//  Similarly, if you find an error in these sample codes, simply
+//  report them to O'Reilly at the following URL:
+//  http://www.oreilly.com/catalog/errata.csp?isbn=0636920034254
 
-/* 1 */
+///* 1 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -36,7 +51,7 @@ class ViewController: UIViewController {
   let fileName = "MyFileName.txt"
   
   func storeFile(){
-    println("Storing a file in the directory...")
+    print("Storing a file in the directory...")
     
     if let directory = cloudDocumentsDirectory{
       
@@ -48,44 +63,45 @@ class ViewController: UIViewController {
       
       var writingError: NSError?
       
-      if "Hello, World!".writeToFile(pathInAppBundle,
-        atomically: true,
-        encoding: NSUTF8StringEncoding,
-        error: &writingError){
-          println("Successfully saved the file in the app bundle")
-          
-          println("Now moving this file into the cloud...")
-          
-          let sourceUrl = NSURL(fileURLWithPath: pathInAppBundle)
-          let destinationUrl = NSURL(fileURLWithPath: pathInCloud)
-          
-          var savingError: NSError?
-          if fileManager.setUbiquitous(true,
-            itemAtURL: sourceUrl!,
-            destinationURL: destinationUrl!,
-            error: &savingError){
-              println("Successfully moved the file to the cloud...")
-          } else {
-            if let error = savingError{
-              println("Failed to move the file to the cloud = \(error)")
-            }
+      do {
+        try "Hello, World!".writeToFile(pathInAppBundle,
+          atomically: true,
+          encoding: NSUTF8StringEncoding)
+        print("Successfully saved the file in the app bundle")
+        
+        print("Now moving this file into the cloud...")
+        
+        let sourceUrl = NSURL(fileURLWithPath: pathInAppBundle)
+        let destinationUrl = NSURL(fileURLWithPath: pathInCloud)
+        
+        var savingError: NSError?
+        do {
+          try fileManager.setUbiquitous(true,
+            itemAtURL: sourceUrl,
+            destinationURL: destinationUrl)
+          print("Successfully moved the file to the cloud...")
+        } catch let error1 as NSError {
+          savingError = error1
+          if let error = savingError{
+            print("Failed to move the file to the cloud = \(error)")
           }
-          
-      } else {
+        }
+        
+      } catch let error1 as NSError {
+        writingError = error1
         if let error = writingError{
-          println("An error occurred while writing the file = \(error)")
+          print("An error occurred while writing the file = \(error)")
         }
       }
       startQuery()
     } else {
-      println("The directory was nil")
+      print("The directory was nil")
     }
     
   }
   
   func doesDocumentsDirectoryExist() -> Bool{
     var isDirectory = false as ObjCBool
-    var mustCreateDocumentsDirectory = false
     
     if let directory = cloudDocumentsDirectory{
       if fileManager.fileExistsAtPath(directory,
@@ -100,25 +116,26 @@ class ViewController: UIViewController {
   }
   
   func createDocumentsDirectory(){
-    println("Must create the directory.")
+    print("Must create the directory.")
     
     var directoryCreationError: NSError?
     
     if let directory = cloudDocumentsDirectory{
-      if fileManager.createDirectoryAtPath(directory,
-        withIntermediateDirectories:true,
-        attributes:nil,
-        error:&directoryCreationError){
-          println("Successfully created the folder")
-          /* Now store the file */
-          storeFile()
-      } else {
+      do {
+        try fileManager.createDirectoryAtPath(directory,
+          withIntermediateDirectories:true,
+          attributes:nil)
+        print("Successfully created the folder")
+        /* Now store the file */
+        storeFile()
+      } catch let error1 as NSError {
+        directoryCreationError = error1
         if let error = directoryCreationError{
-          println("Failed to create the folder with error = \(error)")
+          print("Failed to create the folder with error = \(error)")
         }
       }
     } else {
-      println("The directory was nil")
+      print("The directory was nil")
     }
     
   }
@@ -135,7 +152,7 @@ class ViewController: UIViewController {
   }
   
   func startQuery(){
-    println("Starting the query now...")
+    print("Starting the query now...")
     
     metadataQuery.searchScopes = [NSMetadataQueryUbiquitousDocumentsScope]
     let predicate = NSPredicate(format: "%K like %@",
@@ -144,15 +161,15 @@ class ViewController: UIViewController {
     
     metadataQuery.predicate = predicate
     if metadataQuery.startQuery(){
-      println("Successfully started the query.")
+      print("Successfully started the query.")
     } else {
-      println("Failed to start the query.")
+      print("Failed to start the query.")
     }
   }
   
   func handleMetadataQueryFinished(sender: NSMetadataQuery){
     
-    println("Search finished");
+    print("Search finished");
     
     /* Stop listening for notifications as we are not expecting
     anything more */
@@ -173,9 +190,9 @@ class ViewController: UIViewController {
       let itemSize = item.valueForAttribute(NSMetadataItemFSSizeKey)
         as! Int
       
-      println("Item name = \(itemName)")
-      println("Item url = \(itemUrl)")
-      println("Item size = \(itemSize)")
+      print("Item name = \(itemName)")
+      print("Item url = \(itemUrl)")
+      print("Item size = \(itemSize)")
       
     }
     
@@ -184,7 +201,7 @@ class ViewController: UIViewController {
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     
-    println("Listening for notifications...")
+    print("Listening for notifications...")
     /* Listen for a notification that gets fired when the metadata query
     has finished finding the items we were looking for */
     NSNotificationCenter.defaultCenter().addObserver(self,
@@ -193,7 +210,7 @@ class ViewController: UIViewController {
       object: nil)
     
     if doesDocumentsDirectoryExist(){
-      println("This folder already exists.")
+      print("This folder already exists.")
       /* Now store the file */
       storeFile()
     } else {

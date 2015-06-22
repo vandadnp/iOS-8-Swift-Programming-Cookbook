@@ -2,9 +2,24 @@
 //  ViewController.swift
 //  Observing Changes to Records in CloudKit
 //
-//  Created by vandad on 197//14.
+//  Created by Vandad Nahavandipoor on 7/11/14.
 //  Copyright (c) 2014 Pixolity Ltd. All rights reserved.
 //
+//  These example codes are written for O'Reilly's iOS 8 Swift Programming Cookbook
+//  If you use these solutions in your apps, you can give attribution to
+//  Vandad Nahavandipoor for his work. Feel free to visit my blog
+//  at http://vandadnp.wordpress.com for daily tips and tricks in Swift
+//  and Objective-C and various other programming languages.
+//
+//  You can purchase "iOS 8 Swift Programming Cookbook" from
+//  the following URL:
+//  http://shop.oreilly.com/product/0636920034254.do
+//
+//  If you have any questions, you can contact me directly
+//  at vandad.np@gmail.com
+//  Similarly, if you find an error in these sample codes, simply
+//  report them to O'Reilly at the following URL:
+//  http://www.oreilly.com/catalog/errata.csp?isbn=0636920034254
 
 import UIKit
 import CloudKit
@@ -25,7 +40,7 @@ class ViewController: UIViewController {
 
   func subscription() -> CKSubscription{
     
-    var predicate = NSPredicate(format: "maker == %@", maker)
+    let predicate = NSPredicate(format: "maker == %@", maker)
     
     let subscription = CKSubscription(recordType: recordType,
       predicate: predicate,
@@ -57,20 +72,20 @@ class ViewController: UIViewController {
     newCar.setValue(2016, forKey: "year")
     newCar.setValue("Orange", forKey: "color")
     
-    println("Saving the new car...")
-    database.saveRecord(newCar, completionHandler: {[weak self]
-      (record: CKRecord!, error: NSError!) in
+    print("Saving the new car...")
+    database.saveRecord(newCar, completionHandler: {
+      (record: CKRecord?, error: NSError?) in
       
       if error != nil{
-        println("Failed to save the car. Error = \(error)")
+        print("Failed to save the car. Error = \(error)")
       } else {
-        println("Successfully saved the car")
+        print("Successfully saved the car")
       }
       
-      if self!.backgroundTaskIdentifier != UIBackgroundTaskInvalid{
+      if self.backgroundTaskIdentifier != UIBackgroundTaskInvalid{
         UIApplication.sharedApplication().endBackgroundTask(
-          self!.backgroundTaskIdentifier)
-        self!.backgroundTaskIdentifier = UIBackgroundTaskInvalid
+          self.backgroundTaskIdentifier)
+        self.backgroundTaskIdentifier = UIBackgroundTaskInvalid
       }
       
       })
@@ -79,28 +94,28 @@ class ViewController: UIViewController {
   
   func appWentToBackground(notification: NSNotification){
     
-    println("Going to the background...")
+    print("Going to the background...")
     
     /* Start a background taks that saves a new car record
     into the database */
     self.backgroundTaskIdentifier =
       UIApplication.sharedApplication().beginBackgroundTaskWithName(
         backgroundTaskName,
-        expirationHandler: {[weak self] in
-          println("Background task is expired now")
+        expirationHandler: {
+          print("Background task is expired now")
         })
     
-    println("App is in the background so let's create the car object")
+    print("App is in the background so let's create the car object")
     self.createAndSaveANewCar()
     
   }
   
   func appCameToForeground(notification: NSNotification){
     
-    println("Application came to the foreground")
+    print("Application came to the foreground")
     
     if self.backgroundTaskIdentifier != UIBackgroundTaskInvalid{
-      println("We need to invalidate our background task")
+      print("We need to invalidate our background task")
       UIApplication.sharedApplication().endBackgroundTask(
         self.backgroundTaskIdentifier)
       self.backgroundTaskIdentifier = UIBackgroundTaskInvalid
@@ -109,35 +124,35 @@ class ViewController: UIViewController {
   
   func goAheadAfterPushNotificationRegistration(notification: NSNotification!){
     
-    println("We are asked to proceed since notifications are registered...")
+    print("We are asked to proceed since notifications are registered...")
     
-    println("Trying to find the subscription...")
+    print("Trying to find the subscription...")
     database.fetchSubscriptionWithID(subscriptionId, completionHandler: {
-      [weak self] (subscription: CKSubscription!, error: NSError!) in
+      (subscription: CKSubscription?, error: NSError?) in
       
-      if error != nil{
-        if error.code == CKErrorCode.UnknownItem.rawValue{
-          println("This subscription doesn't exist. Creating it now...")
-          
-          self!.database.saveSubscription(self!.subscription(),
-            completionHandler:
-            {(subscription: CKSubscription!, error: NSError!) in
-              
-              if error != nil{
-                println("Could not save the subscription. Error = \(error)")
-              } else {
-                println("Successfully saved the subscription")
-              }
-              
-            })
-          
-        } else {
-          println("An unknown error occurred. Error = \(error)")
-        }
+      guard let error = error else {
+        print("Found the subscription already. No need to create it.")
+        return
+      }
+      
+      
+      if error.code == CKErrorCode.UnknownItem.rawValue{
+        print("This subscription doesn't exist. Creating it now...")
+        
+        self.database.saveSubscription(self.subscription(),
+          completionHandler:
+          {(subscription: CKSubscription?, error: NSError?) in
+            
+            if error != nil{
+              print("Could not save the subscription. Error = \(error)")
+            } else {
+              print("Successfully saved the subscription")
+            }
+            
+        })
+        
       } else {
-        
-        println("Found the subscription already. No need to create it.")
-        
+        print("An unknown error occurred. Error = \(error)")
       }
       
       })
@@ -182,7 +197,7 @@ class ViewController: UIViewController {
   
   /* Checks if the user has logged into her iCloud account or not */
   func isIcloudAvailable() -> Bool{
-    if let token = NSFileManager.defaultManager().ubiquityIdentityToken{
+    if let _ = NSFileManager.defaultManager().ubiquityIdentityToken{
       return true
     } else {
       return false

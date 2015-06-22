@@ -2,9 +2,24 @@
 //  ViewController.swift
 //  Querying the Cloud with CloudKit
 //
-//  Created by vandad on 197//14.
+//  Created by Vandad Nahavandipoor on 7/11/14.
 //  Copyright (c) 2014 Pixolity Ltd. All rights reserved.
 //
+//  These example codes are written for O'Reilly's iOS 8 Swift Programming Cookbook
+//  If you use these solutions in your apps, you can give attribution to
+//  Vandad Nahavandipoor for his work. Feel free to visit my blog
+//  at http://vandadnp.wordpress.com for daily tips and tricks in Swift
+//  and Objective-C and various other programming languages.
+//
+//  You can purchase "iOS 8 Swift Programming Cookbook" from
+//  the following URL:
+//  http://shop.oreilly.com/product/0636920034254.do
+//
+//  If you have any questions, you can contact me directly
+//  at vandad.np@gmail.com
+//  Similarly, if you find an error in these sample codes, simply
+//  report them to O'Reilly at the following URL:
+//  http://www.oreilly.com/catalog/errata.csp?isbn=0636920034254
 
 /* 1 */
 //import UIKit
@@ -40,21 +55,21 @@
 //
 //    if let array = filteredArray{
 //      for person in array{
-//        println("Found a person with first name equal or less than 6 letters")
-//        println("First name = \(person.firstName)")
-//        println("Last name = \(person.lastName)")
+//        print("Found a person with first name equal or less than 6 letters")
+//        print("First name = \(person.firstName)")
+//        print("Last name = \(person.lastName)")
 //      }
 //    } else {
-//      println("Could not find any items in the filtered array")
+//      print("Could not find any items in the filtered array")
 //
 //    }
 //
 //  }
 //
 //}
-
-
-/* 2 */
+//
+//
+///* 2 */
 //import UIKit
 //import CloudKit
 //
@@ -76,7 +91,7 @@
 //  
 //  /* Checks if the user has logged into her iCloud account or not */
 //  func isIcloudAvailable() -> Bool{
-//    if let token = NSFileManager.defaultManager().ubiquityIdentityToken{
+//    if let _ = NSFileManager.defaultManager().ubiquityIdentityToken{
 //      return true
 //    } else {
 //      return false
@@ -101,15 +116,20 @@
 //    let query = CKQuery(recordType: "MyCar", predicate: predicate)
 //    
 //    database.performQuery(query, inZoneWithID: nil, completionHandler: {
-//      (records: [AnyObject]!, error: NSError!) in
+//      (records: [CKRecord]?, error: NSError?) in
 //      
 //      if error != nil{
-//        println("An error occurred while performing the query.")
-//        println("Error = \(error)")
+//        print("An error occurred while performing the query.")
+//        print("Error = \(error)")
 //      } else {
-//        println("\(records.count) record(s) came back")
+//        
+//        guard let records = records else {
+//          return
+//        }
+//        
+//        print("\(records.count) record(s) came back")
 //        for record in records as [CKRecord]{
-//          println("Record = \(record)")
+//          print("Record = \(record)")
 //        }
 //      }
 //      
@@ -133,7 +153,7 @@
 //  
 //}
 
-/* 3 */
+///* 3 */
 import UIKit
 import CloudKit
 
@@ -156,7 +176,7 @@ class ViewController: UIViewController {
   
   /* Checks if the user has logged into her iCloud account or not */
   func isIcloudAvailable() -> Bool{
-    if let token = NSFileManager.defaultManager().ubiquityIdentityToken{
+    if let _ = NSFileManager.defaultManager().ubiquityIdentityToken{
       return true
     } else {
       return false
@@ -165,7 +185,7 @@ class ViewController: UIViewController {
   
   func recordFetchBlock(record: CKRecord!){
     
-    println("Fetched a record = \(record)")
+    print("Fetched a record = \(record)")
     
   }
   
@@ -188,19 +208,21 @@ class ViewController: UIViewController {
     
     let operation = CKQueryOperation(query: query)
     operation.recordFetchedBlock = recordFetchBlock
-    operation.queryCompletionBlock = {[weak self]
-      (cursor: CKQueryCursor!, error: NSError!) in
-      if cursor != nil{
-        /* There is so much data that a cursor came back to us and we will
-        need to fetch the rest of the results in a separate operation */
-        println("A cursor was sent to us. Fetching the rest of the records...")
-        let newOperation = CKQueryOperation(cursor: cursor)
-        newOperation.recordFetchedBlock = self!.recordFetchBlock
-        newOperation.queryCompletionBlock = operation.queryCompletionBlock
-        self!.operationQueue.addOperation(newOperation)
-      } else {
-        println("No cursor came back. We've fetched all the data")
+    operation.queryCompletionBlock = {
+      (cursor: CKQueryCursor?, error: NSError?) in
+      
+      guard let cursor = cursor else {
+        print("No cursor came back. We've fetched all the data")
+        return
       }
+      
+      /* There is so much data that a cursor came back to us and we will
+      need to fetch the rest of the results in a separate operation */
+      print("A cursor was sent to us. Fetching the rest of the records...")
+      let newOperation = CKQueryOperation(cursor: cursor)
+      newOperation.recordFetchedBlock = self.recordFetchBlock
+      newOperation.queryCompletionBlock = operation.queryCompletionBlock
+      self.operationQueue.addOperation(newOperation)
     }
     
     operationQueue.addOperation(operation)

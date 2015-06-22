@@ -12,7 +12,6 @@
 		A6177134197BAD34008D1357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6177132197BAD34008D1357 /* Main.storyboard */; };
 		A6177136197BAD34008D1357 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6177135197BAD34008D1357 /* Images.xcassets */; };
 		A6177142197BAD34008D1357 /* Storing_and_Synchronizing_Dictionaries_in_iCloudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6177141197BAD34008D1357 /* Storing_and_Synchronizing_Dictionaries_in_iCloudTests.swift */; };
-		A617714D197BAD65008D1357 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A617714C197BAD65008D1357 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +35,6 @@
 		A6177140197BAD34008D1357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6177141197BAD34008D1357 /* Storing_and_Synchronizing_Dictionaries_in_iCloudTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storing_and_Synchronizing_Dictionaries_in_iCloudTests.swift; sourceTree = "<group>"; };
 		A617714B197BAD61008D1357 /* Storing and Synchronizing Dictionaries in iCloud.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Storing and Synchronizing Dictionaries in iCloud.entitlements"; sourceTree = "<group>"; };
-		A617714C197BAD65008D1357 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A617714D197BAD65008D1357 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +58,6 @@
 		A6177120197BAD34008D1357 = {
 			isa = PBXGroup;
 			children = (
-				A617714C197BAD65008D1357 /* CloudKit.framework */,
 				A617712B197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloud */,
 				A617713E197BAD34008D1357 /* Storing and Synchronizing Dictionaries in iCloudTests */,
 				A617712A197BAD34008D1357 /* Products */,
@@ -159,7 +155,8 @@
 		A6177121197BAD34008D1357 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					A6177128197BAD34008D1357 = {
@@ -275,6 +272,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -344,6 +342,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
 				INFOPLIST_FILE = "Storing and Synchronizing Dictionaries in iCloud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5c3e7b9b-e609-4b87-b960-62efcc90d867";
 			};
@@ -357,6 +356,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Storing and Synchronizing Dictionaries in iCloud/Storing and Synchronizing Dictionaries in iCloud.entitlements";
 				INFOPLIST_FILE = "Storing and Synchronizing Dictionaries in iCloud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5c3e7b9b-e609-4b87-b960-62efcc90d867";
 			};
@@ -376,6 +376,7 @@
 				);
 				INFOPLIST_FILE = "Storing and Synchronizing Dictionaries in iCloudTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixolity.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -391,6 +392,7 @@
 				);
 				INFOPLIST_FILE = "Storing and Synchronizing Dictionaries in iCloudTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixolity.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -415,6 +417,7 @@
 				A6177147197BAD34008D1357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6177148197BAD34008D1357 /* Build configuration list for PBXNativeTarget "Storing and Synchronizing Dictionaries in iCloudTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +426,7 @@
 				A617714A197BAD34008D1357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

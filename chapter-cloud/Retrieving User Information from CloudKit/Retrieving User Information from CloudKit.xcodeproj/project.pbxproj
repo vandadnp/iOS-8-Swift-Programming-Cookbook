@@ -12,7 +12,6 @@
 		A6D2E154197AE45700EAD72D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D2E152197AE45700EAD72D /* Main.storyboard */; };
 		A6D2E156197AE45700EAD72D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6D2E155197AE45700EAD72D /* Images.xcassets */; };
 		A6D2E162197AE45700EAD72D /* Retrieving_User_Information_from_CloudKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2E161197AE45700EAD72D /* Retrieving_User_Information_from_CloudKitTests.swift */; };
-		A6D2E16D197AE49D00EAD72D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D2E16C197AE49D00EAD72D /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +35,6 @@
 		A6D2E160197AE45700EAD72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6D2E161197AE45700EAD72D /* Retrieving_User_Information_from_CloudKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Retrieving_User_Information_from_CloudKitTests.swift; sourceTree = "<group>"; };
 		A6D2E16B197AE49400EAD72D /* Retrieving User Information from CloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Retrieving User Information from CloudKit.entitlements"; sourceTree = "<group>"; };
-		A6D2E16C197AE49D00EAD72D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6D2E16D197AE49D00EAD72D /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +58,6 @@
 		A6D2E140197AE45700EAD72D = {
 			isa = PBXGroup;
 			children = (
-				A6D2E16C197AE49D00EAD72D /* CloudKit.framework */,
 				A6D2E14B197AE45700EAD72D /* Retrieving User Information from CloudKit */,
 				A6D2E15E197AE45700EAD72D /* Retrieving User Information from CloudKitTests */,
 				A6D2E14A197AE45700EAD72D /* Products */,
@@ -159,7 +155,8 @@
 		A6D2E141197AE45700EAD72D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					A6D2E148197AE45700EAD72D = {
@@ -275,6 +272,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -343,6 +341,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
 				INFOPLIST_FILE = "Retrieving User Information from CloudKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -355,6 +354,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Retrieving User Information from CloudKit/Retrieving User Information from CloudKit.entitlements";
 				INFOPLIST_FILE = "Retrieving User Information from CloudKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -373,6 +373,7 @@
 				);
 				INFOPLIST_FILE = "Retrieving User Information from CloudKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixolity.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -388,6 +389,7 @@
 				);
 				INFOPLIST_FILE = "Retrieving User Information from CloudKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixolity.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -412,6 +414,7 @@
 				A6D2E167197AE45700EAD72D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6D2E168197AE45700EAD72D /* Build configuration list for PBXNativeTarget "Retrieving User Information from CloudKitTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +423,7 @@
 				A6D2E16A197AE45700EAD72D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

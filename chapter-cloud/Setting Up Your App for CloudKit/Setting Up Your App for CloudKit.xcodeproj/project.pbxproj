@@ -12,7 +12,6 @@
 		A62BF08919792E430027539E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62BF08719792E430027539E /* Main.storyboard */; };
 		A62BF08B19792E430027539E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A62BF08A19792E430027539E /* Images.xcassets */; };
 		A62BF09719792E440027539E /* Setting_Up_Your_App_for_CloudKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62BF09619792E440027539E /* Setting_Up_Your_App_for_CloudKitTests.swift */; };
-		A62BF0A7197931090027539E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62BF0A6197931090027539E /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +35,6 @@
 		A62BF09519792E440027539E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A62BF09619792E440027539E /* Setting_Up_Your_App_for_CloudKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting_Up_Your_App_for_CloudKitTests.swift; sourceTree = "<group>"; };
 		A62BF0A3197930590027539E /* Setting Up Your App for CloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Setting Up Your App for CloudKit.entitlements"; sourceTree = "<group>"; };
-		A62BF0A6197931090027539E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A62BF0A7197931090027539E /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +58,6 @@
 		A62BF07519792E430027539E = {
 			isa = PBXGroup;
 			children = (
-				A62BF0A6197931090027539E /* CloudKit.framework */,
 				A62BF08019792E430027539E /* Setting Up Your App for CloudKit */,
 				A62BF09319792E440027539E /* Setting Up Your App for CloudKitTests */,
 				A62BF07F19792E430027539E /* Products */,
@@ -159,7 +155,8 @@
 		A62BF07619792E430027539E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					A62BF07D19792E430027539E = {
@@ -275,6 +272,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -344,6 +342,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
 				INFOPLIST_FILE = "Setting Up Your App for CloudKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5c3e7b9b-e609-4b87-b960-62efcc90d867";
 			};
@@ -359,6 +358,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
 				INFOPLIST_FILE = "Setting Up Your App for CloudKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5c3e7b9b-e609-4b87-b960-62efcc90d867";
 			};
@@ -378,6 +378,7 @@
 				);
 				INFOPLIST_FILE = "Setting Up Your App for CloudKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixolity.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -393,6 +394,7 @@
 				);
 				INFOPLIST_FILE = "Setting Up Your App for CloudKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixolity.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -417,6 +419,7 @@
 				A62BF09C19792E440027539E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A62BF09D19792E440027539E /* Build configuration list for PBXNativeTarget "Setting Up Your App for CloudKitTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +428,7 @@
 				A62BF09F19792E440027539E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

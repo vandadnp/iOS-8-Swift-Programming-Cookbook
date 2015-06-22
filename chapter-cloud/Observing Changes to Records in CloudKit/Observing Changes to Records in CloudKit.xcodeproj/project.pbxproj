@@ -12,7 +12,6 @@
 		A6D2E124197ABC3800EAD72D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D2E122197ABC3800EAD72D /* Main.storyboard */; };
 		A6D2E126197ABC3800EAD72D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6D2E125197ABC3800EAD72D /* Images.xcassets */; };
 		A6D2E132197ABC3800EAD72D /* Observing_Changes_to_Records_in_CloudKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2E131197ABC3800EAD72D /* Observing_Changes_to_Records_in_CloudKitTests.swift */; };
-		A6D2E13D197ABC7000EAD72D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D2E13C197ABC7000EAD72D /* CloudKit.framework */; };
 		A6D2E13F197AC7E700EAD72D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6D2E13E197AC7E700EAD72D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +36,6 @@
 		A6D2E130197ABC3800EAD72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6D2E131197ABC3800EAD72D /* Observing_Changes_to_Records_in_CloudKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observing_Changes_to_Records_in_CloudKitTests.swift; sourceTree = "<group>"; };
 		A6D2E13B197ABC5800EAD72D /* Observing Changes to Records in CloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Observing Changes to Records in CloudKit.entitlements"; sourceTree = "<group>"; };
-		A6D2E13C197ABC7000EAD72D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		A6D2E13E197AC7E700EAD72D /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6D2E13D197ABC7000EAD72D /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +60,6 @@
 		A6D2E110197ABC3800EAD72D = {
 			isa = PBXGroup;
 			children = (
-				A6D2E13C197ABC7000EAD72D /* CloudKit.framework */,
 				A6D2E11B197ABC3800EAD72D /* Observing Changes to Records in CloudKit */,
 				A6D2E12E197ABC3800EAD72D /* Observing Changes to Records in CloudKitTests */,
 				A6D2E11A197ABC3800EAD72D /* Products */,
@@ -162,7 +158,8 @@
 		A6D2E111197ABC3800EAD72D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					A6D2E118197ABC3800EAD72D = {
@@ -282,6 +279,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -350,6 +348,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
 				INFOPLIST_FILE = "Observing Changes to Records in CloudKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5c3e7b9b-e609-4b87-b960-62efcc90d867";
 			};
@@ -363,6 +362,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Observing Changes to Records in CloudKit/Observing Changes to Records in CloudKit.entitlements";
 				INFOPLIST_FILE = "Observing Changes to Records in CloudKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5c3e7b9b-e609-4b87-b960-62efcc90d867";
 			};
@@ -382,6 +382,7 @@
 				);
 				INFOPLIST_FILE = "Observing Changes to Records in CloudKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixolity.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -397,6 +398,7 @@
 				);
 				INFOPLIST_FILE = "Observing Changes to Records in CloudKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixolity.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -421,6 +423,7 @@
 				A6D2E137197ABC3800EAD72D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6D2E138197ABC3800EAD72D /* Build configuration list for PBXNativeTarget "Observing Changes to Records in CloudKitTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +432,7 @@
 				A6D2E13A197ABC3800EAD72D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

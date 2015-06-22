@@ -2,9 +2,24 @@
 //  AppDelegate.swift
 //  Observing Changes to Records in CloudKit
 //
-//  Created by vandad on 197//14.
+//  Created by Vandad Nahavandipoor on 7/11/14.
 //  Copyright (c) 2014 Pixolity Ltd. All rights reserved.
 //
+//  These example codes are written for O'Reilly's iOS 8 Swift Programming Cookbook
+//  If you use these solutions in your apps, you can give attribution to
+//  Vandad Nahavandipoor for his work. Feel free to visit my blog
+//  at http://vandadnp.wordpress.com for daily tips and tricks in Swift
+//  and Objective-C and various other programming languages.
+//
+//  You can purchase "iOS 8 Swift Programming Cookbook" from
+//  the following URL:
+//  http://shop.oreilly.com/product/0636920034254.do
+//
+//  If you have any questions, you can contact me directly
+//  at vandad.np@gmail.com
+//  Similarly, if you find an error in these sample codes, simply
+//  report them to O'Reilly at the following URL:
+//  http://www.oreilly.com/catalog/errata.csp?isbn=0636920034254
 
 import UIKit
 import CloudKit
@@ -17,15 +32,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication,
     didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
       
-      println("A new record is generated and we received a push")
+      print("A new record is generated and we received a push")
       
-      let notification = CKNotification(
-        fromRemoteNotificationDictionary: userInfo)
+      var dict = [String : NSObject]()
+      
+      for (key, value) in userInfo.filter({return $0 is String && $1 is NSObject}){
+        dict[key as! String] = value as? NSObject
+      }
+      
+      let notification = CKNotification(fromRemoteNotificationDictionary: dict)
       
       if let query = notification as? CKQueryNotification{
-        let model = query.recordFields["model"] as? NSString as? String
+        let model = query.recordFields?["model"] as? String
         if let theModel = model{
-          println("The model of the newly inserted car is \(theModel)")
+          print("The model of the newly inserted car is \(theModel)")
         }
         
       }
@@ -45,30 +65,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication,
     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
       
-      println("Successfully registered for remote notifications")
+      print("Successfully registered for remote notifications")
       goAheadWithSubscriptionCreation()
     
   }
   
   func application(application: UIApplication,
     didFailToRegisterForRemoteNotificationsWithError error: NSError){
-      println("Failed to receive remote notifications")
+      print("Failed to receive remote notifications")
   }
   
   func application(application: UIApplication,
     didRegisterUserNotificationSettings
     notificationSettings: UIUserNotificationSettings) {
       
-      if notificationSettings.types == nil{
-        /* The user did not allow us to send notifications */
-        return
-      }
-      
       if application.isRegisteredForRemoteNotifications() == false{
-        println("Not registered for push notifications. Registering now...")
+        print("Not registered for push notifications. Registering now...")
         application.registerForRemoteNotifications()
       } else {
-        println("We are already registered for push notifications")
+        print("We are already registered for push notifications")
         goAheadWithSubscriptionCreation()
       }
   }
@@ -77,27 +92,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       
       var needToRequestSettingChanges = true
-      if let settings = application.currentUserNotificationSettings(){
-        if settings.types != nil{
+      if let _ = application.currentUserNotificationSettings(){
           needToRequestSettingChanges = false
-        }
       }
       
       if needToRequestSettingChanges{
-        let settings = UIUserNotificationSettings(forTypes: .Alert | .Badge,
+        let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge],
           categories: nil)
         
-        println("Requesting for change to user notification settings...")
+        print("Requesting for change to user notification settings...")
         application.registerUserNotificationSettings(settings)
       } else {
         
-        println("We've already set the notification settings.")
+        print("We've already set the notification settings.")
         
         if application.isRegisteredForRemoteNotifications() == false{
-          println("Not registered for push notifications. Registering now...")
+          print("Not registered for push notifications. Registering now...")
           application.registerForRemoteNotifications()
         } else {
-          println("We are already registered for push notifications")
+          print("We are already registered for push notifications")
           goAheadWithSubscriptionCreation()
         }
         

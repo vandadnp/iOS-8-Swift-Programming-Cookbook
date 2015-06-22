@@ -12,7 +12,6 @@
 		A650FFC2197BBA44009C4429 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A650FFC0197BBA44009C4429 /* Main.storyboard */; };
 		A650FFC4197BBA44009C4429 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A650FFC3197BBA44009C4429 /* Images.xcassets */; };
 		A650FFD0197BBA44009C4429 /* Searching_for_Files_and_Folders_in_iCloudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A650FFCF197BBA44009C4429 /* Searching_for_Files_and_Folders_in_iCloudTests.swift */; };
-		A650FFDB197BBA81009C4429 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A650FFDA197BBA81009C4429 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +35,6 @@
 		A650FFCE197BBA44009C4429 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A650FFCF197BBA44009C4429 /* Searching_for_Files_and_Folders_in_iCloudTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searching_for_Files_and_Folders_in_iCloudTests.swift; sourceTree = "<group>"; };
 		A650FFD9197BBA7F009C4429 /* Searching for Files and Folders in iCloud.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Searching for Files and Folders in iCloud.entitlements"; sourceTree = "<group>"; };
-		A650FFDA197BBA81009C4429 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A650FFDB197BBA81009C4429 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +58,6 @@
 		A650FFAE197BBA44009C4429 = {
 			isa = PBXGroup;
 			children = (
-				A650FFDA197BBA81009C4429 /* CloudKit.framework */,
 				A650FFB9197BBA44009C4429 /* Searching for Files and Folders in iCloud */,
 				A650FFCC197BBA44009C4429 /* Searching for Files and Folders in iCloudTests */,
 				A650FFB8197BBA44009C4429 /* Products */,
@@ -159,7 +155,8 @@
 		A650FFAF197BBA44009C4429 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					A650FFB6197BBA44009C4429 = {
@@ -275,6 +272,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -344,6 +342,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
 				INFOPLIST_FILE = "Searching for Files and Folders in iCloud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -357,6 +356,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Searching for Files and Folders in iCloud/Searching for Files and Folders in iCloud.entitlements";
 				INFOPLIST_FILE = "Searching for Files and Folders in iCloud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -376,6 +376,7 @@
 				);
 				INFOPLIST_FILE = "Searching for Files and Folders in iCloudTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixolity.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -391,6 +392,7 @@
 				);
 				INFOPLIST_FILE = "Searching for Files and Folders in iCloudTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixolity.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
