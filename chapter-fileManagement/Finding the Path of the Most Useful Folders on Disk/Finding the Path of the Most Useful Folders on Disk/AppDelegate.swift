@@ -31,36 +31,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
     
     /* 1 */
-//let fileManager = NSFileManager()
-//let urls = fileManager.URLsForDirectory(
-//  NSSearchPathDirectory.DocumentDirectory,
-//  inDomains: NSSearchPathDomainMask.UserDomainMask) as! [NSURL]
-//
-//if urls.count > 0{
-//  var documentsFolder = urls[0]
-//  println("\(documentsFolder)")
-//} else {
-//  println("Could not find the Documents folder")
-//}
+//    let fileManager = NSFileManager()
+//    let urls = fileManager.URLsForDirectory(
+//      NSSearchPathDirectory.DocumentDirectory,
+//      inDomains: NSSearchPathDomainMask.UserDomainMask) as [NSURL]
+//    
+//    if urls.count > 0{
+//      let documentsFolder = urls[0]
+//      print("\(documentsFolder)")
+//    } else {
+//      print("Could not find the Documents folder")
+//    }
     
     /* 2 */
     let fileManager = NSFileManager()
     let urls = fileManager.URLsForDirectory(
       NSSearchPathDirectory.CachesDirectory,
-      inDomains: NSSearchPathDomainMask.UserDomainMask) as! [NSURL]
+      inDomains: NSSearchPathDomainMask.UserDomainMask) as [NSURL]
     
     if urls.count > 0{
       let documentsFolder = urls[0]
-      println("\(documentsFolder)")
+      print("\(documentsFolder)")
     } else {
-      println("Could not find the Documents folder")
+      print("Could not find the Documents folder")
     }
     
     /* 3 */
-    if let tempDirectory = NSTemporaryDirectory(){
-      println("\(tempDirectory)")
+    if NSTemporaryDirectory().characters.count > 0{
+      print(NSTemporaryDirectory())
     } else {
-      println("Could not find the temp directory")
+      print("Could not find the temp directory")
     }
     
     self.window = UIWindow(frame: UIScreen.mainScreen().bounds)

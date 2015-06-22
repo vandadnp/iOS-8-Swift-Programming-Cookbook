@@ -34,13 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func createFolderAtPath(path: String){
       
-      var error:NSError?
       
-      if fileManager.createDirectoryAtPath(path,
-        withIntermediateDirectories: true,
-        attributes: nil,
-        error: &error) == false && error != nil{
-          println("Failed to create folder at \(path), error = \(error!)")
+      do{
+        try fileManager.createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil)
+      } catch let error as NSError{
+        print("Failed to create folder at \(path), error = \(error)")
       }
       
     }
@@ -52,16 +50,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let fileName = NSString(format: "%lu.txt", counter)
         let path = folder.stringByAppendingPathComponent(String(fileName))
         let fileContents = "Some text"
-        var error:NSError?
-        if fileContents.writeToFile(path,
-          atomically: true,
-          encoding: NSUTF8StringEncoding,
-          error: &error) == false{
-            if let theError = error{
-              println("Failed to save the file at path \(path)" +
-                " with error = \(theError)")
-            }
+        do{
+          try fileContents.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding)
+        } catch let error as NSError{
+          print("Failed to save the file at path \(path)" +
+            " with error = \(error)")
         }
+        
       }
       
     }
@@ -69,53 +64,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /* Enumerates all files/folders at a given path */
     func enumerateFilesInFolder(folder: String){
       
-      var error:NSError?
-      let contents = fileManager.contentsOfDirectoryAtPath(
-        folder,
-        error: &error)!
-      
-      if let theError = error{
-        println("An error occurred \(theError)")
-      } else if contents.count == 0{
-        println("No content was found")
-      } else {
-        println("Contents of path \(folder) = \(contents)")
+      do{
+        let contents = try fileManager.contentsOfDirectoryAtPath(folder)
+        if contents.count == 0{
+          print("No content was found")
+        } else {
+          print("Contents of path \(folder) = \(contents)")
+        }
+      } catch let error as NSError{
+        print("An error occurred \(error)")
       }
+      
       
     }
     
     /* Deletes all files/folders in a given path */
     func deleteFilesInFolder(folder: String){
       
-      var error:NSError?
-      let contents = fileManager.contentsOfDirectoryAtPath(folder,
-        error: &error) as! [String]
-      
-      if let theError = error{
-        println("An error occurred = \(theError)")
-      } else {
+      do{
+        let contents = try fileManager.contentsOfDirectoryAtPath(folder)
         for fileName in contents{
           let filePath = folder.stringByAppendingPathComponent(fileName)
-          if fileManager.removeItemAtPath(filePath, error: nil){
-            println("Successfully removed item at path \(filePath)")
-          } else {
-            println("Failed to remove item at path \(filePath)")
+          do {
+            try fileManager.removeItemAtPath(filePath)
+            print("Successfully removed item at path \(filePath)")
+          } catch _ {
+            print("Failed to remove item at path \(filePath)")
           }
         }
+      } catch let error as NSError{
+        print("An error occurred = \(error)")
       }
       
     }
     
     /* Deletes a folder with a given path */
     func deleteFolderAtPath(path: String){
-      
-      var error:NSError?
-      if fileManager.removeItemAtPath(path, error: &error){
-        println("Successfully deleted the path \(path)")
-      } else {
-        if let theError = error{
-          println("Failed to remove path \(path) with error \(theError)")
-        }
+      do {
+        try fileManager.removeItemAtPath(path)
+        print("Successfully deleted the path \(path)")
+      } catch let error as NSError {
+          print("Failed to remove path \(path) with error \(error)")
       }
       
     }

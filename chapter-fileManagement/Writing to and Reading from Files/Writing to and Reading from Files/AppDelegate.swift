@@ -31,41 +31,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func example1(){
     let someText = NSString(string: "Put some string here")
     let destinationPath = NSTemporaryDirectory() + "MyFile.txt"
-    var error:NSError?
-    
-    let written = someText.writeToFile(destinationPath,
-      atomically: true,
-      encoding: NSUTF8StringEncoding,
-      error: &error)
-    
-    if written{
-      println("Successfully stored the file at path \(destinationPath)")
-    } else {
-      if let errorValue = error{
-        println("An error occurred: \(errorValue)")
-      }
+    do {
+      try someText.writeToFile(destinationPath,
+            atomically: true,
+            encoding: NSUTF8StringEncoding)
+      print("Successfully stored the file at path \(destinationPath)")
+    } catch let error as NSError {
+      print("An error occurred: \(error)")
     }
+    
   }
   
   func example2(){
     
-    var error:NSError?
     let path = NSTemporaryDirectory() + "MyFile.txt"
     
-    let succeeded = "Hello, World!".writeToFile(path,
-      atomically: true,
-      encoding: NSUTF8StringEncoding,
-      error: &error)
-    
-    if (succeeded){
+    do {
+      try "Hello, World!".writeToFile(path,
+            atomically: true,
+            encoding: NSUTF8StringEncoding)
       /* Now read from the same file */
-      let readString = NSString(contentsOfFile: path,
-        encoding: NSUTF8StringEncoding, error: nil) as! String
-      println("The read string is: \(readString)")
-    } else {
-      if let theError = error{
-        println("Could not write. Error = \(theError)")
-      }
+      let readString = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+      print("The read string is: \(readString)")
+    } catch let error as NSError {
+      print("Could not write. Error = \(error)")
     }
     
   }
@@ -78,9 +67,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     if arrayOfNames.writeToFile(path, atomically: true){
       let readArray:NSArray? = NSArray(contentsOfFile: path)
       if let array = readArray{
-        println("Could read the array back = \(array)")
+        print("Could read the array back = \(array)")
       } else {
-        println("Failed to read the array back")
+        print("Failed to read the array back")
       }
     }
     
@@ -99,12 +88,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       let readDict:NSDictionary? = NSDictionary(contentsOfFile: path)
       if let dict = readDict{
-        println("Read the dictionary back from disk = \(dict)")
+        print("Read the dictionary back from disk = \(dict)")
       } else {
-        println("Failed to read the dictionary back from disk")
+        print("Failed to read the dictionary back from disk")
       }
     } else {
-      println("Failed to write the dictionary to disk")
+      print("Failed to write the dictionary to disk")
     }
     
   }
@@ -114,15 +103,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let chars = [CUnsignedChar(ascii: "a"), CUnsignedChar(ascii: "b")]
     let data = NSData(bytes: chars, length: 2)
     if data.writeToFile(path, atomically: true){
-      println("Wrote the data")
+      print("Wrote the data")
       let readData = NSData(contentsOfFile: path)
       if readData!.isEqualToData(data){
-        println("Read the same data")
+        print("Read the same data")
       } else {
-        println("Not the same data")
+        print("Not the same data")
       }
     } else {
-      println("Could not write the data")
+      print("Could not write the data")
     }
   }
   

@@ -10,7 +10,7 @@
 //  Vandad Nahavandipoor for his work. Feel free to visit my blog
 //  at http://vandadnp.wordpress.com for daily tips and tricks in Swift
 //  and Objective-C and various other programming languages.
-//  
+//
 //  You can purchase "iOS 8 Swift Programming Cookbook" from
 //  the following URL:
 //  http://shop.oreilly.com/product/0636920034254.do
@@ -30,19 +30,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func example1(){
     
-let tempPath = NSTemporaryDirectory()
-let imagesPath = tempPath.stringByAppendingPathComponent("images")
-var error:NSError?
-let fileManager = NSFileManager()
-
-if fileManager.createDirectoryAtPath(imagesPath,
-  withIntermediateDirectories: true,
-  attributes: nil,
-  error: nil){
-  println("Created the directory")
-} else {
-  println("Could not create the directory")
-}
+    let tempPath = NSTemporaryDirectory()
+    let imagesPath = tempPath.stringByAppendingPathComponent("images")
+    let fileManager = NSFileManager()
+    
+    do {
+      try fileManager.createDirectoryAtPath(imagesPath,
+            withIntermediateDirectories: true,
+            attributes: nil)
+        print("Created the directory")
+    } catch {
+      print("Could not create the directory")
+    }
   }
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
