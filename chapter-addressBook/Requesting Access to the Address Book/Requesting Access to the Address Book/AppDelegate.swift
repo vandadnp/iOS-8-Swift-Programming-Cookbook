@@ -51,12 +51,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /* Now you can use the address book */
       case .Denied:
         print("You are denied access to address book")
-        
       case .NotDetermined:
         createAddressBook()
         if let theBook: ABAddressBookRef = addressBook{
           ABAddressBookRequestAccessWithCompletion(theBook,
-            {(granted: Bool, error: CFError!) in
+            {granted, error in
               
               if granted{
                 print("Access is granted")

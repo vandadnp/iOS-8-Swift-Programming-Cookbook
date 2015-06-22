@@ -221,9 +221,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           })
       case .Restricted:
         print("Access is restricted")
-        
-      default:
-        print("Unhandled")
       }
       
       return true

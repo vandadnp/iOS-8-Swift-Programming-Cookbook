@@ -21,7 +21,7 @@
 //  report them to O'Reilly at the following URL:
 //  http://www.oreilly.com/catalog/errata.csp?isbn=0636920034254
 
-/* 1 */
+///* 1 */
 //import UIKit
 //import AddressBookUI
 //
@@ -41,13 +41,13 @@
 //  }
 //  
 //  func peoplePickerNavigationControllerDidCancel(
-//    peoplePicker: ABPeoplePickerNavigationController!){
+//    peoplePicker: ABPeoplePickerNavigationController){
 //    /* Mandatory to implement */
 //  }
 //  
 //  func peoplePickerNavigationController(
-//    peoplePicker: ABPeoplePickerNavigationController!,
-//    didSelectPerson person: ABRecordRef!) {
+//    peoplePicker: ABPeoplePickerNavigationController,
+//    didSelectPerson person: ABRecordRef) {
 //      
 //      /* Do we know which picker this is? */
 //      if peoplePicker != personPicker{
@@ -65,15 +65,15 @@
 //        let phone = ABMultiValueCopyValueAtIndex(phones,
 //          index).takeRetainedValue() as! String
 //        
-//        println(phone)
+//        print(phone)
 //        
 //      }
 //    
 //  }
 //  
 //}
-
-/* 2 */
+//
+///* 2 */
 import UIKit
 import AddressBookUI
 

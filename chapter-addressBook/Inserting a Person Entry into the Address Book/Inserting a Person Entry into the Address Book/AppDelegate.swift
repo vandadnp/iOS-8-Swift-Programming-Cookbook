@@ -110,12 +110,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
       case .NotDetermined:
         ABAddressBookRequestAccessWithCompletion(addressBook,
-          {[weak self] (granted: Bool, error: CFError!) in
+          {granted, error in
             
             if granted{
-              let strongSelf = self!
               print("Access is granted")
-              strongSelf.createContact()
+              self.createContact()
             } else {
               print("Access is not granted")
             }
