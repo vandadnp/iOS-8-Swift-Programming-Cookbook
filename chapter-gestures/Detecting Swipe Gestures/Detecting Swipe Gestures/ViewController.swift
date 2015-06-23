@@ -36,16 +36,16 @@ class ViewController: UIViewController {
   func handleSwipes(sender: UISwipeGestureRecognizer){
     
     if sender.direction  == .Down{
-      println("Swiped Down")
+      print("Swiped Down")
     }
     if sender.direction == .Left{
-      println("Swiped Left")
+      print("Swiped Left")
     }
     if sender.direction == .Right{
-      println("Swiped Right")
+      print("Swiped Right")
     }
     if sender.direction == .Up{
-      println("Swiped Up")
+      print("Swiped Up")
     }
     
   }

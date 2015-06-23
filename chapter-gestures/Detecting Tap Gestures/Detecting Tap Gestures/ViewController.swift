@@ -34,7 +34,7 @@ class ViewController: UIViewController {
       let touchPoint = sender.locationOfTouch(touchCounter,
         inView: sender.view)
       
-      println("Touch \(touchCounter + 1): \(touchPoint)")
+      print("Touch \(touchCounter + 1): \(touchPoint)")
       
     }
     

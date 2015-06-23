@@ -65,7 +65,7 @@ class ViewController: UIViewController {
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     
-    dummyButton = UIButton.buttonWithType(.System) as! UIButton
+    dummyButton = UIButton(type:.System)
     dummyButton.frame = CGRect(x: 0, y: 0, width: 72, height: 37)
     dummyButton.setTitle("My Button", forState: .Normal)
     
