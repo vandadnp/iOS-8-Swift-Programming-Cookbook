@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     /* Instantiate the button */
-    let button = UIButton.buttonWithType(.Custom) as! UIButton
+    let button = UIButton(type: .Custom)
     button.frame = CGRect(x: 0, y: 0, width: 200, height: 44)
     
     

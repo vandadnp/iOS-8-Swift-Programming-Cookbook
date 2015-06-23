@@ -57,6 +57,7 @@ class View: UIView {
 //    
 //  }
   
+//  2
   override func drawRect(rect: CGRect) {
     /* Create the path first. Just the path handle. */
     let path = CGPathCreateMutable()

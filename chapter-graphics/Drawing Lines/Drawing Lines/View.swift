@@ -25,7 +25,7 @@ import UIKit
 
 class View: UIView {
 
-  /* 1 */
+////   1 
 //  override func drawRect(rect: CGRect)
 //  {
 //    
@@ -48,8 +48,8 @@ class View: UIView {
 //    CGContextStrokePath(context)
 //    
 //  }
-  
-  /* 2 */
+//  
+////   2
 //  override func drawRect(rect: CGRect) {
 //    /* Set the color that we want to use to draw the line */
 //    UIColor.brownColor().set()

@@ -25,7 +25,7 @@ import UIKit
 
 class View: UIView {
 
-  /* 1 */
+//  /* 1 */
 //  override func drawRect(rect: CGRect) {
 //    
 //    /* Create the path first. Just the path handle. */
@@ -61,8 +61,8 @@ class View: UIView {
 //    CGContextDrawPath(currentContext, kCGPathFillStroke)
 //    
 //  }
-  
-  /* 2 */
+//  
+////   2 
 //  override func drawRect(rect: CGRect) {
 //    
 //    /* Create the path first. Just the path handle. */
@@ -105,6 +105,7 @@ class View: UIView {
 //    
 //  }
   
+//  3
   override func drawRect(rect: CGRect) {
     
     /* Create the path first. Just the path handle. */
