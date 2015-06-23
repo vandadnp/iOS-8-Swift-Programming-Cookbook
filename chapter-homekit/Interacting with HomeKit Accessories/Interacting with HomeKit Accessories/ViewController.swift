@@ -27,11 +27,9 @@ import HomeKit
 extension HMCharacteristic{
   
   func containsProperty(paramProperty: String) -> Bool{
-    if let propeties = self.properties{
-      for property in properties as! [String]{
-        if property == paramProperty{
-          return true
-        }
+    for property in self.properties{
+      if property == paramProperty{
+        return true
       }
     }
     return false
@@ -65,7 +63,7 @@ HMAccessoryBrowserDelegate {
     
     /* Can we find the old value? */
     if let name = defaults.stringForKey(homeNameKey){
-      if count(name) > 0 {
+      if name.characters.count > 0 {
         return name
       }
     }
@@ -90,16 +88,16 @@ HMAccessoryBrowserDelegate {
   func createRoom(){
     
     home.addRoomWithName(roomName, completionHandler: {
-      [weak self](room: HMRoom!, error: NSError!) in
+      room, error in
       
-      if error != nil{
-        println("Failed to create the room")
-      } else {
-        println("Successuflly created the room")
-        let strongSelf = self!
-        strongSelf.room = room
-        strongSelf.findCinemaRoomProjectorAccessory()
+      guard let room = room else {
+        print("Failed to create the room")
+        return
       }
+      
+      print("Successuflly created the room")
+      self.room = room
+      self.findCinemaRoomProjectorAccessory()
       
       })
     
@@ -108,17 +106,17 @@ HMAccessoryBrowserDelegate {
   func createHome(){
     
     homeManager.addHomeWithName(homeName, completionHandler: {
-      [weak self](home: HMHome!, error: NSError!) in
+      home, error in
       
-      if error != nil{
-        println("Failed to create the home")
-      } else {
-        println("Successfully created the home")
-        let strongSelf = self!
-        strongSelf.home = home
-        println("Creating the room...")
-        strongSelf.createRoom()
+      guard let home = home else {
+        print("Failed to create the home")
+        return
       }
+      
+      print("Successfully created the home")
+      self.home = home
+      print("Creating the room...")
+      self.createRoom()
       
       })
     
@@ -126,15 +124,15 @@ HMAccessoryBrowserDelegate {
   
   func homeManagerDidUpdateHomes(manager: HMHomeManager) {
     
-    for home in manager.homes as! [HMHome]{
+    for home in manager.homes as [HMHome]{
       if home.name == homeName{
         
-        println("Found the home")
+        print("Found the home")
         self.home = home
         
-        for room in home.rooms as! [HMRoom]{
+        for room in home.rooms as [HMRoom]{
           if room.name == roomName{
-            println("Found the room")
+            print("Found the room")
             self.room = room
             findCinemaRoomProjectorAccessory()
           }
@@ -142,7 +140,7 @@ HMAccessoryBrowserDelegate {
         
         if self.room == nil{
           /* We have to create the room */
-          println("The room doesn't exist. Creating it...")
+          print("The room doesn't exist. Creating it...")
           createRoom()
         }
         
@@ -150,39 +148,38 @@ HMAccessoryBrowserDelegate {
     }
     
     if home == nil{
-      println("Home doesn't exist. Creating it...")
+      print("Home doesn't exist. Creating it...")
       createHome()
     }
     
   }
   
   func accessoryBrowser(browser: HMAccessoryBrowser,
-    didFindNewAccessory accessory: HMAccessory!) {
+    didFindNewAccessory accessory: HMAccessory) {
       
-      println("Found an accessory...")
+      print("Found an accessory...")
       
       if accessory.name == accessoryName{
-        println("Discovered the projector accessory")
-        println("Adding it to the home")
+        print("Discovered the projector accessory")
+        print("Adding it to the home")
         home.addAccessory(accessory, completionHandler: {
-          [weak self](error: NSError!) in
+          error in
           
           if error != nil{
-            println("Failed to add it to the home")
+            print("Failed to add it to the home")
           } else {
-            println("Successfully added it to home")
-            println("Assigning the projector to the room...")
-            let strongSelf = self!
-            strongSelf.home.assignAccessory(accessory,
-              toRoom: strongSelf.room,
-              completionHandler: {(error: NSError!) in
+            print("Successfully added it to home")
+            print("Assigning the projector to the room...")
+            self.home.assignAccessory(accessory,
+              toRoom: self.room,
+              completionHandler: {error in
                 
                 if error != nil{
-                  println("Failed to assign the projector to the room")
+                  print("Failed to assign the projector to the room")
                 } else {
-                  strongSelf.projectorAccessory = accessory
-                  println("Successfully assigned the projector to the room")
-                  strongSelf.lowerBrightnessOfProjector()
+                  self.projectorAccessory = accessory
+                  print("Successfully assigned the projector to the room")
+                  self.lowerBrightnessOfProjector()
                 }
                 
               })
@@ -198,50 +195,49 @@ HMAccessoryBrowserDelegate {
     
     var brightnessCharacteristic: HMCharacteristic!
     
-    println("Finding the brightness characteristic of the projector...")
+    print("Finding the brightness characteristic of the projector...")
     
-    for service in projectorAccessory.services as! [HMService]{
-      for characteristic in service.characteristics as! [HMCharacteristic]{
+    for service in projectorAccessory.services as [HMService]{
+      for characteristic in service.characteristics as [HMCharacteristic]{
         if characteristic.characteristicType == HMCharacteristicTypeBrightness{
-          println("Found it")
+          print("Found it")
           brightnessCharacteristic = characteristic
         }
       }
     }
     
     if brightnessCharacteristic == nil{
-      println("Could not find it")
+      print("Could not find it")
     } else {
       
       if brightnessCharacteristic.isReadable() == false{
-        println("Cannot read the value of the brightness characteristic")
+        print("Cannot read the value of the brightness characteristic")
         return
       }
       
-      println("Reading the value of the brightness characteristic...")
+      print("Reading the value of the brightness characteristic...")
       
-      brightnessCharacteristic.readValueWithCompletionHandler{[weak self]
-        (error: NSError!) in
+      brightnessCharacteristic.readValueWithCompletionHandler{error in
         
         if error != nil{
-          println("Could not read the brightness value")
+          print("Could not read the brightness value")
         } else {
-          println("Read the brightness value. Setting it now...")
+          print("Read the brightness value. Setting it now...")
           
           if brightnessCharacteristic.isWritable(){
             let newValue = (brightnessCharacteristic.value as! Float) - 1.0
             brightnessCharacteristic.writeValue(newValue,
-              completionHandler: {(error: NSError!) in
+              completionHandler: {error in
                 
                 if error != nil{
-                  println("Failed to set the brightness value")
+                  print("Failed to set the brightness value")
                 } else {
-                  println("Successfully set the brightness value")
+                  print("Successfully set the brightness value")
                 }
                 
               })
           } else {
-            println("The brightness characteristic is not writable")
+            print("The brightness characteristic is not writable")
           }
           
         }
@@ -251,7 +247,7 @@ HMAccessoryBrowserDelegate {
       if brightnessCharacteristic.value is Float{
         
       } else {
-        println("The value of the brightness is not Float. Cannot set it")
+        print("The value of the brightness is not Float. Cannot set it")
       }
       
     }
@@ -260,19 +256,17 @@ HMAccessoryBrowserDelegate {
   
   func findCinemaRoomProjectorAccessory(){
     
-    if let accessories = room.accessories{
-      for accessory in accessories as! [HMAccessory]{
-        if accessory.name == accessoryName{
-          println("Found the projector accessory in the room")
-          self.projectorAccessory = accessory
-        }
+    for accessory in room.accessories{
+      if accessory.name == accessoryName{
+        print("Found the projector accessory in the room")
+        self.projectorAccessory = accessory
       }
     }
     
     /* Start searching for accessories */
     if self.projectorAccessory == nil{
-      println("Could not find the projector accessory in the room")
-      println("Starting to search for all available accessories")
+      print("Could not find the projector accessory in the room")
+      print("Starting to search for all available accessories")
       accessoryBrowser.startSearchingForNewAccessories()
     } else {
       lowerBrightnessOfProjector()

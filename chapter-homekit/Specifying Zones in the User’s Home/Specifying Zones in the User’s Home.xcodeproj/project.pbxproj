@@ -12,7 +12,6 @@
 		9D022AC8198274A100AA8814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D022AC6198274A100AA8814 /* Main.storyboard */; };
 		9D022ACA198274A100AA8814 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D022AC9198274A100AA8814 /* Images.xcassets */; };
 		9D022AD6198274A100AA8814 /* Specifying_Zones_in_the_User_s_HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D022AD5198274A100AA8814 /* Specifying_Zones_in_the_User_s_HomeTests.swift */; };
-		9D022AE01982772200AA8814 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D022ADF1982772200AA8814 /* HomeKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +34,6 @@
 		9D022ACF198274A100AA8814 /* Specifying Zones in the User’s HomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Specifying Zones in the User’s HomeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D022AD4198274A100AA8814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D022AD5198274A100AA8814 /* Specifying_Zones_in_the_User_s_HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specifying_Zones_in_the_User_s_HomeTests.swift; sourceTree = "<group>"; };
-		9D022ADF1982772200AA8814 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		9D022AE11982772200AA8814 /* Specifying Zones in the User’s Home.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Specifying Zones in the User’s Home.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D022AE01982772200AA8814 /* HomeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +58,6 @@
 		9D022AB4198274A100AA8814 = {
 			isa = PBXGroup;
 			children = (
-				9D022ADF1982772200AA8814 /* HomeKit.framework */,
 				9D022ABF198274A100AA8814 /* Specifying Zones in the User’s Home */,
 				9D022AD2198274A100AA8814 /* Specifying Zones in the User’s HomeTests */,
 				9D022ABE198274A100AA8814 /* Products */,
@@ -159,7 +155,8 @@
 		9D022AB5198274A100AA8814 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					9D022ABC198274A100AA8814 = {
@@ -275,6 +272,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -343,6 +341,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
 				INFOPLIST_FILE = "Specifying Zones in the User’s Home/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -356,6 +355,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Specifying Zones in the User’s Home/Specifying Zones in the User’s Home.entitlements";
 				INFOPLIST_FILE = "Specifying Zones in the User’s Home/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -375,6 +375,7 @@
 				);
 				INFOPLIST_FILE = "Specifying Zones in the User’s HomeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -390,6 +391,7 @@
 				);
 				INFOPLIST_FILE = "Specifying Zones in the User’s HomeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -414,6 +416,7 @@
 				9D022ADB198274A100AA8814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D022ADC198274A100AA8814 /* Build configuration list for PBXNativeTarget "Specifying Zones in the User’s HomeTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +425,7 @@
 				9D022ADE198274A100AA8814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

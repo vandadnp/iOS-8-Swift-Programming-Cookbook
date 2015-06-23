@@ -31,24 +31,22 @@ class AddHomeViewController: UIViewController {
 
   @IBAction func addHome(){
     
-    if count(textField.text) == 0{
+    guard let text = textField.text where text.characters.count > 0 else {
       UIAlertController.showAlertControllerOnHostController(self,
         title: "Home name", message: "Please enter the home name",
         buttonTitle: "OK")
       return
     }
     
-    homeManager.addHomeWithName(textField.text,
-      completionHandler: {[weak self] (home: HMHome!, error: NSError!) in
-        
-        let strongSelf = self!
+    homeManager.addHomeWithName(text,
+      completionHandler: {home, error in
         
         if error != nil{
-          UIAlertController.showAlertControllerOnHostController(strongSelf,
+          UIAlertController.showAlertControllerOnHostController(self,
             title: "Error happened", message: "\(error)",
             buttonTitle: "OK")
         } else {
-          strongSelf.navigationController!.popViewControllerAnimated(true)
+          self.navigationController!.popViewControllerAnimated(true)
         }
         
       })

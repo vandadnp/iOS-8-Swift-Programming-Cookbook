@@ -39,16 +39,16 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate {
   let major: CLBeaconMajorValue = 1
   let minor: CLBeaconMinorValue = 0
 
-  func peripheralManagerDidStartAdvertising(peripheral: CBPeripheralManager!,
-    error: NSError!){
+  func peripheralManagerDidStartAdvertising(peripheral: CBPeripheralManager,
+    error: NSError?){
       
       if error == nil{
-        println("Successfully started advertising our beacon data")
+        print("Successfully started advertising our beacon data")
         
         let message = "Successfully set up your beacon. " +
         "The unique identifier of our service is: \(uuid.UUIDString)"
         
-        println(message)
+        print(message)
         
         let controller = UIAlertController(title: "iBeacon",
           message: message,
@@ -61,29 +61,29 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate {
         presentViewController(controller, animated: true, completion: nil)
         
       } else {
-        println("Failed to advertise our beacon. Error = \(error)")
+        print("Failed to advertise our beacon. Error = \(error)")
       }
       
   }
   
-  func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager!){
+  func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager){
     
     peripheral.stopAdvertising()
     
-    print("The peripheral state is ")
+    print("The peripheral state is ", appendNewline: false)
     switch peripheral.state{
     case .PoweredOff:
-      println("Powered off")
+      print("Powered off")
     case .PoweredOn:
-      println("Powered on")
+      print("Powered on")
     case .Resetting:
-      println("Resetting")
+      print("Resetting")
     case .Unauthorized:
-      println("Unauthorized")
+      print("Unauthorized")
     case .Unknown:
-      println("Unknown")
+      print("Unknown")
     case .Unsupported:
-      println("Unsupported")
+      print("Unsupported")
     }
     
     /* Bluetooth is now powered on */
@@ -100,11 +100,6 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate {
       presentViewController(controller, animated: true, completion: nil)
       
     } else {
-      
-      let region = CLBeaconRegion(proximityUUID: uuid,
-        major: major,
-        minor: minor,
-        identifier: identifier)
       
       let manufacturerData = identifier.dataUsingEncoding(
         NSUTF8StringEncoding,

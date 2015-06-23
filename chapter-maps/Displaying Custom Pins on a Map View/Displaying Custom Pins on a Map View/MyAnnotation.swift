@@ -57,8 +57,8 @@ enum PinColor : String{
 
 class MyAnnotation: NSObject, MKAnnotation {
   let coordinate: CLLocationCoordinate2D
-  var title: String!
-  var subtitle: String!
+  var title: String?
+  var subtitle: String?
   var pinColor: PinColor!
   
   init(coordinate: CLLocationCoordinate2D,

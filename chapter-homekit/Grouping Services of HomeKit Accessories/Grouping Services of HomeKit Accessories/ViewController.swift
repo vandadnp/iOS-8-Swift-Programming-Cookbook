@@ -27,13 +27,17 @@ import HomeKit
 extension HMCharacteristic{
   
   func containsProperty(paramProperty: String) -> Bool{
-    if let propeties = self.properties{
-      for property in properties as! [String]{
+    
+    guard self.properties.count > 0 else {
+      return false
+    }
+    
+      for property in properties{
         if property == paramProperty{
           return true
         }
-      }
     }
+    
     return false
   }
   
@@ -66,7 +70,7 @@ HMAccessoryBrowserDelegate {
     
     /* Can we find the old value? */
     if let name = defaults.stringForKey(homeNameKey){
-      if count(name) > 0 {
+      if name.characters.count > 0 {
         return name
       }
     }
@@ -90,16 +94,16 @@ HMAccessoryBrowserDelegate {
   func createRoom(){
     
     home.addRoomWithName(roomName, completionHandler: {
-      [weak self](room: HMRoom!, error: NSError!) in
+      room, error in
       
-      if error != nil{
-        println("Failed to create the room")
-      } else {
-        println("Successuflly created the room")
-        let strongSelf = self!
-        strongSelf.room = room
-        strongSelf.findOrCreateSwitchServiceGroup()
+      guard let room = room else {
+        print("Failed to create the room")
+        return
       }
+      
+      print("Successuflly created the room")
+      self.room = room
+      self.findOrCreateSwitchServiceGroup()
       
       })
     
@@ -108,33 +112,32 @@ HMAccessoryBrowserDelegate {
   func createHome(){
     
     homeManager.addHomeWithName(homeName, completionHandler: {
-      [weak self](home: HMHome!, error: NSError!) in
+      home, error in
       
-      if error != nil{
-        println("Failed to create the home")
-      } else {
-        println("Successfully created the home")
-        let strongSelf = self!
-        strongSelf.home = home
-        println("Creating the room...")
-        strongSelf.createRoom()
+      guard let home = home else {
+        print("Failed to create the home")
+        return
       }
       
+      print("Successfully created the home")
+      self.home = home
+      print("Creating the room...")
+      self.createRoom()
       })
     
   }
   
   func homeManagerDidUpdateHomes(manager: HMHomeManager) {
     
-    for home in manager.homes as! [HMHome]{
+    for home in manager.homes as [HMHome]{
       if home.name == homeName{
         
-        println("Found the home")
+        print("Found the home")
         self.home = home
         
-        for room in home.rooms as! [HMRoom]{
+        for room in home.rooms as [HMRoom]{
           if room.name == roomName{
-            println("Found the room")
+            print("Found the room")
             self.room = room
             findOrCreateSwitchServiceGroup()
           }
@@ -142,7 +145,7 @@ HMAccessoryBrowserDelegate {
         
         if self.room == nil{
           /* We have to create the room */
-          println("The room doesn't exist. Creating it...")
+          print("The room doesn't exist. Creating it...")
           createRoom()
         }
         
@@ -150,37 +153,36 @@ HMAccessoryBrowserDelegate {
     }
     
     if home == nil{
-      println("Home doesn't exist. Creating it...")
+      print("Home doesn't exist. Creating it...")
       createHome()
     }
     
   }
   
   func accessoryBrowser(browser: HMAccessoryBrowser,
-    didFindNewAccessory accessory: HMAccessory!) {
+    didFindNewAccessory accessory: HMAccessory) {
       
-      println("Found an accessory...")
+      print("Found an accessory...")
       
-      println("Discovered an accessory")
-      println("Adding it to the home")
+      print("Discovered an accessory")
+      print("Adding it to the home")
       home.addAccessory(accessory, completionHandler: {
-        [weak self](error: NSError!) in
+        error in
         
         if error != nil{
-          println("Failed to add it to the home")
+          print("Failed to add it to the home")
         } else {
-          println("Successfully added it to home")
-          println("Assigning the accessory to the room...")
-          let strongSelf = self!
-          strongSelf.home.assignAccessory(accessory,
-            toRoom: strongSelf.room,
-            completionHandler: {(error: NSError!) in
+          print("Successfully added it to home")
+          print("Assigning the accessory to the room...")
+          self.home.assignAccessory(accessory,
+            toRoom: self.room,
+            completionHandler: {error in
               
               if error != nil{
-                println("Failed to assign the accessory to the room")
+                print("Failed to assign the accessory to the room")
               } else {
-                println("Successfully assigned the accessory to the room")
-                strongSelf.findOrCreateSwitchServiceGroup()
+                print("Successfully assigned the accessory to the room")
+                self.findOrCreateSwitchServiceGroup()
               }
               
             })
@@ -192,46 +194,38 @@ HMAccessoryBrowserDelegate {
   }
   
   func addAllSwitchesToServiceGroup(serviceGroup: HMServiceGroup,
-    completionHandler: ((NSError!) -> Void)?){
+    completionHandler: ((NSError?) -> Void)){
     
-    if let accessories = room.accessories{
-      for accessory in accessories as! [HMAccessory]{
-        if let services = accessory.services{
-          for service in services as! [HMService]{
-            if (service.name as NSString).rangeOfString("switch",
-              options: .CaseInsensitiveSearch).location != NSNotFound{
-                /* This is a switch, add it to the service group */
-                println("Found a switch service. Adding it to the group...")
-                serviceGroup.addService(service,
-                  completionHandler: completionHandler)
-            }
+      for accessory in room.accessories{
+        for service in accessory.services{
+          if (service.name as NSString).rangeOfString("switch",
+            options: .CaseInsensitiveSearch).location != NSNotFound{
+              /* This is a switch, add it to the service group */
+              print("Found a switch service. Adding it to the group...")
+              serviceGroup.addService(service,
+                completionHandler: completionHandler)
           }
         }
       }
-      
-    }
     
   }
   
   func enumerateServicesInServiceGroup(serviceGroup: HMServiceGroup){
-    println("Discovering all the services in this service group...")
-    if let services = serviceGroup.services{
-      for service in services as! [HMService]{
-        println(service)
-      }
+    print("Discovering all the services in this service group...")
+    for service in serviceGroup.services{
+      print(service)
     }
   }
   
   func discoverServicesInServiceGroup(serviceGroup: HMServiceGroup){
     
     addAllSwitchesToServiceGroup(serviceGroup, completionHandler: {
-      [weak self](error: NSError!) in
+      error in
 
       if error != nil{
-        println("Failed to add the switch to the service group")
+        print("Failed to add the switch to the service group")
       } else {
-        let strongSelf = self!
-        strongSelf.enumerateServicesInServiceGroup(serviceGroup)
+        self.enumerateServicesInServiceGroup(serviceGroup)
       }
       
       })
@@ -243,38 +237,34 @@ HMAccessoryBrowserDelegate {
   func findOrCreateSwitchServiceGroup(){
     
     /* Find out if we already have our switch service group or not */
-    if let groups = home.serviceGroups{
-      for serviceGroup in groups as! [HMServiceGroup]{
-        if serviceGroup.name == switchServiceGroupName{
-          switchServiceGroup = serviceGroup
-        }
+    for serviceGroup in home.serviceGroups{
+      if serviceGroup.name == switchServiceGroupName{
+        switchServiceGroup = serviceGroup
       }
     }
     
     if switchServiceGroup == nil{
-      println("Could not find the switch service group. Creating it...")
+      print("Could not find the switch service group. Creating it...")
       home.addServiceGroupWithName(switchServiceGroupName,
-        completionHandler: {[weak self ]
-          (group: HMServiceGroup!, error: NSError!) in
+        completionHandler: {group, error in
           
-          if error != nil{
-            println("Failed to create the switch service group")
-          } else {
-            let strongSelf = self!
-            println("The switch service group was created successfully")
-            strongSelf.switchServiceGroup = group
-            strongSelf.discoverServicesInServiceGroup(group)
+          guard let group = group else {
+            print("Failed to create the switch service group")
+            return
           }
+          print("The switch service group was created successfully")
+          self.switchServiceGroup = group
+          self.discoverServicesInServiceGroup(group)
           
         })
     } else {
-      println("Found an existing switch service group")
+      print("Found an existing switch service group")
       discoverServicesInServiceGroup(switchServiceGroup)
       
     }
     
     /* First, start finding new accessories */
-    println("Finding new accessories...")
+    print("Finding new accessories...")
     accessoryBrowser.startSearchingForNewAccessories()
     
   }

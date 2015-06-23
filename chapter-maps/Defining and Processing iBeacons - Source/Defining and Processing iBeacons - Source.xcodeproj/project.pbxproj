@@ -12,7 +12,6 @@
 		9D4DE54E196C442900EABDED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4DE54C196C442900EABDED /* Main.storyboard */; };
 		9D4DE550196C442900EABDED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4DE54F196C442900EABDED /* Images.xcassets */; };
 		9D4DE55C196C442900EABDED /* Defining_and_Processing_iBeacons___SourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DE55B196C442900EABDED /* Defining_and_Processing_iBeacons___SourceTests.swift */; };
-		9DA11B9C199110FE00DC5222 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA11B9B199110FE00DC5222 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +34,6 @@
 		9D4DE555196C442900EABDED /* Defining and Processing iBeacons - SourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Defining and Processing iBeacons - SourceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4DE55A196C442900EABDED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D4DE55B196C442900EABDED /* Defining_and_Processing_iBeacons___SourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defining_and_Processing_iBeacons___SourceTests.swift"; sourceTree = "<group>"; };
-		9DA11B9B199110FE00DC5222 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +41,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DA11B9C199110FE00DC5222 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +57,6 @@
 		9D4DE53A196C442900EABDED = {
 			isa = PBXGroup;
 			children = (
-				9DA11B9B199110FE00DC5222 /* CoreBluetooth.framework */,
 				9D4DE545196C442900EABDED /* Defining and Processing iBeacons - Source */,
 				9D4DE558196C442900EABDED /* Defining and Processing iBeacons - SourceTests */,
 				9D4DE544196C442900EABDED /* Products */,
@@ -157,7 +153,8 @@
 		9D4DE53B196C442900EABDED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					9D4DE542196C442900EABDED = {
@@ -267,6 +264,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -333,6 +331,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Defining and Processing iBeacons - Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -344,6 +343,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Defining and Processing iBeacons - Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -362,6 +362,7 @@
 				);
 				INFOPLIST_FILE = "Defining and Processing iBeacons - SourceTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -377,6 +378,7 @@
 				);
 				INFOPLIST_FILE = "Defining and Processing iBeacons - SourceTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};

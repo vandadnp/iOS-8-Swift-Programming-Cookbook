@@ -32,39 +32,39 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
   application that we have already written. I have now run that app
   on a device and copied and pasted the UUID here in the destination
   application */
-  let uuid = NSUUID(UUIDString: "1FBF369D-6E55-4F3C-A4DA-CDE6155920A1")
+  let uuid = NSUUID(UUIDString: "1FBF369D-6E55-4F3C-A4DA-CDE6155920A1")!
   /* This is the identifier of the beacon that we just wrote. The identifier
   of the beacon was chosen by us to be the same as the bundle id of
   that app */
   let identifier = "com.pixolity.ios.Defining-and-Processing-iBeacons---Source"
   
 /* This will let us know when we are exiting the region of the beacon */
-func locationManager(manager: CLLocationManager!,
-  didExitRegion region: CLRegion!){
+func locationManager(manager: CLLocationManager,
+  didExitRegion region: CLRegion){
     
-    println("You are exiting the region of a beacon " +
+    print("You are exiting the region of a beacon " +
       "with an identifier of \(region.identifier)")
     
 }
   
   /* We will know when we have made contact with a beacon here */
-  func locationManager(manager: CLLocationManager!,
-    didRangeBeacons beacons: [AnyObject]!,
-    inRegion region: CLBeaconRegion!){
+  func locationManager(manager: CLLocationManager,
+    didRangeBeacons beacons: [CLBeacon],
+    inRegion region: CLBeaconRegion){
       
       print("Found a beacon with the proximity of = ")
       
       /* How close are we to the beacon? */
-      for beacon in beacons as! [CLBeacon]{
+      for beacon in beacons as [CLBeacon]{
         switch beacon.proximity{
         case .Far:
-          println("Far")
+          print("Far")
         case .Immediate:
-          println("Immediate")
+          print("Immediate")
         case .Near:
-          println("Near")
+          print("Near")
         default:
-          println("Unknown")
+          print("Unknown")
         }
       }
       

@@ -29,38 +29,41 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
   
   var locationManager: CLLocationManager?
   
-  func locationManager(manager: CLLocationManager!,
-    didUpdateToLocation newLocation: CLLocation!,
-    fromLocation oldLocation: CLLocation!){
-      
-      println("Latitude = \(newLocation.coordinate.latitude)")
-      println("Longitude = \(newLocation.coordinate.longitude)")
-      
+  func locationManager(manager: CLLocationManager, didUpdateLocations locations: [AnyObject]) {
+    
+    if locations.count == 0{
+      //handle error here
+      return
+    }
+    
+    let newLocation = locations[0] as! CLLocation
+    
+    print("Latitude = \(newLocation.coordinate.latitude)")
+    print("Longitude = \(newLocation.coordinate.longitude)")
+    
   }
   
-  func locationManager(manager: CLLocationManager!,
-    didFailWithError error: NSError!){
-      println("Location manager failed with error = \(error)")
+  func locationManager(manager: CLLocationManager,
+    didFailWithError error: NSError){
+      print("Location manager failed with error = \(error)")
   }
   
-  func locationManager(manager: CLLocationManager!,
+  func locationManager(manager: CLLocationManager,
     didChangeAuthorizationStatus status: CLAuthorizationStatus){
       
-      print("The authorization status of location services is changed to: ")
+      print("The authorization status of location services is changed to: ", appendNewline: false)
       
       switch CLLocationManager.authorizationStatus(){
       case .AuthorizedAlways:
-        println("Authorized")
+        print("Authorized")
       case .AuthorizedWhenInUse:
-        println("Authorized when in use")
+        print("Authorized when in use")
       case .Denied:
-        println("Denied")
+        print("Denied")
       case .NotDetermined:
-        println("Not determined")
+        print("Not determined")
       case .Restricted:
-        println("Restricted")
-      default:
-        println("Unhandled")
+        print("Restricted")
       }
       
   }
@@ -78,10 +81,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
   }
   
-  func createLocationManager(#startImmediately: Bool){
+  func createLocationManager(startImmediately startImmediately: Bool){
     locationManager = CLLocationManager()
     if let manager = locationManager{
-      println("Successfully created the location manager")
+      print("Successfully created the location manager")
       manager.delegate = self
       if startImmediately{
         manager.startUpdatingLocation()
@@ -125,7 +128,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
       /* Location services are not enabled.
       Take appropriate action: for instance, prompt the
       user to enable the location services */
-      println("Location services are not enabled")
+      print("Location services are not enabled")
     }
   }
   

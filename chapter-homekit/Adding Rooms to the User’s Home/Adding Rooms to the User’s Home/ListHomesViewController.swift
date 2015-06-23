@@ -79,9 +79,9 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewValues.identifier, forIndexPath: indexPath)
-        as! UITableViewCell
+        as UITableViewCell
       
-      let home = homeManager.homes[indexPath.row] as! HMHome
+      let home = homeManager.homes[indexPath.row] as HMHome
       
       cell.textLabel!.text = home.name
       cell.accessoryType = .DisclosureIndicator
@@ -90,8 +90,8 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
       
   }
   
-  func homeManager(manager: HMHomeManager, didRemoveHome home: HMHome!) {
-    println("A home has been deleted")
+  func homeManager(manager: HMHomeManager, didRemoveHome home: HMHome) {
+    print("A home has been deleted")
   }
   
   func homeManagerDidUpdateHomes(manager: HMHomeManager) {
@@ -114,8 +114,8 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
           as! ListRoomsTableViewController
         controller.homeManager = homeManager
         
-        let home = homeManager.homes[tableView.indexPathForSelectedRow()!.row]
-          as! HMHome
+        let home = homeManager.homes[tableView.indexPathForSelectedRow!.row]
+          as HMHome
         
         controller.home = home
       }
@@ -130,14 +130,11 @@ class ListHomesViewController: UITableViewController, HMHomeManagerDelegate{
       
       if editingStyle == .Delete{
         
-        let home = homeManager.homes[indexPath.row] as! HMHome
-        homeManager.removeHome(home, completionHandler: {[weak self]
-          (error: NSError!) in
-          
-          let strongSelf = self!
+        let home = homeManager.homes[indexPath.row] as HMHome
+        homeManager.removeHome(home, completionHandler: {error in
           
           if error != nil{
-            UIAlertController.showAlertControllerOnHostController(strongSelf,
+            UIAlertController.showAlertControllerOnHostController(self,
               title: "Error",
               message: "An error occurred = \(error)",
               buttonTitle: "OK")

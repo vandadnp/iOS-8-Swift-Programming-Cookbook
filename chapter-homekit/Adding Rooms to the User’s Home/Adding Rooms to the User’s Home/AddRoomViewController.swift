@@ -32,24 +32,21 @@ class AddRoomViewController: UIViewController{
   
   @IBAction func addRoom(){
     
-    if count(textField.text) == 0{
+    guard let text = textField.text where text.characters.count > 0 else {
       UIAlertController.showAlertControllerOnHostController(self,
         title: "Room name", message: "Please enter the room name",
         buttonTitle: "OK")
       return
     }
     
-    home.addRoomWithName(textField.text, completionHandler: {[weak self]
-      (room: HMRoom!, error: NSError!) in
-      
-      let strongSelf = self!
+    home.addRoomWithName(textField.text!, completionHandler: {room, error in
       
       if error != nil{
-        UIAlertController.showAlertControllerOnHostController(strongSelf,
+        UIAlertController.showAlertControllerOnHostController(self,
           title: "Error happened", message: "\(error)",
           buttonTitle: "OK")
       } else {
-        strongSelf.navigationController!.popViewControllerAnimated(true)
+        self.navigationController!.popViewControllerAnimated(true)
       }
       
       })

@@ -32,8 +32,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
     mapView = MKMapView()
   }
   
-  func mapView(mapView: MKMapView!,
-    viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView!{
+  func mapView(mapView: MKMapView,
+    viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?{
       
       if annotation is MyAnnotation == false{
         return nil

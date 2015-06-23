@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D022A7D198248BA00AA8814 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D022A7C198248BA00AA8814 /* HomeKit.framework */; };
 		9DC90C301981812300833A37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC90C2F1981812300833A37 /* AppDelegate.swift */; };
 		9DC90C321981812300833A37 /* ListHomesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC90C311981812300833A37 /* ListHomesViewController.swift */; };
 		9DC90C351981812300833A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DC90C331981812300833A37 /* Main.storyboard */; };
@@ -28,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		9D022A7B198248BA00AA8814 /* Managing the User’s Home in HomeKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Managing the User’s Home in HomeKit.entitlements"; sourceTree = "<group>"; };
-		9D022A7C198248BA00AA8814 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		9DC90C2A1981812300833A37 /* Managing the User’s Home in HomeKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Managing the User’s Home in HomeKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC90C2E1981812300833A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DC90C2F1981812300833A37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D022A7D198248BA00AA8814 /* HomeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +60,6 @@
 		9DC90C211981812300833A37 = {
 			isa = PBXGroup;
 			children = (
-				9D022A7C198248BA00AA8814 /* HomeKit.framework */,
 				9DC90C2C1981812300833A37 /* Managing the User’s Home in HomeKit */,
 				9DC90C3F1981812300833A37 /* Managing the User’s Home in HomeKitTests */,
 				9DC90C2B1981812300833A37 /* Products */,
@@ -162,7 +158,8 @@
 		9DC90C221981812300833A37 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					9DC90C291981812300833A37 = {
@@ -279,6 +276,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -348,6 +346,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Managing the User’s Home in HomeKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -363,6 +362,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Managing the User’s Home in HomeKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -382,6 +382,7 @@
 				);
 				INFOPLIST_FILE = "Managing the User’s Home in HomeKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -397,6 +398,7 @@
 				);
 				INFOPLIST_FILE = "Managing the User’s Home in HomeKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};

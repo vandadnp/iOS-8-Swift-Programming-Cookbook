@@ -30,14 +30,14 @@ MKMapViewDelegate, CLLocationManagerDelegate {
   var mapView: MKMapView!
   var locationManager: CLLocationManager?
   
-  func mapView(mapView: MKMapView!,
-    didFailToLocateUserWithError error: NSError!) {
+  func mapView(mapView: MKMapView,
+    didFailToLocateUserWithError error: NSError) {
     displayAlertWithTitle("Failed",
       message: "Could not get the user's location")
   }
   
-  func mapView(mapView: MKMapView!,
-    didUpdateUserLocation userLocation: MKUserLocation!) {
+  func mapView(mapView: MKMapView,
+    didUpdateUserLocation userLocation: MKUserLocation) {
       
       let request = MKLocalSearchRequest()
       request.naturalLanguageQuery = "restaurants";
@@ -45,55 +45,62 @@ MKMapViewDelegate, CLLocationManagerDelegate {
       let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
       
       request.region = MKCoordinateRegion(
-        center: userLocation.location.coordinate,
+        center: userLocation.location!.coordinate,
         span: span)
       
       let search = MKLocalSearch(request: request)
       
       search.startWithCompletionHandler{
-        (response: MKLocalSearchResponse!, error: NSError!) in
+        response, error in
         
-        for item in response.mapItems as! [MKMapItem]{
+        guard let response = response else {
+          return
+        }
+        
+        for item in response.mapItems{
           
-          println("Item name = \(item.name)")
-          println("Item phone number = \(item.phoneNumber)")
-          println("Item url = \(item.url)")
-          println("Item location = \(item.placemark.location)")
+          print("Item name = \(item.name)")
+          print("Item phone number = \(item.phoneNumber)")
+          print("Item url = \(item.url)")
+          print("Item location = \(item.placemark.location)")
           
         }
         
       }
   }
   
-  func locationManager(manager: CLLocationManager!,
-    didUpdateToLocation newLocation: CLLocation!,
-    fromLocation oldLocation: CLLocation!){
-      
-      println("Latitude = \(newLocation.coordinate.latitude)")
-      println("Longitude = \(newLocation.coordinate.longitude)")
-      
+  func locationManager(manager: CLLocationManager, didUpdateLocations locations: [AnyObject]) {
+    
+    if locations.count == 0{
+      return
+    }
+    
+    let newLocation = locations[0] as! CLLocation
+    print("Latitude = \(newLocation.coordinate.latitude)")
+    print("Longitude = \(newLocation.coordinate.longitude)")
+    
   }
   
-  func locationManager(manager: CLLocationManager!,
-    didFailWithError error: NSError!){
-      println("Location manager failed with error = \(error)")
+  func locationManager(manager: CLLocationManager,
+    didFailWithError error: NSError){
+      print("Location manager failed with error = \(error)")
   }
   
   /* The authorization status of the user has changed, we need to react
   to that so that if she has authorized our app to to view her location,
   we will accordingly attempt to do so */
-  func locationManager(manager: CLLocationManager!,
+  func locationManager(manager: CLLocationManager,
     didChangeAuthorizationStatus status: CLAuthorizationStatus){
       
-      print("The authorization status of location services is changed to: ")
+      print("The authorization status of location services is changed to: ", appendNewline: false)
       
       switch CLLocationManager.authorizationStatus(){
       case .Denied:
-        println("Denied")
+        print("Denied")
       case .NotDetermined:
-        println("Not determined")
+        print("Not determined")
       case .Restricted:
-        println("Restricted")
+        print("Restricted")
       default:
         showUserLocationOnMapView()
       }
@@ -154,7 +161,7 @@ MKMapViewDelegate, CLLocationManagerDelegate {
       /* Location services are not enabled.
       Take appropriate action: for instance, prompt the
       user to enable the location services */
-      println("Location services are not enabled")
+      print("Location services are not enabled")
     }
   }
   

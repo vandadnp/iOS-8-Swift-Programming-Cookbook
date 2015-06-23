@@ -12,7 +12,6 @@
 		9D022AF61982877000AA8814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D022AF41982877000AA8814 /* Main.storyboard */; };
 		9D022AF81982877000AA8814 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D022AF71982877000AA8814 /* Images.xcassets */; };
 		9D022B041982877000AA8814 /* Discovering_and_Managing_HomeKit_Enabled_AccessoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D022B031982877000AA8814 /* Discovering_and_Managing_HomeKit_Enabled_AccessoriesTests.swift */; };
-		9D022B0E1982885600AA8814 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D022B0D1982885600AA8814 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +34,6 @@
 		9D022AFD1982877000AA8814 /* Discovering and Managing HomeKit Enabled AccessoriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Discovering and Managing HomeKit Enabled AccessoriesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D022B021982877000AA8814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D022B031982877000AA8814 /* Discovering_and_Managing_HomeKit_Enabled_AccessoriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discovering_and_Managing_HomeKit_Enabled_AccessoriesTests.swift; sourceTree = "<group>"; };
-		9D022B0D1982885600AA8814 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		9D022B0F1982885600AA8814 /* Discovering and Managing HomeKit Enabled Accessories.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Discovering and Managing HomeKit Enabled Accessories.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D022B0E1982885600AA8814 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +58,6 @@
 		9D022AE21982877000AA8814 = {
 			isa = PBXGroup;
 			children = (
-				9D022B0D1982885600AA8814 /* HealthKit.framework */,
 				9D022AED1982877000AA8814 /* Discovering and Managing HomeKit Enabled Accessories */,
 				9D022B001982877000AA8814 /* Discovering and Managing HomeKit Enabled AccessoriesTests */,
 				9D022AEC1982877000AA8814 /* Products */,
@@ -159,7 +155,8 @@
 		9D022AE31982877000AA8814 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					9D022AEA1982877000AA8814 = {
@@ -275,6 +272,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -344,6 +342,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
 				INFOPLIST_FILE = "Discovering and Managing HomeKit Enabled Accessories/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -357,6 +356,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Discovering and Managing HomeKit Enabled Accessories/Discovering and Managing HomeKit Enabled Accessories.entitlements";
 				INFOPLIST_FILE = "Discovering and Managing HomeKit Enabled Accessories/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -376,6 +376,7 @@
 				);
 				INFOPLIST_FILE = "Discovering and Managing HomeKit Enabled AccessoriesTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -391,6 +392,7 @@
 				);
 				INFOPLIST_FILE = "Discovering and Managing HomeKit Enabled AccessoriesTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -415,6 +417,7 @@
 				9D022B091982877000AA8814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D022B0A1982877000AA8814 /* Build configuration list for PBXNativeTarget "Discovering and Managing HomeKit Enabled AccessoriesTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +426,7 @@
 				9D022B0C1982877000AA8814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

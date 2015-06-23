@@ -13,7 +13,6 @@
 		9D022AA01982643700AA8814 /* Adding_Rooms_to_the_User_s_HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D022A9F1982643700AA8814 /* Adding_Rooms_to_the_User_s_HomeTests.swift */; };
 		9D022AAB1982645200AA8814 /* ListHomesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D022AA91982645200AA8814 /* ListHomesViewController.swift */; };
 		9D022AAC1982645200AA8814 /* AddHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D022AAA1982645200AA8814 /* AddHomeViewController.swift */; };
-		9D022AAF1982648E00AA8814 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D022AAE1982648E00AA8814 /* HomeKit.framework */; };
 		9D022AB11982654F00AA8814 /* ListRoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D022AB01982654F00AA8814 /* ListRoomsTableViewController.swift */; };
 		9D022AB31982685F00AA8814 /* AddRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D022AB21982685F00AA8814 /* AddRoomViewController.swift */; };
 /* End PBXBuildFile section */
@@ -40,7 +39,6 @@
 		9D022AA91982645200AA8814 /* ListHomesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListHomesViewController.swift; sourceTree = "<group>"; };
 		9D022AAA1982645200AA8814 /* AddHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHomeViewController.swift; sourceTree = "<group>"; };
 		9D022AAD1982648E00AA8814 /* Adding Rooms to the User’s Home.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Adding Rooms to the User’s Home.entitlements"; sourceTree = "<group>"; };
-		9D022AAE1982648E00AA8814 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		9D022AB01982654F00AA8814 /* ListRoomsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRoomsTableViewController.swift; sourceTree = "<group>"; };
 		9D022AB21982685F00AA8814 /* AddRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D022AAF1982648E00AA8814 /* HomeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +64,6 @@
 		9D022A7E1982643700AA8814 = {
 			isa = PBXGroup;
 			children = (
-				9D022AAE1982648E00AA8814 /* HomeKit.framework */,
 				9D022A891982643700AA8814 /* Adding Rooms to the User’s Home */,
 				9D022A9C1982643700AA8814 /* Adding Rooms to the User’s HomeTests */,
 				9D022A881982643700AA8814 /* Products */,
@@ -168,7 +164,8 @@
 		9D022A7F1982643700AA8814 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					9D022A861982643700AA8814 = {
@@ -287,6 +284,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -356,6 +354,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Adding Rooms to the User’s Home/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -371,6 +370,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Adding Rooms to the User’s Home/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -390,6 +390,7 @@
 				);
 				INFOPLIST_FILE = "Adding Rooms to the User’s HomeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -405,6 +406,7 @@
 				);
 				INFOPLIST_FILE = "Adding Rooms to the User’s HomeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -429,6 +431,7 @@
 				9D022AA51982643700AA8814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D022AA61982643700AA8814 /* Build configuration list for PBXNativeTarget "Adding Rooms to the User’s HomeTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +440,7 @@
 				9D022AA81982643700AA8814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -41,34 +41,31 @@ class ViewController: UIViewController, HMHomeManagerDelegate{
   
   var homeManager: HMHomeManager!
   
-  func roomAddedToZoneCompletionHandler(error: NSError!){
+  func roomAddedToZoneCompletionHandler(error: NSError?){
     
     if error != nil{
-      println("Failed to add room to zone. Error = \(error)")
+      print("Failed to add room to zone. Error = \(error)")
     } else {
-      println("Successfully added a bedroom to the bedroom zone")
+      print("Successfully added a bedroom to the bedroom zone")
       numberOfBedroomsAddedSoFar++
     }
     
     if numberOfBedroomsAddedSoFar == numberOfBedroomsToAdd{
-      home.removeZone(bedroomZone, completionHandler: {[weak self]
-        (error: NSError!) in
-        
-        let strongSelf = self!
+      home.removeZone(bedroomZone, completionHandler: {error in
         
         if error != nil{
-          println("Failed to remove the zone")
+          print("Failed to remove the zone")
         } else {
-          println("Successfully removed the zone")
-          println("Removing the home now...")
+          print("Successfully removed the zone")
+          print("Removing the home now...")
           
-          strongSelf.homeManager.removeHome(strongSelf.home,
-            completionHandler: {(error: NSError!) in
+          self.homeManager.removeHome(self.home,
+            completionHandler: {error in
               
               if error != nil{
-                println("Failed to remove the home")
+                print("Failed to remove the home")
               } else {
-                println("Removed the home")
+                print("Removed the home")
               }
               
             })
@@ -80,32 +77,33 @@ class ViewController: UIViewController, HMHomeManagerDelegate{
     
   }
   
-  func roomAddedToHomeCompletionHandler(room: HMRoom!, error: NSError!){
+  func roomAddedToHomeCompletionHandler(room: HMRoom?, error: NSError?){
     
-    if error != nil{
-      println("Failed to add room to home. Error = \(error)")
+    guard let room = room else {
+      print("Failed to add room to home. Error = \(error)")
+      return
+    }
+    
+    if (room.name as NSString).rangeOfString(bedroomKeyword,
+      options: .CaseInsensitiveSearch).location != NSNotFound{
+        print("A bedroom is added to the home")
+        print("Adding it to the zone...")
+        bedroomZone.addRoom(room, completionHandler:
+          self.roomAddedToZoneCompletionHandler)
     } else {
-      if (room.name as NSString).rangeOfString(bedroomKeyword,
-        options: .CaseInsensitiveSearch).location != NSNotFound{
-          println("A bedroom is added to the home")
-          println("Adding it to the zone...")
-          bedroomZone.addRoom(room, completionHandler:
-            self.roomAddedToZoneCompletionHandler)
-      } else {
-        println("The room that is added is not a bedroom")
-      }
+      print("The room that is added is not a bedroom")
     }
     
   }
   
-  func addZoneCompletionHandler(zone: HMZone!, error: NSError!){
+  func addZoneCompletionHandler(zone: HMZone?, error: NSError?){
     
     if error != nil{
-      println("Failed to add the zone. Error = \(error)")
+      print("Failed to add the zone. Error = \(error)")
       return
     } else {
-      println("Successfully added the zone")
-      println("Adding bedrooms to the home now...")
+      print("Successfully added the zone")
+      print("Adding bedrooms to the home now...")
     }
     
     bedroomZone = zone
@@ -124,20 +122,16 @@ class ViewController: UIViewController, HMHomeManagerDelegate{
   func homeManagerDidUpdateHomes(manager: HMHomeManager) {
     
     manager.addHomeWithName(randomHomeName, completionHandler: {
-      [weak self](home: HMHome!, error :NSError!) in
+      home, error in
       
-      let strongSelf = self!
-      
-      if error != nil{
-        println("Failed to add the home. Error = \(error)")
+      guard let home = home else {
+        print("Failed to add the home")
         return
       }
       
-      strongSelf.home = home
-      
       /* Now let's add the "bedrooms" zone to the home */
       home.addZoneWithName("Bedrooms", completionHandler:
-        strongSelf.addZoneCompletionHandler)
+        self.addZoneCompletionHandler)
       
       })
     

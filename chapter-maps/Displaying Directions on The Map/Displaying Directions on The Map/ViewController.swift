@@ -48,72 +48,77 @@ MKMapViewDelegate, CLLocationManagerDelegate {
   func provideDirections(){
     let destination = "Godsgatan, Norrköping, Sweden"
     CLGeocoder().geocodeAddressString(destination,
-      completionHandler: {(placemarks: [AnyObject]!, error: NSError!) in
+      completionHandler: {placemarks, error in
         
-        if error != nil{
+        guard let placemarks = placemarks else{
           /* Handle the error here perhaps by displaying an alert */
-        } else {
-          let request = MKDirectionsRequest()
-          request.setSource(MKMapItem.mapItemForCurrentLocation())
+          return
+        }
+        
+        let request = MKDirectionsRequest()
+        request.source = MKMapItem.mapItemForCurrentLocation()
+        
+        /* Convert the CoreLocation destination
+        placemark to a MapKit placemark */
+        let placemark = placemarks[0]
+        let destinationCoordinates =
+        placemark.location.coordinate
+        /* Get the placemark of the destination address */
+        let destination = MKPlacemark(coordinate:
+          destinationCoordinates,
+          addressDictionary: nil)
+        
+        request.destination = MKMapItem(placemark: destination)
+        
+        /* Set the transportation method to automobile */
+        request.transportType = .Automobile
+        
+        /* Get the directions */
+        let directions = MKDirections(request: request)
+        directions.calculateDirectionsWithCompletionHandler{
+          response, error in
           
-          /* Convert the CoreLocation destination
-          placemark to a MapKit placemark */
-          let placemark = placemarks[0] as! CLPlacemark
-          let destinationCoordinates =
-          placemark.location.coordinate
-          /* Get the placemark of the destination address */
-          let destination = MKPlacemark(coordinate:
-            destinationCoordinates,
-            addressDictionary: nil)
-          
-          request.setDestination(MKMapItem(placemark: destination))
-          
-          /* Set the transportation method to automobile */
-          request.transportType = .Automobile
-          
-          /* Get the directions */
-          let directions = MKDirections(request: request)
-          directions.calculateDirectionsWithCompletionHandler{
-            (response: MKDirectionsResponse!, error: NSError!) in
-            
-            /* You can manually parse the response, but in 
-            here we will take a shortcut and use the Maps app
-            to display our source and
-            destination. We didn't have to make this API call at all,
-            as we already had the map items before, but this is to
-            demonstrate that the directions response contains more
-            information than just the source and the destination. */
-            
-            /* Display the directions on the Maps app */
-            let launchOptions = [
-              MKLaunchOptionsDirectionsModeKey:
-              MKLaunchOptionsDirectionsModeDriving]
-            
-            MKMapItem.openMapsWithItems(
-              [response.source, response.destination],
-              launchOptions: launchOptions)
+          guard let response = response else {
+            //handle the error here
+            return
           }
           
+          /* You can manually parse the response, but in
+          here we will take a shortcut and use the Maps app
+          to display our source and
+          destination. We didn't have to make this API call at all,
+          as we already had the map items before, but this is to
+          demonstrate that the directions response contains more
+          information than just the source and the destination. */
+          
+          /* Display the directions on the Maps app */
+          let launchOptions = [
+            MKLaunchOptionsDirectionsModeKey:
+            MKLaunchOptionsDirectionsModeDriving]
+          
+          MKMapItem.openMapsWithItems(
+            [response.source, response.destination],
+            launchOptions: launchOptions)
         }
         
       })
   }
   
-  func locationManager(manager: CLLocationManager!,
+  func locationManager(manager: CLLocationManager,
     didChangeAuthorizationStatus status: CLAuthorizationStatus){
       
       print("The authorization status of location " +
-        "services is changed to: ")
+        "services is changed to: ", appendNewline: false)
       
       switch CLLocationManager.authorizationStatus(){
       case .Denied:
-        println("Denied")
+        print("Denied")
       case .NotDetermined:
-        println("Not determined")
+        print("Not determined")
       case .Restricted:
-        println("Restricted")
+        print("Restricted")
       default:
-        println("Authorized")
+        print("Authorized")
         provideDirections()
       }
       
@@ -166,7 +171,7 @@ MKMapViewDelegate, CLLocationManagerDelegate {
       /* Location services are not enabled.
       Take appropriate action: for instance, prompt the
       user to enable the location services */
-      println("Location services are not enabled")
+      print("Location services are not enabled")
     }
     
   }

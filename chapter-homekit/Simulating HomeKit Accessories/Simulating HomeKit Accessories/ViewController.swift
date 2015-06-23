@@ -27,7 +27,7 @@ class ViewController: UIViewController {
                             
   override func viewDidLoad() {
     super.viewDidLoad()
-    println(NSUUID().UUIDString)
+    print(NSUUID().UUIDString)
   }
 
   override func didReceiveMemoryWarning() {
