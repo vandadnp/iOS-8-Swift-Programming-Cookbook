@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Pixolity Ltd. All rights reserved.
 //
 
-/* 1 */
+///* 1 */
 //import UIKit
 //import CoreMotion
 //
@@ -26,14 +26,18 @@
 //    if CMPedometer.isStepCountingAvailable(){
 //
 //      pedometer.startPedometerUpdatesFromDate(NSDate(), withHandler: {
-//        (data: CMPedometerData!, error: NSError!) in
+//        data, error in
+//        
+//        guard let data = data else{
+//          return
+//        }
 //
-//        println("Number of steps = \(data.numberOfSteps)")
+//        print("Number of steps = \(data.numberOfSteps)")
 //
 //        })
 //
 //    } else {
-//      println("Step counting is not available")
+//      print("Step counting is not available")
 //    }
 //  }
 //
@@ -42,8 +46,8 @@
 //  }
 //
 //}
-
-/* 2 */
+//
+/////* 2 */
 //import UIKit
 //import CoreMotion
 //
@@ -77,15 +81,19 @@
 //      
 //      pedometer.queryPedometerDataFromDate(NSDate.yesterday(),
 //        toDate: NSDate.now(),
-//        withHandler: {(data: CMPedometerData!, error: NSError!) in
+//        withHandler: {data, error in
 //          
-//        println("Distance travelled from yesterday to now " +
+//          guard let data = data else{
+//            return
+//          }
+//          
+//        print("Distance travelled from yesterday to now " +
 //          "= \(data.distance) meters")
 //        
 //        })
 //      
 //    } else {
-//      println("Distance counting is not available")
+//      print("Distance counting is not available")
 //    }
 //  }
 //  
@@ -94,8 +102,8 @@
 //  }
 //  
 //}
-
-/* 3 */
+//
+///* 3 */
 import UIKit
 import CoreMotion
 
@@ -127,15 +135,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       pedometer.queryPedometerDataFromDate(NSDate.tenMinutesAgo(),
         toDate: NSDate.now(),
-        withHandler: {(data: CMPedometerData!, error: NSError!) in
+        withHandler: {data, error in
+          
+          guard let data = data else{
+            return
+          }
 
-          println("Floors ascended = \(data.floorsAscended)")
-          println("Floors descended = \(data.floorsAscended)")
+          print("Floors ascended = \(data.floorsAscended)")
+          print("Floors descended = \(data.floorsAscended)")
           
         })
       
     } else {
-      println("Floor counting is not available")
+      print("Floor counting is not available")
     }
   }
   

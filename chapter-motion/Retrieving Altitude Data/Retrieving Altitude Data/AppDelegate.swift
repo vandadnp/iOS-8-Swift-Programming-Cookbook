@@ -11,29 +11,33 @@ import CoreMotion
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-                            
+  
   var window: UIWindow?
   /* The altimeter instance that will deliver our altitude updates if they
   are available on the host device */
   lazy var altimeter = CMAltimeter()
   /* A private queue on which altitude updates will be delivered to us */
   lazy var queue = NSOperationQueue()
-
+  
   func application(application: UIApplication,
     didFinishLaunchingWithOptions launchOptions:
     [NSObject : AnyObject]?) -> Bool {
-    return true
+      return true
   }
   
   /* Start altitude updates if possible */
   func applicationDidBecomeActive(application: UIApplication) {
     if CMAltimeter.isRelativeAltitudeAvailable(){
       altimeter.startRelativeAltitudeUpdatesToQueue(queue,
-        withHandler: {(data: CMAltitudeData!, error: NSError!) in
+        withHandler: {data, error in
           
-          println("Relative altitude is \(data.relativeAltitude) meters")
+          guard let data = data else{
+            return
+          }
           
-        })
+          print("Relative altitude is \(data.relativeAltitude) meters")
+          
+      })
     }
   }
   
@@ -41,6 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationWillResignActive(application: UIApplication) {
     altimeter.stopRelativeAltitudeUpdates()
   }
-
+  
 }
 

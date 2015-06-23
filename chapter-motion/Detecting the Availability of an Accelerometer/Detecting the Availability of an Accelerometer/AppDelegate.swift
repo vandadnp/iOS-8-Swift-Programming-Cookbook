@@ -21,15 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let motionManager = CMMotionManager()
       
       if motionManager.accelerometerAvailable{
-        println("Accelerometer is available")
+        print("Accelerometer is available")
       } else{
-        println("Accelerometer is not available")
+        print("Accelerometer is not available")
       }
       
       if motionManager.accelerometerActive{
-        println("Accelerometer is active")
+        print("Accelerometer is active")
       } else {
-        println("Accelerometer is not active")
+        print("Accelerometer is not active")
       }
       
       return true

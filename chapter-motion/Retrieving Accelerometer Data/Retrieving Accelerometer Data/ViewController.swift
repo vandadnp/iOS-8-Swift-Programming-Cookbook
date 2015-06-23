@@ -30,16 +30,20 @@ class ViewController: UIViewController {
     if motionManager.accelerometerAvailable{
       let queue = NSOperationQueue()
       motionManager.startAccelerometerUpdatesToQueue(queue, withHandler:
-        {(data: CMAccelerometerData!, error: NSError!) in
+        {data, error in
           
-          println("X = \(data.acceleration.x)")
-          println("Y = \(data.acceleration.y)")
-          println("Z = \(data.acceleration.z)")
+          guard let data = data else{
+            return
+          }
+          
+          print("X = \(data.acceleration.x)")
+          print("Y = \(data.acceleration.y)")
+          print("Z = \(data.acceleration.z)")
           
         }
       )
     } else {
-      println("Accelerometer is not available")
+      print("Accelerometer is not available")
     }
     
   }

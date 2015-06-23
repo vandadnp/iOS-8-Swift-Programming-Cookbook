@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A6378A611977C74600D19505"
-               BuildableName = "Retrieving Altitude Data.app"
-               BlueprintName = "Retrieving Altitude Data"
-               ReferencedContainer = "container:Retrieving Altitude Data.xcodeproj">
+               BlueprintIdentifier = "A6378A361977C2EB00D19505"
+               BuildableName = "Retrieving Gyroscope Data.app"
+               BlueprintName = "Retrieving Gyroscope Data"
+               ReferencedContainer = "container:Retrieving Gyroscope Data.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A6378A731977C74700D19505"
-               BuildableName = "Retrieving Altitude DataTests.xctest"
-               BlueprintName = "Retrieving Altitude DataTests"
-               ReferencedContainer = "container:Retrieving Altitude Data.xcodeproj">
+               BlueprintIdentifier = "A6378A481977C2EB00D19505"
+               BuildableName = "Retrieving Gyroscope DataTests.xctest"
+               BlueprintName = "Retrieving Gyroscope DataTests"
+               ReferencedContainer = "container:Retrieving Gyroscope Data.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6378A611977C74600D19505"
-            BuildableName = "Retrieving Altitude Data.app"
-            BlueprintName = "Retrieving Altitude Data"
-            ReferencedContainer = "container:Retrieving Altitude Data.xcodeproj">
+            BlueprintIdentifier = "A6378A361977C2EB00D19505"
+            BuildableName = "Retrieving Gyroscope Data.app"
+            BlueprintName = "Retrieving Gyroscope Data"
+            ReferencedContainer = "container:Retrieving Gyroscope Data.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,10 +65,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6378A611977C74600D19505"
-            BuildableName = "Retrieving Altitude Data.app"
-            BlueprintName = "Retrieving Altitude Data"
-            ReferencedContainer = "container:Retrieving Altitude Data.xcodeproj">
+            BlueprintIdentifier = "A6378A361977C2EB00D19505"
+            BuildableName = "Retrieving Gyroscope Data.app"
+            BlueprintName = "Retrieving Gyroscope Data"
+            ReferencedContainer = "container:Retrieving Gyroscope Data.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -84,10 +84,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6378A611977C74600D19505"
-            BuildableName = "Retrieving Altitude Data.app"
-            BlueprintName = "Retrieving Altitude Data"
-            ReferencedContainer = "container:Retrieving Altitude Data.xcodeproj">
+            BlueprintIdentifier = "A6378A361977C2EB00D19505"
+            BuildableName = "Retrieving Gyroscope Data.app"
+            BlueprintName = "Retrieving Gyroscope Data"
+            ReferencedContainer = "container:Retrieving Gyroscope Data.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
