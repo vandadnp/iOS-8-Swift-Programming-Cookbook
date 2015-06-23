@@ -31,7 +31,7 @@ class ViewController: UIViewController {
   
   func videoHasFinishedPlaying(notification: NSNotification){
     
-    println("Video finished playing")
+    print("Video finished playing")
     
     /* Find out what the reason was for the player to stop */
     let reason =
@@ -45,18 +45,16 @@ class ViewController: UIViewController {
       switch reasonValue!{
       case .PlaybackEnded:
         /* The movie ended normally */
-        println("Playback Ended")
+        print("Playback Ended")
       case .PlaybackError:
         /* An error happened and the movie ended */
-        println("Error happened")
+        print("Error happened")
       case .UserExited:
         /* The user exited the player */
-        println("User exited")
-      default:
-        println("Another event happened")
+        print("User exited")
       }
       
-      println("Finish Reason = \(theReason)")
+      print("Finish Reason = \(theReason)")
       stopPlayingVideo()
     }
     
@@ -74,8 +72,8 @@ class ViewController: UIViewController {
   
   func videoThumbnailIsAvailable(notification: NSNotification){
     
-    if let player = moviePlayer{
-      println("Thumbnail is available")
+    if let _ = moviePlayer{
+      print("Thumbnail is available")
       
       /* Now get the thumbnail out of the user info dictionary */
       let thumbnail =
@@ -84,7 +82,7 @@ class ViewController: UIViewController {
       if let image = thumbnail{
         
         /* We got the thumbnail image. You can now use it here */
-        println("Thumbnail image = \(image)")
+        print("Thumbnail image = \(image)")
         
       }
     }
@@ -101,7 +99,7 @@ class ViewController: UIViewController {
     
     /* If we have already created a movie player before,
     let's try to stop it */
-    if let player = moviePlayer{
+    if let _ = moviePlayer{
       stopPlayingVideo()
     }
     
@@ -122,7 +120,7 @@ class ViewController: UIViewController {
         name: MPMoviePlayerThumbnailImageRequestDidFinishNotification,
         object: nil)
       
-      println("Successfully instantiated the movie player")
+      print("Successfully instantiated the movie player")
       
       /* Scale the movie player to fit the aspect ratio */
       player.scalingMode = .AspectFit
@@ -144,7 +142,7 @@ class ViewController: UIViewController {
         timeOption: .NearestKeyFrame)
       
     } else {
-      println("Failed to instantiate the movie player")
+      print("Failed to instantiate the movie player")
     }
     
   }
@@ -152,7 +150,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    playButton = UIButton.buttonWithType(.System) as? UIButton
+    playButton = UIButton(type: .System)
     
     if let button = playButton{
       
@@ -162,10 +160,7 @@ class ViewController: UIViewController {
       button.center = view.center
       
       button.autoresizingMask =
-        .FlexibleTopMargin |
-        .FlexibleLeftMargin |
-        .FlexibleBottomMargin |
-        .FlexibleRightMargin
+        [.FlexibleTopMargin, .FlexibleLeftMargin, .FlexibleBottomMargin, .FlexibleRightMargin]
       
       button.addTarget(self,
         action: "startPlayingVideo",

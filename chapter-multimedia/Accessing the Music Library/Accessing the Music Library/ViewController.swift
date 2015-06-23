@@ -29,8 +29,8 @@
 //
 //  var mediaPicker: MPMediaPickerController?
 //
-//  func mediaPicker(mediaPicker: MPMediaPickerController!,
-//    didPickMediaItems mediaItemCollection: MPMediaItemCollection!){
+//  func mediaPicker(mediaPicker: MPMediaPickerController,
+//    didPickMediaItems mediaItemCollection: MPMediaItemCollection){
 //
 //      for thisItem in mediaItemCollection.items as [MPMediaItem]{
 //
@@ -51,19 +51,19 @@
 //
 //
 //        if let url = itemUrl{
-//          println("Item URL = \(url)")
+//          print("Item URL = \(url)")
 //        }
 //
 //        if let title = itemTitle{
-//          println("Item Title = \(title)")
+//          print("Item Title = \(title)")
 //        }
 //
 //        if let artist = itemArtist{
-//          println("Item Artist = \(artist)")
+//          print("Item Artist = \(artist)")
 //        }
 //
 //        if let artwork = itemArtwork{
-//          println("Item Artwork = \(artwork)")
+//          print("Item Artwork = \(artwork)")
 //        }
 //
 //      }
@@ -72,9 +72,9 @@
 //
 //  }
 //
-//  func mediaPickerDidCancel(mediaPicker: MPMediaPickerController!) {
+//  func mediaPickerDidCancel(mediaPicker: MPMediaPickerController) {
 //    /* The media picker was cancelled */
-//    println("Media Picker was cancelled")
+//    print("Media Picker was cancelled")
 //    mediaPicker.dismissViewControllerAnimated(true, completion: nil)
 //  }
 //
@@ -84,14 +84,14 @@
 //
 //    if let picker = mediaPicker{
 //
-//      println("Successfully instantiated a media picker")
+//      print("Successfully instantiated a media picker")
 //      picker.delegate = self
 //      picker.allowsPickingMultipleItems = false
 //
 //      presentViewController(picker, animated: true, completion: nil)
 //
 //    } else {
-//      println("Could not instantiate a media picker")
+//      print("Could not instantiate a media picker")
 //    }
 //
 //  }
@@ -102,8 +102,8 @@
 //  }
 //
 //}
-
-/* 2 */
+//
+///* 2 */
 import UIKit
 import MediaPlayer
 import AVFoundation
@@ -118,7 +118,7 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
   
   func musicPlayerStateChanged(notification: NSNotification){
     
-    println("Player State Changed")
+    print("Player State Changed")
     
     /* Let's get the state of the player */
     let stateAsObject =
@@ -131,26 +131,26 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
       switch MPMusicPlaybackState(rawValue: state.integerValue)!{
       case .Stopped:
         /* Here the media player has stopped playing the queue. */
-        println("Stopped")
+        print("Stopped")
       case .Playing:
         /* The media player is playing the queue. Perhaps you
         can reduce some processing that your application
         that is using to give more processing power
         to the media player */
-        println("Paused")
+        print("Paused")
       case .Paused:
         /* The media playback is paused here. You might want
         to indicate by showing graphics to the user */
-        println("Paused")
+        print("Paused")
       case .Interrupted:
         /* An interruption stopped the playback of the media queue */
-        println("Interrupted")
+        print("Interrupted")
       case .SeekingForward:
         /* The user is seeking forward in the queue */
-        println("Seeking Forward")
+        print("Seeking Forward")
       case .SeekingBackward:
         /* The user is seeking backward in the queue */
-        println("Seeking Backward")
+        print("Seeking Backward")
       }
       
     }
@@ -158,7 +158,7 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
   
   func nowPlayingItemIsChanged(notification: NSNotification){
     
-    println("Playing Item Is Changed")
+    print("Playing Item Is Changed")
     
     let key = "MPMusicPlayerControllerNowPlayingItemPersistentIDKey"
     
@@ -167,20 +167,20 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
     
     if let id = persistentID{
       /* Do something with Persistent ID */
-      println("Persistent ID = \(id)")
+      print("Persistent ID = \(id)")
     }
     
   }
   
   func volumeIsChanged(notification: NSNotification){
-    println("Volume Is Changed")
+    print("Volume Is Changed")
     /* The userInfo dictionary of this notification is normally empty */
   }
   
-  func mediaPicker(mediaPicker: MPMediaPickerController!,
-    didPickMediaItems mediaItemCollection: MPMediaItemCollection!){
+  func mediaPicker(mediaPicker: MPMediaPickerController,
+    didPickMediaItems mediaItemCollection: MPMediaItemCollection){
       
-      println("Media Picker returned")
+      print("Media Picker returned")
       
       /* Instantiate the music player */
       
@@ -221,9 +221,9 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
       
   }
   
-  func mediaPickerDidCancel(mediaPicker: MPMediaPickerController!) {
+  func mediaPickerDidCancel(mediaPicker: MPMediaPickerController) {
     /* The media picker was cancelled */
-    println("Media Picker was cancelled")
+    print("Media Picker was cancelled")
     mediaPicker.dismissViewControllerAnimated(true, completion: nil)
   }
   
@@ -244,7 +244,7 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
     if let picker = mediaPicker{
       
       
-      println("Successfully instantiated a media picker")
+      print("Successfully instantiated a media picker")
       picker.delegate = self
       picker.allowsPickingMultipleItems = true
       picker.showsCloudItems = true
@@ -254,7 +254,7 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
       presentViewController(picker, animated: true, completion: nil)
       
     } else {
-      println("Could not instantiate a media picker")
+      print("Could not instantiate a media picker")
     }
     
   }
@@ -264,7 +264,7 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
     
     title = "Media picker..."
     
-    buttonPickAndPlay = UIButton.buttonWithType(.System) as? UIButton
+    buttonPickAndPlay = UIButton(type: .System)
     
     if let pickAndPlay = buttonPickAndPlay{
       pickAndPlay.frame = CGRect(x: 0, y: 0, width: 200, height: 37)
@@ -276,7 +276,7 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
       view.addSubview(pickAndPlay)
     }
     
-    buttonStopPlaying = UIButton.buttonWithType(.System) as? UIButton
+    buttonStopPlaying = UIButton(type: .System)
     
     if let stopPlaying = buttonStopPlaying{
       stopPlaying.frame = CGRect(x: 0, y: 0, width: 200, height: 37)

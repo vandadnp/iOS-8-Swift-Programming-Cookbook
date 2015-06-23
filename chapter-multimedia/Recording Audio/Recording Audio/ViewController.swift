@@ -30,65 +30,62 @@ AVAudioPlayerDelegate, AVAudioRecorderDelegate {
   var audioRecorder: AVAudioRecorder?
   var audioPlayer: AVAudioPlayer?
   
-func audioPlayerBeginInterruption(player: AVAudioPlayer!) {
-  /* The audio session is deactivated here */
-}
-
-func audioPlayerEndInterruption(player: AVAudioPlayer!,
-  withOptions flags: Int) {
-    if flags == AVAudioSessionInterruptionFlags_ShouldResume{
-      player.play()
-    }
-}
+  func audioPlayerBeginInterruption(player: AVAudioPlayer) {
+    /* The audio session is deactivated here */
+  }
   
-  func audioPlayerDidFinishPlaying(player: AVAudioPlayer!,
+  func audioPlayerEndInterruption(player: AVAudioPlayer,
+    withOptions flags: Int) {
+      if flags == AVAudioSessionInterruptionFlags_ShouldResume{
+        player.play()
+      }
+  }
+  
+  func audioPlayerDidFinishPlaying(player: AVAudioPlayer,
     successfully flag: Bool){
       
       if flag{
-        println("Audio player stopped correctly")
+        print("Audio player stopped correctly")
       } else {
-        println("Audio player did not stop correctly")
+        print("Audio player did not stop correctly")
       }
       
       audioPlayer = nil
       
   }
   
-  func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!,
+  func audioRecorderDidFinishRecording(recorder: AVAudioRecorder,
     successfully flag: Bool){
       
       if flag{
         
-        println("Successfully stopped the audio recording process")
+        print("Successfully stopped the audio recording process")
         
-        /* Let's try to retrieve the data for the recorded file */
-        var playbackError:NSError?
-        var readingError:NSError?
-        
-        let fileData = NSData(contentsOfURL: audioRecordingPath(),
-          options: .MappedRead,
-          error: &readingError)
-        
-        /* Form an audio player and make it play the recorded data */
-        audioPlayer = AVAudioPlayer(data: fileData, error: &playbackError)
-        
-        /* Could we instantiate the audio player? */
-        if let player = audioPlayer{
+        do{
+          let fileData = try NSData(contentsOfURL: audioRecordingPath(),
+            options: .MappedRead)
+          
+          audioPlayer = try AVAudioPlayer(data: fileData)
+          
+          guard let player = audioPlayer else{
+            return
+          }
+          
           player.delegate = self
           
           /* Prepare to play and start playing */
           if player.prepareToPlay() && player.play(){
-            println("Started playing the recorded audio")
+            print("Started playing the recorded audio")
           } else {
-            println("Could not play the audio")
+            print("Could not play the audio")
           }
-          
-        } else {
-          println("Failed to create an audio player")
+        } catch let error as NSError{
+          print("Error = \(error)")
+          audioPlayer = nil
         }
         
       } else {
-        println("Stopping the audio recording failed")
+        print("Stopping the audio recording failed")
       }
       
       /* Here we don't need the audio recorder anymore */
@@ -101,24 +98,28 @@ func audioPlayerEndInterruption(player: AVAudioPlayer!,
     
     let fileManager = NSFileManager()
     
-    let documentsFolderUrl = fileManager.URLForDirectory(.DocumentDirectory,
-      inDomain: .UserDomainMask,
-      appropriateForURL: nil,
-      create: false,
-      error: nil)
+    let documentsFolderUrl: NSURL?
+    do {
+      documentsFolderUrl = try fileManager.URLForDirectory(.DocumentDirectory,
+            inDomain: .UserDomainMask,
+            appropriateForURL: nil,
+            create: false)
+    } catch _ {
+      documentsFolderUrl = nil
+    }
     
     return documentsFolderUrl!.URLByAppendingPathComponent("Recording.m4a")
     
   }
   
-  func audioRecordingSettings() -> [NSObject : AnyObject]{
+  func audioRecordingSettings() -> [String : AnyObject]{
     
     /* Let's prepare the audio recorder options in the dictionary.
     Later we will use this dictionary to instantiate an audio
     recorder of type AVAudioRecorder */
     
     return [
-      AVFormatIDKey : kAudioFormatMPEG4AAC as NSNumber,
+      AVFormatIDKey : NSNumber(unsignedInt: kAudioFormatMPEG4AAC),
       AVSampleRateKey : 16000.0 as NSNumber,
       AVNumberOfChannelsKey : 1 as NSNumber,
       AVEncoderAudioQualityKey : AVAudioQuality.Low.rawValue as NSNumber
@@ -128,22 +129,22 @@ func audioPlayerEndInterruption(player: AVAudioPlayer!,
   
   func startRecordingAudio(){
     
-    var error: NSError?
-    
     let audioRecordingURL = self.audioRecordingPath()
     
-    audioRecorder = AVAudioRecorder(URL: audioRecordingURL,
-      settings: audioRecordingSettings(),
-      error: &error)
-    
-    if let recorder = audioRecorder{
+    do {
+      audioRecorder = try AVAudioRecorder(URL: audioRecordingURL,
+        settings: audioRecordingSettings())
+      
+      guard let recorder = audioRecorder else{
+        return
+      }
       
       recorder.delegate = self
       /* Prepare the recorder and then start the recording */
       
       if recorder.prepareToRecord() && recorder.record(){
         
-        println("Successfully started to record.")
+        print("Successfully started to record.")
         
         /* After 5 seconds, let's stop the recording process */
         let delayInSeconds = 5.0
@@ -152,18 +153,18 @@ func audioPlayerEndInterruption(player: AVAudioPlayer!,
           Int64(delayInSeconds * Double(NSEC_PER_SEC)))
         
         dispatch_after(delayInNanoSeconds, dispatch_get_main_queue(), {
-          [weak self] in
-          self!.audioRecorder!.stop()
+          self.audioRecorder!.stop()
           })
         
       } else {
-        println("Failed to record.")
+        print("Failed to record.")
         audioRecorder = nil
       }
       
-    } else {
-      println("Failed to create an instance of the audio recorder")
+    } catch {
+      audioRecorder = nil
     }
+    
     
   }
   
@@ -172,36 +173,31 @@ func audioPlayerEndInterruption(player: AVAudioPlayer!,
     
     /* Ask for permission to see if we can record audio */
     
-    var error: NSError?
     let session = AVAudioSession.sharedInstance()
     
-    if session.setCategory(AVAudioSessionCategoryPlayAndRecord,
-      withOptions: .DuckOthers,
-      error: &error){
+    do {
+      try session.setCategory(AVAudioSessionCategoryPlayAndRecord,
+            withOptions: .DuckOthers)
+      do {
+        try session.setActive(true)
+        print("Successfully activated the audio session")
         
-        if session.setActive(true, error: nil){
-          println("Successfully activated the audio session")
+        session.requestRecordPermission{allowed in
           
-          session.requestRecordPermission{[weak self](allowed: Bool) in
-            
-            if allowed{
-              self!.startRecordingAudio()
-            } else {
-              println("We don't have permission to record audio");
-            }
-            
+          if allowed{
+            self.startRecordingAudio()
+          } else {
+            print("We don't have permission to record audio");
           }
-        } else {
-          println("Could not activate the audio session")
+          
         }
-        
-    } else {
-      
-      if let theError = error{
-        println("An error occurred in setting the audio " +
-          "session category. Error = \(theError)")
+      } catch {
+        print("Could not activate the audio session")
       }
-      
+        
+    } catch let error as NSError {
+        print("An error occurred in setting the audio " +
+          "session category. Error = \(error)")
     }
   }
   

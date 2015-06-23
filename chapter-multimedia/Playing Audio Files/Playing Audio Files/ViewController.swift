@@ -30,9 +30,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
   
   /* The delegate message that will let us know that the player
   has finished playing an audio file */
-  func audioPlayerDidFinishPlaying(player: AVAudioPlayer!,
+  func audioPlayerDidFinishPlaying(player: AVAudioPlayer,
     successfully flag: Bool) {
-      println("Finished playing the song")
+      print("Finished playing the song")
   }
   
   override func viewDidLoad() {
@@ -41,7 +41,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     let dispatchQueue =
     dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
     
-    dispatch_async(dispatchQueue, {[weak self] in
+    dispatch_async(dispatchQueue, {
       let mainBundle = NSBundle.mainBundle()
       
       /* Find the location of our file to feed to the audio player */
@@ -50,13 +50,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
       if let path = filePath{
         let fileData = NSData(contentsOfFile: path)
         
-        var error:NSError?
-        
-        /* Start the audio player */
-        self!.audioPlayer = AVAudioPlayer(data: fileData, error: &error)
-        
-        /* Did we get an instance of AVAudioPlayer? */
-        if let player = self!.audioPlayer{
+        do {
+          /* Start the audio player */
+          self.audioPlayer = try AVAudioPlayer(data: fileData!)
+          
+          guard let player = self.audioPlayer else{
+            return
+          }
+          
           /* Set the delegate and start playing */
           player.delegate = self
           if player.prepareToPlay() && player.play(){
@@ -64,9 +65,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
           } else {
             /* Failed to play */
           }
-        } else {
-          /* Failed to instantiate AVAudioPlayer */
+          
+        } catch{
+          self.audioPlayer = nil
+          return
         }
+        
       }
       
     })
