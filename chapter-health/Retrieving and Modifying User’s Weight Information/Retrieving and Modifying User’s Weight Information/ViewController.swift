@@ -33,10 +33,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
   let textFieldRightLabel = UILabel(frame: CGRectZero)
   
   let weightQuantityType = HKQuantityType.quantityTypeForIdentifier(
-    HKQuantityTypeIdentifierBodyMass)
+    HKQuantityTypeIdentifierBodyMass)!
   
-  lazy var types: Set<NSObject>! = {
-    return Set([self.weightQuantityType])
+  lazy var types: Set<HKObjectType> = {
+    return [self.weightQuantityType]
     }()
   
   lazy var healthStore = HKHealthStore()
@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
   
     let kilogramUnit = HKUnit.gramUnitWithMetricPrefix(.Kilo)
     let weightQuantity = HKQuantity(unit: kilogramUnit,
-      doubleValue: (textField.text as NSString).doubleValue)
+      doubleValue: NSString(string: textField.text!).doubleValue)
     let now = NSDate()
     let sample = HKQuantitySample(type: weightQuantityType,
       quantity: weightQuantity,
@@ -53,12 +53,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
       endDate: now)
     
     healthStore.saveObject(sample, withCompletion: {
-      (succeeded: Bool, error: NSError!) in
+      succeeded, error in
       
       if error == nil{
-        println("Successfully saved the user's weight")
+        print("Successfully saved the user's weight")
       } else {
-        println("Failed to save the user's weight")
+        print("Failed to save the user's weight")
       }
       
       })
@@ -74,49 +74,42 @@ class ViewController: UIViewController, UITextFieldDelegate {
       predicate: nil,
       limit: 1,
       sortDescriptors: [sortDescriptor],
-      resultsHandler: {[weak self] (query: HKSampleQuery!,
-        results: [AnyObject]!,
-        error: NSError!) in
-      
-        if results.count > 0{
-          
-          /* We only have one sample really */
-          let sample = results[0] as! HKQuantitySample
-          /* Get the weight in kilograms from the quantity */
-          let weightInKilograms = sample.quantity.doubleValueForUnit(
-            HKUnit.gramUnitWithMetricPrefix(.Kilo))
-          
-          /* This is the value of "KG", localized in user's language */
-          let formatter = NSMassFormatter()
-          let kilogramSuffix = formatter.unitStringFromValue(weightInKilograms,
-            unit: .Kilogram)
-          
-          dispatch_async(dispatch_get_main_queue(), {
-            
-            let strongSelf = self!
-            
-            
-            /* Set the value of "KG" on the right hand side of the
-            text field */
-            strongSelf.textFieldRightLabel.text = kilogramSuffix
-            strongSelf.textFieldRightLabel.sizeToFit()
-            
-            /* And finally set the text field's value to the user's
-            weight */
-            let weightFormattedAsString =
-            NSNumberFormatter.localizedStringFromNumber(
-              NSNumber(double: weightInKilograms),
-              numberStyle: .NoStyle)
-            
-            strongSelf.textField.text = weightFormattedAsString
-            
-            })
-          
-        } else {
+      resultsHandler: {query, results, sample in
+        
+        guard let results = results where results.count > 0 else {
           print("Could not read the user's weight ")
-          println("or no weight data was available")
+          print("or no weight data was available")
+          return
         }
         
+        /* We only have one sample really */
+        let sample = results[0] as! HKQuantitySample
+        /* Get the weight in kilograms from the quantity */
+        let weightInKilograms = sample.quantity.doubleValueForUnit(
+          HKUnit.gramUnitWithMetricPrefix(.Kilo))
+        
+        /* This is the value of "KG", localized in user's language */
+        let formatter = NSMassFormatter()
+        let kilogramSuffix = formatter.unitStringFromValue(weightInKilograms,
+          unit: .Kilogram)
+        
+        dispatch_async(dispatch_get_main_queue(), {
+          
+          /* Set the value of "KG" on the right hand side of the
+          text field */
+          self.textFieldRightLabel.text = kilogramSuffix
+          self.textFieldRightLabel.sizeToFit()
+          
+          /* And finally set the text field's value to the user's
+          weight */
+          let weightFormattedAsString =
+          NSNumberFormatter.localizedStringFromNumber(
+            NSNumber(double: weightInKilograms),
+            numberStyle: .NoStyle)
+          
+          self.textField.text = weightFormattedAsString
+          
+        })
       
       })
     
@@ -141,25 +134,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     if HKHealthStore.isHealthDataAvailable(){
       
-      healthStore.requestAuthorizationToShareTypes(types,
+      let sampleTypes: Set<HKSampleType> = [self.weightQuantityType]
+
+      healthStore.requestAuthorizationToShareTypes(sampleTypes,
         readTypes: types,
-        completion: {[weak self]
-          (succeeded: Bool, error: NSError!) in
-          
-          let strongSelf = self!
+        completion: {succeeded, error in
+        
           if succeeded && error == nil{
             dispatch_async(dispatch_get_main_queue(),
-              strongSelf.readWeightInformation)
+              self.readWeightInformation)
           } else {
             if let theError = error{
-              println("Error occurred = \(theError)")
+              print("Error occurred = \(theError)")
             }
           }
           
         })
       
     } else {
-      println("Health data is not available")
+      print("Health data is not available")
     }
     
   }

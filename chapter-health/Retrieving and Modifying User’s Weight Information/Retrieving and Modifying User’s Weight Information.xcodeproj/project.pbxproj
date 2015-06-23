@@ -12,7 +12,6 @@
 		A676E071197F099B00DB9B2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676E06F197F099B00DB9B2D /* Main.storyboard */; };
 		A676E073197F099B00DB9B2D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A676E072197F099B00DB9B2D /* Images.xcassets */; };
 		A676E07F197F099C00DB9B2D /* Retrieving_and_Modifying_User_s_Weight_InformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676E07E197F099C00DB9B2D /* Retrieving_and_Modifying_User_s_Weight_InformationTests.swift */; };
-		A676E08A197F09DA00DB9B2D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A676E089197F09DA00DB9B2D /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +35,6 @@
 		A676E07D197F099C00DB9B2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A676E07E197F099C00DB9B2D /* Retrieving_and_Modifying_User_s_Weight_InformationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Retrieving_and_Modifying_User_s_Weight_InformationTests.swift; sourceTree = "<group>"; };
 		A676E088197F09DA00DB9B2D /* Retrieving and Modifying User’s Weight Information.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Retrieving and Modifying User’s Weight Information.entitlements"; sourceTree = "<group>"; };
-		A676E089197F09DA00DB9B2D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A676E08A197F09DA00DB9B2D /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +58,6 @@
 		A676E05D197F099B00DB9B2D = {
 			isa = PBXGroup;
 			children = (
-				A676E089197F09DA00DB9B2D /* HealthKit.framework */,
 				A676E068197F099B00DB9B2D /* Retrieving and Modifying User’s Weight Information */,
 				A676E07B197F099C00DB9B2D /* Retrieving and Modifying User’s Weight InformationTests */,
 				A676E067197F099B00DB9B2D /* Products */,
@@ -159,7 +155,8 @@
 		A676E05E197F099B00DB9B2D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					A676E065197F099B00DB9B2D = {
@@ -275,6 +272,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -343,6 +341,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
 				INFOPLIST_FILE = "Retrieving and Modifying User’s Weight Information/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -356,6 +355,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Retrieving and Modifying User’s Weight Information/Retrieving and Modifying User’s Weight Information.entitlements";
 				INFOPLIST_FILE = "Retrieving and Modifying User’s Weight Information/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -375,6 +375,7 @@
 				);
 				INFOPLIST_FILE = "Retrieving and Modifying User’s Weight InformationTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -390,6 +391,7 @@
 				);
 				INFOPLIST_FILE = "Retrieving and Modifying User’s Weight InformationTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};

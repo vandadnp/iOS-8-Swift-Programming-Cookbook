@@ -26,11 +26,11 @@ import HealthKit
 
 class ViewController: UIViewController {
                             
-  let weightQuantityType = HKQuantityType.quantityTypeForIdentifier(
-    HKQuantityTypeIdentifierBodyMass)
+  let weightQuantityType = HKObjectType.quantityTypeForIdentifier(
+    HKQuantityTypeIdentifierBodyMass)!
   
-  lazy var types: Set<NSObject>! = {
-    return Set([self.weightQuantityType])
+  lazy var types: Set<HKObjectType> = {
+    return [self.weightQuantityType]
     }()
   
   lazy var healthStore = HKHealthStore()
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
   lazy var predicate: NSPredicate = {
     let now = NSDate()
     let yesterday =
-    NSCalendar.currentCalendar().dateByAddingUnit(.DayCalendarUnit,
+    NSCalendar.currentCalendar().dateByAddingUnit(.NSDayCalendarUnit,
       value: -1,
       toDate: now,
       options: .WrapComponents)
@@ -48,11 +48,10 @@ class ViewController: UIViewController {
       options: .StrictEndDate)
   }()
   
-  lazy var query: HKObserverQuery = {[weak self] in
-    let strongSelf = self!
-    return HKObserverQuery(sampleType: strongSelf.weightQuantityType,
-      predicate: strongSelf.predicate,
-      updateHandler: strongSelf.weightChangedHandler)
+  lazy var query: HKObserverQuery = {
+    return HKObserverQuery(sampleType: self.weightQuantityType,
+      predicate: self.predicate,
+      updateHandler: self.weightChangedHandler)
   }()
   
   func fetchRecordedWeightsInLastDay(){
@@ -64,36 +63,32 @@ class ViewController: UIViewController {
       predicate: predicate,
       limit: Int(HKObjectQueryNoLimit),
       sortDescriptors: [sortDescriptor],
-      resultsHandler: {[weak self] (query: HKSampleQuery!,
-        results: [AnyObject]!,
-        error: NSError!) in
+      resultsHandler: {(query: HKSampleQuery,
+        results: [HKSample]?,
+        error: NSError?) in
         
-        if results.count > 0{
+        guard let results = results where results.count > 0 else {
+          print("Could not read the user's weight")
+          print("or no weight data was available")
+          return
+        }
+        
+        for sample in results as! [HKQuantitySample]{
+          /* Get the weight in kilograms from the quantity */
+          let weightInKilograms = sample.quantity.doubleValueForUnit(
+            HKUnit.gramUnitWithMetricPrefix(.Kilo))
           
-          for sample in results as! [HKQuantitySample]{
-            /* Get the weight in kilograms from the quantity */
-            let weightInKilograms = sample.quantity.doubleValueForUnit(
-              HKUnit.gramUnitWithMetricPrefix(.Kilo))
-            
-            /* This is the value of "KG", localized in user's language */
-            let formatter = NSMassFormatter()
-            let kilogramSuffix = formatter.unitStringFromValue(
-              weightInKilograms, unit: .Kilogram)
-            
-            dispatch_async(dispatch_get_main_queue(), {
-              
-              let strongSelf = self!
-              
-              println("Weight has been changed to " +
-                "\(weightInKilograms) \(kilogramSuffix)")
-              println("Change date = \(sample.startDate)")
-              
-              })
-          }
+          /* This is the value of "KG", localized in user's language */
+          let formatter = NSMassFormatter()
+          let kilogramSuffix = formatter.unitStringFromValue(
+            weightInKilograms, unit: .Kilogram)
           
-        } else {
-          print("Could not read the user's weight ")
-          println("or no weight data was available")
+          dispatch_async(dispatch_get_main_queue(), {
+            print("Weight has been changed to " +
+              "\(weightInKilograms) \(kilogramSuffix)")
+            print("Change date = \(sample.startDate)")
+            
+          })
         }
         
         
@@ -103,9 +98,9 @@ class ViewController: UIViewController {
     
   }
   
-  func weightChangedHandler(query: HKObserverQuery!,
-    completionHandler: HKObserverQueryCompletionHandler!,
-    error: NSError!){
+  func weightChangedHandler(query: HKObserverQuery,
+    completionHandler: HKObserverQueryCompletionHandler,
+    error: NSError?){
     
       /* Be careful, we are not on the UI thread */
       fetchRecordedWeightsInLastDay()
@@ -118,14 +113,14 @@ class ViewController: UIViewController {
     healthStore.executeQuery(query)
     healthStore.enableBackgroundDeliveryForType(weightQuantityType,
       frequency: .Immediate,
-      withCompletion: {(succeeded: Bool, error: NSError!) in
+      withCompletion: {succeeded, error in
         
         if succeeded{
-          println("Enabled background delivery of weight changes")
+          print("Enabled background delivery of weight changes")
         } else {
           if let theError = error{
             print("Failed to enable background delivery of weight changes. ")
-            println("Error = \(theError)")
+            print("Error = \(theError)")
           }
         }
         
@@ -135,14 +130,14 @@ class ViewController: UIViewController {
   func stopObservingWeightChanges(){
     healthStore.stopQuery(query)
     healthStore.disableAllBackgroundDeliveryWithCompletion{
-      (succeeded: Bool, error: NSError!) in
+      succeeded, error in
       
       if succeeded{
-        println("Disabled background delivery of weight changes")
+        print("Disabled background delivery of weight changes")
       } else {
         if let theError = error{
           print("Failed to disable background delivery of weight changes. ")
-          println("Error = \(theError)")
+          print("Error = \(theError)")
         }
       }
       
@@ -157,23 +152,21 @@ class ViewController: UIViewController {
       
       healthStore.requestAuthorizationToShareTypes(nil,
         readTypes: types,
-        completion: {[weak self]
-          (succeeded: Bool, error: NSError!) in
+        completion: {succeeded, error in
           
-          let strongSelf = self!
           if succeeded && error == nil{
             dispatch_async(dispatch_get_main_queue(),
-              strongSelf.startObservingWeightChanges)
+              self.startObservingWeightChanges)
           } else {
             if let theError = error{
-              println("Error occurred = \(theError)")
+              print("Error occurred = \(theError)")
             }
           }
           
         })
       
     } else {
-      println("Health data is not available")
+      print("Health data is not available")
     }
     
   }

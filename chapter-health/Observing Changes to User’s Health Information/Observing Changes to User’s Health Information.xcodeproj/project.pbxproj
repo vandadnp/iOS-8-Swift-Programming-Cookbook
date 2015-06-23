@@ -12,7 +12,6 @@
 		A676E0FB197FE66C00DB9B2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676E0F9197FE66C00DB9B2D /* Main.storyboard */; };
 		A676E0FD197FE66C00DB9B2D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A676E0FC197FE66C00DB9B2D /* Images.xcassets */; };
 		A676E109197FE66C00DB9B2D /* Observing_Changes_to_User_s_Health_InformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676E108197FE66C00DB9B2D /* Observing_Changes_to_User_s_Health_InformationTests.swift */; };
-		A676E114197FE69C00DB9B2D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A676E113197FE69C00DB9B2D /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +35,6 @@
 		A676E107197FE66C00DB9B2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A676E108197FE66C00DB9B2D /* Observing_Changes_to_User_s_Health_InformationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observing_Changes_to_User_s_Health_InformationTests.swift; sourceTree = "<group>"; };
 		A676E112197FE69C00DB9B2D /* Observing Changes to User’s Health Information.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Observing Changes to User’s Health Information.entitlements"; sourceTree = "<group>"; };
-		A676E113197FE69C00DB9B2D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A676E114197FE69C00DB9B2D /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +58,6 @@
 		A676E0E7197FE66C00DB9B2D = {
 			isa = PBXGroup;
 			children = (
-				A676E113197FE69C00DB9B2D /* HealthKit.framework */,
 				A676E0F2197FE66C00DB9B2D /* Observing Changes to User’s Health Information */,
 				A676E105197FE66C00DB9B2D /* Observing Changes to User’s Health InformationTests */,
 				A676E0F1197FE66C00DB9B2D /* Products */,
@@ -159,7 +155,8 @@
 		A676E0E8197FE66C00DB9B2D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					A676E0EF197FE66C00DB9B2D = {
@@ -275,6 +272,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -344,6 +342,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Observing Changes to User’s Health Information/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -359,6 +358,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Observing Changes to User’s Health Information/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -378,6 +378,7 @@
 				);
 				INFOPLIST_FILE = "Observing Changes to User’s Health InformationTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -393,6 +394,7 @@
 				);
 				INFOPLIST_FILE = "Observing Changes to User’s Health InformationTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -417,6 +419,7 @@
 				A676E10E197FE66C00DB9B2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A676E10F197FE66C00DB9B2D /* Build configuration list for PBXNativeTarget "Observing Changes to User’s Health InformationTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +428,7 @@
 				A676E111197FE66C00DB9B2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

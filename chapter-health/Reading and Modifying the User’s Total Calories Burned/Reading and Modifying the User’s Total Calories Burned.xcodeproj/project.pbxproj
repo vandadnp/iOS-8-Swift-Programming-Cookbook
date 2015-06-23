@@ -13,7 +13,6 @@
 		9DA11B811990FF7500DC5222 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA11B801990FF7500DC5222 /* Images.xcassets */; };
 		9DA11B8D1990FF7500DC5222 /* Reading_and_Modifying_the_User_s_Total_Calories_BurnedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA11B8C1990FF7500DC5222 /* Reading_and_Modifying_the_User_s_Total_Calories_BurnedTests.swift */; };
 		9DA11B971990FFE500DC5222 /* AddBurnedCaloriesToDietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA11B961990FFE500DC5222 /* AddBurnedCaloriesToDietViewController.swift */; };
-		9DA11B991991004A00DC5222 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA11B981991004A00DC5222 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +36,6 @@
 		9DA11B8B1990FF7500DC5222 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA11B8C1990FF7500DC5222 /* Reading_and_Modifying_the_User_s_Total_Calories_BurnedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reading_and_Modifying_the_User_s_Total_Calories_BurnedTests.swift; sourceTree = "<group>"; };
 		9DA11B961990FFE500DC5222 /* AddBurnedCaloriesToDietViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBurnedCaloriesToDietViewController.swift; sourceTree = "<group>"; };
-		9DA11B981991004A00DC5222 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		9DA11B9A1991004A00DC5222 /* Reading and Modifying the User’s Total Calories Burned.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Reading and Modifying the User’s Total Calories Burned.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DA11B991991004A00DC5222 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +60,6 @@
 		9DA11B6B1990FF7400DC5222 = {
 			isa = PBXGroup;
 			children = (
-				9DA11B981991004A00DC5222 /* HealthKit.framework */,
 				9DA11B761990FF7400DC5222 /* Reading and Modifying the User’s Total Calories Burned */,
 				9DA11B891990FF7500DC5222 /* Reading and Modifying the User’s Total Calories BurnedTests */,
 				9DA11B751990FF7400DC5222 /* Products */,
@@ -162,7 +158,8 @@
 		9DA11B6C1990FF7400DC5222 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					9DA11B731990FF7400DC5222 = {
@@ -279,6 +276,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -348,6 +346,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Reading and Modifying the User’s Total Calories Burned/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -363,6 +362,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Reading and Modifying the User’s Total Calories Burned/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -382,6 +382,7 @@
 				);
 				INFOPLIST_FILE = "Reading and Modifying the User’s Total Calories BurnedTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixolity.ios.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reading and Modifying the User’s Total Calories Burned.app/Reading and Modifying the User’s Total Calories Burned";
 			};
@@ -397,6 +398,7 @@
 				);
 				INFOPLIST_FILE = "Reading and Modifying the User’s Total Calories BurnedTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pixolity.ios.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reading and Modifying the User’s Total Calories Burned.app/Reading and Modifying the User’s Total Calories Burned";
 			};

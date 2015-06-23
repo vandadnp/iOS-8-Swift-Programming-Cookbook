@@ -12,7 +12,6 @@
 		A676E0CD197FBBDD00DB9B2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676E0CB197FBBDD00DB9B2D /* Main.storyboard */; };
 		A676E0CF197FBBDD00DB9B2D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A676E0CE197FBBDD00DB9B2D /* Images.xcassets */; };
 		A676E0DB197FBBDD00DB9B2D /* Retrieving_User_s_Date_of_BirthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676E0DA197FBBDD00DB9B2D /* Retrieving_User_s_Date_of_BirthTests.swift */; };
-		A676E0E6197FBC0000DB9B2D /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A676E0E5197FBC0000DB9B2D /* HomeKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +35,6 @@
 		A676E0D9197FBBDD00DB9B2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A676E0DA197FBBDD00DB9B2D /* Retrieving_User_s_Date_of_BirthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Retrieving_User_s_Date_of_BirthTests.swift; sourceTree = "<group>"; };
 		A676E0E4197FBC0000DB9B2D /* Retrieving User’s Date of Birth.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Retrieving User’s Date of Birth.entitlements"; sourceTree = "<group>"; };
-		A676E0E5197FBC0000DB9B2D /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A676E0E6197FBC0000DB9B2D /* HomeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +58,6 @@
 		A676E0B9197FBBDD00DB9B2D = {
 			isa = PBXGroup;
 			children = (
-				A676E0E5197FBC0000DB9B2D /* HomeKit.framework */,
 				A676E0C4197FBBDD00DB9B2D /* Retrieving User’s Date of Birth */,
 				A676E0D7197FBBDD00DB9B2D /* Retrieving User’s Date of BirthTests */,
 				A676E0C3197FBBDD00DB9B2D /* Products */,
@@ -159,7 +155,8 @@
 		A676E0BA197FBBDD00DB9B2D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					A676E0C1197FBBDD00DB9B2D = {
@@ -275,6 +272,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -343,6 +341,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
 				INFOPLIST_FILE = "Retrieving User’s Date of Birth/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -357,6 +356,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = "Retrieving User’s Date of Birth/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -376,6 +376,7 @@
 				);
 				INFOPLIST_FILE = "Retrieving User’s Date of BirthTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -391,6 +392,7 @@
 				);
 				INFOPLIST_FILE = "Retrieving User’s Date of BirthTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};

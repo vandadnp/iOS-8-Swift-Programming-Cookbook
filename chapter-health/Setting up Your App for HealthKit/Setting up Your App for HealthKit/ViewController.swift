@@ -27,27 +27,24 @@ import HealthKit
 class ViewController: UIViewController {
   
   let heightQuantity = HKQuantityType.quantityTypeForIdentifier(
-    HKQuantityTypeIdentifierHeight)
+    HKQuantityTypeIdentifierHeight)!
   
   let weightQuantity = HKQuantityType.quantityTypeForIdentifier(
-    HKQuantityTypeIdentifierBodyMass)
+    HKQuantityTypeIdentifierBodyMass)!
   
   let heartRateQuantity = HKQuantityType.quantityTypeForIdentifier(
-    HKQuantityTypeIdentifierHeartRate)
+    HKQuantityTypeIdentifierHeartRate)!
   
   lazy var healthStore = HKHealthStore()
   
   /* The type of data that we wouldn't write into the health store */
-  lazy var typesToShare: Set<NSObject> = {
-    return Set([self.heightQuantity,
-      self.weightQuantity])
+  lazy var typesToShare: Set<HKSampleType> = {
+    return [self.heightQuantity, self.weightQuantity]
   }()
   
   /* We want to read this type of data */
-  lazy var typesToRead: Set<NSObject> = {
-    return Set([self.heightQuantity,
-      self.weightQuantity,
-      self.heartRateQuantity])
+  lazy var typesToRead: Set<HKObjectType> = {
+    return [self.heightQuantity, self.weightQuantity, self.heartRateQuantity]
   }()
   
   /* Ask for permission to access the health store */
@@ -58,20 +55,20 @@ class ViewController: UIViewController {
       
       healthStore.requestAuthorizationToShareTypes(typesToShare,
         readTypes: typesToRead,
-        completion: {(succeeded: Bool, error: NSError!) in
+        completion: {succeeded, error in
           
           if succeeded && error == nil{
-            println("Successfully received authorization")
+            print("Successfully received authorization")
           } else {
             if let theError = error{
-              println("Error occurred = \(theError)")
+              print("Error occurred = \(theError)")
             }
           }
           
         })
 
     } else {
-      println("Health data is not available")
+      print("Health data is not available")
     }
     
   }

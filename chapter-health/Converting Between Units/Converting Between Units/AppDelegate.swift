@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       
-      /* 1 */
+//      /* 1 */
 //      let gramUnit = HKUnit(fromMassFormatterUnit: .Gram)
 //      let kilogramUnit = HKUnit(fromMassFormatterUnit: .Kilogram)
 //      let weightInGrams:Double = 74_250
@@ -40,10 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        doubleValue: weightInGrams)
 //      let weightInKilograms = weightQuantity.doubleValueForUnit(kilogramUnit)
 //      
-//      println("Your weight is \(weightInKilograms) kilograms")
-//      println("Your weight is \(weightInGrams) grams")
-      
-      /* 2 */
+//      print("Your weight is \(weightInKilograms) kilograms")
+//      print("Your weight is \(weightInGrams) grams")
+//      
+//      /* 2 */
 //      let caloriesValue:Double = 1_500
 //      
 //      let caloriesUnit = HKQuantity(unit: HKUnit.calorieUnit(),
@@ -59,9 +59,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //      let kilojoulesString = energyFormatter.stringFromValue(kilojoulesValue,
 //        unit: .Kilojoule)
 //      
-//      println("You've burned \(caloriesString)")
-//      println("You've burned \(kilojoulesString)")
-      
+//      print("You've burned \(caloriesString)")
+//      print("You've burned \(kilojoulesString)")
+//
       /* 3 */
       let distanceInMeters:Double = 1_234
       
@@ -78,8 +78,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let feetString = lengthFormatter.stringFromValue(feetValue,
         unit: .Foot)
       
-      println("You've driven \(metersString)")
-      println("You've driven \(feetString)")
+      print("You've driven \(metersString)")
+      print("You've driven \(feetString)")
       
       return true
   }

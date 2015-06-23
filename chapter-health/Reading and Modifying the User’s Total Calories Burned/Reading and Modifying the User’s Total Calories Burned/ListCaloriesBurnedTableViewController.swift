@@ -65,17 +65,16 @@ AddBurnedCaloriesToDietViewControllerDelegate {
   }
   
   let burnedEnergyQuantityType = HKQuantityType.quantityTypeForIdentifier(
-    HKQuantityTypeIdentifierActiveEnergyBurned)
+    HKQuantityTypeIdentifierActiveEnergyBurned)!
   
-  lazy var types: Set<NSObject>! = {
-    return Set([self.burnedEnergyQuantityType])
+  lazy var types: Set<HKObjectType> = {
+    return [self.burnedEnergyQuantityType]
     }()
   
-  lazy var query: HKObserverQuery = {[weak self] in
-    let strongSelf = self!
-    return HKObserverQuery(sampleType: strongSelf.burnedEnergyQuantityType,
-      predicate: strongSelf.predicate,
-      updateHandler: strongSelf.burnedCaloriesChangedHandler)
+  lazy var query: HKObserverQuery = {
+    return HKObserverQuery(sampleType: self.burnedEnergyQuantityType,
+      predicate: self.predicate,
+      updateHandler: self.burnedCaloriesChangedHandler)
     }()
   
   lazy var healthStore = HKHealthStore()
@@ -88,7 +87,7 @@ AddBurnedCaloriesToDietViewControllerDelegate {
     let beginningOfToday = nowDate.beginningOfDay()
     
     let tomorrowDate =
-    NSCalendar.currentCalendar().dateByAddingUnit(.DayCalendarUnit,
+    NSCalendar.currentCalendar().dateByAddingUnit(.NSDayCalendarUnit,
       value: 1, toDate: NSDate(), options: options)
     
     let beginningOfTomorrow = tomorrowDate!.beginningOfDay()
@@ -98,11 +97,11 @@ AddBurnedCaloriesToDietViewControllerDelegate {
       options: .StrictEndDate)
     }()
   
-  func burnedCaloriesChangedHandler(query: HKObserverQuery!,
-    completionHandler: HKObserverQueryCompletionHandler!,
-    error: NSError!){
+  func burnedCaloriesChangedHandler(query: HKObserverQuery,
+    completionHandler: HKObserverQueryCompletionHandler,
+    error: NSError?){
       
-      println("The burned calories has changed...")
+      print("The burned calories has changed...")
       
       /* Be careful, we are not on the UI thread */
       fetchBurnedCaloriesInLastDay()
@@ -127,18 +126,16 @@ AddBurnedCaloriesToDietViewControllerDelegate {
         endDate: endDate,
         metadata: metadata)
       
-      healthStore.saveObject(sample, withCompletion: {[weak self]
-        (succeeded: Bool, error: NSError!) in
-        
-        let strongSelf = self!
+      healthStore.saveObject(sample, withCompletion: {
+        succeeded, error in
         
         if succeeded{
-          println("Successfully saved the calories...")
-          strongSelf.tableView.reloadData()
+          print("Successfully saved the calories...")
+          self.tableView.reloadData()
         } else {
-          println("Failed to save the calories")
+          print("Failed to save the calories")
           if let theError = error{
-            println("Error = \(theError)")
+            print("Error = \(theError)")
           }
         }
         
@@ -156,44 +153,33 @@ AddBurnedCaloriesToDietViewControllerDelegate {
       predicate: predicate,
       limit: Int(HKObjectQueryNoLimit),
       sortDescriptors: [sortDescriptor],
-      resultsHandler: {[weak self] (query: HKSampleQuery!,
-        results: [AnyObject]!,
-        error: NSError!) in
+      resultsHandler: {query, results, error in
         
-        println("Received new data from the query. Processing...")
+        print("Received new data from the query. Processing...")
         
-        let strongSelf = self!
-        
-        if results.count > 0{
-          
-          strongSelf.allCaloriesBurned = [CalorieBurner]()
-          
-          for sample in results as! [HKQuantitySample]{
-            
-            let burnerName = sample.metadata[HKMetadataKeyExerciseName]
-              as? NSString
-            let calories = sample.quantity.doubleValueForUnit(strongSelf.unit)
-            let caloriesAsString =
-            strongSelf.formatter.stringFromValue(calories, unit: .Kilocalorie)
-            
-            let burner = CalorieBurner(name: String(burnerName!),
-              calories: calories,
-              startDate: sample.startDate,
-              endDate: sample.endDate)
-            strongSelf.allCaloriesBurned.append(burner)
-            
-          }
-          
-          dispatch_async(dispatch_get_main_queue(), {
-            strongSelf.tableView.reloadData()
-            })
-          
-        } else {
+        guard let results = results where results.count > 0 else{
           print("Could not read the burned calories ")
-          println("or no burned calories data was available")
+          print("or no burned calories data was available")
+          return
         }
         
+        self.allCaloriesBurned = [CalorieBurner]()
         
+        for sample in results as! [HKQuantitySample]{
+          let burnerName = NSString(string: sample.metadata?[HKMetadataKeyExerciseName] as! String)
+          let calories = sample.quantity.doubleValueForUnit(self.unit)
+          
+          let burner = CalorieBurner(name: String(burnerName),
+            calories: calories,
+            startDate: sample.startDate,
+            endDate: sample.endDate)
+          self.allCaloriesBurned.append(burner)
+          
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), {
+          self.tableView.reloadData()
+        })
       })
     
     healthStore.executeQuery(query)
@@ -210,16 +196,16 @@ AddBurnedCaloriesToDietViewControllerDelegate {
     healthStore.executeQuery(query)
     healthStore.enableBackgroundDeliveryForType(burnedEnergyQuantityType,
       frequency: .Immediate,
-      withCompletion: {[weak self] (succeeded: Bool, error: NSError!) in
+      withCompletion: {succeeded, error in
         
         if succeeded{
-          self!.isObservingBurnedCalories = true
-          println("Enabled background delivery of burned energy changes")
+          self.isObservingBurnedCalories = true
+          print("Enabled background delivery of burned energy changes")
         } else {
           if let theError = error{
             print("Failed to enable background delivery " +
               "of burned energy changes. ")
-            println("Error = \(theError)")
+            print("Error = \(theError)")
           }
         }
         
@@ -237,17 +223,17 @@ AddBurnedCaloriesToDietViewControllerDelegate {
     }
     
     healthStore.stopQuery(query)
-    healthStore.disableAllBackgroundDeliveryWithCompletion{[weak self]
-      (succeeded: Bool, error: NSError!) in
+    healthStore.disableAllBackgroundDeliveryWithCompletion{
+      succeeded, error in
       
       if succeeded{
-        self!.isObservingBurnedCalories = false
-        println("Disabled background delivery of burned energy changes")
+        self.isObservingBurnedCalories = false
+        print("Disabled background delivery of burned energy changes")
       } else {
         if let theError = error{
           print("Failed to disable background delivery of " +
             "burned energy changes. ")
-          println("Error = \(theError)")
+          print("Error = \(theError)")
         }
       }
       
@@ -260,25 +246,25 @@ AddBurnedCaloriesToDietViewControllerDelegate {
     
     if HKHealthStore.isHealthDataAvailable(){
       
-      healthStore.requestAuthorizationToShareTypes(types,
+      let sampleTypes: Set<HKSampleType> = [self.burnedEnergyQuantityType as HKSampleType]
+      
+      healthStore.requestAuthorizationToShareTypes(sampleTypes,
         readTypes: types,
-        completion: {[weak self]
-          (succeeded: Bool, error: NSError!) in
+        completion: {succeeded, error in
           
-          let strongSelf = self!
           if succeeded && error == nil{
             dispatch_async(dispatch_get_main_queue(),
-              strongSelf.startObservingBurnedCaloriesChanges)
+              self.startObservingBurnedCaloriesChanges)
           } else {
             if let theError = error{
-              println("Error occurred = \(theError)")
+              print("Error occurred = \(theError)")
             }
           }
           
         })
       
     } else {
-      println("Health data is not available")
+      print("Health data is not available")
     }
     
     if allCaloriesBurned.count > 0{
@@ -312,7 +298,7 @@ AddBurnedCaloriesToDietViewControllerDelegate {
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewValues.identifier, forIndexPath: indexPath)
-        as! UITableViewCell
+        as UITableViewCell
       
       let burner = allCaloriesBurned[indexPath.row]
       

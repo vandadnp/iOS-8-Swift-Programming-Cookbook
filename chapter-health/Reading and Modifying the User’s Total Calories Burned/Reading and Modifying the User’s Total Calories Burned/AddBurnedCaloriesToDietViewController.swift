@@ -83,7 +83,7 @@ class AddBurnedCaloriesToDietViewController: UITableViewController {
   
   @IBAction func addToDiet(){
     
-    let burner = allCalorieBurners[tableView.indexPathForSelectedRow()!.row]
+    let burner = allCalorieBurners[tableView.indexPathForSelectedRow!.row]
     
     if let theDelegate = delegate{
       theDelegate.addBurnedCaloriesToDietViewController?(self,
@@ -107,7 +107,7 @@ class AddBurnedCaloriesToDietViewController: UITableViewController {
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewValues.identifier, forIndexPath: indexPath)
-        as! UITableViewCell
+        as UITableViewCell
       
       let burner = allCalorieBurners[indexPath.row]
       

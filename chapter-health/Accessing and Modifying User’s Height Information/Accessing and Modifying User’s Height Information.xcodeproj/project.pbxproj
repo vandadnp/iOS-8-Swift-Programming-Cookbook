@@ -12,7 +12,6 @@
 		A676E09F197FA69700DB9B2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676E09D197FA69700DB9B2D /* Main.storyboard */; };
 		A676E0A1197FA69700DB9B2D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A676E0A0197FA69700DB9B2D /* Images.xcassets */; };
 		A676E0AD197FA69800DB9B2D /* Accessing_and_Modifying_User_s_Height_InformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676E0AC197FA69800DB9B2D /* Accessing_and_Modifying_User_s_Height_InformationTests.swift */; };
-		A676E0B8197FA6CF00DB9B2D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A676E0B7197FA6CF00DB9B2D /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +35,6 @@
 		A676E0AB197FA69800DB9B2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A676E0AC197FA69800DB9B2D /* Accessing_and_Modifying_User_s_Height_InformationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessing_and_Modifying_User_s_Height_InformationTests.swift; sourceTree = "<group>"; };
 		A676E0B6197FA6CF00DB9B2D /* Accessing and Modifying User’s Height Information.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Accessing and Modifying User’s Height Information.entitlements"; sourceTree = "<group>"; };
-		A676E0B7197FA6CF00DB9B2D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A676E0B8197FA6CF00DB9B2D /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +58,6 @@
 		A676E08B197FA69700DB9B2D = {
 			isa = PBXGroup;
 			children = (
-				A676E0B7197FA6CF00DB9B2D /* HealthKit.framework */,
 				A676E096197FA69700DB9B2D /* Accessing and Modifying User’s Height Information */,
 				A676E0A9197FA69800DB9B2D /* Accessing and Modifying User’s Height InformationTests */,
 				A676E095197FA69700DB9B2D /* Products */,
@@ -159,7 +155,8 @@
 		A676E08C197FA69700DB9B2D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					A676E093197FA69700DB9B2D = {
@@ -275,6 +272,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -343,6 +341,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
 				INFOPLIST_FILE = "Accessing and Modifying User’s Height Information/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -356,6 +355,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Accessing and Modifying User’s Height Information/Accessing and Modifying User’s Height Information.entitlements";
 				INFOPLIST_FILE = "Accessing and Modifying User’s Height Information/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -375,6 +375,7 @@
 				);
 				INFOPLIST_FILE = "Accessing and Modifying User’s Height InformationTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -390,6 +391,7 @@
 				);
 				INFOPLIST_FILE = "Accessing and Modifying User’s Height InformationTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};

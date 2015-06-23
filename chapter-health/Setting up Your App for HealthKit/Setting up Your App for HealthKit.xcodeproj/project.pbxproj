@@ -155,7 +155,8 @@
 		A676E030197EF3A300DB9B2D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Pixolity Ltd.";
 				TargetAttributes = {
 					A676E037197EF3A300DB9B2D = {
@@ -271,6 +272,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -339,6 +341,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Vandad Nahavandipoor (J54K6K24Z3)";
 				INFOPLIST_FILE = "Setting up Your App for HealthKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -352,6 +355,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Setting up Your App for HealthKit/Setting up Your App for HealthKit.entitlements";
 				INFOPLIST_FILE = "Setting up Your App for HealthKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "16B110EE-4B5A-4B6C-9D22-9F18B7FFC1FA";
 			};
@@ -371,6 +375,7 @@
 				);
 				INFOPLIST_FILE = "Setting up Your App for HealthKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -386,6 +391,7 @@
 				);
 				INFOPLIST_FILE = "Setting up Your App for HealthKitTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixolity.ios.cookbook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};

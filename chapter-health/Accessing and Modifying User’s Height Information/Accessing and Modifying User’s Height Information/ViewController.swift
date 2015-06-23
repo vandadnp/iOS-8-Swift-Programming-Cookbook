@@ -66,11 +66,11 @@ class ViewController: UIViewController{
   put a check mark next to it */
   var selectedIndexPath = NSIndexPath(forRow: 0, inSection: 0)
   
-  let heightQuantityType = HKQuantityType.quantityTypeForIdentifier(
-    HKQuantityTypeIdentifierHeight)
+  let heightQuantityType = HKObjectType.quantityTypeForIdentifier(
+    HKQuantityTypeIdentifierHeight)!
   
-  lazy var types: Set<NSObject>! = {
-    return Set([self.heightQuantityType])
+  lazy var types: Set<HKObjectType> = {
+    return [self.heightQuantityType]
     }()
   
   lazy var healthStore = HKHealthStore()
@@ -104,7 +104,7 @@ class ViewController: UIViewController{
       
       let cell = tableView.dequeueReusableCellWithIdentifier(
         TableViewInfo.cellIdentifier, forIndexPath: indexPath)
-        as! UITableViewCell
+        as UITableViewCell
       
       let heightUnit = HeightUnits.allValues[indexPath.row]
       
@@ -128,38 +128,37 @@ class ViewController: UIViewController{
       predicate: nil,
       limit: 1,
       sortDescriptors: [sortDescriptor],
-      resultsHandler: {[weak self] (query: HKSampleQuery!,
-        results: [AnyObject]!,
-        error: NSError!) in
+      resultsHandler: {(query: HKSampleQuery,
+        results: [HKSample]?,
+        error: NSError?) in
         
-        let strongSelf = self!
-        
-        if results.count > 0{
-          
-          /* We only have one sample really */
-          let sample = results[0] as! HKQuantitySample
-          /* Get the height in the currently-selected unit */
-          let currentlySelectedUnit = strongSelf.heightUnit.healthKitUnit()
-          
-          let heightInUnit = sample.quantity.doubleValueForUnit(
-            currentlySelectedUnit)
-          
-          dispatch_async(dispatch_get_main_queue(), {
-            
-            /* And finally set the text field's value to the user's height */
-            let heightFormattedAsString =
-            NSNumberFormatter.localizedStringFromNumber(
-              NSNumber(double: heightInUnit),
-              numberStyle: .DecimalStyle)
-            
-            strongSelf.textField.text = heightFormattedAsString
-            
-          })
-          
-        } else {
-          print("Could not read the user's height ")
-          println("or no height data was available")
+        guard let results = results where results.count > 0 else {
+          print("Could not read the user's height ", appendNewline: false)
+          print("or no height data was available")
+          return
         }
+        
+        /* We only have one sample really */
+        let sample = results[0] as! HKQuantitySample
+        /* Get the height in the currently-selected unit */
+        let currentlySelectedUnit = self.heightUnit.healthKitUnit()
+        
+        let heightInUnit = sample.quantity.doubleValueForUnit(
+          currentlySelectedUnit)
+        
+        dispatch_async(dispatch_get_main_queue(), {
+          
+          /* And finally set the text field's value to the user's height */
+          let heightFormattedAsString =
+          NSNumberFormatter.localizedStringFromNumber(
+            NSNumber(double: heightInUnit),
+            numberStyle: .DecimalStyle)
+          
+          self.textField.text = heightFormattedAsString
+          
+        })
+        
+        
         
         
     })
@@ -187,8 +186,9 @@ class ViewController: UIViewController{
   
   @IBAction func saveHeight(){
     let currentlySelectedUnit = heightUnit.healthKitUnit()
+    
     let heightQuantity = HKQuantity(unit: currentlySelectedUnit,
-      doubleValue: (textField.text as NSString).doubleValue)
+      doubleValue: NSString(string: textField.text!).doubleValue)
     let now = NSDate()
     let sample = HKQuantitySample(type: heightQuantityType,
       quantity: heightQuantity,
@@ -196,13 +196,14 @@ class ViewController: UIViewController{
       endDate: now)
     
     healthStore.saveObject(sample, withCompletion: {
-      (succeeded: Bool, error: NSError!) in
+      (succeeded: Bool, error: NSError?) in
       
-      if error == nil{
-        println("Successfully saved the user's height")
-      } else {
-        println("Failed to save the user's height")
+      guard let error = error else {
+        print("Successfully saved the user's height")
+        return
       }
+      
+      print("Failed to save the user's height \(error)")
       
     })
   }
@@ -213,25 +214,26 @@ class ViewController: UIViewController{
     
     if HKHealthStore.isHealthDataAvailable(){
       
-      healthStore.requestAuthorizationToShareTypes(types,
+      let sampleTypes: Set<HKSampleType> = [self.heightQuantityType as HKSampleType]
+      
+      healthStore.requestAuthorizationToShareTypes(sampleTypes,
         readTypes: types,
-        completion: {[weak self]
-          (succeeded: Bool, error: NSError!) in
+        completion: {
+          (succeeded: Bool, error: NSError?) in
           
-          let strongSelf = self!
           if succeeded && error == nil{
             dispatch_async(dispatch_get_main_queue(),
-              strongSelf.readHeightInformation)
+              self.readHeightInformation)
           } else {
             if let theError = error{
-              println("Error occurred = \(theError)")
+              print("Error occurred = \(theError)")
             }
           }
           
       })
       
     } else {
-      println("Health data is not available")
+      print("Health data is not available")
     }
     
   }
