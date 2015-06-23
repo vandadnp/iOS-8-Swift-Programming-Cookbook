@@ -38,7 +38,7 @@ class ViewController: UICollectionViewController {
     return allImages[Int(arc4random_uniform(UInt32(allImages.count)))]!
   }
   
-  override init(collectionViewLayout layout: UICollectionViewLayout!) {
+  override init(collectionViewLayout layout: UICollectionViewLayout) {
     super.init(collectionViewLayout: layout)
     
     /* Register the nib with the collection view for easy retrieval */
@@ -89,7 +89,7 @@ convenience required init(coder aDecoder: NSCoder) {
       
       let view = collectionView.dequeueReusableSupplementaryViewOfKind(kind,
         withReuseIdentifier: identifier,
-        forIndexPath: indexPath) as! UICollectionReusableView
+        forIndexPath: indexPath) as UICollectionReusableView
       
       if kind == UICollectionElementKindSectionHeader{
         if let header = view as? Header{

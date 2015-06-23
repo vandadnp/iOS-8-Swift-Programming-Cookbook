@@ -38,17 +38,17 @@
 //        forCellReuseIdentifier: "identifier")
 //      
 //      theTableView.dataSource = self
-//      theTableView.autoresizingMask = .FlexibleWidth | .FlexibleHeight
+//      theTableView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
 //      
 //      view.addSubview(theTableView)
 //    }
 //  }
 //  
-//  <# Rest of the code goes here #>
+//  //<# Rest of the code goes here #>
 //  
 //}
-
-/* 2 */
+//
+///* 2 */
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         forCellReuseIdentifier: "identifier")
       
       theTableView.dataSource = self
-      theTableView.autoresizingMask = .FlexibleWidth | .FlexibleHeight
+      theTableView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
       
       view.addSubview(theTableView)
     }
@@ -95,7 +95,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
       
       let cell = tableView.dequeueReusableCellWithIdentifier("identifier",
-        forIndexPath: indexPath) as! UITableViewCell
+        forIndexPath: indexPath) as UITableViewCell
       
       cell.textLabel!.text = "Section \(indexPath.section), " +
       "Cell \(indexPath.row)"

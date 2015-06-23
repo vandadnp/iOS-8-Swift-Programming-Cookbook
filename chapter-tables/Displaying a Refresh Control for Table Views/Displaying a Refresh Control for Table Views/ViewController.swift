@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         forCellReuseIdentifier: "identifier")
       
       theTableView.dataSource = self
-      theTableView.autoresizingMask = .FlexibleWidth | .FlexibleHeight
+      theTableView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
       
       /* Create the refresh control */
       refreshControl = UIRefreshControl()
@@ -67,7 +67,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
       
       let cell = tableView.dequeueReusableCellWithIdentifier("identifier",
-        forIndexPath: indexPath) as! UITableViewCell
+        forIndexPath: indexPath) as UITableViewCell
       
       cell.textLabel!.text = "\(allTimes[indexPath.row])"
       

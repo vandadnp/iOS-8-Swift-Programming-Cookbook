@@ -41,11 +41,12 @@ class ViewController: UICollectionViewController {
     let pinch = UIPinchGestureRecognizer(target: self,
       action: "handlePinches:")
     
-    for recognizer in collectionView!.gestureRecognizers as!
-      [UIGestureRecognizer]{
-        if recognizer is UIPinchGestureRecognizer{
-          recognizer.requireGestureRecognizerToFail(pinch)
-        }
+    if let recognizers = collectionView?.gestureRecognizers{
+      for recognizer in recognizers{
+          if recognizer is UIPinchGestureRecognizer{
+            recognizer.requireGestureRecognizerToFail(pinch)
+          }
+      }
     }
     
     collectionView!.addGestureRecognizer(pinch)

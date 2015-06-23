@@ -32,7 +32,7 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     imageViewBackgroundImage.backgroundColor = UIColor.clearColor()
     selectedBackgroundView = UIView(frame: bounds)
-    selectedBackgroundView.backgroundColor = UIColor.blueColor()
+    selectedBackgroundView!.backgroundColor = UIColor.blueColor()
     
   }
   

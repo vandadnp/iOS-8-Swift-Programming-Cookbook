@@ -70,7 +70,7 @@ class ViewController: UICollectionViewController {
       
       let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
         "cell",
-        forIndexPath: indexPath) as! UICollectionViewCell
+        forIndexPath: indexPath) as UICollectionViewCell
       
       cell.backgroundColor = allSectionColors[indexPath.section]
       
