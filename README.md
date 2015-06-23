@@ -1,7 +1,7 @@
 iOS 8 Swift Programming Cookbook (by: Vandad Nahavandipoor)
 ===============================
 
-__Updated for__: Xcode 6.3 Beta 2 6D532l
+__Updated for__: Swift 2.0 (Xcode 7)
 
 These example codes are written for O'Reilly's iOS 8 Swift Programming Cookbook
 If you use these solutions in your apps, you can give attribution to
