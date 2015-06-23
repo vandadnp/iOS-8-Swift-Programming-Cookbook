@@ -40,12 +40,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /* First delete the existing one if one exists. We don't have to do this
     but SecItemAdd will fail if an existing value is in the keychain. */
     let query = [
-      kSecClass as! String :
-      kSecClassGenericPassword as! String,
+      kSecClass as String :
+      kSecClassGenericPassword as String,
       
-      kSecAttrService as! String : service,
-      kSecAttrAccessGroup as! String : accessGroup,
-      kSecAttrAccount as! String : key
+      kSecAttrService as String : service,
+      kSecAttrAccessGroup as String : accessGroup,
+      kSecAttrAccount as String : key
       ]
     
     
@@ -57,13 +57,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       allowLossyConversion: false)
     
     let secItem = [
-      kSecClass as! String :
-      kSecClassGenericPassword as! String,
+      kSecClass as String :
+      kSecClassGenericPassword as String,
       
-      kSecAttrService as! String : service,
-      kSecAttrAccount as! String : key,
-      kSecAttrAccessGroup as! String : accessGroup,
-      kSecValueData as! String : valueData!,
+      kSecAttrService as String : service,
+      kSecAttrAccount as String : key,
+      kSecAttrAccessGroup as String : accessGroup,
+      kSecValueData as String : valueData!,
       ]
     
     var result: Unmanaged<AnyObject>? = nil
@@ -71,11 +71,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     switch status{
     case Int(errSecSuccess):
-      println("Successfully stored the value")
+      print("Successfully stored the value")
     case Int(errSecDuplicateItem):
-      println("This item is already saved. Cannot duplicate it")
+      print("This item is already saved. Cannot duplicate it")
     default:
-      println("An error occurred with code \(status)")
+      print("An error occurred with code \(status)")
     }
     
     return true

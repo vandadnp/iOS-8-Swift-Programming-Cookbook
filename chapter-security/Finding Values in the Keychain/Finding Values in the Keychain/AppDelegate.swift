@@ -21,7 +21,7 @@
 //  report them to O'Reilly at the following URL:
 //  http://www.oreilly.com/catalog/errata.csp?isbn=0636920034254
 
-/* 1 */
+///* 1 */
 //import UIKit
 //
 //@UIApplicationMain
@@ -36,12 +36,12 @@
 //      let service = NSBundle.mainBundle().bundleIdentifier!
 //
 //      let query = [
-//        kSecClass as! String :
-//        kSecClassGenericPassword as! String,
+//        kSecClass as String :
+//        kSecClassGenericPassword as String,
 //
-//        kSecAttrService as! String : service,
-//        kSecAttrAccount as! String : keyToSearchFor,
-//        kSecReturnAttributes as! String : kCFBooleanTrue,
+//        kSecAttrService as String : service,
+//        kSecAttrAccount as String : keyToSearchFor,
+//        kSecReturnAttributes as String : kCFBooleanTrue,
 //      ] as NSDictionary
 //
 //
@@ -52,73 +52,73 @@
 //
 //        let attributes = valueAttributes!.takeRetainedValue() as! NSDictionary
 //
-//        let key = attributes[kSecAttrAccount as! String]
-//          as String
+//        let key = attributes[kSecAttrAccount as String]
+//          as! String
 //
-//        let accessGroup = attributes[kSecAttrAccessGroup as! String] as String
+//        let accessGroup = attributes[kSecAttrAccessGroup as String] as! String
 //
-//        let creationDate = attributes[kSecAttrCreationDate as NSString] as NSDate
+//        let creationDate = attributes[kSecAttrCreationDate as NSString] as! NSDate
 //
 //        let modifiedDate = attributes[
-//          kSecAttrModificationDate as NSString] as NSDate
+//          kSecAttrModificationDate as NSString] as! NSDate
 //
-//        let serviceValue = attributes[kSecAttrService as! String] as String
+//        let serviceValue = attributes[kSecAttrService as String] as! String
 //
-//        println("Key = \(key)")
-//        println("Access Group = \(accessGroup)")
-//        println("Creation Date = \(creationDate)")
-//        println("Modification Date = \(modifiedDate)")
-//        println("Service = \(serviceValue)")
+//        print("Key = \(key)")
+//        print("Access Group = \(accessGroup)")
+//        print("Creation Date = \(creationDate)")
+//        print("Modification Date = \(modifiedDate)")
+//        print("Service = \(serviceValue)")
 //
 //      } else {
-//        println("Error happened with code: \(results)")
+//        print("Error happened with code: \(results)", appendNewline: false)
 //      }
 //
 //    return true
 //  }
 //
 //}
-
-/* 2 */
+//
+///* 2 */
 import UIKit
 import Security
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+  
   var window: UIWindow?
-
-func application(application: UIApplication,
-  didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
-
-    let keyToSearchFor = "Full Name"
-    let service = NSBundle.mainBundle().bundleIdentifier!
-
-    let query = [
-      kSecClass as! String :
-      kSecClassGenericPassword as! String,
-
-      kSecAttrService as! String : service,
-      kSecAttrAccount as! String : keyToSearchFor,
-      kSecReturnData as! String : kCFBooleanTrue,
+  
+  func application(application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+      
+      let keyToSearchFor = "Full Name"
+      let service = NSBundle.mainBundle().bundleIdentifier!
+      
+      let query = [
+        kSecClass as String :
+          kSecClassGenericPassword as String,
+        
+        kSecAttrService as String : service,
+        kSecAttrAccount as String : keyToSearchFor,
+        kSecReturnData as String : kCFBooleanTrue,
       ]
-
-    var returnedData: Unmanaged<AnyObject>? = nil
-    let results = Int(SecItemCopyMatching(query, &returnedData))
-
-    if results == Int(errSecSuccess){
-
-      let data = returnedData!.takeRetainedValue() as! NSData
-
-      let value = NSString(data: data, encoding: NSUTF8StringEncoding)
-
-      println("Value = \(value)")
-
-    } else {
-      println("Error happened with code: \(results)")
-    }
-
-    return true
-}
-
+      
+      var returnedData: Unmanaged<AnyObject>? = nil
+      let results = Int(SecItemCopyMatching(query, &returnedData))
+      
+      if results == Int(errSecSuccess){
+        
+        let data = returnedData!.takeRetainedValue() as! NSData
+        
+        let value = NSString(data: data, encoding: NSUTF8StringEncoding)
+        
+        print("Value = \(value)")
+        
+      } else {
+        print("Error happened with code: \(results)")
+      }
+      
+      return true
+  }
+  
 }

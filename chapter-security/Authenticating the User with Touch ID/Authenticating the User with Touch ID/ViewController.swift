@@ -32,16 +32,12 @@ class ViewController: UIViewController {
   @IBAction func checkTouchIdAvailability(sender: AnyObject) {
     
     let context = LAContext()
-    var error: NSError?
     
-    let isTouchIdAvailable = context.canEvaluatePolicy(
-      .DeviceOwnerAuthenticationWithBiometrics,
-      error: &error)
-    
-    buttonUseTouchId.enabled = isTouchIdAvailable
-    
-    /* Touch ID is not available */
-    if isTouchIdAvailable == false{
+    do {
+      try context.canEvaluatePolicy(
+            .DeviceOwnerAuthenticationWithBiometrics)
+      
+      buttonUseTouchId.enabled = true
       
       let alertController = UIAlertController(title: "Touch ID",
         message: "Touch ID is not available",
@@ -53,6 +49,8 @@ class ViewController: UIViewController {
       
       presentViewController(alertController, animated: true, completion: nil)
       
+    } catch {
+      buttonUseTouchId.enabled = false
     }
     
   }
@@ -61,12 +59,11 @@ class ViewController: UIViewController {
     /* We will code this soon */
     
     let context = LAContext()
-    var error: NSError?
     let reason = "Please authenticate with Touch ID " +
     "to access your private information"
     
     context.evaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics,
-      localizedReason: reason, reply: {(success: Bool, error: NSError!) in
+      localizedReason: reason, reply: {success, error in
         
         if success{
           /* The user was successfully authenticated */

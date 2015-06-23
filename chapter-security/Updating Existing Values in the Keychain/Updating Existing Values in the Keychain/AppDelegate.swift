@@ -34,12 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let service = NSBundle.mainBundle().bundleIdentifier!
     
     let query = [
-      kSecClass as! String :
-      kSecClassGenericPassword as! String,
+      kSecClass as String :
+      kSecClassGenericPassword as String,
       
-      kSecAttrService as! String : service,
-      kSecAttrAccount as! String : keyToSearchFor,
-      kSecReturnAttributes as! String : kCFBooleanTrue,
+      kSecAttrService as String : service,
+      kSecAttrAccount as String : keyToSearchFor,
+      kSecReturnAttributes as String : kCFBooleanTrue,
       
       ]
     
@@ -50,12 +50,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       let attributes = returnedAttributes!.takeRetainedValue() as! NSDictionary
       
-      let comments = attributes[kSecAttrComment as! String] as! String
+      let comments = attributes[kSecAttrComment as String] as! String
       
-      println("Comments = \(comments)")
+      print("Comments = \(comments)")
       
     } else {
-      println("Error happened with code: \(results)")
+      print("Error happened with code: \(results)")
     }
   }
 
@@ -66,11 +66,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let service = NSBundle.mainBundle().bundleIdentifier!
       
       let query = [
-        kSecClass as! String :
-      kSecClassGenericPassword as! String,
+        kSecClass as String :
+      kSecClassGenericPassword as String,
         
-        kSecAttrService as! String : service,
-        kSecAttrAccount as! String : keyToSearchFor,
+        kSecAttrService as String : service,
+        kSecAttrAccount as String : keyToSearchFor,
       ]
       
       var result: Unmanaged<AnyObject>? = nil
@@ -82,21 +82,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           allowLossyConversion: false)
         
         let update = [
-          kSecValueData as! String : newData!,
-          kSecAttrComment as! String : "My comments"
+          kSecValueData as String : newData!,
+          kSecAttrComment as String : "My comments"
         ]
         
         let updated = Int(SecItemUpdate(query, update))
         
         if updated == Int(errSecSuccess){
-          println("Successfully updated the existing value")
+          print("Successfully updated the existing value")
           readExistingValue()
         } else {
-          println("Failed to update the value. Error = \(updated)")
+          print("Failed to update the value. Error = \(updated)")
         }
         
       } else {
-        println("Error happened. Code = \(found)")
+        print("Error happened. Code = \(found)")
       }
     
     

@@ -40,12 +40,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
       let service = NSBundle.mainBundle().bundleIdentifier!
       
       let secItem = [
-        kSecClass as! String :
-      kSecClassGenericPassword as! String,
+        kSecClass as String :
+      kSecClassGenericPassword as String,
         
-        kSecAttrService as! String : service,
-        kSecAttrAccount as! String : key,
-        kSecValueData as! String : valueData!,
+        kSecAttrService as String : service,
+        kSecAttrAccount as String : key,
+        kSecValueData as String : valueData!,
         ]
       
       var result: Unmanaged<AnyObject>? = nil
@@ -53,11 +53,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
       
       switch status{
       case Int(errSecSuccess):
-        println("Successfully stored the value")
+        print("Successfully stored the value")
       case Int(errSecDuplicateItem):
-        println("This item is already saved. Cannot duplicate it")
+        print("This item is already saved. Cannot duplicate it")
       default:
-        println("An error occurred with code \(status)")
+        print("An error occurred with code \(status)")
       }
       
       return true

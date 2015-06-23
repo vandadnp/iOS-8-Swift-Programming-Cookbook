@@ -10,7 +10,7 @@
 //  Vandad Nahavandipoor for his work. Feel free to visit my blog
 //  at http://vandadnp.wordpress.com for daily tips and tricks in Swift
 //  and Objective-C and various other programming languages.
-//  
+//
 //  You can purchase "iOS 8 Swift Programming Cookbook" from
 //  the following URL:
 //  http://shop.oreilly.com/product/0636920034254.do
@@ -25,34 +25,35 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-                            
+  
   var window: UIWindow?
   
   var filePath: String?{
     
     let fileManager = NSFileManager()
     
-    var error:NSError?
-    
-    let documentFolderUrl = fileManager.URLForDirectory(.DocumentDirectory,
-      inDomain: .UserDomainMask,
-      appropriateForURL: nil,
-      create: true,
-      error: &error)
-    
-    if error == nil && documentFolderUrl != nil{
+    do {
+      let documentFolderUrl = try fileManager.URLForDirectory(.DocumentDirectory,
+        inDomain: .UserDomainMask,
+        appropriateForURL: nil,
+        create: true)
       
       let fileName = "MyFile.txt"
       let filePath =
-      documentFolderUrl!.path!.stringByAppendingPathComponent(fileName)
+      documentFolderUrl.path!.stringByAppendingPathComponent(fileName)
       
       return filePath
+      
+    } catch {
+      //handle error
+      print("Error")
     }
+    
     
     return nil
     
   }
-
+  
   func application(application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
       
@@ -81,15 +82,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           attributes: fileAttributes)
         
         if wrote{
-          println("Successfully and securely stored the file")
+          print("Successfully and securely stored the file")
         } else {
-          println("Failed to write the file")
+          print("Failed to write the file")
         }
         
       }
       
-    return true
+      return true
   }
-
+  
 }
 

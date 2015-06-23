@@ -36,11 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let service = NSBundle.mainBundle().bundleIdentifier!
       
       let query = [
-        kSecClass as! String :
-        kSecClassGenericPassword as! String,
+        kSecClass as String :
+        kSecClassGenericPassword as String,
         
-        kSecAttrService as! String : service,
-        kSecAttrAccount as! String : keyToSearchFor,
+        kSecAttrService as String : service,
+        kSecAttrAccount as String : keyToSearchFor,
         ]
       
       
@@ -51,13 +51,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let deleted = Int(SecItemDelete(query))
         if deleted == Int(errSecSuccess){
-          println("Successfully deleted the item")
+          print("Successfully deleted the item")
         } else {
-          println("Failed to delete the item")
+          print("Failed to delete the item")
         }
         
       } else {
-        println("Error happened with code: \(foundExisting)")
+        print("Error happened with code: \(foundExisting)")
       }
     
     return true

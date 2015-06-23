@@ -40,13 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let accessGroup = "F3FU372W5M.*"
       
       let query = [
-        kSecClass as! String :
-        kSecClassGenericPassword as! String,
+        kSecClass as String :
+        kSecClassGenericPassword as String,
         
-        kSecAttrService as! String : service,
-        kSecAttrAccessGroup as! String : accessGroup,
-        kSecAttrAccount as! String : key,
-        kSecReturnData as! String : kCFBooleanTrue,
+        kSecAttrService as String : service,
+        kSecAttrAccessGroup as String : accessGroup,
+        kSecAttrAccount as String : key,
+        kSecReturnData as String : kCFBooleanTrue,
         ]
       
       
@@ -59,10 +59,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let value = NSString(data: data, encoding: NSUTF8StringEncoding)
         
-        println("Value = \(value)")
+        print("Value = \(value)")
         
       } else {
-        println("Error happened with code: \(results)")
+        print("Error happened with code: \(results)")
       }
 
     return true
