@@ -48,7 +48,7 @@ NSURLSessionDownloadDelegate, NSURLSessionTaskDelegate {
     let previousValue = userDefaults.stringForKey(key) as String?
     
     if let thePreviousValue = previousValue{
-      return previousValue!
+      return thePreviousValue
     } else {
       let newValue = NSDate().description
       userDefaults.setObject(newValue, forKey: key)
@@ -62,13 +62,13 @@ NSURLSessionDownloadDelegate, NSURLSessionTaskDelegate {
     didWriteData bytesWritten: Int64,
     totalBytesWritten: Int64,
     totalBytesExpectedToWrite: Int64){
-      println("Received data")
+      print("Received data")
   }
   
   func URLSession(session: NSURLSession,
     downloadTask: NSURLSessionDownloadTask,
     didFinishDownloadingToURL location: NSURL){
-      println("Finished writing the downloaded content to URL = \(location)")
+      print("Finished writing the downloaded content to URL = \(location)")
   }
   
   /* We now get to know that the download procedure was finished */
@@ -78,9 +78,9 @@ NSURLSessionDownloadDelegate, NSURLSessionTaskDelegate {
       print("Finished ")
       
       if error == nil{
-        println("without an error")
+        print("without an error")
       } else {
-        println("with an error = \(error)")
+        print("with an error = \(error)")
       }
       
       /* Release the delegate */
@@ -125,7 +125,9 @@ NSURLSessionDownloadDelegate, NSURLSessionTaskDelegate {
     /* Now attempt to download the contents of the URL */
     let url = NSURL(string: "<# place your URL here #>")
     
-    let task = session.downloadTaskWithURL(url!)
+    guard let task = session.downloadTaskWithURL(url!) else{
+      return
+    }
     
     /* Our own extension on the task adds the start method */
     task.start()

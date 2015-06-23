@@ -32,7 +32,7 @@
 //    let httpMethod = "GET"
 //    
 //    /* We have a 15 second timeout for our connection */
-//    let timeout = 15
+//    let timeout = 15.0
 //    
 //    /* You can choose your own URL here */
 //    var urlAsString = "<# place your url here #>"
@@ -45,7 +45,7 @@
 //    /* Set the timeout on our request here */
 //    let urlRequest = NSMutableURLRequest(URL: url!,
 //      cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData,
-//      timeoutInterval: 15.0)
+//      timeoutInterval: timeout)
 //    
 //    urlRequest.HTTPMethod = httpMethod
 //    
@@ -53,20 +53,15 @@
 //    
 //    NSURLConnection.sendAsynchronousRequest(urlRequest,
 //      queue: queue,
-//      completionHandler: {(response: NSURLResponse!,
-//        data: NSData!,
-//        error: NSError!) in
+//      completionHandler: {response, data, error in
 //        
-//        /* Now we may have access to the data but check if an error came back
-//        first or not */
-//        if data.length > 0 && error == nil{
-//          let html = NSString(data: data, encoding: NSUTF8StringEncoding)
-//          println("html = \(html)")
-//        } else if data.length == 0 && error == nil{
-//          println("Nothing was downloaded")
-//        } else if error != nil{
-//          println("Error happened = \(error)")
+//        guard let data = data where data.length > 0 else{
+//          print("Error happened")
+//          return
 //        }
+//        
+//        let html = NSString(data: data, encoding: NSUTF8StringEncoding)
+//        print("html = \(html)")
 //        
 //      }
 //    )
@@ -75,7 +70,7 @@
 //
 //}
 
-/* 2 */
+///* 2 */
 import UIKit
 
 class ViewController: UIViewController {
@@ -86,7 +81,7 @@ class ViewController: UIViewController {
     let httpMethod = "POST"
     
     /* We have a 15 second timeout for our connection */
-    let timeout = 15
+    let timeout = 15.0
     
     /* You can choose your own URL here */
     var urlAsString = "<# place your url here #>"
@@ -100,7 +95,7 @@ class ViewController: UIViewController {
     /* Set the timeout on our request here */
     let urlRequest = NSMutableURLRequest(URL: url!,
       cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData,
-      timeoutInterval: 15.0)
+      timeoutInterval: timeout)
     
     urlRequest.HTTPMethod = httpMethod
     
@@ -116,20 +111,15 @@ class ViewController: UIViewController {
     
     NSURLConnection.sendAsynchronousRequest(urlRequest,
       queue: queue,
-      completionHandler: {(response: NSURLResponse!,
-        data: NSData!,
-        error: NSError!) in
+      completionHandler: {response, data, error in
         
-        /* Now we may have access to the data but check if an error came back
-        first or not */
-        if data.length > 0 && error == nil{
-          let html = NSString(data: data, encoding: NSUTF8StringEncoding)
-          println("html = \(html)")
-        } else if data.length == 0 && error == nil{
-          println("Nothing was downloaded")
-        } else if error != nil{
-          println("Error happened = \(error)")
+        guard let data = data where data.length > 0 else{
+          print("Error happened")
+          return
         }
+        
+        let html = NSString(data: data, encoding: NSUTF8StringEncoding)
+        print("html = \(html)")
         
       }
     )

@@ -37,11 +37,11 @@ class ViewController: UIViewController {
       controller.addImage(UIImage(named: "Safari"))
       controller.addURL(NSURL(string: "http://www.apple.com/safari/"))
       controller.completionHandler = {(result: SLComposeViewControllerResult) in
-        println("Completed")
+        print("Completed")
       }
       presentViewController(controller, animated: true, completion: nil)
     } else {
-      println("The twitter service is not available")
+      print("The twitter service is not available")
     }
     
   }

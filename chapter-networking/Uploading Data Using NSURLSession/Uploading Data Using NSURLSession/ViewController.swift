@@ -41,9 +41,9 @@ class ViewController: UIViewController, NSURLSessionDelegate,
       /* Now you have your data in the mutableData property */
       session.finishTasksAndInvalidate()
       
-      println("Error = \(error)")
+      print("Error = \(error)")
       
-      dispatch_async(dispatch_get_main_queue(), {[weak self] in
+      dispatch_async(dispatch_get_main_queue(), {
         
         var message = "Finished uploading your content"
         
@@ -51,7 +51,7 @@ class ViewController: UIViewController, NSURLSessionDelegate,
           message = "Failed to upload your content"
         }
         
-        self!.displayAlertWithTitle("Done", message: message)
+        self.displayAlertWithTitle("Done", message: message)
         
         })
       
@@ -78,12 +78,15 @@ class ViewController: UIViewController, NSURLSessionDelegate,
     /* Now attempt to upload to the following URL */
     
     let dataToUpload = "Hello World".dataUsingEncoding(NSUTF8StringEncoding,
-      allowLossyConversion: false)
+      allowLossyConversion: false)!
     
     let url = NSURL(string: "<# place your upload URL here #>")
     let request = NSMutableURLRequest(URL: url!)
     request.HTTPMethod = "POST"
-    let task = session.uploadTaskWithRequest(request, fromData: dataToUpload)
+    guard let task = session.uploadTaskWithRequest(request, fromData: dataToUpload) else{
+      //handle error
+      return
+    }
     
     /* The start method is an extension that we have built on this class */
     task.start()

@@ -39,19 +39,22 @@
 //    
 //    NSURLConnection.sendAsynchronousRequest(urlRequest,
 //      queue: queue,
-//      completionHandler: {(response: NSURLResponse!,
-//        data: NSData!,
-//        error: NSError!) in
+//      completionHandler: {response, data, error in
+//        
+//        guard let data = data else{
+//          //handle error
+//          return
+//        }
 //      
 //        /* Now we may have access to the data but check if an error came back
 //        first or not */
 //        if data.length > 0 && error == nil{
 //          let html = NSString(data: data, encoding: NSUTF8StringEncoding)
-//          println("html = \(html)")
+//          print("html = \(html)")
 //        } else if data.length == 0 && error == nil{
-//          println("Nothing was downloaded")
+//          print("Nothing was downloaded")
 //        } else if error != nil{
-//          println("Error happened = \(error)")
+//          print("Error happened = \(error)")
 //        }
 //      
 //      })
@@ -59,7 +62,7 @@
 //  }
 //  
 //}
-
+//
 /* 2 */
 import UIKit
 
@@ -68,11 +71,10 @@ extension NSURL{
   documents folder path */
   class func documentsFolder() -> NSURL{
     let fileManager = NSFileManager()
-    return fileManager.URLForDirectory(.DocumentDirectory,
+    return try! fileManager.URLForDirectory(.DocumentDirectory,
       inDomain: .UserDomainMask,
       appropriateForURL: nil,
-      create: false,
-      error: nil)!
+      create: false)
   }
 }
 
@@ -91,9 +93,12 @@ class ViewController: UIViewController {
     
     NSURLConnection.sendAsynchronousRequest(urlRequest,
       queue: queue,
-      completionHandler: {(response: NSURLResponse!,
-        data: NSData!,
-        error: NSError!) in
+      completionHandler: {response, data, error in
+        
+        guard let data = data else{
+          //handle error
+          return
+        }
         
         /* Now we may have access to the data but check if an error came back
         first or not */
@@ -104,15 +109,13 @@ class ViewController: UIViewController {
           NSURL.documentsFolder().URLByAppendingPathComponent("apple.html")
           
           if data.writeToURL(filePath, atomically: true){
-            println("Successfully saved the file to \(filePath)")
+            print("Successfully saved the file to \(filePath)")
           } else {
-            println("Failed to save the file to \(filePath)")
+            print("Failed to save the file to \(filePath)")
           }
           
         } else if data.length == 0 && error == nil{
-          println("Nothing was downloaded")
-        } else if error != nil{
-          println("Error happened = \(error)")
+          print("Nothing was downloaded")
         }
         
       })

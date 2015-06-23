@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     /* We have a 15 second timeout for our connection */
-    let timeout = 15
+    let timeout = 15.0
 
     /* You can choose your own URL here */
     let urlAsString = "http://www.apple.com"
@@ -38,26 +38,21 @@ class ViewController: UIViewController {
     /* Set the timeout on our request here */
     let urlRequest = NSURLRequest(URL: url!,
       cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData,
-      timeoutInterval: 15.0)
+      timeoutInterval: timeout)
     
     let queue = NSOperationQueue()
     
     NSURLConnection.sendAsynchronousRequest(urlRequest,
       queue: queue,
-      completionHandler: {(response: NSURLResponse!,
-        data: NSData!,
-        error: NSError!) in
-      
-        /* Now we may have access to the data but check if an error came back
-        first or not */
-        if data.length > 0 && error == nil{
-          let html = NSString(data: data, encoding: NSUTF8StringEncoding)
-          println("html = \(html)")
-        } else if data.length == 0 && error == nil{
-          println("Nothing was downloaded")
-        } else if error != nil{
-          println("Error happened = \(error)")
+      completionHandler: {response, data, error in
+        
+        guard let data = data where data.length > 0 else{
+          print("Error happened")
+          return
         }
+        
+        let html = NSString(data: data, encoding: NSUTF8StringEncoding)
+        print("html = \(html)")
         
       }
     )

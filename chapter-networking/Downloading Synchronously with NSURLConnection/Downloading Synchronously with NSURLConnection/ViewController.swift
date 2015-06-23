@@ -30,7 +30,7 @@
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
 //
-//    println("We are here...")
+//    print("We are here...")
 //
 //    /* You can have a custom URL here */
 //    let urlAsString = "http://www.yahoo.com"
@@ -39,34 +39,28 @@
 //    let urlRequest = NSURLRequest(URL: url!)
 //
 //    var response: NSURLResponse?
-//    var error: NSError?
 //
-//    println("Firing synchronous url connection...")
+//    print("Firing synchronous url connection...")
 //
 //    /* Get the data for our URL, synchronously */
-//    let data = NSURLConnection.sendSynchronousRequest(urlRequest,
-//      returningResponse: &response,
-//      error: &error)
-//
-//    if data != nil && error == nil{
-//      println("\(data!.length) bytes of data was returned")
-//    }
-//    else if data!.length == 0 && error == nil{
-//      println("No data was returned")
-//    }
-//    else if error != nil{
-//      println("Error happened = \(error)");
+//    let data: NSData?
+//    do {
+//      data = try NSURLConnection.sendSynchronousRequest(urlRequest,
+//        returningResponse: &response)
+//      print("\(data!.length) bytes of data was returned")
+//    } catch {
+//      //handle error
+//      print("Error happened = \(error)");
 //    }
 //
-//    println("We are done")
+//    print("We are done")
 //
 //  }
 //
 //}
-
-
+//
+//
 /* 2 */
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -74,7 +68,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    println("We are here...")
+    print("We are here...")
     
     /* You can have a custom URL here */
     let urlAsString = "http://www.yahoo.com"
@@ -83,9 +77,8 @@ class ViewController: UIViewController {
     let urlRequest = NSURLRequest(URL: url!)
     
     var response: NSURLResponse?
-    var error: NSError?
     
-    println("Firing synchronous url connection...")
+    print("Firing synchronous url connection...")
     
     let dispatchQueue =
     dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
@@ -93,23 +86,18 @@ class ViewController: UIViewController {
     dispatch_async(dispatchQueue, {
       
       /* Get the data for our URL, synchronously */
-      let data = NSURLConnection.sendSynchronousRequest(urlRequest,
-        returningResponse: &response,
-        error: &error)
-      
-      if data != nil && error == nil{
-        println("\(data!.length) bytes of data was returned")
-      }
-      else if data!.length == 0 && error == nil{
-        println("No data was returned")
-      }
-      else if error != nil{
-        println("Error happened = \(error)");
+      let data: NSData?
+      do {
+        data = try NSURLConnection.sendSynchronousRequest(urlRequest,
+                returningResponse: &response)
+        print("\(data!.length) bytes of data was returned")
+      } catch {
+        //handle error here
       }
       
       })
     
-    println("We are done")
+    print("We are done")
     
   }
   

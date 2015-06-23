@@ -49,17 +49,23 @@
 //    /* Now attempt to download the contents of the URL */
 //    let url = NSURL(string: "<# place a URL here #>")
 //
-//    let task = session.dataTaskWithURL(url!,
-//      completionHandler: {[weak self] (data: NSData!,
-//        response: NSURLResponse!,
-//        error: NSError!) in
+//    guard let task = session.dataTaskWithURL(url!,
+//      completionHandler: {data, response, error in
+//        
+//        guard let _ = data else{
+//          //handle error
+//          return
+//        }
 //
 //        /* We got our data here */
-//        println("Done")
+//        print("Done")
 //
-//        self!.session.finishTasksAndInvalidate()
+//        self.session.finishTasksAndInvalidate()
 //
-//      })
+//    }) else{
+//      //handle error
+//      return
+//    }
 //
 //    task.resume()
 //
@@ -67,7 +73,7 @@
 //
 //}
 
-/* 2 */
+//// 2 
 //import UIKit
 //
 //extension NSURLSessionTask{
@@ -115,27 +121,23 @@
 //    /* Now attempt to download the contents of the URL */
 //    let url = NSURL(string: "<# place a URL here #>")
 //
-//    let task = session.downloadTaskWithURL(url!,
-//      completionHandler: {[weak self] (url: NSURL!,
-//        response: NSURLResponse!,
-//        error: NSError!) in
+//    guard let task = session.downloadTaskWithURL(url!,
+//      completionHandler: {url, response, error in
 //
 //        if error == nil{
 //
 //          let manager = NSFileManager()
 //
 //          /* Get the path to the caches folder */
-//          var error: NSError?
-//          var destinationPath = manager.URLForDirectory(.CachesDirectory,
+//          var destinationPath = try! manager.URLForDirectory(.CachesDirectory,
 //            inDomain: .UserDomainMask,
 //            appropriateForURL: url,
-//            create: true,
-//            error: &error)!
+//            create: true)
 //
 //          /* Extract the last part of the source URL which is the name of the
 //          file we are downloading  */
 //          let componentsOfUrl =
-//          url.absoluteString!.componentsSeparatedByString("/")
+//          url!.absoluteString.componentsSeparatedByString("/")
 //          let fileNameFromUrl = componentsOfUrl[componentsOfUrl.count - 1]
 //
 //          /* Append the name of the file in the source URL to the
@@ -143,19 +145,26 @@
 //          destinationPath =
 //            destinationPath.URLByAppendingPathComponent(fileNameFromUrl)
 //
-//          /* Now move the file over */
-//          manager.moveItemAtURL(url, toURL: destinationPath, error: nil)
+//          do {
+//            /* Now move the file over */
+//            try manager.moveItemAtURL(url!, toURL: destinationPath)
+//          } catch {
+//            //handle error
+//          }
 //
 //          let message = "Saved the downloaded data to = \(destinationPath)"
 //
-//          self!.displayAlertWithTitle("Success", message: message)
+//          self.displayAlertWithTitle("Success", message: message)
 //
 //        } else {
-//          self!.displayAlertWithTitle("Error",
+//          self.displayAlertWithTitle("Error",
 //            message: "Could not download the data. An error occurred")
 //        }
 //
-//      })
+//    }) else {
+//      //handle error
+//      return
+//    }
 //
 //    /* Our own extension on the task adds the start method */
 //    task.start()
@@ -163,8 +172,8 @@
 //  }
 //
 //}
-
-/* 3 */
+//
+///* 3 */
 import UIKit
 
 extension NSURLSessionTask{
@@ -239,7 +248,9 @@ NSURLSessionDataDelegate {
     /* Now attempt to download the contents of the URL */
     let url = NSURL(string: "<# place your URL here #>")
     
-    let task = session.dataTaskWithURL(url!, completionHandler: nil)
+    guard let task = session.dataTaskWithURL(url!) else{
+      return
+    }
     
     task.start()
     

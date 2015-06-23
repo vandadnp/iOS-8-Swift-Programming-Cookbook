@@ -43,28 +43,26 @@
 //      ],
 //    ]
 //    
-//    var error: NSError?
-//    let jsonData = NSJSONSerialization.dataWithJSONObject(dictionary,
-//      options: .PrettyPrinted,
-//      error: &error)
-//    
-//    if let data = jsonData{
-//      if data.length > 0 && error == nil{
-//        println("Successfully serialized the dictionary into data \(jsonData)")
+//    do {
+//      let jsonData = try NSJSONSerialization.dataWithJSONObject(dictionary,
+//            options: .PrettyPrinted)
+//      if jsonData.length > 0{
+//        print("Successfully serialized the dictionary into data \(jsonData)")
 //      }
-//      else if data.length == 0 && error == nil{
-//        println("No data was returned after serialization.")
+//      else{
+//        print("No data was returned after serialization.")
 //      }
-//      else if error != nil{
-//        println("An error happened = \(error)")
-//      }
+//      
+//    } catch let error as NSError {
+//      print("An error happened = \(error)")
 //    }
+//    
 //    
 //  }
 //
 //}
-
-/* 2 */
+//
+///* 2 */
 //import UIKit
 //
 //class ViewController: UIViewController {
@@ -87,33 +85,30 @@
 //    ]
 //    
 //    /* Convert the dictionary into a data structure */
-//    var error: NSError?
-//    let jsonData = NSJSONSerialization.dataWithJSONObject(dictionary,
-//      options: .PrettyPrinted,
-//      error: &error)
-//    
-//    if let data = jsonData{
-//      if data.length > 0 && error == nil{
-//        println("Successfully serialized the dictionary into data")
+//    do {
+//      let jsonData = try NSJSONSerialization.dataWithJSONObject(dictionary,
+//            options: .PrettyPrinted)
+//      if jsonData.length > 0{
+//        print("Successfully serialized the dictionary into data")
 //        
 //        /* Then convert the data into a string */
-//        let jsonString = NSString(data: data, encoding: NSUTF8StringEncoding)
-//        println("JSON String = \(jsonString)")
+//        let jsonString = NSString(data: jsonData, encoding: NSUTF8StringEncoding)
+//        print("JSON String = \(jsonString)")
 //        
 //      }
-//      else if data.length == 0 && error == nil{
-//        println("No data was returned after serialization.")
+//      else{
+//        print("No data was returned after serialization.")
 //      }
-//      else if error != nil{
-//        println("An error happened = \(error)")
-//      }
+//    } catch let error as NSError {
+//      print("An error happened = \(error)")
 //    }
+//    
 //    
 //  }
 //  
 //}
-
-/* 3 */
+//
+///* 3 */
 import UIKit
 
 class ViewController: UIViewController {
@@ -121,32 +116,28 @@ class ViewController: UIViewController {
   func retrieveJsonFromData(data: NSData){
     
     /* Now try to deserialize the JSON object into a dictionary */
-    var error: NSError?
-    
-    let jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(data,
-      options: .AllowFragments,
-      error: &error)
-    
-    if  error == nil{
+    do {
+      let jsonObject = try NSJSONSerialization.JSONObjectWithData(data,
+            options: .AllowFragments)
       
-      println("Successfully deserialized...")
+      print("Successfully deserialized...")
       
       if jsonObject is NSDictionary{
         let deserializedDictionary = jsonObject as! NSDictionary
-        println("Deserialized JSON Dictionary = \(deserializedDictionary)")
+        print("Deserialized JSON Dictionary = \(deserializedDictionary)")
       }
       else if jsonObject is NSArray{
         let deserializedArray = jsonObject as! NSArray
-        println("Deserialized JSON Array = \(deserializedArray)")
+        print("Deserialized JSON Array = \(deserializedArray)")
       }
       else {
         /* Some other object was returned. We don't know how to
         deal with this situation as the deserializer only
         returns dictionaries or arrays */
       }
-    }
-    else if error != nil{
-      println("An error happened while deserializing the JSON data.")
+      
+    } catch {
+      print("An error happened while deserializing the JSON data.")
     }
     
   }
@@ -154,7 +145,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let dictionary = [1, 2, 3]
+    let dictionary =
     [
       "First Name" : "Anthony",
       "Last Name" : "Robbins",
@@ -169,26 +160,21 @@ class ViewController: UIViewController {
     ]
 
     /* Convert the dictionary into a data structure */
-    var error: NSError?
-    let jsonData = NSJSONSerialization.dataWithJSONObject(dictionary,
-      options: .PrettyPrinted,
-      error: &error)
-    
-    if let data = jsonData{
-      if data.length > 0 && error == nil{
-        println("Successfully serialized the dictionary into data")
+    do {
+      let jsonData = try NSJSONSerialization.dataWithJSONObject(dictionary,
+            options: .PrettyPrinted)
+      if jsonData.length > 0{
+        print("Successfully serialized the dictionary into data")
         
-        retrieveJsonFromData(data)
+        retrieveJsonFromData(jsonData)
         
       }
-      else if data.length == 0 && error == nil{
-        println("No data was returned after serialization.")
+      else{
+        print("No data was returned after serialization.")
       }
-      else if error != nil{
-        println("An error happened = \(error)")
-      }
+    } catch let error as NSError {
+      print("An error happened = \(error)")
     }
-
     
   }
 
