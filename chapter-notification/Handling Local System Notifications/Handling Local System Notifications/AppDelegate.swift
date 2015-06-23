@@ -15,10 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func handleSettingsChanged(notification: NSNotification){
     
-    println("Settings changed")
+    print("Settings changed")
     
     if let object:AnyObject = notification.object{
-      println("Notification Object = \(object)")
+      print("Notification Object = \(object)")
     }
     
   }

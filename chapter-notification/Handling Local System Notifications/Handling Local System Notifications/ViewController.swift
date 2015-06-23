@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
   
   func orientationChanged(notification: NSNotification){
-    println("Orientation Changed")
+    print("Orientation Changed")
   }
   
   override func viewDidAppear(animated: Bool) {

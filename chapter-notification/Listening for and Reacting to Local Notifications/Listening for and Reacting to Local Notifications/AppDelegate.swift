@@ -74,7 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func askForNotificationPermissionForApplication(application: UIApplication){
     /* First ask the user if we are
     allowed to perform local notifications */
-    let settings = UIUserNotificationSettings(forTypes: .Alert | .Badge,
+    let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge],
       categories: nil)
     
     application.registerUserNotificationSettings(settings)
@@ -105,12 +105,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication,
     didRegisterUserNotificationSettings
     notificationSettings: UIUserNotificationSettings){
-      
-      if notificationSettings.types == nil{
-        /* The user did not allow us to send notifications */
-        return
-      }
-      
+            
       scheduleLocalNotification()
       
   }

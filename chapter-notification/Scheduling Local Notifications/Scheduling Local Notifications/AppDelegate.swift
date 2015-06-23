@@ -45,11 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didRegisterUserNotificationSettings
     notificationSettings: UIUserNotificationSettings){
       
-      if notificationSettings.types == nil{
-        /* The user did not allow us to send notifications */
-        return
-      }
-      
       let notification = UILocalNotification()
       
       /* Time and timezone settings */

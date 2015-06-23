@@ -65,10 +65,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       /* Here is proof */
       if let firstName = steveJobs.firstName{
-        println("Person's first name is: \(firstName)")
+        print("Person's first name is: \(firstName)")
       }
       if let lastName = steveJobs.lastName{
-        println("Person's last name is: \(lastName)")
+        print("Person's last name is: \(lastName)")
       }
       
     return true
