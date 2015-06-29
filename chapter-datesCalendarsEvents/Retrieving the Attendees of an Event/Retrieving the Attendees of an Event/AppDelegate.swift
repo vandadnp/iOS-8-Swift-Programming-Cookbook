@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     type: EKSourceType,
     title: String) -> EKSource?{
       
-      for source in eventStore.sources(){
+      for source in eventStore.sources{
         if source.sourceType.rawValue == type.rawValue &&
           source.title.caseInsensitiveCompare(title) ==
           NSComparisonResult.OrderedSame{
@@ -132,12 +132,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       print("Event start date = \(event.startDate)")
       print("Event end date = \(event.endDate)")
       
-      if event.attendees?.count == 0{
-        print("This event has no attendees")
-        continue
+      guard let attendees = event.attendees where attendees.count > 0 else{
+        continue;
       }
       
-      for attendee in event.attendees as! [EKParticipant]{
+      for attendee in attendees{
         print("Attendee name = \(attendee.name)")
         
         let role = attendeeRole[Int(attendee.participantRole.rawValue)]
