@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var icloudEventSource: EKSource?
     
     let eventStore = EKEventStore()
-    for source in eventStore.sources(){
+    for source in eventStore.sources{
       if source.sourceType.rawValue == EKSourceType.CalDAV.rawValue &&
         source.title.lowercaseString == "icloud"{
           icloudEventSource = source

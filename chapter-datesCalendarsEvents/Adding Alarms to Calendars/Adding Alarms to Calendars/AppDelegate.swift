@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     type: EKSourceType,
     title: String) -> EKSource?{
       
-      for source in eventStore.sources() as [EKSource]{
+      for source in eventStore.sources{
         if source.sourceType.rawValue == type.rawValue &&
           source.title.caseInsensitiveCompare(title) ==
           NSComparisonResult.OrderedSame{
